@@ -1,0 +1,4 @@
+[id='rn-known-issues-ref']
+= Known issues
+
+This section lists known issues with {PRODUCT} {PRODUCT_VERSION}.

@@ -1,0 +1,34 @@
+
+[id='rn-versions-ref']
+
+= Versions of Components
+
+{PRODUCT} includes the following software versions:
+
+[cols="h,,"]
+|===
+
+|Component
+|Version and documentation
+|Supported Configurations
+
+
+|{fuse-name}
+|link:{fuse-docs}[{fuse-version}]
+|{fuse-configs}
+
+|{amq-online-name}
+|link:{amq-online-docs}[{amq-online-version}]
+|{amq-online-configs}
+
+|{three-scale-name}
+|link:{three-scale-docs}[{three-scale-version}]
+|{three-scale-configs}
+
+|{code-ready-name}
+|link:{code-ready-docs}[{code-ready-version}]
+|{code-ready-configs}
+
+|===
+
+

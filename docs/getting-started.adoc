@@ -1,0 +1,21 @@
+[id='assembly_getting-started']
+
+include::attributes.adoc[]
+
+= Getting started with {PRODUCT}
+// Context attribute is assembly specific and enables module reuse between assemblies.
+:imagesdir: images
+:context: getting-started
+
+// Purpose statement for the assembly
+This document provides instructions for new users of {PRODUCT}.
+// and subsequent patch releases.
+
+include::content/gs-intro-con.adoc[leveloffset=+1]
+
+include::content/gs-adding-users-proc.adoc[leveloffset=+1]
+
+include::content/gs-writing-walkthroughs-proc.adoc[leveloffset=+1]
+
+include::content/gs-using-nexus-proc.adoc[leveloffset=+1]
+
