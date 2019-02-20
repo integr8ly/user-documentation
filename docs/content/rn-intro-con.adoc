@@ -1,0 +1,6 @@
+
+[id='rn-intro-con']
+
+= Product overview
+
+{PRODUCT} provides ...

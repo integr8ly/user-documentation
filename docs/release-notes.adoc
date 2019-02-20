@@ -1,0 +1,18 @@
+[id='assembly_release-notes']
+
+include::attributes.adoc[]
+
+= Release notes for {PRODUCT} {PRODUCT_VERSION}
+// Context attribute is assembly specific and enables module reuse between assemblies.
+:imagesdir: images
+:context: release-notes
+
+// Purpose statement for the assembly
+These release notes list the components of{PRODUCT} {PRODUCT_VERSION} and known issues in this release.
+// and subsequent patch releases.
+
+include::content/rn-intro-con.adoc[leveloffset=+1]
+
+include::content/rn-versions-ref.adoc[leveloffset=+1]
+
+include::content/rn-known-issues-ref.adoc[leveloffset=+1]
