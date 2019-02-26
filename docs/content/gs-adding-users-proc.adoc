@@ -19,27 +19,21 @@ How to manage users within the {PRODUCT} environment.
 - Click on the *Administration Console* option on the Red Hat Single Sign-On landing page.
 - Login to the Red Hat Single Sign-On administration console.
 
-== Viewing Users in the SSO Admin Console
-- Navigate to the *Users* menu.
-- Click the *View all users* button at the top of the page. This will show the list of users currently available in the Integreatly environment.
+== Viewing Users in the Red Hat Single Sign-On administration console
 
-image:../assets/images/gs-adding-users-sso-view-users.png[Viewing all users in SSO]
+By default, when you log into Red Hat Single Sign-On administration console, the *Openshift* realm is displayed.
 
-
-- The search box at the top of the page can be used to query the list and only show users that matches your criteria.
-
-image:../assets/images/gs-adding-users-sso-search-users.png[Searching for users in SSO]
+. Navigate to the *Users* menu. The search box at the top of the page can be used to query the list and only show users that matches your criteria.
+. Click the *View all users* button at the top of the page. This displays the list of users currently available in the {PRODUCT} environment.
 
 == Creating Users in the SSO Admin Console
-- Navigate to the *Users* menu.
-- Click the *Add User* button at the top right corner of the page.
-
-image:../assets/images/gs-adding-users-sso-add-user.png[User form in SSO]
-
-- Enter the user information required in the user creation form.
-  * Ensure that the `Username` and `Email` fields are filled in.
-  * Ensure that field `User Enabled` is set to *ON*. This ensures that the user account will be activated and can be used for login.
-  * Ensure that the field `Email Verified` is set to *ON*. This ensures that the user account will be activated in 3Scale.
+. Navigate to the *Users* menu.
+. Click the *Add User* button at the top right corner of the page.
+. Enter the user information:
++
+ * Enter values to `Username` and `Email`.
+ * Set `User Enabled` to *ON*.
+ * Set `Email Verified` to *ON*. This ensures that the user account will be activated in 3Scale.
 
 image:../assets/images/gs-adding-users-sso-add-user-form.png[Adding a user in SSO]
 
