@@ -1,11 +1,11 @@
 [id='gs-adding-users-proc']
 
-= User Management
+= Managing Users
 
-This section covers how to manage users within the Integreatly environment.
+How to manage users within the {PRODUCT} environment.
 
 == Accessing the SSO Admin Console
-- Login to the OpenShift console as the `customer-admin` user (The credentials for this user were sent with your welcome email).
+- Login to the OpenShift console as the `customer-admin` user. 
 - Navigate to the `sso` project.
 - Go to *Applications* > *Routes*
 - Click on the `sso` route hostname to open the Single Sign-On (SSO) landing screen.
