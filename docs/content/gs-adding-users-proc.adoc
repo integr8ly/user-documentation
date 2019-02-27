@@ -32,6 +32,7 @@ By default, when you log into Red Hat Single Sign-On administration console, the
 
 * You have logged into the Red Hat Single Sign-On administration console.
 
+To create a user:
 . Navigate to the *Users* menu.
 . Click the *Add User* button at the top right corner of the page.
 . Enter the user information:
@@ -52,6 +53,7 @@ The following example JSON file imports two users:
     {
       "username": "jdoe",
       "enabled": true,
+      "emailVerified": true,
       "email": "johndoe@example.com",
       "firstName": "John",
       "lastName": "Doe",
@@ -69,6 +71,7 @@ The following example JSON file imports two users:
     {
       "username": "msmith",
       "enabled": true,
+      "emailVerified": true,
       "email": "marysmith@example.com",
       "firstName": "Mary",
       "lastName": "Smith",
@@ -155,7 +158,7 @@ A list of users is displayed.
 
 . Find the user you want to change, and click on the *Edit* button for that user.
 
-. On the *Edit User* page, change the user's information, password, roles and permissions:
+. On the *Edit User* page, change the user's roles and permissions:
 +
 image:../assets/images/gs-adding-users-3scale-edit-user-page.png[3Scale edit user page]
 +
