@@ -23,6 +23,8 @@ Log in as the `customer-admin` user using the credentials that you received in t
 
 By default, when you log into Red Hat Single Sign-On administration console, the *Openshift* realm is displayed.
 
+To view user list:
+
 . Navigate to the *Users* menu. The search box at the top of the page can be used to query the list and only show users that matches your criteria.
 . Click the *View all users* button at the top of the page. This displays the list of users currently available in the {PRODUCT} environment.
 
@@ -33,6 +35,7 @@ By default, when you log into Red Hat Single Sign-On administration console, the
 * You have logged into the Red Hat Single Sign-On administration console.
 
 To create a user:
+
 . Navigate to the *Users* menu.
 . Click the *Add User* button at the top right corner of the page.
 . Enter the user information:
