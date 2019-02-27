@@ -5,19 +5,12 @@
 How to manage users within the {PRODUCT} environment.
 
 == Accessing the Red Hat Single Sign-On administration console
-. Login to the OpenShift console as the `customer-admin` user. 
-. Navigate to the *sso* project.
-. Retrieve the credentials for the Red Hat Single Sign-On administration console:
-.. Click *Secrets* in the *Resources* menu.
-.. Click *credential-rhsso* in the list of Secrets.
-.. Click *Reveal Secret* in the  *credential-rhsso* detail page.
-.. Note the values for *SSO_ADMIN_USERNAME* and *SSO_ADMIN_PASSWORD*.
-.. Click *Overview* to navigate back to the *sso* project overview page.
 
-. Click *Routes* in the *Applications* menu.
-. Click on the *sso* route hostname to open the Red Hat Single Sign-On (SSO) application.
-- Click on the *Administration Console* option on the Red Hat Single Sign-On landing page.
-- Login to the Red Hat Single Sign-On administration console.
+To access the administration console navigate to the following URL, replacing `<cluster-host>` with the hostname of your cluster:
+
+----
+https://<cluster-host>/auth/admin/openshift/console
+----
 
 == Viewing Users in the Red Hat Single Sign-On administration console
 
@@ -35,39 +28,69 @@ By default, when you log into Red Hat Single Sign-On administration console, the
  * Set `User Enabled` to *ON*.
  * Set `Email Verified` to *ON*. This ensures that the user account will be activated in 3Scale.
 
-image:../assets/images/gs-adding-users-sso-add-user-form.png[Adding a user in SSO]
-
 - Click the *Save* button to create the user.
 
-NOTE: Users can also be created by importing a JSON file with user information via the SSO admin console. For more information, please see the https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.2/html/server_administration_guide/export_import#admin_console_export_import[SSO documentation] and the example https://gist.github.com/JameelB/da0a082cade4c7a19c966bba2869743c[users.json] file.
+NOTE: You can also import a JSON file with user information as described in the https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.2/html/server_administration_guide/export_import#admin_console_export_import[RHSSO documentation].
+
+The following example JSON file imports two users:
+
+[source,javascript]
+----
+{ "users": [
+    {
+      "username": "jdoe",
+      "enabled": true,
+      "email": "johndoe@example.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+          "account": ["manage-account", "view-profile"]
+      },
+      "groups": [],
+      "attributes": {},
+      "credentials": [{
+        "type" : "password",
+        "value" : "Password1"
+      }]
+    },
+    {
+      "username": "msmith",
+      "enabled": true,
+      "email": "marysmith@example.com",
+      "firstName": "Mary",
+      "lastName": "Smith",
+      "realmRoles": ["offline_access", "uma_authorization"],
+      "clientRoles": {
+          "account": ["manage-account", "view-profile"]
+      },
+      "groups": [],
+      "attributes": {},
+      "credentials": [{
+        "type" : "password",
+        "value" : "Password1"
+      }]
+    }
+  ]
+}
+----
 
 === Setting User Password
 - Navigate to the *Users* menu.
 - Find the user you wish to edit and click on their *Edit* button associated with the user.
 - Go to the *Credentials* tab.
 - Set a password for the user and click the *Reset Password* button to save.
-- Set the `Temporary` field to *ON* only if you require the user to update their password upon login. 
-
-image:../assets/images/gs-adding-users-sso-set-user-password.png[Setting a password for a user in SSO]
-
-The newly created user should now be ready to be used to login to the OpenShift console and all the Integreatly services.
+- If you require the user to update their password upon login, set the `Temporary` field to *ON*.
 
 == Deleting Users in the SSO Admin Console
 - Navigate to the *Users* menu
 - Click the *View all users* button at the top of the page.
 - Find the user you wish to delete
 - Click the *Delete* button associated to the user you wish to remove.
-
-image:../assets/images/gs-adding-users-sso-delete-user.png[Delete a user in SSO]
-
 - Click *Delete* in the confirmation box to proceed.
 
-image:../assets/images/gs-adding-users-sso-user-delete-confirmation.png[Delete user confirmation]
-
-The user should now be deleted from the SSO and will no longer be available to login to the OpenShift console and Integreatly services.
-
 == User Management in 3Scale
-Users created in the OpenShift SSO can be used to login to the 3Scale console. The user's account will only be created in 3Scale once a user attempts to login to the 3Scale console. The user created is assigned the role `member` and no permissions set by default. 
+Users created in  Red Hat Single Sign-On can login to the 3Scale console, however the user's account is created in 3Scale after that initial login. The user created is assigned the role `member` and no permissions set by default. 
 
 The user role and permission can only be set once a user account is created in 3Scale. Because of this, the only way to change the user's role/permission before the user attempts to login to the 3Scale console is to create a user account that matches the account created in the OpenShift SSO.
 
@@ -84,59 +107,6 @@ image:../assets/images/gs-adding-users-3scale-login.png[3Scale login with Red Ha
 
 - If asked for credentials, login as the `customer-admin` user.
 
-=== Creating Users in 3Scale
-The user accounts that will be created in 3Scale must match the user account created in the OpenShift SSO.
-
-NOTE: This is only required if you wish to set the user's role and permission before the user login to the 3Scale console.
-
-==== Retrieve the 3Scale Access Token
-The 3Scale API needs to be used in order to create users in 3Scale. An `access_token` is required in order to send requests to the 3Scale API.
-
-- Navigate to the `3scale` project on OpenShift.
-- Go to *Resources* > *Secrets*.
-- Search for the `system-seed` secret and click on it to view it's details.
-- Click on the *Reveal Secret* button to show the secret values.
-
-image:../assets/images/gs-adding-users-3scale-route.png[3Scale route]
-
-- Take not of the `ADMIN_ACCESS_TOKEN` value as this will be required when sending requests to the 3Scale API.
-
-image:../assets/images/gs-adding-users-3scale-admin-access-token.png[3Scale admin access token]
-
-==== Using the 3Scale API
-In order to create a user, a *POST* request must be sent to the 3Scale API user endpoint.
-
-- Navigate to the `3scale` project.
-- Go to *Applications* > *Routes*
-- Append the user endpoint */admin/api/users.xml* to the `system-provider-admin` hostname.
-
-image:../assets/images/gs-adding-users-3scale-route.png[3Scale route]
-
-The request requires the following parameters. Each of these properties must match with the properties of the user that was created in the OpenShift SSO.
-
-- *access_token* (String): The `ADMIN_ACCESS_TOKEN` value retrieved from the `system_seed` secret. This token lets you authenticate against the 3Scale API.
-- *username* (String): Username of the user
-- *email* (String): Email of the user
-- *password* (String): Password of the user
-
-Example: 
-
-[source, bash]
-curl --data “access_token=wpq41uo62ly5eiu5&username=jdoe&email=johndoe@example.com&password=Password1” https://3scale-admin.apps.waterford-a1c6.openshiftworkshop.com/admin/api/users.xml
-
-This request can also be done through the 3Scale API documentation in the 3Scale console.
-- Click on the *Documentation* icon on the top right corner of the page.
-- Click on the *3Scale API Docs* from the documentation menu
-
-image:../assets/images/gs-adding-users-3scale-api-docs.png[3Scale API documentation]
-
-- Go to the *User Create (provider account)* section and click on it to view the endpoint's description.
-
-image:../assets/images/gs-adding-users-3scale-create-user-api-docs.png[3Scale user create endpoint]
-
-- Fill in the required parameters.
-- Click the *Send Request* button to create a user.
-- The response for the request sent will be shown below the *Send Request* button.
 
 === Setting User Roles and Permissions in 3Scale
 All users in 3Scale are created as a `member` with no permissions set by default. The 3Scale console allows you to manage user roles and permissions after a user account is created in 3Scale.
