@@ -93,11 +93,13 @@ The following example JSON file imports two users:
 
 * You have logged into the Red Hat Single Sign-On administration console.
 
-- Navigate to the *Users* menu.
-- Find the user you wish to edit and click on their *Edit* button associated with the user.
-- Go to the *Credentials* tab.
-- Set a password for the user and click the *Reset Password* button to save.
-- If you require the user to update their password upon login, set the `Temporary` field to *ON*.
+To set user passwords:
+
+. Navigate to the *Users* menu.
+. Find the user you wish to edit and click on their *Edit* button associated with the user.
+. Go to the *Credentials* tab.
+. Set a password for the user and click the *Reset Password* button to save.
+. If you require the user to update their password upon login, set the `Temporary` field to *ON*.
 
 == Deleting users in the Red Hat Single Sign-On administration console
 
@@ -105,15 +107,17 @@ The following example JSON file imports two users:
 
 * You have logged into the Red Hat Single Sign-On administration console.
 
-- Navigate to the *Users* menu
-- Click the *View all users* button at the top of the page.
-- Find the user you wish to delete
-- Click the *Delete* button associated to the user you wish to remove.
-- Click *Delete* in the confirmation box to proceed.
+To delete users:
+
+. Navigate to the *Users* menu
+. Click the *View all users* button at the top of the page.
+. Find the user you wish to delete
+. Click the *Delete* button associated to the user you wish to remove.
+. Click *Delete* in the confirmation box to proceed.
 
 == Managing Red Hat 3scale API Management Platform users
 
-Users created in  Red Hat Single Sign-On can login to the 3Scale console, however the user's account is created in 3Scale after that initial login. The user created is assigned the role `member` and no permissions set by default. The user role and permission can only be set once a user account is created in 3Scale. 
+Users created in  Red Hat Single Sign-On can login to the 3Scale console, however the user's account is created in 3Scale after that initial login. The new user is assigned the role `member` and no permissions set by default. The user role and permission can only be set once a user account is created in 3Scale. 
 
 To make sure you create users with the correct roles for Red Hat 3scale API Management Platform:
 
@@ -123,6 +127,8 @@ To make sure you create users with the correct roles for Red Hat 3scale API Mana
 
 
 === Accessing the Red Hat 3scale API Management Platform administration console
+
+To access the Red Hat 3scale API Management Platform administration console:
 
 . Navigate to the *Red Hat Solution Explorer* URL that you received in the *Welcome* email.
 If asked for credentials, login as the `customer-admin` user.
@@ -162,6 +168,8 @@ For example, you can give the user the *Admin* role.
 .Prerequisite
 
 * You have logged into the Red Hat 3scale API Management Platform administration console.
+
+To delete 3Scale users:
 
 . Navigate to *Account Settings*.
 
