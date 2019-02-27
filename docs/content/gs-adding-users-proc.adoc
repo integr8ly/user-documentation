@@ -1,5 +1,9 @@
 [id='gs-adding-users-proc']
 
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Managing Users
 
 How to manage users within the {PRODUCT} environment.
@@ -154,7 +158,7 @@ To change permissions for a 3Scale user:
 
 . Navigate to *Account Settings* by clicking the gear icon in the top right of the 3Scale console.
 +
-image:../assets/images/gs-adding-users-3scale-account-settings.png[3Scale account settings]
+image:gs-adding-users-3scale-account-settings.png[3Scale account settings]
 
 . Select *Listings* from the *Users* menu. 
 A list of users is displayed.
@@ -163,7 +167,7 @@ A list of users is displayed.
 
 . On the *Edit User* page, change the user's roles and permissions:
 +
-image:../assets/images/gs-adding-users-3scale-edit-user-page.png[3Scale edit user page]
+image:gs-adding-users-3scale-edit-user-page.png[3Scale edit user page]
 +
 For example, you can give the user the *Admin* role.
 
