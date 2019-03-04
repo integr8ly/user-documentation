@@ -1,0 +1,35 @@
+[id='gs-using-nexus-proc']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+:nexus-name: Nexus Repository Manager
+
+= Managing Java artifacts using {nexus-name}
+
+The {PRODUCT} cluster includes a running instance of {nexus-name}.
+If you are developing Java applications, you might want to use {nexus-name} to cache and manage dependencies.
+
+== Using {nexus-name} to build your applications
+
+. Add the following to your `application.yaml` file:
++
+----
+- name: MAVEN_MIRROR_URL
+  description: Maven Nexus Repository to be used during build phase
+  displayName:
+  value: 'http://nexus.nexus.svc:8081/nexus/content/groups/public'
+  required: false
+----
+
+. Build your application.
+. Test your application.
+
+Subsequent builds should be faster dues to the {nexus-name} caching.
+
+
+.Additional Information
+
+* link:https://launcher.fabric8.io/docs/[Launcher Documentation]
+* link:https://help.sonatype.com/repomanager3[{nexus-name}]
