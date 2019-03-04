@@ -1,6 +1,11 @@
+[id='concept-explanation-{context}']
+= Overview of {PRODUCT}
 
-[id='rn-intro-con']
+{PRODUCT} enables your team to develop, build and deploy enterprise integration solutions on a private Kubernetes cluster managed by Red Hat. 
+{PRODUCT} enables developers adopt event-based computing and API-based development with lightweight, loosely coupled, self-service and flexible components. 
+{PRODUCT} enables operations focus on high value objectives because Red Hat manage the infrastructure and everything is protected by RHSSO.
 
-= Product overview
 
-{PRODUCT} provides ...
+.Additional resources
+
+* https://access.redhat.com/documentation/en-us/openshift_dedicated/3/[Product Documentation for OpenShift Dedicated 3]
