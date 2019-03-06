@@ -13,15 +13,13 @@ If you are developing Java applications, you might want to use {nexus-name} to c
 
 == Using {nexus-name} to build your applications
 
-. Add the following to your `application.yaml` file:
+. Set the `MAVEN_MIRROR_URL` environment variable in your BuildConfig: 
 +
 ----
-- name: MAVEN_MIRROR_URL
-  description: Maven Nexus Repository to be used during build phase
-  displayName:
-  value: 'http://nexus.nexus.svc:8081/nexus/content/groups/public'
-  required: false
+MAVEN_MIRROR_URL=http://nexus.nexus.svc:8081/nexus/content/groups/public
 ----
++
+This ensures that Maven uses {nexus-name}.
 
 . Build your application.
 . Test your application.
@@ -31,5 +29,4 @@ Subsequent builds should be faster dues to the {nexus-name} caching.
 
 .Additional Information
 
-* link:https://launcher.fabric8.io/docs/[Launcher Documentation]
 * link:https://help.sonatype.com/repomanager3[{nexus-name}]
