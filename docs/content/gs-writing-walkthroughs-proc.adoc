@@ -8,10 +8,10 @@
 :publishing-walkthroughs: *Adding {walkthrough-name}s to a cluster*
 
 
-= Writing {PRODUCT} {walkthrough-name}s
+= Creating {PRODUCT} {walkthrough-name}s
 
 
-== About writing {walkthrough-name}s
+== About creating {walkthrough-name}s
 
 
 {walkthrough-name}s are tutorials available in {PRODUCT}. The default {walkthrough-name}s guide you through the following scenarios:
