@@ -1,4 +1,4 @@
-:{walkthrough-name}: Walkthrough
+:walkthrough-name: Solution Pattern
 
 :linkTroubleshooting: https://github.com/integr8ly/example-customisations/blob/master/docs/troubleshooting.adoc
 :linkGitHubFork: https://help.github.com/articles/fork-a-repo/
@@ -69,7 +69,7 @@ The template contains the directory structure along with a sample {walkthrough-n
 +
 [source,bash]
 ----
-git clone https://github.com/integr8ly/{walkthrough-name}-template.git
+git clone https://github.com/integr8ly/walkthrough-template.git
 ----
 
 . Change to the `walkthrough-template` directory:
@@ -89,6 +89,7 @@ Try downloading the link:https://github.com/integr8ly/walkthrough-template/archi
 
 === Understanding the file structure
 
+[subs="attributes"]
 ----
 .
 └── walkthroughs<1>
@@ -176,6 +177,7 @@ To add an overview section using the template respository:
 
 . Change the title of the {walkthrough-name}, for example:
 +
+[subs="attributes"]
 ----
 = My first {walkthrough-name}
 ----
@@ -444,20 +446,17 @@ Other attributes that are available to {walkthrough-name} authors are:
 
 * Default attributes:
 ** OpenShift App Host: `\{openshift-app-host}`
-** Che URL: `\{che-url}`.
+** CodeReady Workspaces URL: `\{che-url}`.
 ** Fuse URL: `\{fuse-url}`
 ** Launcher URL: `\{launcher-url}`
 ** API Management URL: `\{api-management-url}`
-** AMQ URL: `\{amq-url}`
-** AMQ Broker URL: `\{amq-broker-tcp-url}`
-** AMQ Credential Username: `\{amq-credentials-username}`
-** AMQ Credential Password: `\{amq-credentials-password}`
-** EnMasse URL: `\{enmasse-url}`
-** EnMasse Broker URL: `\{enmasse-broker-url}`
-** EnMasse Credential Username: `\{enmasse-credentials-username}`
-** EnMasse Credential Password: `\{enmasse-credentials-password}`
+** AMQ Online URL: `\{enmasse-url}`
+** AMQ Online Broker URL: `\{enmasse-broker-url}`
+** AMQ Online Credential Username: `\{enmasse-credentials-username}`
+** AMQ Online Credential Password: `\{enmasse-credentials-password}`
 * Custom attributes:
-** NodeJS Frontend App Route (provisioned from {walkthrough-name}.json): `\{route-frontend-host}`
+** NodeJS Frontend App Route (provisioned from walkthrough.json): `\{route-frontend-host}`
+
 
 .Prerequisites
 * You have created a repo using the {walkthrough-name} template.
