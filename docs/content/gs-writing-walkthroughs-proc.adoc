@@ -31,22 +31,21 @@ To write {walkthrough-name}s you require a knowledge of:
 
 A simple {walkthrough-name} only requires that you edit an asciidoc file, for example:
 
-[source,asciidoc,subs="attributes"]
+[source,asciidoc]
 ----
-= Demonstrating a custom {walkthrough-name} <1>
+= Demonstrating features <1>
 
-A short description for the {walkthrough-name}. <2>
+A short description for the feature. <2>
 
 == Doing a task <3>
 
-. Do this first: <5>
-. Do this second: <5>
+. Do this first: <4>
+. Do this second: 
 ----
-
 <1> {walkthrough-name} title, you can only have one level 1 heading per file
 <2> The first line of the introduction is displayed as a tag line for the {walkthrough-name}.
 <3> A task contains one or more subtasks (level 3 headings)
-<5> A numbered lists of steps the user must perform.
+<4> A numbered lists of steps the user must perform.
 
 [type={walkthrough-name}Resource]
 .Additional Resources
@@ -89,7 +88,7 @@ Try downloading the link:https://github.com/integr8ly/walkthrough-template/archi
 
 === Understanding the file structure
 
-[subs="attributes"]
+[source]
 ----
 .
 └── walkthroughs<1>
@@ -104,9 +103,9 @@ Try downloading the link:https://github.com/integr8ly/walkthrough-template/archi
 
 <1> This is a required directory. All {walkthrough-name}s are defined under `walkthroughs`.
 
-<2> The directory name of a {walkthrough-name}. This is also displayed in the URL of the web app. 
+<2> The directory name of a {walkthrough-name}. This is also displayed in the URL of the web app.
 
-<3> All images for the {walkthrough-name}. 
+<3> All images for the {walkthrough-name}.
 
 <4> *walkthrough.adoc* is where the content of the {walkthrough-name} is written in asciidoc format.
 <5> *walkthrough.json* is the manifest file of the {walkthrough-name} where you can define extra dependencies.
@@ -123,7 +122,6 @@ The default `walkthrough.json` does not define any dependent services:
   }
 }
 ----
-NOTE: If you want to provision services as part of the {walkthrough-name}, this process is described in <<Adding custom services to a {walkthrough-name}>>
 
 === Committing your {walkthrough-name}s to a remote repository
 
@@ -168,7 +166,7 @@ The overview is displayed when a user clicks on the {walkthrough-name} in {Webap
 
 * The overview is defined by a first level heading (in AsciiDoc a line begining with `=`) and finishes at the next second level heading (`==`).
 * The title of the overview becomes the name of the {walkthrough-name}.
-* The overview heading must be followed by a paragraph giving a short introduction to the {walkthrough-name} in one or two sentences. 
+* The overview heading must be followed by a paragraph giving a short introduction to the {walkthrough-name} in one or two sentences.
 This description is displayed in the {Webapp} dashboard card for the {walkthrough-name}.
 
 To add an overview section using the template respository:
@@ -184,7 +182,7 @@ To add an overview section using the template respository:
 
 . Add an introduction paragraph to your preamble.
 
-. Add another paragraph with more information about the {walkthrough-name}. 
+. Add another paragraph with more information about the {walkthrough-name}.
 
 . Commit your changes
 +
@@ -221,9 +219,9 @@ The template already contains a sample task, you can change it as follows:
 
 . Change the task title, for example, `== Doing the first task`.
 
-. Write a short introduction to the task. 
+. Write a short introduction to the task.
 
-. Change the task timing estimate. Each task has an attribute to communicate the approximate time that the task should take the user to perform. 
+. Change the task timing estimate. Each task has an attribute to communicate the approximate time that the task should take the user to perform.
 +
 This is displayed in the {walkthrough-name} overview as part of the task list.
 +
@@ -261,9 +259,9 @@ Check that the Webapp has finished redeployment and no errors occurred.
 * You have created a repo using the {walkthrough-name} template.
 * You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
 
-A procedure is a set of steps that you perform to complete a task or subtask. 
+A procedure is a set of steps that you perform to complete a task or subtask.
 
-Write procedures using AsciiDoc numbered lists. 
+Write procedures using AsciiDoc numbered lists.
 Prepend each step with a `. ` to create a simple numbered list.
 
 To edit a procedure in the template respository:
@@ -296,7 +294,7 @@ Check that the Webapp has finished redeployment and no errors occurred.
 [time=5]
 == Editing {walkthrough-name} resources for a {PRODUCT} {walkthrough-name}
 
-The {webapp} can display helpful information and links on the right hand side panel. 
+The {webapp} can display helpful information and links on the right hand side panel.
 
 .Prerequisites
 * You have created a repo using the {walkthrough-name} template.
@@ -317,9 +315,9 @@ To add a {walkthrough-name} resources:
 ****
 ----
 +
-Setting `serviceName` is optional. 
+Setting `serviceName` is optional.
 +
-If `serviceName` is set to the name of a middleware service, an icon indicating the service status is displayed next to the resource. 
+If `serviceName` is set to the name of a middleware service, an icon indicating the service status is displayed next to the resource.
 +
 For a list of default services, see link:https://github.com/integr8ly/tutorial-web-app/blob/master/src/common/serviceInstanceHelpers.js[the value for DEFAULT_SERVICES].
 +
@@ -327,7 +325,7 @@ Setting the `window="_blank"` parameter for a {walkthrough-name} resource link i
 +
 NOTE: You can only define {walkthrough-name} resources in the overview section.
 
-. Save, commit and push your changes. 
+. Save, commit and push your changes.
 
 . Redeploy the {webapp}:
 .. Navigate to the *webapp* project in OpenShift.
@@ -347,7 +345,7 @@ Make sure that you added the resource to the preamble section and that it uses a
 [time=5]
 == Editing task resources for a {PRODUCT} {walkthrough-name}
 
-The {webapp} can display helpful information and links on the right hand side panel that are specific to a task. 
+The {webapp} can display helpful information and links on the right hand side panel that are specific to a task.
 {walkthrough-name} resources are displayed for every task, whereas task resources typically change as the user navigates the {walkthrough-name}.
 
 .Prerequisites
@@ -368,7 +366,7 @@ To add task resources:
 ****
 ----
 
-. Save, commit and push your changes. 
+. Save, commit and push your changes.
 
 . Redeploy the {webapp}:
 .. Navigate to the *webapp* project in OpenShift.
@@ -386,10 +384,10 @@ Check that the Webapp has finished redeployment and no errors occurred.
 [time=10]
 == Adding verifications to a {PRODUCT} {walkthrough-name}
 
-Verifications are interactive elements in a {walkthrough-name} that confirm whether a user has successfully completed a procedure. 
+Verifications are interactive elements in a {walkthrough-name} that confirm whether a user has successfully completed a procedure.
 They are questions present to the user, who can answer the question with either a `Yes` or `No` answer.
 
-NOTE: Every procedure in a task or subtasks requires a verification. 
+NOTE: Every procedure in a task or subtasks requires a verification.
 
 .Prerequisites
 * You have created a repo using the {walkthrough-name} template.
@@ -416,7 +414,7 @@ Check that the dashboard of service X reports no errors.
 Try turning it off and on again.
 ----
 
-. Save, commit and push your changes. 
+. Save, commit and push your changes.
 
 . Redeploy the {webapp}:
 .. Navigate to the *webapp* project in OpenShift.
@@ -435,7 +433,7 @@ Check that the verification has been added after the Procedure section. It will 
 [time=5]
 == Adding attributes a {PRODUCT} {walkthrough-name}
 
-Attributes are used to make external variables users performing a {walkthrough-name}. 
+Attributes are used to make external variables users performing a {walkthrough-name}.
 The syntax for using attributes is `{<attribute name>}`. {walkthrough-name}s have access to a number of predefined attributes:
 
 * If a middleware service defines a route you can access it using `{route-<route name>-host}`.
@@ -470,7 +468,7 @@ For example, to add a link  to the Openshift Console in the {walkthrough-name}:
 . Click on link:{openshift-url}[Openshift Console]
 ----
 
-. Save, commit and push your changes. 
+. Save, commit and push your changes.
 
 . Redeploy the {webapp}:
 .. Navigate to the *webapp* project in OpenShift.
@@ -489,7 +487,7 @@ Check that the correct attribute has been used.
 [time=10]
 == Adding custom services to a {PRODUCT} {walkthrough-name}
 
-You can create services from the OpenShift catalog in the cluster as part of the {walkthrough-name} startup process. 
+You can create services from the OpenShift catalog in the cluster as part of the {walkthrough-name} startup process.
 You can also link to the URLs associated with those services in your `walkthrough.adoc` file.
 
 
