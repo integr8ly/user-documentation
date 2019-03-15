@@ -457,6 +457,7 @@ Other attributes that are available to {walkthrough-name} authors are:
 * Custom attributes:
 ** NodeJS Frontend App Route (provisioned from walkthrough.json): `\{route-frontend-host}`
 
+
 .Prerequisites
 * You have created a repo using the {walkthrough-name} template.
 * You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
