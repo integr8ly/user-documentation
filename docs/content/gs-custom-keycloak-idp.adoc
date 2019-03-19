@@ -1,0 +1,43 @@
+[id='gs-custom-keycloak-idp']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+= Adding custom identity providers to Integreatly SSO
+
+Integreatly comes preinstalled with Single Sign on based on link:https://www.keycloak.org/[Keycloak^].
+This lets you log in to various middleware services using the same accounts.
+
+Keycloak allows you to supply your own login mechanism using Identity Providers. This document describes how to add a custom Identity Provider to the Integreatly Single Sign On.
+
+This guide assumes that you are logged in to OpenShift with the `customer-admin` user.
+
+== Configuring the SSO Realm
+
+First you need to allow manual edits to the `openshift` Keycloak Realm. Otherwise the Keycloak operator would overwrite any change to the Realm.
+
+Under `My Projects` navigate to the `sso` project and from there to `Resources -> Other Resources`. In the dropdown select `Keycloak Realm`. You should see one Realm named `openshift`. Select `Actions -> Edit YAML`.
+
+Add the following property to the `spec` part of the resource:
+
+```yaml
+...
+spec:
+    createOnly: true
+...
+```
+
+This will stop the operator from updating the Realm.
+
+== Obtaining the credentials
+
+Next, open `Resources -> Secrets`. Select the `customer-admin-user-credentials` secret and click on `Reveal Secret`. Take note of the username and password.
+
+== Logging in to SSO
+
+Open `Applications -> Routes` and follow the link next to the `sso` route. Click on `Administration Console` and log in with the previously noted username and password.
+
+Once logged in make sure the `openshift` Realm is selected om the top left drop down. In the menu navigate to `Identity Providers` and pick a provider from the drop down.
+
+Follow the link:https://www.keycloak.org/docs/3.3/server_admin/topics/identity-broker.html[official documentation^] for the type of Identity Provider you want to add.
