@@ -17,56 +17,12 @@ This section describes how to add a custom identity provider to the Integreatly 
 .Prerequisite
 You are logged in to OpenShift as the `customer-admin` user.
 
-== Configuring the SSO realm
 
-By default, {PRODUCT} prevents an administrator from changing the configuration of the `openshift` realm in RHSSO.
-This is the realm that controls access to {PRODUCT}, so this behavior must be reconfigured to allow you add a custom identity provider.
+. Log into the RHSSO administration console using the URL and credentials you received in your Welcome email.
 
-To enable changes to the `openshift` realm:
-. Log into the OpenShift console.
-+
-Log in as the `customer-admin` user using the credentials that you received in the *Welcome* email.
-. Select the *sso* project from the *My Projects* menu.
-. Select *Other Resources* from the *Resources* menu.
-. In the dropdown select *Keycloak Realm*. A realm named `openshift` is displayed.
-. Select *Edit YAML* from the *Actions* menu.
-. Add the following property to the `spec` part of the resource:
-
-[source,yaml]
-----
-...
-spec:
-    createOnly: true
-...
-----
-
-After completing this procedure, all changes to the `openshift` realm are persisted.
-
-== Obtaining the RHSSO credentials
-
-. Log into the OpenShift console.
-+
-Log in as the `customer-admin` user using the credentials that you received in the *Welcome* email.
-
-. Select the *sso* project from the *My Projects* menu.
-. Select *Secrets* from the *Resources* menu.
-. Select the `customer-admin-user-credentials` secret and click *Reveal Secret*. 
-+
-Take note of the username and password.
-
-== Logging in to SSO
-
-. Log into the RHSSO administration console using the following URL, replacing `<cluster-host>` with the hostname of your cluster:
-+
-----
-https://sso-sso.<cluster-host>/auth/admin/openshift/console
-----
-+
-Log in using the `customer-admin-user-credentials` credentials that you noted earlier.
-
-. Make sure the `openshift` realm is selected om the top left drop down. 
+. Make sure the `openshift` realm is selected om the top left drop down.
 
 . In the menu navigate to `Identity Providers` and pick a provider from the drop down.
 
-. Follow the instructions in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.2/html-single/server_administration_guide/index#identity_broker[RHSSO documentation] to add a new identity provider. 
+. Follow the instructions in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.2/html-single/server_administration_guide/index#identity_broker[RHSSO documentation] to add a new identity provider.
 
