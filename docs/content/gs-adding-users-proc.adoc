@@ -184,3 +184,17 @@ To delete 3Scale users:
 . Go to *Users* > *Listings*.
 . Find the user you wish to delete.
 . Click the *Delete* button associated with that user.
+
+== Giving users permissions to view integration logs and perform 3Scale service discovery
+
+This procedure describes how to add the *view* role for a user if that user requires either of the following:
+
+* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/service_discovery/index[Service Discovery] in 3Scale, which an be used to add Fuse Online services automatically
+* Access to Fuse Online integration logs
+
+. Log into OpenShift using `oc` and the `customer-admin` credentials.
+. Run the following command, where `<userid>` is the user you want to give the role to:
+
+----
+oc adm policy add-role-to-user view <userid> -n openshift-fuse
+----
