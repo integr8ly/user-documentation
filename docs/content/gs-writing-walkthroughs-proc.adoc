@@ -91,24 +91,29 @@ Try downloading the link:https://github.com/integr8ly/walkthrough-template/archi
 [source]
 ----
 .
-└── walkthroughs<1>
-    ├── <identifier> <2>
-    │   ├── images <3>
+├── walkthroughs-config.json <1>
+└── walkthroughs<2>
+    ├── <identifier> <3>
+    │   ├── images <4>
     │   │   └── image.png
-    │   ├── walkthrough.adoc <4>
-    │   └── walkthrough.json <5>
-    ├── Another {walkthrough-name} <2>
-    └── Third {walkthrough-name} <2>
+    │   ├── walkthrough.adoc <5>
+    │   └── walkthrough.json <6>
+    ├── <walkthrough2-id> <3>
+    └── <walkthrough3-id> <3>
 ----
 
-<1> This is a required directory. All {walkthrough-name}s are defined under `walkthroughs`.
 
-<2> The directory name of a {walkthrough-name}. This is also displayed in the URL of the web app.
+<1> This is a an optional file that defines metadata for the set of walkthroughs in the repo. 
 
-<3> All images for the {walkthrough-name}.
+<2> This is a required directory. All {walkthrough-name}s are defined under `walkthroughs`.
 
-<4> *walkthrough.adoc* is where the content of the {walkthrough-name} is written in asciidoc format.
-<5> *walkthrough.json* is the manifest file of the {walkthrough-name} where you can define extra dependencies.
+<3> The directory name of a {walkthrough-name}. This is also displayed in the URL of the web app.
+
+<4> All images for the {walkthrough-name}.
+
+<5> *walkthrough.adoc* is where the content of the {walkthrough-name} is written in asciidoc format.
+
+<6> *walkthrough.json* is the manifest file of the {walkthrough-name} where you can define extra dependencies.
 
 
 The default `walkthrough.json` does not define any dependent services:
@@ -579,3 +584,18 @@ Make sure you have completed all the steps.
 
 ****
 ////
+
+== Defining metadata for your walkthrough repo
+
+By default, the walkthroughs from a repo are displayed in Solution Explorer with a title corresponding to your repo name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My Solution Patterns`:
+
+
+[source, json]
+----
+{
+    "prettyName": "My Solution Patterns"
+}
+----
+
+
+
