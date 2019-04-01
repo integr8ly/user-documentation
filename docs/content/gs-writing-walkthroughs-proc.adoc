@@ -91,8 +91,8 @@ Try downloading the link:https://github.com/integr8ly/walkthrough-template/archi
 [source]
 ----
 .
-└── walkthroughs<1>
-    ├── walkthroughs-config.json <2>
+├── walkthroughs-config.json <1>
+└── walkthroughs<2>
     ├── <identifier> <3>
     │   ├── images <4>
     │   │   └── image.png
@@ -102,15 +102,17 @@ Try downloading the link:https://github.com/integr8ly/walkthrough-template/archi
     └── <walkthrough3-id> <3>
 ----
 
-<1> This is a required directory. All {walkthrough-name}s are defined under `walkthroughs`.
 
-<2> This is a an optional file that defines metadata for the set of walkthroughs in the repo. 
+<1> This is a an optional file that defines metadata for the set of walkthroughs in the repo. 
+
+<2> This is a required directory. All {walkthrough-name}s are defined under `walkthroughs`.
 
 <3> The directory name of a {walkthrough-name}. This is also displayed in the URL of the web app.
 
 <4> All images for the {walkthrough-name}.
 
 <5> *walkthrough.adoc* is where the content of the {walkthrough-name} is written in asciidoc format.
+
 <6> *walkthrough.json* is the manifest file of the {walkthrough-name} where you can define extra dependencies.
 
 
