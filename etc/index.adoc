@@ -1,0 +1,6 @@
+= User Documentation
+
+* link:index.html?e=docs/getting-started.adoc[Getting Started]
+
+* link:index.html?e=docs/release-notes.adoc[Release Notes]
+
