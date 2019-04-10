@@ -15,4 +15,4 @@ include::content/rn-intro-con.adoc[leveloffset=+1]
 
 include::content/rn-versions-ref.adoc[leveloffset=+1]
 
-include::content/rn-known-issues-ref.adoc[leveloffset=+1]
+// include::content/rn-known-issues-ref.adoc[leveloffset=+1]
