@@ -1,4 +1,4 @@
-:walkthrough-name: Solution Pattern
+:walkthrough-name: Walkthrough
 
 :linkTroubleshooting: https://github.com/integr8ly/example-customisations/blob/master/docs/troubleshooting.adoc
 :linkGitHubFork: https://help.github.com/articles/fork-a-repo/
@@ -587,13 +587,13 @@ Make sure you have completed all the steps.
 
 == Defining metadata for your walkthrough repo
 
-By default, the walkthroughs from a repo are displayed in Solution Explorer with a title corresponding to your repo name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My Solution Patterns`:
+By default, the walkthroughs from a repo are displayed in Solution Explorer with a title corresponding to your repo name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My Walkthroughs`:
 
 
 [source, json]
 ----
 {
-    "prettyName": "My Solution Patterns"
+    "prettyName": "My Walkthroughs"
 }
 ----
 

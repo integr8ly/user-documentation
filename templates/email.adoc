@@ -11,7 +11,7 @@ You can now log into the link:{webapp-url}[Red Hat Solution Explorer] using {use
 
 You are prompted to reset your password after logging in for the first time.
 
-The Solution Explorer displays links to various consoles, including the OpenShift console and offers you curated {walkthrough-name}s of solution patterns.
+The Solution Explorer displays links to various consoles, including the OpenShift console and offers you curated {walkthrough-name}s.
 
 ifeval::["{PRODUCT}"=="Integreatly"]
 
