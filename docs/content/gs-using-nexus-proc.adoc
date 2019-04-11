@@ -16,6 +16,12 @@ If you are developing Java applications, you might want to use {nexus-name} to c
 . Set the `MAVEN_MIRROR_URL` environment variable in your BuildConfig: 
 +
 ----
+MAVEN_MIRROR_URL=http://nexus.openshift-nexus.svc:8081/nexus/content/groups/public
+----
++
+For non RHMI clusters, or custom installs, nexus may be installed in a different namespace. In those cases use the following:
++
+----
 MAVEN_MIRROR_URL=http://nexus.nexus.svc:8081/nexus/content/groups/public
 ----
 +
