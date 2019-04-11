@@ -10,10 +10,10 @@ You manage users in the context of an Red Hat Single Sign-On realm. A realm mana
 
 {PRODUCT} provides two realms for user management:
 
-* `openshift` - users who develop applications using the Red Hat applications available from the Solution Explorer
-* `{customer-realm-name}` - end users of the applications developed by the users in the `openshift` realm
+* `openshift` - users who develop solutions using the Red Hat applications available from the Solution Explorer
+* `{customer-realm-name}` - end users of the solutions developed by the users in the `openshift` realm
 
-NOTE: Red Hat recommends that only users in the `{customer-realm-name}` realm have access to the developed applications. For example, if you use {PRODUCT} to develop an application named `my-app`, the only users of that app are defined in the `{customer-realm-name}` realm.
+NOTE: Red Hat recommends that you define users of the solution you are developing in the `{customer-realm-name}` realm. For example, if you use {PRODUCT} to develop an solution named `my-app`, define all users of `my-app` in the `{customer-realm-name}` realm only.
 
 
 == Accessing the Red Hat Single Sign-On administration console
@@ -32,7 +32,7 @@ Log in as the `customer-admin` user using the credentials that you received in t
 .Prerequisites
 
 * You have logged into the Red Hat Single Sign-On administration console.
-* You have selected the correct realm from the top left menu of realms, `openshift` for developers, `{customer-realm-name}` for application end users.
+* You have selected the correct realm from the top left menu of realms, `openshift` for developers, `{customer-realm-name}` for solution end users.
 
 
 To view user list:
@@ -45,7 +45,7 @@ To view user list:
 .Prerequisites
 
 * You have logged into the Red Hat Single Sign-On administration console.
-* You have selected the correct realm from the top left menu of realms, `openshift` for developers, `{customer-realm-name}` for application end users.
+* You have selected the correct realm from the top left menu of realms, `openshift` for developers, `{customer-realm-name}` for solution end users.
 
 To create a user:
 
@@ -111,7 +111,7 @@ The following example JSON file imports two users:
 .Prerequisites
 
 * You have logged into the Red Hat Single Sign-On administration console.
-* You have selected the correct realm from the top left menu of realms, `openshift` for developers, `{customer-realm-name}` for application end users.
+* You have selected the correct realm from the top left menu of realms, `openshift` for developers, `{customer-realm-name}` for solution end users.
 
 To set user passwords:
 
@@ -126,7 +126,7 @@ To set user passwords:
 .Prerequisites
 
 * You have logged into the Red Hat Single Sign-On administration console.
-* You have selected the correct realm from the top left menu of realms, `openshift` for developers, `{customer-realm-name}` for application end users.
+* You have selected the correct realm from the top left menu of realms, `openshift` for developers, `{customer-realm-name}` for solution end users.
 
 To delete users:
 
