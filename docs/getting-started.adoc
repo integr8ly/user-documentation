@@ -6,6 +6,7 @@ include::attributes.adoc[]
 // Context attribute is assembly specific and enables module reuse between assemblies.
 :imagesdir: images
 :context: getting-started
+:customer-realm-name: customer-applications
 
 NOTE: Refer to the link:{rn-link}[Release Notes] for the latest information about {PRODUCT}.
 
