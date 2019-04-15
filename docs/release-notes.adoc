@@ -15,4 +15,10 @@ include::content/rn-intro-con.adoc[leveloffset=+1]
 
 include::content/rn-versions-ref.adoc[leveloffset=+1]
 
-// include::content/rn-known-issues-ref.adoc[leveloffset=+1]
+include::content/rn-known-issues-ref.adoc[leveloffset=+1]
+
+// INTLY-1695
+
+= Requesting a custom URL for APIs
+
+If you use 3scale to manage your API, you might require that the API URL use a specific host and format. For example, you might want to expose an API as `https://mydomain.com/v1/getStuff`. To request a specific URL, link:https://access.redhat.com/support/cases/new[create a support case].
