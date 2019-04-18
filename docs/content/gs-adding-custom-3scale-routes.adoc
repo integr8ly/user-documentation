@@ -4,7 +4,7 @@ ifdef::env-github[]
 :imagesdir: ../images/
 endif::[]
 
-= Creating custom URLss for 3scale APIs
+= Creating custom URLs for 3scale APIs
 
 NOTE: You cannot delete any routes created using the procedure described below.
 
