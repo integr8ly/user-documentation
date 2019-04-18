@@ -4,29 +4,33 @@ ifdef::env-github[]
 :imagesdir: ../images/
 endif::[]
 
-= Creating custom urls for 3scale APIs
+= Creating custom URLs for 3scale APIs
+
+NOTE: You cannot delete any routes created using the procedure described below.
 
 If you use 3scale to manage your API, you might require that the API URL use a specific host and format.
 For example, you might want to expose an API as `https://mydomain.com/v1/getStuff`.
 To use a custom domain, you must create a route in the OpenShift 3scale project as described below.
 
 .Prerequisites
-* you must be logged in as the `customer-admin` user
+* the `customer-admin` user credentials
 * a custom domain registration
 
 .Procedure
 
 A new OpenShift route for the public has to be created.
 
-First make sure you are logged in as `customer-admin`
-
-```sh
+. Log in as `customer-admin`:
++
+[source,bash]
+----
 $ oc login -u customer-admin
-```
+----
 
-Create a file named `custom-route.yaml` using the appropriate values for `<route name>` and `<route host>`:
-
-```yaml
+. Create a file named `custom-route.yaml` using the appropriate values for `<route name>` and `<route host>`:
++
+[source,yaml]
+----
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
@@ -44,20 +48,17 @@ spec:
     name: apicast-staging
     weight: 100
   wildcardPolicy: None
-```
+----
 
-Create the route:
-
-```sh
+. Create the route:
++
+[source,bash]
+----
 $ oc create -f ./custom-route.yaml
-```
+----
 
-NOTE: You cannot delete any routes created using this method.
+. Set up your public base URL in APIcast as described in the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/deployment_options/index#configure_your_service[3scale documentation].
 
 .Additional Information
-
-Once the route is created in OpenShift it has to be configured in your APIcast instance.
-
-See the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/deployment_options/index#configure_your_service[3scale documentation] for a description of how to set up your public base URL in APIcast.
 
 See the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/deployment_options/index#public_base_url[Public Base URL] documentation for an introduction to custom URLs.
