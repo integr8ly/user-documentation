@@ -1,0 +1,22 @@
+[id='gs-adding-users-proc']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+= Managing Images
+
+{PRODUCT} allows you create and push images to your cluster.
+
+For the {PRODUCT} cluster, the registry is located at:
+
+----
+registry.<clusterid>.openshift.com
+----
+
+where `<clusterid>` is the unique identifier for your cluster
+
+. Use the instructions in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/3/html-single/developer_guide/index#accessing-the-internal-registry[OpenShift documentation] to access the registry.
+. Following the procedures for link:https://access.redhat.com/documentation/en-us/openshift_dedicated/3/html-single/developer_guide/index#dev-guide-managing-images[Managing Images].
+
+
