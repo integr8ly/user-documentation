@@ -436,7 +436,7 @@ Check that the verification has been added after the Procedure section. It will 
 
 
 [time=5]
-== Adding attributes a {PRODUCT} {walkthrough-name}
+== Adding attributes to a {PRODUCT} {walkthrough-name}
 
 Attributes are used to make external variables users performing a {walkthrough-name}.
 The syntax for using attributes is `{<attribute name>}`. {walkthrough-name}s have access to a number of predefined attributes:
