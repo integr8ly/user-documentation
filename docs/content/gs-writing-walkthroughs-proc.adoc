@@ -14,7 +14,7 @@
 == About creating {walkthrough-name}s
 
 
-{walkthrough-name}s are tutorials available in {PRODUCT}. The default {walkthrough-name}s guide you through the following scenarios:
+{walkthrough-name}s are tutorials available in {PRODUCT_SHORT}. The default {walkthrough-name}s guide you through the following scenarios:
 
 * {walkthrough-1A}
 * {walkthrough-2}
@@ -613,4 +613,3 @@ You can also configure the set of {walkthrough-name} repositories published to a
 oc patch webapp tutorial-web-app-operator -n openshift-webapp --type=merge -p '{ "spec": { "template": { "parameters": { "WALKTHROUGH_LOCATIONS": "<locations>" }}}}'
 ----
 ====
-

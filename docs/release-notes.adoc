@@ -8,7 +8,7 @@ include::attributes.adoc[]
 :context: release-notes
 
 // Purpose statement for the assembly
-These release notes list the components of{PRODUCT} {PRODUCT_VERSION} and known issues in this release.
+These release notes list the components of{PRODUCT_SHORT} {PRODUCT_VERSION} and known issues in this release.
 // and subsequent patch releases.
 
 include::content/rn-intro-con.adoc[leveloffset=+1]

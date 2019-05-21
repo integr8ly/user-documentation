@@ -5,30 +5,29 @@
 
 Congratulations,
 
-Your {PRODUCT} environment is now available.
- 
+Your {PRODUCT_SHORT} environment is now available.
+
 You can now log into the link:{webapp-url}[Red Hat Solution Explorer] using {username}/{password}.
 
 You are prompted to reset your password after logging in for the first time.
 
 The Solution Explorer displays links to various consoles, including the OpenShift console and offers you curated {walkthrough-name}s.
 
-ifeval::["{PRODUCT}"=="Integreatly"]
+ifeval::["{PRODUCT_SHORT}"=="Integreatly"]
 
-We have also pre-seeded the environment with 50 evaluation users. 
-These evaluation accounts take the form of evalsN where N represents a number between 01 and 50. 
+We have also pre-seeded the environment with 50 evaluation users.
+These evaluation accounts take the form of evalsN where N represents a number between 01 and 50.
 The password for each of these evaluation accounts is Password1.
 
 endif::[]
 
-ifeval::["{PRODUCT}"=="Integreatly"]
+ifeval::["{PRODUCT_SHORT}"=="Integreatly"]
 
 See the link:{GS-link}[Getting Started Guide], which includes information about:
 
 * Managing users, for example, adding users
 * Writing {walkthrough-name}s
 
-endif::[] 
- 
-If you have questions regarding your environment, please contact integreatly-support@redhat.com
+endif::[]
 
+If you have questions regarding your environment, please contact integreatly-support@redhat.com
