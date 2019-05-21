@@ -10,10 +10,10 @@ include::attributes.adoc[]
 :rn-link: https://integr8ly.github.io/user-documentation/index.html?e=docs/release-notes.adoc
 
 
-NOTE: Refer to the link:{rn-link}[Release Notes] for the latest information about {PRODUCT}.
+NOTE: Refer to the link:{rn-link}[Release Notes] for the latest information about {PRODUCT_SHORT}.
 
 // Purpose statement for the assembly
-This document provides instructions for new users of {PRODUCT}.
+This document provides instructions for new users of {PRODUCT_SHORT}.
 // and subsequent patch releases.
 
 include::content/gs-adding-users-proc.adoc[leveloffset=+1]
@@ -27,4 +27,3 @@ include::content/gs-custom-keycloak-idp.adoc[leveloffset=+1]
 include::content/gs-adding-custom-3scale-routes.adoc[leveloffset=+1]
 
 include::content/gs-managing-images-proc.adoc[leveloffset=+1]
-

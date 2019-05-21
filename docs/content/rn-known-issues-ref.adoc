@@ -1,6 +1,6 @@
 [id='rn-known-issues-ref']
 = Known issues
 
-This section lists known issues with {PRODUCT} {PRODUCT_VERSION}.
+This section lists known issues with {PRODUCT_SHORT} {PRODUCT_VERSION}.
 
 * Developer users and application users are currently defined in the same Red Hat Single Sign-On instance. This will be resolved in a future release.

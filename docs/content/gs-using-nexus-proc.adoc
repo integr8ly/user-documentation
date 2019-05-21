@@ -8,12 +8,12 @@ endif::[]
 
 = Managing Java artifacts using {nexus-name}
 
-The {PRODUCT} cluster includes a running instance of {nexus-name}.
+The {PRODUCT_SHORT} cluster includes a running instance of {nexus-name}.
 If you are developing Java applications, you might want to use {nexus-name} to cache and manage dependencies.
 
 == Using {nexus-name} to build your applications
 
-. Set the `MAVEN_MIRROR_URL` environment variable in your BuildConfig: 
+. Set the `MAVEN_MIRROR_URL` environment variable in your BuildConfig:
 +
 ----
 MAVEN_MIRROR_URL=http://nexus.openshift-nexus.svc:8081/nexus/content/groups/public
