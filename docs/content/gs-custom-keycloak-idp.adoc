@@ -11,7 +11,7 @@ This lets users log in to all the middleware services using the same accounts.
 
 RHSSO allows an administrator to use identity brokering for the {PRODUCT_SHORT} realm.
 
-This section describes how to add a custom identity provider to the Integreatly Single Sign On.
+This section describes how to add a custom identity provider to Red Hat Single Sign On.
 
 
 .Prerequisite
