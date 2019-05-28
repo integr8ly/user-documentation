@@ -9,7 +9,7 @@
 
 :URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
 
-:web-app: Red Hat Solution Explorer
+:webapp: Red Hat Solution Explorer
 
 :fuse-name: Red Hat Fuse Online
 :fuse-version: 7.3
