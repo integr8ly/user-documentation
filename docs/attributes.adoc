@@ -12,21 +12,21 @@
 :web-app: Red Hat Solution Explorer
 
 :fuse-name: Red Hat Fuse Online
-:fuse-version: 7.2
+:fuse-version: 7.3
 :fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
 :fuse-configs: https://access.redhat.com/articles/310603
 
 :amq-online-name: Red Hat AMQ Online
-:amq-online-version: 7.2
+:amq-online-version: 1.1
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/{amq-online-version}/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 
 :three-scale-name: Red Hat 3scale API Management
-:three-scale-version: 2.4
+:three-scale-version: 2.5
 :three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
 :three-scale-configs: https://access.redhat.com/articles/2798521
 
 :code-ready-name: Red Hat CodeReady Workspaces for OpenShift
 :code-ready-version: 1.0.0
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces_for_openshift/{code-ready-version}/
-:code-ready-configs:
+:code-ready-configs: N/A

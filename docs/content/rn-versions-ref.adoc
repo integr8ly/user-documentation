@@ -3,31 +3,35 @@
 
 = Versions of Components
 
-{PRODUCT} includes the following software versions:
+{PRODUCT} 1.4 includes the following software versions:
 
-[cols="h,,"]
+[cols="h,,,"]
 |===
 
 |Component
-|Version and documentation
+|Release Notes
 |Supported Configurations
-
+|Documentation
 
 |{fuse-name}
-|link:{fuse-docs}[{fuse-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.3/html/release_notes/index[{fuse-version}]
 |{fuse-configs}
+|link:{fuse-docs}[{fuse-version}]
 
 |{amq-online-name}
-|link:{amq-online-docs}[{amq-online-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.2/html/amq_online_1.1_on_openshift_container_platform_release_notes/index[{amq-online-version}]
 |{amq-online-configs}
+|link:{amq-online-docs}[{amq-online-version}]
 
 |{three-scale-name}
-|link:{three-scale-docs}[{three-scale-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.5/html/release_information/index[{three-scale-version}]
 |{three-scale-configs}
+|link:{three-scale-docs}[{three-scale-version}]
 
 |{code-ready-name}
-|link:{code-ready-docs}[{code-ready-version}]
+|{code-ready-version}
 |{code-ready-configs}
+|link:{code-ready-docs}[{code-ready-version}]
 
 |===
 
