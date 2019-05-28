@@ -43,7 +43,7 @@ A short description for the feature. <2>
 . Do this second:
 ----
 <1> {walkthrough-name} title, you can only have one level 1 heading per file
-<2> The first line of the introduction is displayed as a tag line for the {walkthrough-name}.
+<2> The first line of the introduction is displayed as a tag line for the {walkthrough-name}.  Please note that attributes will not be rendered in this tag line.
 <3> A task contains one or more subtasks (level 3 headings)
 <4> A numbered lists of steps the user must perform.
 
