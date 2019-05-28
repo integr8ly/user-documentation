@@ -20,7 +20,7 @@
 * {walkthrough-2}
 * {publishing-walkthroughs}
 
-These {walkthrough-name}s are available in the {web-app}.
+These {walkthrough-name}s are available in the {webapp}.
 
 To write {walkthrough-name}s you require a knowledge of:
 
