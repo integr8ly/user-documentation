@@ -19,7 +19,7 @@ Realms are isolated from one another and can only manage and authenticate the us
 To access the administration console navigate to the following URL, replacing `<cluster-host>` with the hostname of your cluster:
 
 ----
-https://sso-sso.<cluster-host>/auth/admin/openshift/console
+https://sso-openshift-sso.<cluster-host>/auth/admin/openshift/console
 ----
 
 Log in as the `customer-admin` user using the credentials that you received in the *Welcome* email.
