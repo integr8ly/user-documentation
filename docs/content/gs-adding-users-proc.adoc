@@ -51,7 +51,7 @@ To create a user:
 +
  * Enter values to `Username` and `Email`.
  * Set `User Enabled` to *ON*.
- * Set `Email Verified` to *ON*. This ensures that the user account will be activated in 3Scale.
+ * Set `Email Verified` to *ON*. This ensures that the user account will be activated in 3scale.
 
 - Click the *Save* button to create the user.
 
@@ -132,7 +132,7 @@ To delete users:
 
 == Managing Red Hat 3scale API Management Platform users
 
-Users created in  Red Hat Single Sign-On can login to the 3Scale console, however the user's account is created in 3Scale after that initial login. The new user is assigned the role `member` and no permissions set by default. The user role and permission can only be set once a user account is created in 3Scale.
+Users created in  Red Hat Single Sign-On can login to the 3scale console, however the user's account is created in 3scale after that initial login. The new user is assigned the role `member` and no permissions set by default. The user role and permission can only be set once a user account is created in 3scale.
 
 To make sure you create users with the correct roles for Red Hat 3scale API Management Platform:
 
@@ -157,13 +157,13 @@ If asked for credentials, login as the `customer-admin` user.
 
 * You have logged into the Red Hat 3scale API Management Platform administration console.
 
-NOTE: All users in 3Scale are created as a `member` with no permissions set by default.
+NOTE: All users in 3scale are created as a `member` with no permissions set by default.
 
-To change permissions for a 3Scale user:
+To change permissions for a 3scale user:
 
-. Navigate to *Account Settings* by clicking the gear icon in the top right of the 3Scale console.
+. Navigate to *Account Settings* by clicking the gear icon in the top right of the 3scale console.
 +
-image:gs-adding-users-3scale-account-settings.png[3Scale account settings]
+image:gs-adding-users-3scale-account-settings.png[3scale account settings]
 
 . Select *Listings* from the *Users* menu.
 A list of users is displayed.
@@ -172,7 +172,7 @@ A list of users is displayed.
 
 . On the *Edit User* page, change the user's roles and permissions:
 +
-image:gs-adding-users-3scale-edit-user-page.png[3Scale edit user page]
+image:gs-adding-users-3scale-edit-user-page.png[3scale edit user page]
 +
 For example, you can give the user the *Admin* role.
 
@@ -184,7 +184,7 @@ For example, you can give the user the *Admin* role.
 
 * You have logged into the Red Hat 3scale API Management Platform administration console.
 
-To delete 3Scale users:
+To delete 3scale users:
 
 . Navigate to *Account Settings*.
 
@@ -192,11 +192,11 @@ To delete 3Scale users:
 . Find the user you wish to delete.
 . Click the *Delete* button associated with that user.
 
-== Giving users permissions to view integration logs and perform 3Scale service discovery
+== Giving users permissions to view integration logs and perform 3scale service discovery
 
 This procedure describes how to add the *view* role for a user if that user requires either of the following:
 
-* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/service_discovery/index[Service Discovery] in 3Scale, which an be used to add Fuse Online services automatically
+* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/service_discovery/index[Service Discovery] in 3scale, which an be used to add Fuse Online services automatically
 * Access to Fuse Online integration logs
 
 . Log into OpenShift using `oc` and the `customer-admin` credentials.
