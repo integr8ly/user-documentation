@@ -165,7 +165,7 @@ If you created files from a zip file instead of cloning you need to initialize a
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthroughs} {walkthrough-name}.
 
 
 The first section of the `walkthrough.adoc` describes your {walkthrough-name}, it provides an *overview* of the purpose of the {walkthrough-name}.
@@ -216,7 +216,7 @@ Check your git credentials and that you pushed to the correct remote repository.
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthroughs} {walkthrough-name}.
 
 Tasks are procedures that you write as a section of the `walkthrough.adoc` file, the section being defined by a second level heading (`==`).
 
@@ -264,7 +264,7 @@ Check that the Webapp has finished redeployment and no errors occurred.
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthroughs} {walkthrough-name}.
 
 A procedure is a set of steps that you perform to complete a task or subtask.
 
@@ -305,7 +305,7 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthroughs} {walkthrough-name}.
 
 To add a {walkthrough-name} resources:
 
@@ -357,7 +357,7 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthroughs} {walkthrough-name}.
 
 To add task resources:
 
@@ -398,7 +398,7 @@ NOTE: Every procedure in a task or subtasks requires a verification.
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthroughs} {walkthrough-name}.
 
 
 To add a verification:
@@ -465,7 +465,7 @@ Other attributes that are available to {walkthrough-name} authors are:
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthroughs} {walkthrough-name}.
 
 For example, to add a link  to the Openshift Console in the {walkthrough-name}:
 
@@ -500,7 +500,7 @@ You can also link to the URLs associated with those services in your `walkthroug
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in the {publishing-walkthroughs} {walkthrough-name}.
 * Some experience with the `oc` command. See link:https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html[Getting Started with the OpenShift CLI^] for more information about `oc` command.
 
 
