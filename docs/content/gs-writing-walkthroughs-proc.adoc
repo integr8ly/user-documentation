@@ -7,7 +7,6 @@
 :walkthrough-2: *Managing and protecting APIs using API management*
 :publishing-walkthroughs: *Adding {walkthrough-name}s to a cluster*
 
-
 = Creating {PRODUCT} {walkthrough-name}s
 :toc:
 
@@ -472,7 +471,7 @@ For example, to add a link  to the Openshift Console in the {walkthrough-name}:
 . Add another step to the numbered list in your Procedure:
 +
 ----
-. Click on link:{openshift-url}[Openshift Console]
+. Click on the link to the Openshift Console.
 ----
 
 . Save, commit and push your changes.
@@ -508,7 +507,7 @@ You can also link to the URLs associated with those services in your `walkthroug
 
 . Find the name of the service you want to provision:
 
-.. Log into the link:{openshift-url}[Openshift Console].
+.. Log into the Openshift Console.
 
 .. Click your username in the top right corner and choose *Copy Login Command* from the menu.
 
@@ -552,7 +551,7 @@ For example, to use the `CakePHP + MySQL (Ephemeral)` service in your custom {wa
 
 . Publish your {walkthrough-name} using the `walkthrough.json` file above.
 . Navigate the {walkthrough-name} to trigger the provisioning of the custom service, for example, the `cakephp-mysql-example` service.
-. Log into the link:{openshift-url}[OpenShift Console].
+. Log into the OpenShift Console.
 . Navigate to the custom project in OpenShift.
 The project is named using the pattern `<username>-<walkthrough-id>`.
 . Open *Routes* from the *Applications* menu.
