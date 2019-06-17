@@ -29,7 +29,7 @@ Log in as the `customer-admin` user using the credentials that you received in t
 
 .Prerequisite
 
-* You have logged into the Red Hat Single Sign-On administration console using the 'Authenticate through Red Hat Single Sign-On' facility.
+* You have logged into the Red Hat Single Sign-On administration console.
 
 
 To view user list:
@@ -41,7 +41,7 @@ To view user list:
 
 .Prerequisite
 
-* You have logged into the Red Hat Single Sign-On administration console using the 'Authenticate through Red Hat Single Sign-On' facility.
+* You have logged into the Red Hat Single Sign-On administration console.
 
 To create a user:
 
@@ -106,7 +106,7 @@ The following example JSON file imports two users:
 
 .Prerequisite
 
-* You have logged into the Red Hat Single Sign-On administration console using the 'Authenticate through Red Hat Single Sign-On' facility.
+* You have logged into the Red Hat Single Sign-On administration console.
 
 To set user passwords:
 
@@ -120,7 +120,7 @@ To set user passwords:
 
 .Prerequisite
 
-* You have logged into the Red Hat Single Sign-On administration console using the 'Authenticate through Red Hat Single Sign-On' facility.
+* You have logged into the Red Hat Single Sign-On administration console.
 
 To delete users:
 
