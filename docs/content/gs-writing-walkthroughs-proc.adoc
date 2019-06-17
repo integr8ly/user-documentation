@@ -83,8 +83,7 @@ cd walkthrough-template
 Make sure you have a directory named `walkthrough-template` on your system containing a `walkthroughs` subdirectory.
 
 [type=verificationFail]
-Try downloading the link:https://github.com/integr8ly/walkthrough-template/archive/master.zip[zip] file and creating a repository
-.
+Download the link:https://github.com/integr8ly/walkthrough-template/archive/master.zip[zip] file and create a repository.
 ////
 
 === Understanding the file structure
