@@ -123,17 +123,17 @@ The default `walkthrough.json` does not define any dependent services:
 ----
 {
   "dependencies": {
-    "/Users/bdooley/Documents/code/user-documentations": [],
+    "repos": [],
     "serviceInstances": []
   }
 }
 ----
 
-=== Committing your {walkthrough-name}s to a remote /Users/bdooley/Documents/code/user-documentationsitory
+=== Committing your {walkthrough-name}s to a remote repository
 
 Typically, you edit the `walkthrough.adoc` file and push your changes to GitHub.
 
-. Create a new remote /Users/bdooley/Documents/code/user-documentationsitory and take note of the remote URL
+. Create a new remote repository and take note of the remote URL
 
 . Add the remote to your local clone
 +
@@ -153,7 +153,7 @@ git push -u upstream master
 
 ////
 [type=verification]
-Make sure you have a remote /Users/bdooley/Documents/code/user-documentationsitory with the content you want to publish.
+Make sure you have a remote repository with the content you want to publish.
 
 [type=verificationFail]
 If you created files from a zip file instead of cloning you need to initialize and commit the changes first.
@@ -207,7 +207,7 @@ git push upstream master
 Make sure that all your changes are in the remote repository.
 
 [type=verificationFail]
-Check your git credentials and that you pushed to the correct remote repository.
+Check your git credentials and that you pushed to the correct remote repo.
 ////
 
 [time=5]
