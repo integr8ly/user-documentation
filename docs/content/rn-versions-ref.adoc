@@ -16,12 +16,14 @@
 |{fuse-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.3/html/release_notes/index[{fuse-version}]
 |{fuse-configs}
-|link:{fuse-docs}[{fuse-version}]
+|link:{fuse-docs}[{fuse-version}] +
+(Click Fuse Online Category)
 
 |{amq-online-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.2/html/amq_online_1.1_on_openshift_container_platform_release_notes/index[{amq-online-version}]
 |{amq-online-configs}
-|link:{amq-online-docs}[{amq-online-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.3[{amq-online-version}] +
+(Click AMQ Online Category)
 
 |{three-scale-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.5/html/release_information/index[{three-scale-version}]
@@ -34,5 +36,3 @@
 |link:{code-ready-docs}[{code-ready-version}]
 
 |===
-
-
