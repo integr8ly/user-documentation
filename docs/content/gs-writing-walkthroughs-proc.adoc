@@ -3,9 +3,9 @@
 :linkTroubleshooting: https://github.com/integr8ly/example-customisations/blob/master/docs/troubleshooting.adoc
 :linkGitHubFork: https://help.github.com/articles/fork-a-repo/
 :linkIndexURL: https://github.com/integr8ly/example-customisations/index.adoc
-:walkthrough-1A: *Integrating message-oriented middleware with a RESTful API using AMQ Online*
-:walkthrough-2: *Managing and protecting APIs using API management*
-:publishing-walkthroughs: *Adding {walkthrough-name}s to a cluster*
+:walkthrough-1A: Integrating message-oriented middleware with a RESTful API using AMQ Online
+:walkthrough-2: Managing and protecting APIs using API management
+:publishing-walkthroughs: Adding {walkthrough-name}s to a cluster
 
 = Creating {PRODUCT} {walkthrough-name}s
 :toc:
@@ -601,4 +601,3 @@ By default, the walkthroughs from a repository are displayed in Solution Explore
 
 . Log into the Solution Explorer
 . Click the {publishing-walkthroughs} card and follow the steps.
-
