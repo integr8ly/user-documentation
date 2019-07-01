@@ -18,7 +18,7 @@
 
 :amq-online-name: Red Hat AMQ Online
 :amq-online-version: 1.1
-:amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/{amq-online-version}/
+:amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 
 :three-scale-name: Red Hat 3scale API Management
