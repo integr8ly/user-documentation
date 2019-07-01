@@ -7,6 +7,19 @@ Red Hat Managed Integration delivers managed integration services hosted on the 
 {PRODUCT_SHORT} enables developers adopt event-based computing and API-based development with lightweight, loosely coupled, self-service and flexible components.
 {PRODUCT_SHORT} enables the operations team focus on high value objectives while Red Hat manage the infrastructure. All the applications and services are protected by Red Hat Single Sign-On.
 
+The following middlware products are available as part of {PRODUCT_SHORT}:
+
+* Fuse Online
+* AMQ Online
+* 3scale
+
+The Solution Explorer provides navigatation to these products and others, including the OpenShift console. The Solution Explorer also provides walkthroughs that guide you through the process of creating an integration solution using these products.
+
+You can log into 3scale directly from the Solution Explorer, however note that:
+
+* If *Red Hat AMQ Online* is displayed as 'Not ready' in the *Applications* menu, click *Start service* to provision it.
+* You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you perform a walkthrough, you also provision an instance of Fuse Online which is not shared with other cluster users. 
+
 
 .Additional resources
 

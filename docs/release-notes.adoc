@@ -11,8 +11,7 @@ include::attributes.adoc[]
 These release notes list the components of{PRODUCT_SHORT} {PRODUCT_VERSION} and known issues in this release.
 // and subsequent patch releases.
 
-include::content/rn-intro-con.adoc[leveloffset=+1]
 
 include::content/rn-versions-ref.adoc[leveloffset=+1]
 
-// include::content/rn-known-issues-ref.adoc[leveloffset=+1]
+include::content/rn-known-issues-ref.adoc[leveloffset=+1]
