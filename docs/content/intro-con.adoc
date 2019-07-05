@@ -1,25 +1,38 @@
 [id='concept-explanation-{context}']
 = Overview of {PRODUCT}
 
-
 Red Hat Managed Integration delivers managed integration services hosted on the leading container platform, enabling diverse developers to engage in agile, microservices-based application development.
 {PRODUCT_SHORT} enables your team to develop, build and deploy enterprise integration solutions on an OpenShift Dedicated cluster managed by Red Hat.
 {PRODUCT_SHORT} enables developers adopt event-based computing and API-based development with lightweight, loosely coupled, self-service and flexible components.
 {PRODUCT_SHORT} enables the operations team focus on high value objectives while Red Hat manage the infrastructure. All the applications and services are protected by Red Hat Single Sign-On.
 
-The following middleware products are available as part of {PRODUCT_SHORT}:
+== Solution Explorer
+The Solution Explorer is a web application that serves as a user friendly gateway to an {PRODUCT_SHORT} cluster.  It contains links to middleware products that are already installed and ready to use with no configuration necessary, with access to each product managed through RHSSO.
+The Solution Explorer also provides walkthroughs that guide users through the process of creating various integrated solutions using these products.
 
-* Fuse Online
-* AMQ Online
-* 3scale
+== Applications
+{PRODUCT_SHORT} includes the following middleware applications:
 
-The Solution Explorer provides navigation to these products and others, including the OpenShift console. The Solution Explorer also provides walkthroughs that guide you through the process of creating an integration solution using these products.
+* *Red Hat OpenShift Container Platform*, a hybrid cloud application platform for deploying applications on secure, scalable resources with minimal configuration and management overhead.
 
-You can log into 3scale directly from the Solution Explorer, however note that:
+* *Apicurito*, a RESTful API visual designer.
+
+* *Red Hat AMQ*, fast, lightweight, and secure messaging for Internet-scale applications.
+
+* *Red Hat CodeReady Workspaces*, a developer workspace server and cloud IDE.
+
+* *Red Hat Developer Launcher*, a platform for continuous application delivery, with a set of templates.
+
+* *Red Hat Fuse Online*, a facility to obtain data from an application or service, operate on that data, and then send the data to another application or service without writing code.
+
+* *Red Hat Single Sign-On*, a single sign-on solution for web apps and RESTful web services.
+
+* *Red Hat 3scale API Management*, a platform that provide RESTful API Management.
+
+NOTE: You can log into 3scale directly from the Solution Explorer, however note that:
 
 * If *Red Hat AMQ Online* is displayed as 'Not ready' in the *Applications* menu, click *Start service* to provision it.
-* You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you perform a walkthrough, you also provision an instance of Fuse Online which is not shared with other cluster users. 
-
+* You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you perform a walkthrough, you also provision an instance of Fuse Online which is not shared with other cluster users.
 
 .Additional resources
 
