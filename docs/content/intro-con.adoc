@@ -7,15 +7,16 @@ Red Hat Managed Integration delivers managed integration services hosted on the 
 {PRODUCT_SHORT} enables the operations team focus on high value objectives while Red Hat manage the infrastructure. All the applications and services are protected by Red Hat Single Sign-On.
 
 == Solution Explorer
-The Solution Explorer is a web application that serves as a user friendly gateway to an {PRODUCT_SHORT} cluster.  It contains links to middleware products that are already installed and ready to use with no configuration necessary, with access to each product managed through RHSSO.
-The Solution Explorer also provides walkthroughs that guide users through the process of creating various integrated solutions using these products.
+
+The Solution Explorer presents links to the applications available in a {PRODUCT_SHORT} cluster and provides walkthroughs that guide users through the process of creating various integrated solutions using these applications.
 
 == Applications
+
 {PRODUCT_SHORT} includes the following middleware applications:
 
-* *Red Hat OpenShift Container Platform*, a hybrid cloud application platform for deploying applications on secure, scalable resources with minimal configuration and management overhead.
-
 * *Apicurito*, a RESTful API visual designer.
+
+* *Red Hat 3scale API Management*, a platform that provide RESTful API Management.
 
 * *Red Hat AMQ*, fast, lightweight, and secure messaging for Internet-scale applications.
 
@@ -27,13 +28,14 @@ The Solution Explorer also provides walkthroughs that guide users through the pr
 
 * *Red Hat Single Sign-On*, a single sign-on solution for web apps and RESTful web services.
 
-* *Red Hat 3scale API Management*, a platform that provide RESTful API Management.
 
-NOTE: You can log into 3scale directly from the Solution Explorer, however note that:
+[NOTE]
+====
+Most applications are available in the Solution Explorer, after you first log in.  However:
 
 * If *Red Hat AMQ Online* is displayed as 'Not ready' in the *Applications* menu, click *Start service* to provision it.
 * You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you perform a walkthrough, you also provision an instance of Fuse Online which is not shared with other cluster users.
-
+====
 .Additional resources
 
 * https://access.redhat.com/documentation/en-us/openshift_dedicated/3/[Product Documentation for OpenShift Dedicated 3]
