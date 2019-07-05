@@ -1,26 +1,41 @@
 [id='concept-explanation-{context}']
 = Overview of {PRODUCT}
 
-
 Red Hat Managed Integration delivers managed integration services hosted on the leading container platform, enabling diverse developers to engage in agile, microservices-based application development.
 {PRODUCT_SHORT} enables your team to develop, build and deploy enterprise integration solutions on an OpenShift Dedicated cluster managed by Red Hat.
 {PRODUCT_SHORT} enables developers adopt event-based computing and API-based development with lightweight, loosely coupled, self-service and flexible components.
 {PRODUCT_SHORT} enables the operations team focus on high value objectives while Red Hat manage the infrastructure. All the applications and services are protected by Red Hat Single Sign-On.
 
-The following middleware products are available as part of {PRODUCT_SHORT}:
+== Solution Explorer
 
-* Fuse Online
-* AMQ Online
-* 3scale
+The Solution Explorer presents links to the applications available in a {PRODUCT_SHORT} cluster and provides walkthroughs that guide users through the process of creating various integrated solutions using these applications.
 
-The Solution Explorer provides navigation to these products and others, including the OpenShift console. The Solution Explorer also provides walkthroughs that guide you through the process of creating an integration solution using these products.
+== Applications
 
-You can log into 3scale directly from the Solution Explorer, however note that:
+{PRODUCT_SHORT} includes the following middleware applications:
+
+* *Apicurito*, a RESTful API visual designer.
+
+* *Red Hat 3scale API Management*, a platform that provide RESTful API Management.
+
+* *Red Hat AMQ*, fast, lightweight, and secure messaging for Internet-scale applications.
+
+* *Red Hat CodeReady Workspaces*, a developer workspace server and cloud IDE.
+
+* *Red Hat Developer Launcher*, a platform for continuous application delivery, with a set of templates.
+
+* *Red Hat Fuse Online*, a facility to obtain data from an application or service, operate on that data, and then send the data to another application or service without writing code.
+
+* *Red Hat Single Sign-On*, a single sign-on solution for web apps and RESTful web services.
+
+
+[NOTE]
+====
+Most applications are available in the Solution Explorer, after you first log in.  However:
 
 * If *Red Hat AMQ Online* is displayed as 'Not ready' in the *Applications* menu, click *Start service* to provision it.
-* You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you perform a walkthrough, you also provision an instance of Fuse Online which is not shared with other cluster users. 
-
-
+* You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you perform a walkthrough, you also provision an instance of Fuse Online which is not shared with other cluster users.
+====
 .Additional resources
 
 * https://access.redhat.com/documentation/en-us/openshift_dedicated/3/[Product Documentation for OpenShift Dedicated 3]
