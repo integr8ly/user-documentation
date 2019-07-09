@@ -12,15 +12,17 @@ endif::[]
 
 {PRODUCT_SHORT} provides two RH-SSO instances:
 
-* *{rhmi-sso-name}* - protects the Red Hat applications available from the Solution Explorer.
+* *{rhmi-sso-name}* 
 +
-For example, *{rhmi-sso-name}* defines the identities of the integration engineers and developers creating a solution for end users.
+Use the *{rhmi-sso-name}* instance to define the identities of the integration engineers and developers logging into the Red Hat applications available from the Solution Explorer.
 +
 Red Hat manages and provides limited access to this instance, for example, you can implement user federation with this instance, but you cannot create a realm.
 +
 See xref:managing-users[Managing Users] and xref:gs-adding-custom-idp[Adding custom identity providers] sections for more information on using this instance.
 
-* *{customer-sso-name}* - protects the solutions developed using Managed Integration.
+* *{customer-sso-name}*
++
+Use the *{customer-sso-name}* instance to define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}.
 +
 Red Hat manages this instance, however the customer-admin user has admin level privileges to configure this instance.
 +
@@ -32,6 +34,9 @@ Red Hat recommends that you define users of the solution you are developing in t
 For example, if you use {PRODUCT_SHORT} to develop an solution named `my-app`, define all users of `my-app` in the *{customer-sso-name}* instance only.
 
 Typically, you only use the *{customer-sso-name}* for end users, however you have the required privileges to use it for developer related activities.
+// tag::excludeDownstream[]
+For example, if a developer wanted to use http://microcks.github.io/[Microcks], that developer could create associated users in this instance.
+// end::excludeDownstream[]
 ====
 
 
