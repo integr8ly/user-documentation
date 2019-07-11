@@ -1,0 +1,11 @@
+
+[id='rn-fixed-issues-ref']
+
+= Fixed Issues
+
+The following issues are resolved in {PRODUCT} {PATCH_VERSION_NO}:
+
+
+* [INTLY-2118] - AMQ Online serviceinstance dashboard URLs are not updated from 1.0 to 1.1
+
+* [INTLY-2303] - Login fails when using the link to SSO from webapp whereas the link from OpenShift console works fine

@@ -3,10 +3,9 @@
 :linkTroubleshooting: https://github.com/integr8ly/example-customisations/blob/master/docs/troubleshooting.adoc
 :linkGitHubFork: https://help.github.com/articles/fork-a-repo/
 :linkIndexURL: https://github.com/integr8ly/example-customisations/index.adoc
-:walkthrough-1A: *Integrating message-oriented middleware with a RESTful API using AMQ Online*
-:walkthrough-2: *Managing and protecting APIs using API management*
-:publishing-walkthroughs: *Adding {walkthrough-name}s to a cluster*
-
+:walkthrough-1A: Integrating message-oriented middleware with a RESTful API using AMQ Online
+:walkthrough-2: Managing and protecting APIs using API management
+:publishing-walkthroughs: Adding {walkthrough-name}s to a cluster
 
 = Creating {PRODUCT} {walkthrough-name}s
 :toc:
@@ -26,7 +25,7 @@ To write {walkthrough-name}s you require a knowledge of:
 
 * Asciidoc - a lightweight mark up language, similar to markdown
 * JSON - a lightweight format for storing and transporting data
-* Git - you must push your asciidoc and JSON files to a git repo
+* Git - you must push your asciidoc and JSON files to a git repository
 * OpenShift - you can add {walkthrough-name}s using the OpenShift console
 
 A simple {walkthrough-name} only requires that you edit an asciidoc file, for example:
@@ -43,7 +42,7 @@ A short description for the feature. <2>
 . Do this second:
 ----
 <1> {walkthrough-name} title, you can only have one level 1 heading per file
-<2> The first line of the introduction is displayed as a tag line for the {walkthrough-name} and displayed on the Solution Explorer home page.  
+<2> The first line of the introduction is displayed as a tag line for the {walkthrough-name} and displayed on the Solution Explorer home page.
 Do not use AsciiDoc attributes in this line because they are not displayed correctly on the home page.
 <3> A task contains one or more subtasks (level 3 headings)
 <4> A numbered lists of steps the user must perform.
@@ -84,7 +83,7 @@ cd walkthrough-template
 Make sure you have a directory named `walkthrough-template` on your system containing a `walkthroughs` subdirectory.
 
 [type=verificationFail]
-Try downloading the link:https://github.com/integr8ly/walkthrough-template/archive/master.zip[zip] file and creating a repo.
+Download the link:https://github.com/integr8ly/walkthrough-template/archive/master.zip[zip] file and create a repository.
 ////
 
 === Understanding the file structure
@@ -104,7 +103,7 @@ Try downloading the link:https://github.com/integr8ly/walkthrough-template/archi
 ----
 
 
-<1> This is a an optional file that defines metadata for the set of walkthroughs in the repo.
+<1> This is an optional file that defines metadata for the set of walkthroughs in the repository.
 
 <2> This is a required directory. All {walkthrough-name}s are defined under `walkthroughs`.
 
@@ -163,8 +162,8 @@ If you created files from a zip file instead of cloning you need to initialize a
 == Editing overview sections of a {PRODUCT} {walkthrough-name}
 
 .Prerequisites
-* You have created a repo using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
 
 
 The first section of the `walkthrough.adoc` describes your {walkthrough-name}, it provides an *overview* of the purpose of the {walkthrough-name}.
@@ -207,15 +206,15 @@ git push upstream master
 Make sure that all your changes are in the remote repository.
 
 [type=verificationFail]
-Check your git credentials and that you pushed to the correct remote repository.
+Check your git credentials and that you pushed to the correct remote repo.
 ////
 
 [time=5]
 == Editing task sections of a {PRODUCT} {walkthrough-name}
 
 .Prerequisites
-* You have created a repo using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
 
 Tasks are procedures that you write as a section of the `walkthrough.adoc` file, the section being defined by a second level heading (`==`).
 
@@ -240,7 +239,7 @@ For example to change the estimated time for the first task to 12 minutes:
 
 . Save, commit and push your changes.
 +
-NOTE: The content of the {webapp} does not change automatically after a change in the subscribed repo. You must redeploy the {webapp} for the change to be visible.
+NOTE: The content of the {webapp} does not change automatically after a change in the subscribed repository. You must redeploy the {webapp} for the change to be visible.
 
 . Redeploy the {webapp}:
 .. Navigate to the *webapp* project in OpenShift.
@@ -262,8 +261,8 @@ Check that the Webapp has finished redeployment and no errors occurred.
 == Editing procedures of a {PRODUCT} {walkthrough-name}
 
 .Prerequisites
-* You have created a repo using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
 
 A procedure is a set of steps that you perform to complete a task or subtask.
 
@@ -303,8 +302,8 @@ Check that the Webapp has finished redeployment and no errors occurred.
 The {webapp} can display helpful information and links on the right hand side panel.
 
 .Prerequisites
-* You have created a repo using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
 
 To add a {walkthrough-name} resources:
 
@@ -355,8 +354,8 @@ The {webapp} can display helpful information and links on the right hand side pa
 {walkthrough-name} resources are displayed for every task, whereas task resources typically change as the user navigates the {walkthrough-name}.
 
 .Prerequisites
-* You have created a repo using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
 
 To add task resources:
 
@@ -396,8 +395,8 @@ They are questions present to the user, who can answer the question with either 
 NOTE: Every procedure in a task or subtasks requires a verification.
 
 .Prerequisites
-* You have created a repo using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
 
 
 To add a verification:
@@ -463,15 +462,15 @@ Other attributes that are available to {walkthrough-name} authors are:
 
 
 .Prerequisites
-* You have created a repo using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
 
 For example, to add a link  to the Openshift Console in the {walkthrough-name}:
 
 . Add another step to the numbered list in your Procedure:
 +
 ----
-. Click on link:{openshift-url}[Openshift Console]
+. Click on the link to the Openshift Console.
 ----
 
 . Save, commit and push your changes.
@@ -498,8 +497,8 @@ You can also link to the URLs associated with those services in your `walkthroug
 
 
 .Prerequisites
-* You have created a repo using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repo to your cluster as described in the {publishing-walkthrough} {walkthrough-name}.
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
 * Some experience with the `oc` command. See link:https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html[Getting Started with the OpenShift CLI^] for more information about `oc` command.
 
 
@@ -507,7 +506,7 @@ You can also link to the URLs associated with those services in your `walkthroug
 
 . Find the name of the service you want to provision:
 
-.. Log into the link:{openshift-url}[Openshift Console].
+.. Log into the Openshift Console.
 
 .. Click your username in the top right corner and choose *Copy Login Command* from the menu.
 
@@ -551,7 +550,7 @@ For example, to use the `CakePHP + MySQL (Ephemeral)` service in your custom {wa
 
 . Publish your {walkthrough-name} using the `walkthrough.json` file above.
 . Navigate the {walkthrough-name} to trigger the provisioning of the custom service, for example, the `cakephp-mysql-example` service.
-. Log into the link:{openshift-url}[OpenShift Console].
+. Log into the OpenShift Console.
 . Navigate to the custom project in OpenShift.
 The project is named using the pattern `<username>-<walkthrough-id>`.
 . Open *Routes* from the *Applications* menu.
@@ -586,9 +585,9 @@ Make sure you have completed all the steps.
 ****
 ////
 
-== Defining metadata for your walkthrough repo
+== Defining metadata for your walkthrough repository
 
-By default, the walkthroughs from a repo are displayed in Solution Explorer with a title corresponding to your repo name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My Walkthroughs`:
+By default, the walkthroughs from a repository are displayed in Solution Explorer with a title corresponding to your repository name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My Walkthroughs`:
 
 
 [source, json]
@@ -601,5 +600,4 @@ By default, the walkthroughs from a repo are displayed in Solution Explorer with
 == Previewing your {walkthrough-name}
 
 . Log into the Solution Explorer
-. Click the {publishing-walkthroughs} card and follow the steps.
-
+. Click the *{publishing-walkthroughs}* card and follow the steps.

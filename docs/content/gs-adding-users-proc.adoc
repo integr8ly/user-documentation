@@ -4,30 +4,52 @@ ifdef::env-github[]
 :imagesdir: ../images/
 endif::[]
 
-= Managing Users
 
-You manage users in the context of an Red Hat Single Sign-On realm. 
-A realm manages a set of users, credentials, roles, and groups.  
-A user belongs to and logs into a realm.  
-Realms are isolated from one another and can only manage and authenticate the users that they control.
+= About Single Sign-On instances
 
-// removed realm as per https://issues.jboss.org/browse/INTLY-2168
-// https://gist.github.com/finp/ac8b7a743917b2b8268f28e73797e861
+:rhmi-sso-name: Managed Integration RH-SSO instance
+:customer-sso-name: End user RH-SSO instance
 
-== Accessing the Red Hat Single Sign-On administration console
+{PRODUCT_SHORT} provides two RH-SSO instances:
 
-To access the administration console navigate to the following URL, replacing `<cluster-host>` with the hostname of your cluster:
+* *{rhmi-sso-name}* 
++
+Use the *{rhmi-sso-name}* instance to define the identities of the integration engineers and developers logging into the Red Hat applications available from the Solution Explorer.
++
+Red Hat manages and provides limited access to this instance, for example, you can implement user federation with this instance, but you cannot create a realm.
++
+See xref:managing-users[Managing Users] and xref:gs-adding-custom-idp[Adding custom identity providers] sections for more information on using this instance.
 
-----
-https://sso-openshift-sso.<cluster-host>/auth/admin/openshift/console
-----
+* *{customer-sso-name}*
++
+Use the *{customer-sso-name}* instance to define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}.
++
+Red Hat manages this instance, however the customer-admin user has admin level privileges to configure this instance.
++
+See the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on[Product Documentation for Red Hat Single Sign-On] for more information on using Red Hat Single Sign-On.
 
-Log in as the `customer-admin` user using the credentials that you received in the *Welcome* email.
+[NOTE]
+====
+Red Hat recommends that you define users of the solution you are developing in the *{customer-sso-name}*. 
+For example, if you use {PRODUCT_SHORT} to develop an solution named `my-app`, define all users of `my-app` in the *{customer-sso-name}* instance only.
 
+Typically, you only use the *{customer-sso-name}* for end users, however you have the required privileges to use it for developer related activities.
+// tag::excludeDownstream[]
+For example, if a developer wanted to use http://microcks.github.io/[Microcks], that developer could create associated users in this instance.
+// end::excludeDownstream[]
+====
+
+
+[[managing-users]]
+= Managing Users in the {rhmi-sso-name}
+
+You manage users in the context of an Red Hat Single Sign-On realm.
+A realm manages a set of users, credentials, roles, and groups.
+A user belongs to and logs into a realm.
 
 == Viewing Users in the Red Hat Single Sign-On administration console
 
-.Prerequisites
+.Prerequisite
 
 * You have logged into the Red Hat Single Sign-On administration console.
 
@@ -39,7 +61,7 @@ To view user list:
 
 == Creating users in the Red Hat Single Sign-On administration console
 
-.Prerequisites
+.Prerequisite
 
 * You have logged into the Red Hat Single Sign-On administration console.
 
@@ -51,7 +73,7 @@ To create a user:
 +
  * Enter values to `Username` and `Email`.
  * Set `User Enabled` to *ON*.
- * Set `Email Verified` to *ON*. This ensures that the user account will be activated in 3Scale.
+ * Set `Email Verified` to *ON*. This ensures that the user account will be activated in 3scale.
 
 - Click the *Save* button to create the user.
 
@@ -104,7 +126,7 @@ The following example JSON file imports two users:
 
 == Setting user passwords in the Red Hat Single Sign-On administration console
 
-.Prerequisites
+.Prerequisite
 
 * You have logged into the Red Hat Single Sign-On administration console.
 
@@ -118,7 +140,7 @@ To set user passwords:
 
 == Deleting users in the Red Hat Single Sign-On administration console
 
-.Prerequisites
+.Prerequisite
 
 * You have logged into the Red Hat Single Sign-On administration console.
 
@@ -132,7 +154,7 @@ To delete users:
 
 == Managing Red Hat 3scale API Management Platform users
 
-Users created in  Red Hat Single Sign-On can login to the 3Scale console, however the user's account is created in 3Scale after that initial login. The new user is assigned the role `member` and no permissions set by default. The user role and permission can only be set once a user account is created in 3Scale.
+Users created in  Red Hat Single Sign-On can login to the 3scale console, however the user's account is created in 3scale after that initial login. The new user is assigned the role `member` and no permissions set by default. The user role and permission can only be set once a user account is created in 3scale.
 
 To make sure you create users with the correct roles for Red Hat 3scale API Management Platform:
 
@@ -155,15 +177,15 @@ If asked for credentials, login as the `customer-admin` user.
 
 .Prerequisite
 
-* You have logged into the Red Hat 3scale API Management Platform administration console.
+* You have logged into the Red Hat 3scale API Management Platform administration console using the 'Authenticate through Red Hat Single Sign-On' facility.
 
-NOTE: All users in 3Scale are created as a `member` with no permissions set by default.
+NOTE: All users in 3scale are created as a `member` with no permissions set by default.
 
-To change permissions for a 3Scale user:
+To change permissions for a 3scale user:
 
-. Navigate to *Account Settings* by clicking the gear icon in the top right of the 3Scale console.
+. Navigate to *Account Settings* by clicking the gear icon in the top right of the 3scale console.
 +
-image:gs-adding-users-3scale-account-settings.png[3Scale account settings]
+image:gs-adding-users-3scale-account-settings.png[3scale account settings]
 
 . Select *Listings* from the *Users* menu.
 A list of users is displayed.
@@ -172,7 +194,7 @@ A list of users is displayed.
 
 . On the *Edit User* page, change the user's roles and permissions:
 +
-image:gs-adding-users-3scale-edit-user-page.png[3Scale edit user page]
+image:gs-adding-users-3scale-edit-user-page.png[3scale edit user page]
 +
 For example, you can give the user the *Admin* role.
 
@@ -182,9 +204,9 @@ For example, you can give the user the *Admin* role.
 
 .Prerequisite
 
-* You have logged into the Red Hat 3scale API Management Platform administration console.
+* You have logged into the Red Hat 3scale API Management Platform administration console using the 'Authenticate through Red Hat Single Sign-On' facility.
 
-To delete 3Scale users:
+To delete 3scale users:
 
 . Navigate to *Account Settings*.
 
@@ -192,11 +214,11 @@ To delete 3Scale users:
 . Find the user you wish to delete.
 . Click the *Delete* button associated with that user.
 
-== Giving users permissions to view integration logs and perform 3Scale service discovery
+== Giving users permissions to view integration logs and perform 3scale service discovery
 
 This procedure describes how to add the *view* role for a user if that user requires either of the following:
 
-* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/service_discovery/index[Service Discovery] in 3Scale, which an be used to add Fuse Online services automatically
+* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/service_discovery/index[Service Discovery] in 3scale, which an be used to add Fuse Online services automatically
 * Access to Fuse Online integration logs
 
 . Log into OpenShift using `oc` and the `customer-admin` credentials.
