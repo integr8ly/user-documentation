@@ -1,3 +1,4 @@
+:page-partial:
 :PRODUCT: Red Hat Managed Integration
 :PRODUCT_SHORT: Managed Integration
 :PRODUCT_INIT: rhmi
