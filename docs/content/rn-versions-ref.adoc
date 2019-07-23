@@ -31,8 +31,8 @@
 |link:{three-scale-docs}[{three-scale-version}]
 
 |{code-ready-name}
-|{code-ready-version}
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/html/release_notes_and_known_issues/index[{code-ready-version}]
 |{code-ready-configs}
-|link:{code-ready-docs}[{code-ready-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
 
 |===
