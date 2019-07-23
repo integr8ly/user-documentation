@@ -29,6 +29,7 @@
 :three-scale-configs: https://access.redhat.com/articles/2798521
 
 :code-ready-name: Red Hat CodeReady Workspaces for OpenShift
-:code-ready-version: 1.0.0
-:code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces_for_openshift/{code-ready-version}/
+:code-ready-version: 1.2
+:code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
+:code-ready-release-notes: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/html/release_notes_and_known_issues/index
