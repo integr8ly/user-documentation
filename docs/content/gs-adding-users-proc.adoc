@@ -12,7 +12,7 @@ endif::[]
 
 {PRODUCT_SHORT} provides two RH-SSO instances:
 
-* *{rhmi-sso-name}* 
+* *{rhmi-sso-name}*
 +
 Use the *{rhmi-sso-name}* instance to define the identities of the integration engineers and developers logging into the Red Hat applications available from the Solution Explorer.
 +
@@ -30,7 +30,7 @@ See the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-o
 
 [NOTE]
 ====
-Red Hat recommends that you define users of the solution you are developing in the *{customer-sso-name}*. 
+Red Hat recommends that you define users of the solution you are developing in the *{customer-sso-name}*.
 For example, if you use {PRODUCT_SHORT} to develop an solution named `my-app`, define all users of `my-app` in the *{customer-sso-name}* instance only.
 
 Typically, you only use the *{customer-sso-name}* for end users, however you have the required privileges to use it for developer related activities.
@@ -45,7 +45,17 @@ For example, if a developer wanted to use http://microcks.github.io/[Microcks], 
 
 You manage users in the context of an Red Hat Single Sign-On realm.
 A realm manages a set of users, credentials, roles, and groups.
-A user belongs to and logs into a realm.
+A user belongs to a realm, and can log in to this realm.
+
+=== Accessing the Red Hat Single Sign-On administration console
+
+To access the Red Hat Single Sign-On administration console:
+
+. Navigate to the *Red Hat Solution Explorer* URL that you received in the *Welcome* email.
+If asked for credentials, login as the `customer-admin` user.
+
+. Click the *Red Hat Single Sign-On* link available in the *Applications* panel.
+
 
 == Viewing Users in the Red Hat Single Sign-On administration console
 
