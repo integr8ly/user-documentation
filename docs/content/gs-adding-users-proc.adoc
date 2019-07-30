@@ -45,7 +45,7 @@ For example, if a developer wanted to use http://microcks.github.io/[Microcks], 
 
 You manage users in the context of an Red Hat Single Sign-On realm.
 A realm manages a set of users, credentials, roles, and groups.
-A user belongs to and logs into a realm.
+A user belongs to a realm, and can log in to this realm.
 
 === Accessing the Red Hat Single Sign-On administration console
 
