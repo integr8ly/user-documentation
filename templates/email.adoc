@@ -7,11 +7,11 @@ Congratulations,
 
 Your {PRODUCT_SHORT} environment is now available.
 
-You can now log into the link:{webapp-url}[{webapp}] using {username}/{password}.
+You can now log into the link:{webapp-url}[Solution Explorer] using {username}/{password}.
 
 You are prompted to reset your password after logging in for the first time.
 
-The {webapp} displays links to various consoles, including the OpenShift console and offers you curated {walkthrough-name}s.
+The Solution Explorer displays links to various consoles, including the OpenShift console and offers you curated {walkthrough-name}s.
 
 ifeval::["{PRODUCT_SHORT}"=="Integreatly"]
 
