@@ -42,7 +42,7 @@ A short description for the feature. <2>
 . Do this second:
 ----
 <1> {walkthrough-name} title, you can only have one level 1 heading per file
-<2> The first line of the introduction is displayed as a tag line for the {walkthrough-name} and displayed on the Solution Explorer home page.
+<2> The first line of the introduction is displayed as a tag line for the {walkthrough-name} and displayed on the {webapp} home page.
 Do not use AsciiDoc attributes in this line because they are not displayed correctly on the home page.
 <3> A task contains one or more subtasks (level 3 headings)
 <4> A numbered lists of steps the user must perform.
@@ -587,7 +587,7 @@ Make sure you have completed all the steps.
 
 == Defining metadata for your walkthrough repository
 
-By default, the walkthroughs from a repository are displayed in Solution Explorer with a title corresponding to your repository name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My Walkthroughs`:
+By default, the walkthroughs from a repository are displayed in {webapp} with a title corresponding to your repository name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My Walkthroughs`:
 
 
 [source, json]
@@ -599,5 +599,5 @@ By default, the walkthroughs from a repository are displayed in Solution Explore
 
 == Previewing your {walkthrough-name}
 
-. Log into the Solution Explorer
+. Log into the {webapp}
 . Click the *{publishing-walkthroughs}* card and follow the steps.
