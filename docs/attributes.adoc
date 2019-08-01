@@ -11,7 +11,7 @@
 
 :URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
 
-:webapp: Red Hat Solution Explorer
+:webapp: Solution Explorer
 
 :fuse-name: Red Hat Fuse Online
 :fuse-version: 7.3
@@ -32,4 +32,3 @@
 :code-ready-version: 1.2
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
-:code-ready-release-notes: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/html/release_notes_and_known_issues/index

@@ -35,4 +35,9 @@
 |{code-ready-configs}
 |link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
 
+|Solution Explorer
+|N/A
+|N/A
+|link:https://access.redhat.com/documentation/en-us/red_hat_managed_integration/1/html/getting_started/index[2.12.2]
+
 |===
