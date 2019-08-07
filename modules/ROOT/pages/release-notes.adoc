@@ -14,8 +14,8 @@ NOTE: When a {PRODUCT_SHORT} patch or upgrade is available, you are notified and
 
 
 
-include::content/rn-versions-ref.adoc[leveloffset=+1]
+include::_partials/rn-versions-ref.adoc[leveloffset=+1]
 
-include::content/rn-fixed-issues-ref.adoc[leveloffset=+1]
+include::_partials/rn-fixed-issues-ref.adoc[leveloffset=+1]
 
-include::content/rn-known-issues-ref.adoc[leveloffset=+1]
+include::_partials/rn-known-issues-ref.adoc[leveloffset=+1]

@@ -16,16 +16,16 @@ NOTE: Refer to the link:{rn-link}[Release Notes] for the latest information abou
 This document provides instructions for new users of {PRODUCT_SHORT}.
 // and subsequent patch releases.
 
-include::content/intro-con.adoc[leveloffset=+1]
+include::_partials/intro-con.adoc[leveloffset=+1]
 
-include::content/gs-adding-users-proc.adoc[leveloffset=+1]
+include::_partials/gs-adding-users-proc.adoc[leveloffset=+1]
 
-include::content/gs-writing-walkthroughs-proc.adoc[leveloffset=+1]
+include::_partials/gs-writing-walkthroughs-proc.adoc[leveloffset=+1]
 
-include::content/gs-using-nexus-proc.adoc[leveloffset=+1]
+include::_partials/gs-using-nexus-proc.adoc[leveloffset=+1]
 
-include::content/gs-custom-keycloak-idp.adoc[leveloffset=+1]
+include::_partials/gs-custom-keycloak-idp.adoc[leveloffset=+1]
 
-include::content/gs-adding-custom-3scale-routes.adoc[leveloffset=+1]
+include::_partials/gs-adding-custom-3scale-routes.adoc[leveloffset=+1]
 
-include::content/gs-managing-images-proc.adoc[leveloffset=+1]
+include::_partials/gs-managing-images-proc.adoc[leveloffset=+1]
