@@ -20,6 +20,8 @@ include::_partials/intro-con.adoc[leveloffset=+1]
 
 include::_partials/gs-adding-users-proc.adoc[leveloffset=+1]
 
+include::_partials/gs-publishing-walkthroughs-proc.adoc[leveloffset=+1]
+
 include::_partials/gs-writing-walkthroughs-proc.adoc[leveloffset=+1]
 
 include::_partials/gs-using-nexus-proc.adoc[leveloffset=+1]

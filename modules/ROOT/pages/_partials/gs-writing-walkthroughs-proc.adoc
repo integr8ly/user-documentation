@@ -1,12 +1,13 @@
-:walkthrough-name: Walkthrough
-
 :linkTroubleshooting: https://github.com/integr8ly/example-customisations/blob/master/docs/troubleshooting.adoc
 :linkGitHubFork: https://help.github.com/articles/fork-a-repo/
 :linkIndexURL: https://github.com/integr8ly/example-customisations/index.adoc
 :walkthrough-1A: Integrating message-oriented middleware with a RESTful API using AMQ Online
 :walkthrough-2: Managing and protecting APIs using API management
-:publishing-walkthroughs: Adding {walkthrough-name}s to a cluster
+:walkthrough-3: No code API development and SaaS integration
 
+:as described in xref:gs-publishing-walkthroughs-proc[]: Adding {walkthrough-name}s to a cluster
+
+[id='gs-writing-walkthroughs-proc']
 = Creating {PRODUCT} {walkthrough-name}s
 :toc:
 
@@ -17,7 +18,6 @@
 
 * {walkthrough-1A}
 * {walkthrough-2}
-* {publishing-walkthroughs}
 
 These {walkthrough-name}s are available in the {webapp}.
 
@@ -78,13 +78,6 @@ git clone https://github.com/integr8ly/walkthrough-template.git
 cd walkthrough-template
 ----
 
-////
-[type=verification]
-Make sure you have a directory named `walkthrough-template` on your system containing a `walkthroughs` subdirectory.
-
-[type=verificationFail]
-Download the link:https://github.com/integr8ly/walkthrough-template/archive/master.zip[zip] file and create a repository.
-////
 
 === Understanding the file structure
 
@@ -150,20 +143,13 @@ git remote add upstream <remote URL>
 git push -u upstream master
 ----
 
-////
-[type=verification]
-Make sure you have a remote repository with the content you want to publish.
-
-[type=verificationFail]
-If you created files from a zip file instead of cloning you need to initialize and commit the changes first.
-////
 
 [time=5]
 == Editing overview sections of a {PRODUCT} {walkthrough-name}
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
 
 
 The first section of the `walkthrough.adoc` describes your {walkthrough-name}, it provides an *overview* of the purpose of the {walkthrough-name}.
@@ -201,20 +187,13 @@ git commit -am "add overview"
 git push upstream master
 ----
 
-////
-[type=verification]
-Make sure that all your changes are in the remote repository.
-
-[type=verificationFail]
-Check your git credentials and that you pushed to the correct remote repo.
-////
 
 [time=5]
 == Editing task sections of a {PRODUCT} {walkthrough-name}
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
 
 Tasks are procedures that you write as a section of the `walkthrough.adoc` file, the section being defined by a second level heading (`==`).
 
@@ -249,20 +228,13 @@ NOTE: The content of the {webapp} does not change automatically after a change i
 NOTE: You can create another level of subtasks by creating a third level heading (`===`). Subtasks are displayed in the {webapp} on the parent task page.
 
 
-////
-[type=verification]
-After the redeploy has finished, refresh the tab with your {walkthrough-name}. You should see the updated content.
-
-[type=verificationFail]
-Check that the Webapp has finished redeployment and no errors occurred.
-////
 
 [time=5]
 == Editing procedures of a {PRODUCT} {walkthrough-name}
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
 
 A procedure is a set of steps that you perform to complete a task or subtask.
 
@@ -288,13 +260,6 @@ To edit a procedure in the template respository:
 .. Click on the *tutorial-web-app* deployment config.
 .. Click the *Deploy* button.
 
-////
-[type=verification]
-Check that your Task has a number of steps.
-
-[type=verificationFail]
-Check that the Webapp has finished redeployment and no errors occurred.
-////
 
 [time=5]
 == Editing {walkthrough-name} resources for a {PRODUCT} {walkthrough-name}
@@ -303,7 +268,7 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
 
 To add a {walkthrough-name} resources:
 
@@ -338,15 +303,6 @@ NOTE: You can only define {walkthrough-name} resources in the overview section.
 .. Click the *Deploy* button.
 
 
-////
-[type=verification]
-Check that the resource appears on the right hand side of the {walkthrough-name} overview as well as on the task page.
-
-[type=verificationFail]
-Make sure that you added the resource to the preamble section and that it uses a third level heading.
-////
-
-
 [time=5]
 == Editing task resources for a {PRODUCT} {walkthrough-name}
 
@@ -355,7 +311,7 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
 
 To add task resources:
 
@@ -378,13 +334,6 @@ To add task resources:
 .. Click on the *tutorial-web-app* deployment config.
 .. Click the *Deploy* button.
 
-////
-[type=verification]
-Check that the task resource appears on your task, but not on the overview page.
-
-[type=verificationFail]
-Check that the Webapp has finished redeployment and no errors occurred.
-////
 
 [time=10]
 == Adding verifications to a {PRODUCT} {walkthrough-name}
@@ -396,7 +345,7 @@ NOTE: Every procedure in a task or subtasks requires a verification.
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
 
 
 To add a verification:
@@ -425,14 +374,6 @@ Try turning it off and on again.
 .. Navigate to the *webapp* project in OpenShift.
 .. Click on the *tutorial-web-app* deployment config.
 .. Click the *Deploy* button.
-
-////
-[type=verification]
-Check that the verification appears on the task. Check that you can click the *Next* button when answered *Yes* and that the fail text appears when answering *No*.
-
-[type=verificationFail]
-Check that the verification has been added after the Procedure section. It will be ignored in any other location.
-////
 
 
 [time=5]
@@ -463,7 +404,7 @@ Other attributes that are available to {walkthrough-name} authors are:
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
 
 For example, to add a link  to the Openshift Console in the {walkthrough-name}:
 
@@ -480,13 +421,6 @@ For example, to add a link  to the Openshift Console in the {walkthrough-name}:
 .. Click on the *tutorial-web-app* deployment config.
 .. Click the *Deploy* button.
 
-////
-[type=verification]
-Check that the step is displayed as a link to the Openshift Console.
-
-[type=verificationFail]
-Check that the correct attribute has been used.
-////
 
 
 [time=10]
@@ -498,7 +432,7 @@ You can also link to the URLs associated with those services in your `walkthroug
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in the *{publishing-walkthroughs}* {walkthrough-name}.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
 * Some experience with the `oc` command. See link:https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html[Getting Started with the OpenShift CLI^] for more information about `oc` command.
 
 
@@ -548,7 +482,7 @@ For example, to use the `CakePHP + MySQL (Ephemeral)` service in your custom {wa
 }
 ----
 
-. Publish your {walkthrough-name} using the `walkthrough.json` file above.
+. Add your {walkthrough-name} to the cluster as described in  xref:gs-publishing-walkthroughs-proc[].
 . Navigate the {walkthrough-name} to trigger the provisioning of the custom service, for example, the `cakephp-mysql-example` service.
 . Log into the OpenShift Console.
 . Navigate to the custom project in OpenShift.
@@ -565,25 +499,9 @@ For example, to insert a step that asks the user of the {walkthrough-name} to lo
 +
 NOTE: If you want Asciidoc attributes to render values in code blocks, you must start the code block with `[subs="attributes"]`.
 
-. Publish the {walkthrough-name} or redeploy the *tutorial-web-app* to pick up changes to your {walkthrough-name}.
+. Redeploy the *tutorial-web-app* to pick up changes to your {walkthrough-name}.
 . Log in to the Webapp using a different username to test the {walkthrough-name}.
 
-////
-[type=verification]
-Check that the {walkthrough-name} offers the link to the service, and that it resolves.
-
-[type=verificationFail]
-Make sure you have completed all the steps.
-
-
-[type=taskResource]
-.Task Resources
-****
-* link:https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html[Getting Started with the OpenShift CLI, window="_blank"]
-* link:/tutorial/publishing-walkthroughs/1-template-walkthrough/[{walkthrough-name}: Publishing {walkthrough-name}s, window="_blank"]
-
-****
-////
 
 == Defining metadata for your walkthrough repository
 
@@ -600,4 +518,4 @@ By default, the walkthroughs from a repository are displayed in {webapp} with a 
 == Previewing your {walkthrough-name}
 
 . Log into the {webapp}
-. Click the *{publishing-walkthroughs}* card and follow the steps.
+. Follow the steps described in xref:gs-publishing-walkthroughs-proc[].
