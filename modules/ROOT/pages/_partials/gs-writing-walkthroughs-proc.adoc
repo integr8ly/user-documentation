@@ -100,7 +100,7 @@ cd walkthrough-template
 
 <2> This is a required directory. All {walkthrough-name}s are defined under `walkthroughs`.
 
-<3> The directory name of a {walkthrough-name}. This is also displayed in the URL of the web app.
+<3> The directory name of a {walkthrough-name}. This is also displayed in the URL of {webapp}.
 
 <4> All images for the {walkthrough-name}.
 
