@@ -2,7 +2,7 @@
 
 include::attributes.adoc[]
 
-= Release notes for {PRODUCT} {PRODUCT_VERSION}
+= Release Notes
 // Context attribute is assembly specific and enables module reuse between assemblies.
 :imagesdir: images
 :context: release-notes
