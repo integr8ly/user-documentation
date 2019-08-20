@@ -5,8 +5,8 @@
 :PRODUCT_INIT_CAP: RHMI
 
 :PRODUCT_VERSION: 1.0
-:MINOR_VERSION_NO: 1.4
-:PATCH_VERSION_NO: 1.4.1
+:MINOR_VERSION_NO: 1.5
+:PATCH_VERSION_NO: 1.5.0
 
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
 
@@ -16,17 +16,17 @@
 :walkthrough-name: Walkthrough
 
 :fuse-name: Red Hat Fuse Online
-:fuse-version: 7.3
+:fuse-version: 7.4
 :fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
 :fuse-configs: https://access.redhat.com/articles/310603
 
 :amq-online-name: Red Hat AMQ Online
-:amq-online-version: 1.1
+:amq-online-version: 1.2
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 
 :three-scale-name: Red Hat 3scale API Management
-:three-scale-version: 2.5
+:three-scale-version: 2.6
 :three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
 :three-scale-configs: https://access.redhat.com/articles/2798521
 
