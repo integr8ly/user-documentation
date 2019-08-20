@@ -2,7 +2,7 @@
 
 include::attributes.adoc[]
 
-:gs-link: https://integr8ly.github.io/user-documentation/index.html?e=docs/getting-started.adoc
+:gs-link: https://integr8ly.github.io/user-documentation/index.html?e=modules/ROOT/pages/getting-started.adoc
 
 
 = Release notes for {PRODUCT} {PRODUCT_VERSION}

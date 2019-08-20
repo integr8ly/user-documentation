@@ -1,6 +1,7 @@
 [id='rn-new-and-changed-ref']
 = New and changed features
 
+// https://issues.jboss.org/browse/INTLY-2804
 == New Red Hat Single Sign-On instance
 
 This release includes a second Red Hat Single Sign-On instance for instance to define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}. See link:{gs-link}#sso[About Single Sign-On instances] for more information.
