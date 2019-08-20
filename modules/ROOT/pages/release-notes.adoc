@@ -2,6 +2,9 @@
 
 include::attributes.adoc[]
 
+:gs-link: https://integr8ly.github.io/user-documentation/index.html?e=docs/getting-started.adoc
+
+
 = Release notes for {PRODUCT} {PRODUCT_VERSION}
 // Context attribute is assembly specific and enables module reuse between assemblies.
 :imagesdir: images
@@ -19,3 +22,7 @@ include::_partials/rn-versions-ref.adoc[leveloffset=+1]
 include::_partials/rn-fixed-issues-ref.adoc[leveloffset=+1]
 
 include::_partials/rn-known-issues-ref.adoc[leveloffset=+1]
+
+include::_partials/rn-new-and-changed-ref.adoc[leveloffset=+1]
+
+

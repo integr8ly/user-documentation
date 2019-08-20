@@ -4,7 +4,7 @@ ifdef::env-github[]
 :imagesdir: ../images/
 endif::[]
 
-
+[[sso]]
 = About Single Sign-On instances
 
 :rhmi-sso-name: Managed Integration RH-SSO instance
