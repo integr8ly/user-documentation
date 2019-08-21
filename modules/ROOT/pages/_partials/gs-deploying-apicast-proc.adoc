@@ -6,7 +6,7 @@ endif::[]
 
 // https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.5/html/installing_3scale/installing-apicast
 
-= About APIcast API gateway options
+= Deploying an APIcast API gateway
 
 APIcast is an NGINX based API gateway used to integrate your internal and external API services with the 3scale Platform.
 
@@ -14,7 +14,24 @@ There are two APIcast deployment options:
 
 *Embedded APIcast*: {PRODUCT_SHORT} hosts APIcast in the cluster. In this case, APIcast is already deployed for you, but is not suitable for a production environment.
 
-*Self-managed APIcast*: You can deploy APIcast wherever you want. The self-managed mode is the intended mode of operation for production environments. Here are a few recommended options to deploy APIcast:
+*Self-managed APIcast*: You can deploy APIcast wherever you want. The self-managed mode is the intended mode of operation for production environments.
 
+This procedure describes deploying a self-managed APIcast in a separate OpenShift project.
+
+You can perform this procedure as any user.
+
+.Procedure
+
+. Create an access token in 3scale:
+
+.. Log into the {three-scale-name} Portal.
+.. Navigate to the *Account Setting* screen by clicking the gear icon in the top right of the screen.
+.. Select *Tokens* from the *Personal* left hand menu.
+.. Click *Add Access Token* and name the token 'apicast'.
+.. Copy the token value, you require it later in this procedure.
+
+. Create 
+
+.Additional Information
 For instructions about deploying a self-managed APIcast, see link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.5/html/installing_3scale/installing-apicast[Installing APIcast], noting that you must perform the tasks as the *customer-admin* user.
 
