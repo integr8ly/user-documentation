@@ -12,9 +12,9 @@ APIcast is an NGINX based API gateway used to integrate your internal and extern
 
 There are two APIcast deployment options:
 
-*Embedded APIcast*: {PRODUCT_SHORT} hosts APIcast in the cluster. In this case, APIcast is already deployed for you, but is not suitable for a production environment.
+*Embedded APIcast*: {PRODUCT_SHORT} hosts APIcast in the cluster. In this case, APIcast is already deployed for you, making it easy to get started in a development environment, but is not suitable for a production environment.
 
-*Self-managed APIcast*: You can deploy APIcast wherever you want. The self-managed mode is the intended mode of operation for production environments.
+*Self-managed APIcast*: You can deploy APIcast wherever you want. Red Hat recommends using the self-managed mode for production environments.
 
 This procedure describes deploying a self-managed APIcast in a separate OpenShift project.
 
@@ -30,7 +30,7 @@ You can perform this procedure as any user.
 .. Click *Add Access Token* and name the token 'apicast'.
 .. Copy the token value, you require it later in this procedure.
 
-. Create 
+. Create an OpenShift 
 
 .Additional Information
 For instructions about deploying a self-managed APIcast, see link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.5/html/installing_3scale/installing-apicast[Installing APIcast], noting that you must perform the tasks as the *customer-admin* user.
