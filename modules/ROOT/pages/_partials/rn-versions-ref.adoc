@@ -3,7 +3,7 @@
 
 = Versions of Components
 
-{PRODUCT} 1.4 includes the following software versions:
+{PRODUCT} {MINOR_VERSION_NO} includes the following software versions:
 
 [cols="h,,,"]
 |===
@@ -20,9 +20,9 @@
 (Click Fuse Online Category)
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.2/html/amq_online_1.1_on_openshift_container_platform_release_notes/index[{amq-online-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.4/html/amq_online_1.2_on_openshift_container_platform_release_notes/[{amq-online-version}]
 |{amq-online-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.3[{amq-online-version}] +
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.4[{amq-online-version}] +
 (Click AMQ Online Category)
 
 |{three-scale-name}
@@ -35,9 +35,11 @@
 |{code-ready-configs}
 |link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
 
-|Solution Explorer
-|N/A
-|N/A
-|link:https://access.redhat.com/documentation/en-us/red_hat_managed_integration/1/html/getting_started/index[2.12.2]
+
+|Red Hat Single Sign-On
+|link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/release_notes/index[7.3]
+|https://access.redhat.com/articles/2342861
+|https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/
+
 
 |===
