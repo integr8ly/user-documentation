@@ -14,7 +14,7 @@ The {webapp} presents links to the applications available in a {PRODUCT_SHORT} c
 
 {PRODUCT_SHORT} includes the following middleware applications:
 
-* *Apicurito*, a RESTful API visual designer.
+* *API Designer*,  the Apicurito RESTful API visual designer.
 
 * *Red Hat 3scale API Management*, a platform that provide RESTful API Management.
 
