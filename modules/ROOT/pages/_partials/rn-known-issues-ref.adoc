@@ -3,5 +3,9 @@
 
 This section lists known issues with  {PRODUCT} {PATCH_VERSION_NO}:
 
-* You cannot create persistent queues using AMQ Online. This issue will be addressed in a future release.
-* You do not have the required privileges to add walkthroughs to a cluster. If you require this feature, contact Red Hat Support for a workaround.
+// validated by pavel that works in POC env
+
+// * You do not have the required privileges to add walkthroughs to a cluster. If you require this feature, contact Red Hat Support for a workaround.
+
+* Any {PRODUCT_SHORT} user can determine what {walkthrough-name}s are available in a cluster.
+In a future release, this ability will be restricted to the customer-admin user.

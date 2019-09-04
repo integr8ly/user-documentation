@@ -1,45 +1,41 @@
+[id='rn-new-and-changed-ref']
+= New and changed features
 
-[id='rn-versions-ref']
 
-= Versions of Components
+== New component versions
 
-{PRODUCT} {MINOR_VERSION_NO} includes the following software versions:
+This release includes new versions of the following component:
 
-[cols="h,,,"]
+[cols="h,"]
 |===
 
 |Component
 |Release Notes
-|Supported Configurations
-|Documentation
 
 |{fuse-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.3/html/release_notes/index[{fuse-version}]
-|{fuse-configs}
-|link:{fuse-docs}[{fuse-version}] +
-(Click Fuse Online Category)
 
 |{amq-online-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.4/html/amq_online_1.2_on_openshift_container_platform_release_notes/[{amq-online-version}]
-|{amq-online-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.4[{amq-online-version}] +
-(Click AMQ Online Category)
 
 |{three-scale-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.5/html/release_information/index[{three-scale-version}]
-|{three-scale-configs}
-|link:{three-scale-docs}[{three-scale-version}]
 
 |{code-ready-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/html/release_notes_and_known_issues/index[{code-ready-version}]
-|{code-ready-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
-
 
 |Red Hat Single Sign-On
 |link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/release_notes/index[7.3]
-|https://access.redhat.com/articles/2342861
-|https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/
-
 
 |===
+
+
+
+// https://issues.jboss.org/browse/INTLY-2804
+== New Red Hat Single Sign-On instance
+
+This release includes a second Red Hat Single Sign-On instance for instance to define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}. See the link:{gs-link}#sso[Getting Started] guide for more information.
+
+== Adding {walkthrough-name}
+
+This release allows users to add walkthroughs from the {webapp}. See the link:{gs-link}#gs-publishing-walkthroughs-proc[Getting Started] guide for more information. 
