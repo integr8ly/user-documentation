@@ -38,4 +38,4 @@ This release includes a second Red Hat Single Sign-On instance for instance to d
 
 == Adding {walkthrough-name}
 
-This release allows users to add walkthroughs from the {webapp}. See the link:{gs-link}#gs-publishing-walkthroughs-proc[Getting Started] guide for more information. 
+This release allows users to add {walkthrough-name}s from the {webapp}. See the link:{gs-link}#gs-publishing-walkthroughs-proc[Getting Started] guide for more information.

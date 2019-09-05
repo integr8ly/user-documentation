@@ -13,7 +13,7 @@
 :URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
 
 :webapp: Solution Explorer
-:walkthrough-name: Walkthrough
+:walkthrough-name: Solution Pattern
 
 :fuse-name: Red Hat Fuse Online
 :fuse-version: 7.4

@@ -503,15 +503,15 @@ NOTE: If you want Asciidoc attributes to render values in code blocks, you must 
 . Log in to the Webapp using a different username to test the {walkthrough-name}.
 
 
-== Defining metadata for your walkthrough repository
+== Defining metadata for your {walkthrough-name} repository
 
-By default, the walkthroughs from a repository are displayed in {webapp} with a title corresponding to your repository name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My Walkthroughs`:
+By default, the {walkthrough-name}s from a repository are displayed in {webapp} with a title corresponding to your repository name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My {walkthrough-name}s`:
 
 
 [source, json]
 ----
 {
-    "prettyName": "My Walkthroughs"
+    "prettyName": "My Solution Patterns"
 }
 ----
 
