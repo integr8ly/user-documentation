@@ -8,7 +8,7 @@ Red Hat Managed Integration delivers managed integration services hosted on the 
 
 == {webapp}
 
-The {webapp} presents links to the applications available in a {PRODUCT_SHORT} cluster and provides walkthroughs that guide users through the process of creating various integrated solutions using these applications.
+The {webapp} presents links to the applications available in a {PRODUCT_SHORT} cluster and provides {walkthrough-name}s that guide users through the process of creating various integrated solutions using these applications.
 
 == Applications
 
@@ -34,7 +34,7 @@ The {webapp} presents links to the applications available in a {PRODUCT_SHORT} c
 Most applications are available in the {webapp}, after you first log in.  However:
 
 * If *Red Hat AMQ Online* is displayed as 'Not ready' in the *Applications* menu, click *Start service* to provision it.
-* You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you perform a walkthrough, you also provision an instance of Fuse Online which is not shared with other cluster users.
+* You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you create a {walkthrough-name}, you also provision an instance of Fuse Online which is not shared with other cluster users.
 ====
 .Additional resources
 

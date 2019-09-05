@@ -1,7 +1,7 @@
 [id='gs-publishing-walkthroughs-proc']
 = Adding {walkthrough-name}s to your {PRODUCT} cluster
 
-The home page of {webapp} lists all the walkthoughs from all the git repositories you are subscribed to.
+The home page of {webapp} lists all the {walkthrough-name}s from all the git repositories you are subscribed to.
 Any user can add {walkthrough-name}s to your cluster.
 See xref:gs-writing-walkthroughs-proc[] for information about writing {walkthrough-name}s.
 
@@ -14,7 +14,7 @@ This procedure describes how to subscribe your cluster to a Git repository that 
 
 . Click the gear icon in the top right to display the *Application settings* screen.
 
-. Enter the URLs of the walkthrough repositories you want to add to your cluster. For example:
+. Enter the URLs of the Solution Pattern repositories you want to add to your cluster. For example:
 +
 ----
 https://github.com/integr8ly/example-customisations.git#master
@@ -33,11 +33,11 @@ Editing the value triggers an automatic redeployment of {webapp}.
 
 . When the deployment is complete, refresh your Browser.
 +
-You should now see new walkthroughs available from the dashboard.
+You should now see new {walkthrough-name}s available from the dashboard.
 +
 [NOTE]
 ====
-If the git repository is updated with new content, {webapp} is not automatically updated. 
+If the git repository is updated with new content, {webapp} is not automatically updated.
 To redeploy:
 
 . Open the Openshift Console.
@@ -46,5 +46,3 @@ To redeploy:
 . Click the *Deploy* button.
 
 ====
-
-
