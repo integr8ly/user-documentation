@@ -7,26 +7,48 @@ endif::[]
 [[sso]]
 = About Single Sign-On instances
 
-:rhmi-sso-name: Managed Integration RH-SSO instance
-:customer-sso-name: End user RH-SSO instance
+:rhmi-sso-name: Managed Integration SSO instance
+:customer-sso-name: End user SSO instance
+:rhsso-name: 
 
-{PRODUCT_SHORT} provides two RH-SSO instances:
 
-* *{rhmi-sso-name}*
-+
-Use the *{rhmi-sso-name}* instance to define the identities of the integration engineers and developers logging into the Red Hat applications available from the Solution Explorer.
-+
+
+.The two SSO instances in {PRODUCT_SHORT}
+|===
+| |*{rhmi-sso-name}* |*{customer-sso-name}*
+
+|Usage
+|Define the identities of the integration engineers and developers logging into the Red Hat applications available from the Solution Explorer.
+
 Red Hat manages and provides limited access to this instance, for example, you can implement user federation with this instance, but you cannot create a realm.
-+
-See xref:managing-users[Managing Users] and xref:gs-adding-custom-idp[Adding custom identity providers] sections for more information on using this instance.
 
-* *{customer-sso-name}*
-+
-Use the *{customer-sso-name}* instance to define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}.
-+
+|Define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}.
+
 Red Hat manages this instance, however the customer-admin user has admin level privileges to configure this instance.
-+
-See the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on[Product Documentation for Red Hat Single Sign-On] for more information on using Red Hat Single Sign-On.
+
+
+|Solution Explorer link
+|Red Hat Single Sign-On (Cluster)
+|Red Hat Single Sign-On
+
+When you click this link the first time a *Account already exists* message is displayed, and an *Add to existing account* option is displayed. 
+
+Choose this option and after logging in as `customer-admin` you have administrator access.
+Subsequent logins do not require this step.
+
+|User access
+|`customer-admin`
+|`customer-admin`
+
+A user named `admin` is also created and is used to manage this instance. Do not delete this user.
+
+|Documentation
+a|
+* xref:managing-users[Managing Users]
+* xref:gs-adding-custom-idp[Adding custom identity providers]
+|link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/[Product Documentation]
+
+|===
 
 [NOTE]
 ====
