@@ -22,7 +22,6 @@ include::content/gs-adding-users-proc.adoc[leveloffset=+1]
 
 include::content/gs-writing-walkthroughs-proc.adoc[leveloffset=+1]
 
-include::content/gs-using-nexus-proc.adoc[leveloffset=+1]
 
 include::content/gs-custom-keycloak-idp.adoc[leveloffset=+1]
 
