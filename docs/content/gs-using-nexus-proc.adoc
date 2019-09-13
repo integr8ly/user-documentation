@@ -1,0 +1,40 @@
+[id='gs-using-nexus-proc']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+:nexus-name: Nexus Repository Manager
+
+= Managing Java artifacts using {nexus-name}
+
+The {PRODUCT_SHORT} cluster includes a running instance of {nexus-name}.
+If you are developing Java applications, you might want to use {nexus-name} to cache and manage dependencies.
+
+== Using {nexus-name} to build your applications
+
+. Set the `MAVEN_MIRROR_URL` environment variable in your BuildConfig:
++
+----
+MAVEN_MIRROR_URL=http://nexus.openshift-nexus.svc:8081/nexus/content/groups/public
+----
++
+// tag::excludeDownstream[]
+For non RHMI clusters, or custom installs, nexus may be installed in a different namespace. In those cases use the following:
++
+----
+MAVEN_MIRROR_URL=http://nexus.nexus.svc:8081/nexus/content/groups/public
+----
++
+// end::excludeDownstream[]
+This ensures that Maven uses {nexus-name}.
+
+. Build your application.
+. Test your application.
+
+Subsequent builds should be faster dues to the {nexus-name} caching.
+
+
+.Additional Information
+
+* link:https://help.sonatype.com/repomanager3[{nexus-name}]
