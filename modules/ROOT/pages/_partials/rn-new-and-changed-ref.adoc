@@ -13,7 +13,7 @@ This release includes new versions of the following component:
 |Release Notes
 
 |{fuse-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.3/html/release_notes/index[{fuse-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.4/html/release_notes/index[{fuse-version}]
 
 |{amq-online-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.4/html/amq_online_1.2_on_openshift_container_platform_release_notes/[{amq-online-version}]
