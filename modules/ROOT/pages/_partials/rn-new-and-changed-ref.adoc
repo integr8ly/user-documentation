@@ -36,6 +36,6 @@ This release includes new versions of the following component:
 
 This release includes a second Red Hat Single Sign-On instance, which can be used to define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}. See the link:{gs-link}#sso[Getting Started] guide for more information.
 
-== Adding {walkthrough-name}
+== Adding {walkthrough-name}s
 
 This release allows users to add {walkthrough-name}s from the {webapp}. See the link:{gs-link}#gs-publishing-walkthroughs-proc[Getting Started] guide for more information.
