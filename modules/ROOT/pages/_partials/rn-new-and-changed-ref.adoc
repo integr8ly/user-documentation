@@ -34,7 +34,7 @@ This release includes new versions of the following component:
 // https://issues.jboss.org/browse/INTLY-2804
 == New Red Hat Single Sign-On instance
 
-This release includes a second Red Hat Single Sign-On instance for instance to define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}. See the link:{gs-link}#sso[Getting Started] guide for more information.
+This release includes a second Red Hat Single Sign-On instance, which can be used to define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}. See the link:{gs-link}#sso[Getting Started] guide for more information.
 
 == Adding {walkthrough-name}
 
