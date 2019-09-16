@@ -14,7 +14,7 @@
 |Documentation
 
 |{fuse-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.3/html/release_notes/index[{fuse-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.4/html/release_notes/index[{fuse-version}]
 |{fuse-configs}
 |link:{fuse-docs}[{fuse-version}] +
 (Click Fuse Online Category)
@@ -26,7 +26,7 @@
 (Click AMQ Online Category)
 
 |{three-scale-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.5/html/release_information/index[{three-scale-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.6/html/release_notes/index[{three-scale-version}]
 |{three-scale-configs}
 |link:{three-scale-docs}[{three-scale-version}]
 
