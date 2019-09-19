@@ -7,6 +7,16 @@ endif::[]
 [[sso]]
 = About Single Sign-On instances
 
+[NOTE]
+====
+You access your cluster using the credentials for the `customer-admin` user   received in the *Welcome* email. This user can:
+
+* access the OpenShift cluser with the permissions of the link:https://docs.openshift.com/dedicated/3/admin_guide/index.html#admin-guide-index-dedicated-admin-role[Dedicated cluster administrator Role]
+* access the services available from the Solution Explorer with administrator privileges.
+See the link:{rn-link}[Release Notes] for links to the associated product documentation.
+
+====
+
 :rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: End user SSO instance
 :rhsso-name: 
