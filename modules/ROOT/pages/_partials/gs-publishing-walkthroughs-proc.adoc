@@ -1,20 +1,19 @@
 [id='gs-publishing-walkthroughs-proc']
 = Adding {walkthrough-name}s to your {PRODUCT} cluster
 
-The home page of {webapp} lists all the {walkthrough-name}s from all the git repositories you are subscribed to.
-Any user can add {walkthrough-name}s to your cluster.
-See xref:gs-writing-walkthroughs-proc[] for information about writing {walkthrough-name}s.
+The home page of {webapp} lists all the {walkthrough-name}s from all the Git repositories you are subscribed to. Any user can add {walkthrough-name}s to your cluster.
+
+For more information on writing {walkthrough-name}s, see documentation on xref:gs-writing-walkthroughs-proc[Creating walkthroughs].
 
 This procedure describes how to subscribe your cluster to a Git repository that contains {walkthrough-name}s.
 
 .Procedure
 
-
 . Navigate to the *Solution Explorer*.
 
 . Click the gear icon in the top right to display the *Application settings* screen.
 
-. Enter the URLs of the Solution Pattern repositories you want to add to your cluster. For example:
+. Enter the URLs of the *Solution Pattern* repositories you want to add to your cluster. For example:
 +
 ----
 https://github.com/integr8ly/example-customisations.git#master
@@ -24,20 +23,20 @@ https://github.com/integr8ly/example-customisations.git#master
 ====
 * Enter one URL per line.
 * To include a specific branch, use the syntax `#<branch-name>`.
-* List URLs in the order you want them to appear on the Home page.
+* List URLs in the order you want them to appear on the homepage.
 ====
 
 . Click *Save*.
 +
 Editing the value triggers an automatic redeployment of {webapp}.
 
-. When the deployment is complete, refresh your Browser.
+. When the deployment is complete, refresh your browser.
 +
 You should now see new {walkthrough-name}s available from the dashboard.
 +
 [NOTE]
 ====
-If the git repository is updated with new content, {webapp} is not automatically updated.
+If the Git repository is updated with new content, {webapp} is not automatically updated.
 To redeploy:
 
 . Open the Openshift Console.
@@ -46,3 +45,4 @@ To redeploy:
 . Click the *Deploy* button.
 
 ====
+

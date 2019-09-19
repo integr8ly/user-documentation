@@ -12,6 +12,7 @@ include::attributes.adoc[]
 
 NOTE: Refer to the link:{rn-link}[Release Notes] for the latest information about {PRODUCT_SHORT}.
 
+
 // Purpose statement for the assembly
 This document provides instructions for new users of {PRODUCT_SHORT}.
 // and subsequent patch releases.

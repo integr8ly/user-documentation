@@ -8,9 +8,9 @@ endif::[]
 
 By default, a {PRODUCT_SHORT} user cannot perform service discovery in 3scale.
 
-To enable service discovery in 3scale of APIs created in the shared Fuse Online instance:
+To enable service discovery of APIs created in the shared Fuse Online instance:
 
-. Log into OpenShift as the customer-admin user from the command line.
+. Log in to OpenShift as the `customer-admin` user from the command line.
 
 . Enter the following command to enable the `<username>` user perform service discovery of Fuse Online APIs:
 
@@ -20,7 +20,7 @@ $ oc adm policy add-role-to-user view <user-name> -n fuse
 ----
 
 
-.Additional Information
+.Additional resources
 
 * link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html/service_discovery/index[Service Discovery] 3scale documentation.
-* link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.3/html/designing_apis_with_apicurito/threescale-discover-service[Service Discovery] Fuse documentation
+* link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.3/html/designing_apis_with_apicurito/threescale-discover-service[Service Discovery] Fuse documentation.

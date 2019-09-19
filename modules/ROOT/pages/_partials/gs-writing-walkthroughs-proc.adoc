@@ -13,7 +13,6 @@
 
 == About creating {walkthrough-name}s
 
-
 {walkthrough-name}s are tutorials available in {PRODUCT_SHORT}. The default {walkthrough-name}s guide you through the following scenarios:
 
 * {walkthrough-1A}
@@ -23,12 +22,12 @@ These {walkthrough-name}s are available in the {webapp}.
 
 To write {walkthrough-name}s you require a knowledge of:
 
-* Asciidoc - a lightweight mark up language, similar to markdown
+* Asciidoc - a lightweight markup language, similar to markdown
 * JSON - a lightweight format for storing and transporting data
-* Git - you must push your asciidoc and JSON files to a git repository
+* Git - you must push your Asciidoc and JSON files to a Git repository
 * OpenShift - you can add {walkthrough-name}s using the OpenShift console
 
-A simple {walkthrough-name} only requires that you edit an asciidoc file, for example:
+A simple {walkthrough-name} only requires that you edit an Asciidoc file, for example:
 
 [source,asciidoc]
 ----
@@ -41,11 +40,11 @@ A short description for the feature. <2>
 . Do this first: <4>
 . Do this second:
 ----
-<1> {walkthrough-name} title, you can only have one level 1 heading per file
+<1> {walkthrough-name} title, you can only have a single level 1 heading per file.
 <2> The first line of the introduction is displayed as a tag line for the {walkthrough-name} and displayed on the {webapp} home page.
-Do not use AsciiDoc attributes in this line because they are not displayed correctly on the home page.
+Do not use AsciiDoc attributes in this line because they are not displayed correctly on the homepage.
 <3> A task contains one or more subtasks (level 3 headings)
-<4> A numbered lists of steps the user must perform.
+<4> A numbered list of steps the user must perform.
 
 [type={walkthrough-name}Resource]
 .Additional Resources
@@ -104,7 +103,7 @@ cd walkthrough-template
 
 <4> All images for the {walkthrough-name}.
 
-<5> *walkthrough.adoc* is where the content of the {walkthrough-name} is written in asciidoc format.
+<5> *walkthrough.adoc* is where the content of the {walkthrough-name} is written in Asciidoc format.
 
 <6> *walkthrough.json* is the manifest file of the {walkthrough-name} where you can define extra dependencies.
 
@@ -123,11 +122,11 @@ The default `walkthrough.json` does not define any dependent services:
 
 === Committing your {walkthrough-name}s to a remote repository
 
-Typically, you edit the `walkthrough.adoc` file and push your changes to GitHub.
+You can edit the `walkthrough.adoc` file and push your changes to GitHub.
 
-. Create a new remote repository and take note of the remote URL
+. Create a new remote repository and take note of the remote URL.
 
-. Add the remote to your local clone
+. Add the remote to your local clone.
 +
 [source,bash]
 ----
@@ -147,18 +146,20 @@ git push -u upstream master
 [time=5]
 == Editing overview sections of a {PRODUCT} {walkthrough-name}
 
-.Prerequisites
-* You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
-
-
-The first section of the `walkthrough.adoc` describes your {walkthrough-name}, it provides an *overview* of the purpose of the {walkthrough-name}.
-The overview is displayed when a user clicks on the {walkthrough-name} in {Webapp}.
+The first section of the `walkthrough.adoc` describes your {walkthrough-name},it provides an overview of the purpose of the {walkthrough-name}.
+The overview is displayed when a user clicks on the {walkthrough-name} in {webapp}.
 
 * The overview is defined by a first level heading (in AsciiDoc a line begining with `=`) and finishes at the next second level heading (`==`).
 * The title of the overview becomes the name of the {walkthrough-name}.
 * The overview heading must be followed by a paragraph giving a short introduction to the {walkthrough-name} in one or two sentences.
-This description is displayed in the {Webapp} dashboard card for the {walkthrough-name}.
+This description is displayed in the {webapp} dashboard card for the {walkthrough-name}.
+
+.Prerequisites
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+
+
+.Procedure
 
 To add an overview section using the template respository:
 
@@ -193,9 +194,11 @@ git push upstream master
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
 
 Tasks are procedures that you write as a section of the `walkthrough.adoc` file, the section being defined by a second level heading (`==`).
+
+.Procedure
 
 The template already contains a sample task, you can change it as follows:
 
@@ -220,11 +223,13 @@ For example to change the estimated time for the first task to 12 minutes:
 +
 NOTE: The content of the {webapp} does not change automatically after a change in the subscribed repository. You must redeploy the {webapp} for the change to be visible.
 
++
 . Redeploy the {webapp}:
 .. Navigate to the *webapp* project in OpenShift.
 .. Click on the *tutorial-web-app* deployment config.
 .. Click the *Deploy* button.
 
++
 NOTE: You can create another level of subtasks by creating a third level heading (`===`). Subtasks are displayed in the {webapp} on the parent task page.
 
 
@@ -232,14 +237,18 @@ NOTE: You can create another level of subtasks by creating a third level heading
 [time=5]
 == Editing procedures of a {PRODUCT} {walkthrough-name}
 
-.Prerequisites
-* You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
-
 A procedure is a set of steps that you perform to complete a task or subtask.
 
 Write procedures using AsciiDoc numbered lists.
-Prepend each step with a `. ` to create a simple numbered list.
+Prepend each step with a `.` to create a simple numbered list.
+
+
+.Prerequisites
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+
+
+.Procedure
 
 To edit a procedure in the template respository:
 
@@ -268,7 +277,10 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+
+
+.Procedure
 
 To add a {walkthrough-name} resources:
 
@@ -284,16 +296,22 @@ To add a {walkthrough-name} resources:
 * link:{openshift-host}[Openshift Console, window="_blank"]
 ****
 ----
+
 +
-Setting `serviceName` is optional.
-+
-If `serviceName` is set to the name of a middleware service, an icon indicating the service status is displayed next to the resource.
-+
-For a list of default services, see link:https://github.com/integr8ly/tutorial-web-app/blob/master/src/common/serviceInstanceHelpers.js[the value for DEFAULT_SERVICES].
-+
-Setting the `window="_blank"` parameter for a {walkthrough-name} resource link is also optional, but ensures that the target of the link displays in a separate browser tab.
+[NOTE]
+====
+* Setting `serviceName` is optional.
+
+* If `serviceName` is set to the name of a middleware service, an icon indicating the service status is displayed next to the resource.
+
+* For a list of default services, see link:https://github.com/integr8ly/tutorial-web-app/blob/master/src/common/serviceInstanceHelpers.js[the value for DEFAULT_SERVICES].
+
+* Setting the `window="_blank"` parameter for a {walkthrough-name} resource link is also optional, but ensures that the target of the link displays in a separate browser tab.
+====
 +
 NOTE: You can only define {walkthrough-name} resources in the overview section.
+
++
 
 . Save, commit and push your changes.
 
@@ -311,7 +329,10 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+
+
+.Procedure
 
 To add task resources:
 
@@ -337,22 +358,23 @@ To add task resources:
 
 [time=10]
 == Adding verifications to a {PRODUCT} {walkthrough-name}
+Verifications are interactive elements in a {walkthrough-name} that confirm whether a user has successfully completed a procedure. They are questions presented to the user, which can be answered with either a `Yes` or `No` response.
 
-Verifications are interactive elements in a {walkthrough-name} that confirm whether a user has successfully completed a procedure.
-They are questions present to the user, who can answer the question with either a `Yes` or `No` answer.
+NOTE: Every procedure in a task or subtask requires a verification.
 
-NOTE: Every procedure in a task or subtasks requires a verification.
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
 
+
+.Procedure
 
 To add a verification:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
 
-. At the end of the Procedure section, right after the numbered list add:
+. At the end of the procedure section, following the numbered list add:
 +
 :verificationText: verification
 [source,asciidoc,subs="attributes"]
@@ -379,12 +401,12 @@ Try turning it off and on again.
 [time=5]
 == Adding attributes to a {PRODUCT} {walkthrough-name}
 
-Attributes are used to make external variables users performing a {walkthrough-name}.
+Attributes are used to make external variable users performing a {walkthrough-name}.
 The syntax for using attributes is `{<attribute name>}`. {walkthrough-name}s have access to a number of predefined attributes:
 
 * If a middleware service defines a route you can access it using `{route-<route name>-host}`.
 
-* The Openshift Console is available as `\{openshift-host}`.
+* The OpenShift console is available as `\{openshift-host}`.
 
 Other attributes that are available to {walkthrough-name} authors are:
 
@@ -404,18 +426,20 @@ Other attributes that are available to {walkthrough-name} authors are:
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
 
-For example, to add a link  to the Openshift Console in the {walkthrough-name}:
 
-. Add another step to the numbered list in your Procedure:
+.Procedure
+
+To add a link to the OpenShift console in the {walkthrough-name}:
+
+. Add another step to the numbered list in your procedure:
 +
 ----
-. Click on the link to the Openshift Console.
+. Click on the link to the OpenShift console.
 ----
-
++
 . Save, commit and push your changes.
-
 . Redeploy the {webapp}:
 .. Navigate to the *webapp* project in OpenShift.
 .. Click on the *tutorial-web-app* deployment config.
@@ -433,18 +457,18 @@ You can also link to the URLs associated with those services in your `walkthroug
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
 * You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
-* Some experience with the `oc` command. See link:https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html[Getting Started with the OpenShift CLI^] for more information about `oc` command.
+* Some experience with the `oc` command. See link:https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html[Getting Started with the OpenShift CLI] for more information about `oc` command.
 
 
-
+.Procedure
 
 . Find the name of the service you want to provision:
 
-.. Log into the Openshift Console.
+.. Log in to the OpenShift console.
 
 .. Click your username in the top right corner and choose *Copy Login Command* from the menu.
 
-.. Log into the OpenShift CLI using the `oc` on your clipboard.
+.. Log in to the OpenShift CLI using the `oc` on your clipboard.
 
 .. Run the following command to list all the service names available from your cluster catalog:
 +
@@ -481,17 +505,15 @@ For example, to use the `CakePHP + MySQL (Ephemeral)` service in your custom {wa
     }
 }
 ----
-
-. Add your {walkthrough-name} to the cluster as described in  xref:gs-publishing-walkthroughs-proc[].
++
+. Add your {walkthrough-name} to the cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
 . Navigate the {walkthrough-name} to trigger the provisioning of the custom service, for example, the `cakephp-mysql-example` service.
-. Log into the OpenShift Console.
-. Navigate to the custom project in OpenShift.
-The project is named using the pattern `<username>-<walkthrough-id>`.
+. Log in to the OpenShift console.
+. Navigate to the custom project in OpenShift.The project is named using the pattern `<username>-<walkthrough-id>`.
 . Open *Routes* from the *Applications* menu.
 . Note the *Name* of the route you want to reference in your {walkthrough-name} tasks. For example, `cakephp-mysql-example`.
-
 . Edit the `walkthrough.adoc` file and use the `{route-<route-name>-host}` pattern, whenever you want the route URL to appear.
-For example, to insert a step that asks the user of the {walkthrough-name} to log into the CakePHP app:
+For example, to insert a step that asks the user of the {walkthrough-name} to log in to the CakePHP app:
 +
 ----
 . Log into the link:{route-cakephp-mysql-example-host}[CakePHP app].
@@ -499,13 +521,14 @@ For example, to insert a step that asks the user of the {walkthrough-name} to lo
 +
 NOTE: If you want Asciidoc attributes to render values in code blocks, you must start the code block with `[subs="attributes"]`.
 
++
 . Redeploy the *tutorial-web-app* to pick up changes to your {walkthrough-name}.
-. Log in to the Webapp using a different username to test the {walkthrough-name}.
+. Log in to the {webapp} using a different username to test the {walkthrough-name}.
 
 
 == Defining metadata for your {walkthrough-name} repository
 
-By default, the {walkthrough-name}s from a repository are displayed in {webapp} with a title corresponding to your repository name. However, you can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My {walkthrough-name}s`:
+By default, the {walkthrough-name}s from a repository are displayed in {webapp} with a title corresponding to your repository name. You can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My {walkthrough-name}s`:
 
 
 [source, json]
@@ -517,5 +540,5 @@ By default, the {walkthrough-name}s from a repository are displayed in {webapp} 
 
 == Previewing your {walkthrough-name}
 
-. Log into the {webapp}
-. Follow the steps described in xref:gs-publishing-walkthroughs-proc[].
+. Log in to the {webapp}
+. Follow the steps described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
