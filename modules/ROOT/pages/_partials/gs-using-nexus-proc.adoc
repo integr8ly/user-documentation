@@ -20,7 +20,7 @@ MAVEN_MIRROR_URL=http://nexus.openshift-nexus.svc:8081/nexus/content/groups/publ
 ----
 +
 // tag::excludeDownstream[]
-For non RHMI clusters, or custom installs, nexus may be installed in a different namespace. In those cases use the following:
+For non-RHMI clusters, or custom installs, nexus may be installed in a different namespace. In those cases use the following:
 +
 ----
 MAVEN_MIRROR_URL=http://nexus.nexus.svc:8081/nexus/content/groups/public
@@ -32,9 +32,9 @@ This ensures that Maven uses {nexus-name}.
 . Build your application.
 . Test your application.
 
-Subsequent builds should be faster dues to the {nexus-name} caching.
+Subsequent builds should be faster due to the {nexus-name} caching.
 
 
-.Additional Information
+.Additional resources
 
 * link:https://help.sonatype.com/repomanager3[{nexus-name}]
