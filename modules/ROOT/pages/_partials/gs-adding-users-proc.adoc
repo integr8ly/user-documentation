@@ -4,11 +4,9 @@ ifdef::env-github[]
 :imagesdir: ../images/
 endif::[]
 
-[[sso]]
-= About Single Sign-On instances
+[[customer-admin]]
+= About the customer-admin user
 
-[NOTE]
-====
 You access your cluster using the credentials for the `customer-admin` user received in the _Welcome_ email. This user can:
 
 * access the OpenShift cluser with the permissions of the link:https://docs.openshift.com/dedicated/3/admin_guide/index.html#admin-guide-index-dedicated-admin-role[Dedicated cluster administrator Role], including read-only access to the Fuse Online project.
@@ -18,11 +16,15 @@ You access your cluster using the credentials for the `customer-admin` user rece
 
 ** the `customer-admin` user has the manage-user, view-realm and manage-identity-providers roles in the managed integration SSO instance as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/admin_permissions#realm_specific_roles[Red Hat Single Sign-On documentation]
 
-The `customer-admin` user is a single account with the privilege to create users in your Managed Integration cluster. If you require more users with the same privileges, contact link:https://access.redhat.com/support[Red Hat Support].
-
 See the link:{rn-link}[Release Notes] for links to the associated product documentation.
 
-====
+NOTE: The `customer-admin` user is a single account with the privilege to create users in your Managed Integration cluster. If you require more users with the same privileges, contact link:https://access.redhat.com/support[Red Hat Support].
+
+
+
+
+[[sso]]
+= About Single Sign-On instances
 
 :rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: End user SSO instance
