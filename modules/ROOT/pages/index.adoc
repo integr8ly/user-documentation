@@ -4,3 +4,4 @@
 
 * xref:release-notes.adoc[Release Notes]
 
+* xref:troubleshooting.adoc[Troubleshooting Guide]
