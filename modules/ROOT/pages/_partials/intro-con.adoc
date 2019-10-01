@@ -10,7 +10,7 @@ Red Hat Managed Integration delivers managed integration services hosted on the 
 
 The {webapp} presents links to the applications available in a {PRODUCT_SHORT} cluster and provides {walkthrough-name}s that guide users through the process of creating various integrated solutions using these applications.
 
-== Applications
+== Applications available in {webapp}
 
 {PRODUCT_SHORT} includes the following middleware applications:
 
@@ -41,3 +41,17 @@ Most applications are available in the {webapp}, after you first log in.  Howeve
 .Additional resources
 
 * https://access.redhat.com/documentation/en-us/openshift_dedicated/3/[Product Documentation for OpenShift Dedicated 3]
+
+
+== About {walkthrough-name}s
+
+{walkthrough-name}s are tutorials available in {PRODUCT_SHORT}. The default {walkthrough-name}s guide you through the following scenarios:
+
+* Integrating message-oriented middleware with a RESTful API using AMQ Online
+* Managing and protecting APIs using API management
+* No code API development and SaaS integration
+
+In addition, there is a mobile development {walkthrough-name} for Mobile Developer Services.
+
+These {walkthrough-name}s are available in the {webapp}.
+

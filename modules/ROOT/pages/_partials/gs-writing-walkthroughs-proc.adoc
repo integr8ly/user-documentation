@@ -1,9 +1,6 @@
 :linkTroubleshooting: https://github.com/integr8ly/example-customisations/blob/master/docs/troubleshooting.adoc
 :linkGitHubFork: https://help.github.com/articles/fork-a-repo/
 :linkIndexURL: https://github.com/integr8ly/example-customisations/index.adoc
-:walkthrough-1A: Integrating message-oriented middleware with a RESTful API using AMQ Online
-:walkthrough-2: Managing and protecting APIs using API management
-:walkthrough-3: No code API development and SaaS integration
 
 :as described in xref:gs-publishing-walkthroughs-proc[]: Adding {walkthrough-name}s to a cluster
 
@@ -12,13 +9,6 @@
 :toc:
 
 == About creating {walkthrough-name}s
-
-{walkthrough-name}s are tutorials available in {PRODUCT_SHORT}. The default {walkthrough-name}s guide you through the following scenarios:
-
-* {walkthrough-1A}
-* {walkthrough-2}
-
-These {walkthrough-name}s are available in the {webapp}.
 
 To write {walkthrough-name}s you require a knowledge of:
 
