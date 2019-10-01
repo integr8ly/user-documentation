@@ -18,7 +18,7 @@ You access your cluster using the credentials for the `customer-admin` user rece
 
 See the link:{rn-link}[Release Notes] for links to the associated product documentation.
 
-NOTE: The `customer-admin` user is a single account with the privilege to create users in your Managed Integration cluster. If you require more users with the same privileges, contact link:https://access.redhat.com/support[Red Hat Support].
+NOTE: The `customer-admin` user is a single account with the privilege to create users in your Managed Integration cluster. If you require additional users with `customer-admin` user privileges, contact link:https://access.redhat.com/support[Red Hat Support].
 
 
 
