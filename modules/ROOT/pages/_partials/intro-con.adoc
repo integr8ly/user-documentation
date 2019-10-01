@@ -51,7 +51,7 @@ Most applications are available in the {webapp}, after you first log in.  Howeve
 * Managing and protecting APIs using API management
 * No code API development and SaaS integration
 
-In addition, there is is a mobile development {walkthrough-name} for Mobile Developer Services.
+In addition, there is a mobile development {walkthrough-name} for Mobile Developer Services.
 
 These {walkthrough-name}s are available in the {webapp}.
 
