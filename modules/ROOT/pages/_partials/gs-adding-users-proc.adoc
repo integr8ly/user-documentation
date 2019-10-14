@@ -123,6 +123,8 @@ To create a user:
  * Set `User Enabled` to *ON*.
  * Set `Email Verified` to *ON*. This ensures that the user account will be activated in 3scale.
 +
+NOTE: This step does not automatically send an email to new users.
+
 . Click the *Save* button to create the user.
 
 [NOTE]
