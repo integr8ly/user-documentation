@@ -1,6 +1,6 @@
 # User Documentation for RHMI users
 
-Red Hat Managed Integration (RHMI) delivers managed integration services hosted on the OpenShift, enabling developers to engage in agile, microservices-based application development.
+Red Hat Managed Integration delivers Integreatly on OpenShift Dedicated.
 
 This repository contains up-to-date [documentation](https://integr8ly.github.io/user-documentation/) (Getting Started Guide and Release Notes) for RHMI as well as Integrately users. This is a live document and is updated regularly.  
 
