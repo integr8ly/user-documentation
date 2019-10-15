@@ -1,0 +1,9 @@
+
+[id='rn-1.5.1-ref']
+
+= 1.5.1 Patch Release Notes
+
+{PRODUCT} 1.5.1 includes the following changes:
+
+* Nexus removal
+* Improvements to monitoring alerts for Red Hat support team
