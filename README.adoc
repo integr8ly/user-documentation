@@ -1,6 +1,6 @@
 = User Documentation for RHMI users
 
-Red Hat Managed Integration delivers Integreatly on OpenShift Dedicated.
+Red Hat Managed Integration (RHMI) delivers Integreatly on OpenShift Dedicated.
 
 This repository contains up-to-date link:https://integr8ly.github.io/user-documentation/[documentation] (Getting Started Guide and Release Notes) for RHMI as well as Integreatly users. This is a live document and is updated regularly.  
 
