@@ -29,7 +29,9 @@ This release includes new versions of the following components:
 
 |===
 
+== Mobile Developer Services
 
+This release includes Mobile Developer Services. Mobile Developer Services allow you to perform Cloud Native Mobile App Development, making many of the common tasks associated with mobile development much easier and quicker to implement. See the link:https://access.redhat.com/documentation/en-us/red_hat_managed_integration/1/html-single/getting_started_with_mobile_developer_services/[Getting Started] for more information.
 
 // https://issues.jboss.org/browse/INTLY-2804
 == New Red Hat Single Sign-On instance
