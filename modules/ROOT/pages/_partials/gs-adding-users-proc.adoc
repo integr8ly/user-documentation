@@ -61,6 +61,18 @@ Subsequent logins do not require this step.
 
 A user named `admin` is also created and is used to manage this instance. Do not delete this user.
 
+| Permissions
+| Can create users in the `openshift` realm.
+
+Can federate an LDAP or Active Directory server in the `openshift` realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/server_administration_guide/index#user-storage-federation[User Storage Federation] to avoid managing the same users in different realms.
+
+| Can create users in the `master` realm.
+
+Can create new realms. Red Hat recommends creating realms for each end user application.
+
+Can federate an LDAP or Active Directory server in the `master` realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/server_administration_guide/index#user-storage-federation[User Storage Federation] to avoid managing the same users in different realms.
+
+
 |Documentation
 a|
 * xref:managing-users[Managing Users]
