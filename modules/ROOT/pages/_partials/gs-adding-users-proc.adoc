@@ -84,7 +84,7 @@ For example, if a developer wanted to use http://microcks.github.io/[Microcks],t
 [[managing-users]]
 = Managing Users in the {rhmi-sso-name}
 
-You manage users in the context of a Red Hat Single Sign-On (RHSSO) realm.
+You manage users in the context of a Red Hat Single Sign-On realm.
 A realm manages a set of users, credentials, roles, and groups.
 A user belongs to a realm and can log in to this realm.
 
