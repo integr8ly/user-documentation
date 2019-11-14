@@ -9,9 +9,9 @@
 |===
 
 |Component
-|Release Notes
-|Supported Configurations
-|Documentation
+|*Release Notes*
+|*Supported Configurations*
+|*Documentation*
 
 |{fuse-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.4/html/release_notes/index[{fuse-version}]
