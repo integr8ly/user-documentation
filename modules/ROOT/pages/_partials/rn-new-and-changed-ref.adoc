@@ -4,7 +4,7 @@
 
 == New component versions
 
-This release includes new versions of the following component:
+This release includes new versions of the following components:
 
 [cols="h,"]
 |===
