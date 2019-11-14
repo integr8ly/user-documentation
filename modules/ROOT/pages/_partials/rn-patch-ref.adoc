@@ -4,7 +4,6 @@
 
 This release fixes issues relating to Red Hat support of the Managed Integration Cluster.
 
-
 [id='rn-1.5.1-ref']
 
 = Managed Integration 1.5.1 Patch Release Notes
