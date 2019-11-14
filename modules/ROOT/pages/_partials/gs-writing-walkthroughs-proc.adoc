@@ -2,8 +2,6 @@
 :linkGitHubFork: https://help.github.com/articles/fork-a-repo/
 :linkIndexURL: https://github.com/integr8ly/example-customisations/index.adoc
 
-:as described in xref:gs-publishing-walkthroughs-proc[]: Adding {walkthrough-name}s to a cluster
-
 [id='gs-writing-walkthroughs-proc']
 = Creating {PRODUCT} {walkthrough-name}s
 :toc:
