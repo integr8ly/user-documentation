@@ -1,6 +1,6 @@
 name: integreatly
 title: Integreatly
-version: 'latest'
+version: 'v1.5'
 start_ROOT: ROOT::index.adoc
 nav:
  - modules/ROOT/nav.adoc 
