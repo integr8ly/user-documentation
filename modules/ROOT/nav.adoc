@@ -1,7 +1,6 @@
 * xref::index.adoc[User Documentation]
 
 ** xref::getting-started.adoc[Getting Started]
-<<<<<<< HEAD
 *** xref::/_partials/intro-con.adoc[Overview]
 *** xref::/_partials/gs-adding-users-proc.adoc[Adding Users]
 
@@ -17,20 +16,3 @@
 *** xref::/_partials/rn-versions-ref.adoc[Component Versions]
 *** xref::/_partials/rn-known-issues-ref.adoc[Known Issues]
 *** xref::/_partials/rn-new-and-changed-ref.adoc[New Features]
-=======
-*** xref::intro-con.adoc[Overview]
-*** xref::gs-adding-users-proc.adoc[Adding Users]
-
-*** xref::gs-publishing-walkthroughs-proc.adoc[Publishing Walkthroughs]
-**** xref::gs-writing-walkthroughs-proc.adoc[Writing Walkthroughs]
-*** xref::gs-custom-keycloak-idp.adoc[Custom Keycloak]
-*** xref::gs-adding-custom-3scale-routes.adoc[Adding Custom 3scale Routes]
-*** xref::gs-service-discovery-3scale.adoc[Service Discovery 3scale]
-*** xref::gs-managing-images-proc.adoc[Managing Images]
-
-
-** xref::release-notes.adoc[Release Notes]
-*** xref::rn-versions-ref.adoc[Component Versions]
-*** xref::rn-known-issues-ref.adoc[Known Issues]
-*** xref::rn-new-and-changed-ref.adoc[New Features]
->>>>>>> 0aea4ed... Update nav.adoc
