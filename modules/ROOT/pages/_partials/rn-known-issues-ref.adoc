@@ -7,5 +7,5 @@ This section lists known issues with  {PRODUCT} {PATCH_VERSION_NO}:
 
 // * You do not have the required privileges to add {walkthrough-name}s to a cluster. If you require this feature, contact Red Hat Support for a workaround.
 
-* Any {PRODUCT_SHORT} user can determine what {walkthrough-name}s are available in a cluster.
-In a future release, this ability will be restricted to the `customer-admin` user.
+* Any {PRODUCT_SHORT} user can now determine which {walkthrough-name}s are available in a cluster. 
+In future releases, this ability will be restricted to the *customer-admin* user.
