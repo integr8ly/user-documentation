@@ -1,1 +1,18 @@
 * xref::index.adoc[User Documentation]
+
+** xref::getting-started.adoc[Getting Started]
+*** xref::partials/intro-con.adoc[Overview]
+*** xref::_partials/gs-adding-users-proc.adoc[Adding Users]
+
+*** xref::_partials/gs-publishing-walkthroughs-proc.adoc[Publishing Walkthroughs]
+**** xref::_partials/gs-writing-walkthroughs-proc.adoc[Writing Walkthroughs]
+*** xref::_partials/gs-custom-keycloak-idp.adoc[Custom Keycloak]
+*** xref::_partials/gs-adding-custom-3scale-routes.adoc[Adding Custom 3scale Routes]
+*** xref::_partials/gs-service-discovery-3scale.adoc[Service Discovery 3scale]
+*** xref::_partials/gs-managing-images-proc.adoc[Managing Images]
+
+
+** xref::release-notes.adoc[Release Notes]
+*** xref::partials/rn-versions-ref.adoc[Component Versions]
+*** xref::_partials/rn-known-issues-ref.adoc[Known Issues]
+*** xref::_partials/rn-new-and-changed-ref.adoc[New Features]
