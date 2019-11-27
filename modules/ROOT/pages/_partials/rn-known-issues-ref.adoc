@@ -7,5 +7,16 @@ This section lists known issues with  {PRODUCT} {PATCH_VERSION_NO}:
 
 // * You do not have the required privileges to add {walkthrough-name}s to a cluster. If you require this feature, contact Red Hat Support for a workaround.
 
+// For a Known Issue, try to include the following information:
+
+// Consequence - What user action or situation would make this problem appear (Selecting the Foo option with the Bar version 1.3 plugin enabled results in an error message)?  What did the customer experience as a result of the issue? What was the symptom?
+
+// Cause (if it has been identified) - Why did this happen?
+
+// Workaround (If there is one)- What can you do to avoid or negate the effects of this issue in the meantime?  Sometimes if there is no workaround it is worthwhile telling readers to contact support for advice.  Never promise future fixes.
+
+// Result - If the workaround does not completely address the problem.
+
+
 * Any {PRODUCT_SHORT} user can now determine which {walkthrough-name}s are available in a cluster. 
 In future releases, this ability will be restricted to the *customer-admin* user.

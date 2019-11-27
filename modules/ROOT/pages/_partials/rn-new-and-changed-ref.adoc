@@ -1,5 +1,21 @@
 [id='rn-new-and-changed-ref']
 = New and changed features
+// For a New Feature or Enhancement,  try to include the following information:
+
+// Feature – Describe the new functionality available to the customer.  For enhancements, try to describe as specifically as possible where the customer will see changes.  
+
+// Reason – If known, include why has the enhancement been implemented (use case, performance, technology, etc.).   For example, showcases integration of X with Y, demonstrates Z API feature, includes latest framework bug fixes.  There may not have been a 'problem' previously, but system behaviour may have changed.  
+
+// Result – If changed, describe the current user experience
+
+// Detailed instructions about how to use the new features should go into the usage documentation. You can link to the other docs where customers can find this information.
+
+// For a Deprecated Feature,  try to include the following information:
+
+// Description - Description of the any features (including technology previews)that have been removed from the product.  Write the description from a customer perspective, what UI elements, commands, or options are no longer available.
+
+// Consequence or a recommended replacement - Description of what the customer can no longer do, and recommended replacement (if known).
+
 
 
 == New component versions
