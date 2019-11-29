@@ -5,7 +5,7 @@ include::attributes.adoc[]
 :gs-link: https://integr8ly.github.io/user-documentation/index.html?e=modules/ROOT/pages/getting-started.adoc
 
 
-= Release Notes
+= Release Notes for Managed Integration {MINOR_VERSION_NO}
 
 // Context attribute is assembly specific and enables module reuse between assemblies.
 :imagesdir: images
