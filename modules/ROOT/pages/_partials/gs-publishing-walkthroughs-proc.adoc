@@ -3,7 +3,7 @@
 
 The home page of {webapp} lists all the {walkthrough-name}s from all the Git repositories you are subscribed to. Any user can add {walkthrough-name}s to your cluster.
 
-For more information on writing {walkthrough-name}s, see documentation on xref:gs-writing-walkthroughs-proc[Creating walkthroughs].
+For more information on writing {walkthrough-name}s, see documentation on xref:gs-writing-walkthroughs-proc[Creating {walkthrough-name}s].
 
 This procedure describes how to subscribe your cluster to a Git repository that contains {walkthrough-name}s.
 
@@ -45,4 +45,3 @@ To redeploy:
 . Click the *Deploy* button.
 
 ====
-

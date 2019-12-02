@@ -83,7 +83,7 @@ cd walkthrough-template
 ----
 
 
-<1> This is an optional file that defines metadata for the set of walkthroughs in the repository.
+<1> This is an optional file that defines metadata for the set of Solution Patterns in the repository.
 
 <2> This is a required directory. All {walkthrough-name}s are defined under `walkthroughs`.
 
@@ -144,7 +144,7 @@ This description is displayed in the {webapp} dashboard card for the {walkthroug
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
 
 
 .Procedure
@@ -182,7 +182,7 @@ git push upstream master
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
 
 Tasks are procedures that you write as a section of the `walkthrough.adoc` file, the section being defined by a second level heading (`==`).
 
@@ -233,7 +233,7 @@ Prepend each step with a `.` to create a simple numbered list.
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
 
 
 .Procedure
@@ -265,7 +265,7 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
 
 
 .Procedure
@@ -317,7 +317,7 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
 
 
 .Procedure
@@ -353,7 +353,7 @@ NOTE: Every procedure in a task or subtask requires a verification.
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
 
 
 .Procedure
@@ -414,7 +414,7 @@ Other attributes that are available to {walkthrough-name} authors are:
 
 .Prerequisites
 * You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
 
 
 .Procedure
@@ -494,7 +494,7 @@ For example, to use the `CakePHP + MySQL (Ephemeral)` service in your custom {wa
 }
 ----
 +
-. Add your {walkthrough-name} to the cluster as described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+. Add your {walkthrough-name} to the cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
 . Navigate the {walkthrough-name} to trigger the provisioning of the custom service, for example, the `cakephp-mysql-example` service.
 . Log in to the OpenShift console.
 . Navigate to the custom project in OpenShift.The project is named using the pattern `<username>-<walkthrough-id>`.
@@ -529,4 +529,4 @@ By default, the {walkthrough-name}s from a repository are displayed in {webapp} 
 == Previewing your {walkthrough-name}
 
 . Log in to the {webapp}
-. Follow the steps described in xref:gs-publishing-walkthroughs-proc[Adding walkthroughs].
+. Follow the steps described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
