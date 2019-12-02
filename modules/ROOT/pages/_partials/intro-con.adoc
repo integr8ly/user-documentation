@@ -34,7 +34,7 @@ The {webapp} presents links to the applications available in a {PRODUCT_SHORT} c
 Most applications are available in the {webapp}, after you first log in.  However:
 
 * If *Red Hat AMQ Online* is displayed as *Not ready* in the *Applications* menu, click *Start service* to provision it.
-* You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you create a {walkthrough-name}, you also provision an instance of Fuse Online which is not shared with other cluster users.
+* You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you start a {walkthrough-name}, you also provision an instance of Fuse Online which is not shared with other cluster users.
 ====
 
 
@@ -54,4 +54,3 @@ Most applications are available in the {webapp}, after you first log in.  Howeve
 In addition, there is a mobile development {walkthrough-name} for Mobile Developer Services.
 
 These {walkthrough-name}s are available in the {webapp}.
-
