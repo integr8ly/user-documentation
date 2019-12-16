@@ -1,0 +1,47 @@
+[id='push-notification-service']
+= Overview of Push Notifications as a Standalone Service
+
+The Push Notifications service allows you to send native push notifications to different mobile operating systems.
+
+* Code once and push notifications to iOS and Android.
+
+* Push notifications to defined groups.
+
+* Push notifications to either iOS only or Android only.
+
+* Push notifications to different variants of a mobile app.
+
+* Push notifications from different back-end apps to the same mobile app.
+
+Currently the service supports:
+
+* Apple Push Notification Service
+
+* Firebase Cloud Messaging
+
+
+The Push Notifications service offers a unified Notification Service API to the above mentioned Push Network Services. It can be seen as a broker that distributes push messages to different 3rd party Push Networks.
+
+[NOTE]
+====
+* The payload of the push notification is delivered to 3rd party Push Network providers, Google or Apple. AeroGear recommends that users do not send any sensitive personal or confidential information (for example, a social security number, financial account or transactional information) as part of any Push Notification. Users of push notifications should not have an expectation of secure transmission.
+
+* For analytic purposes, the service stores the content of the alert key sent to the UnifiedPush Server. The content of the alert key belongs to the metadata, which is deleted after 30 days, using a nightly job within the UnifiedPush Server.
+
+* You are only able to send push notifications to a real device, sending push notifications to an emulator fails.
+
+* Push is a signalling mechanism and is not suitable to be used as a data carrying system, for example, a chat application.
+====
+
+== Using the Push Notification Service
+
+Access the Push Notification Service section by clicking *Push Notification Service* from the {webapp}
+
+* Click *Start Here*
+* Enter a name for your application and click *Create App*
+* Click *Add a Variant*
+* Enter a name for your variant and select the platform that intend to target (IOS/Android)
+* Enter the *Push Network* details necessary for your push network
+* Click *Create*
+* Code snippets for your applications are displayed.  Copy each snippet into the appropriate file inyour application 
+* Click the *Skip the wizard* link to finish.
