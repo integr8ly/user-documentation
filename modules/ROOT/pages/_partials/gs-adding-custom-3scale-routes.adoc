@@ -8,7 +8,7 @@ endif::[]
 
 NOTE: You cannot delete routes created using the procedure described below.
 
-If you use 3scale to manage your API, you might require that the API URL use a specific host and format.
+If you use 3scale to manage your API, you might need to use a specific host and format for the API URL.
 For example, you might want to expose an API as `https://mydomain.com/v1/getStuff`.
 To use a custom domain, you must create a route in the OpenShift 3scale project as described below.
 
@@ -61,4 +61,4 @@ $ oc create -f ./custom-route.yaml
 
 .Additional resources
 
-* See the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/deployment_options/index#public_base_url[Public Base URL] documentation for an introduction to custom URLs.
+* See the https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html-single/administering_the_api_gateway/index#public_base_url[Public Base URL] documentation for an introduction to custom URLs.
