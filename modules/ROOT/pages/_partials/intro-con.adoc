@@ -42,15 +42,17 @@ Most applications are available in the {webapp}, after you first log in.  Howeve
 
 * https://access.redhat.com/documentation/en-us/openshift_dedicated/3/[Product Documentation for OpenShift Dedicated 3]
 
-
 == About {walkthrough-name}s
 
 {walkthrough-name}s are tutorials available in {PRODUCT_SHORT}. The default {walkthrough-name}s guide you through the following scenarios:
 
 * Integrating message-oriented middleware with a RESTful API using AMQ Online
+* Protecting Applications using Red Hat Single Sign-On (SSO)
++
+NOTE: This {walkthrough-name} requires that you have completed the first {walkthrough-name}.
 * Managing and protecting APIs using API management
 * No code API development and SaaS integration
 
-In addition, there is a mobile development {walkthrough-name} for Mobile Developer Services.
+In addition, there is a Data Sync Solution Pattern using GraphQL {walkthrough-name} for mobile and web developers.
 
 These {walkthrough-name}s are available in the {webapp}.
