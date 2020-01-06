@@ -50,9 +50,9 @@ Red Hat manages this instance, however the customer-admin user has admin level p
 |Red Hat Single Sign-On (Cluster)
 |Red Hat Single Sign-On
 
-When you click this link the first time an *Account already exists* message and an *Add to existing account* option are displayed. 
+When you click this link for the first time an *Account already exists* message and an *Add to existing account* option are displayed. 
 
-Choose this option. After logging in as the `customer-admin`, you will have administrator access.
+Choose the *Add to existing account* option. After logging in as the `customer-admin`, you will have administrator access.
 Subsequent logins do not require this step.
 
 |User access
