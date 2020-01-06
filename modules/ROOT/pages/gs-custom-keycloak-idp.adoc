@@ -7,7 +7,7 @@ endif::[]
 = Adding custom identity providers to {PRODUCT}
 
 By default, {PRODUCT_SHORT} includes a Single Sign-On solution using Red Hat Single Sign-On (RHSSO).
-This allows a user to log in to all middleware services using the single account.
+This allows a user to log in to all middleware services using a single account.
 
 Red Hat Single Sign-On allows an administrator to use identity brokering for the {PRODUCT_SHORT} realm.
 
