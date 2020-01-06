@@ -17,20 +17,20 @@ NOTE: Refer to the link:{rn-link}[Release Notes] for the latest information abou
 This document provides instructions for new users of {PRODUCT_SHORT}.
 // and subsequent patch releases.
 
-include::intro-con.adoc[leveloffset=+1]
+include::_partials/intro-con.adoc[leveloffset=+1]
 
-include::gs-adding-users-proc.adoc[leveloffset=+1]
+include::_partials/gs-adding-users-proc.adoc[leveloffset=+1]
 
-include::gs-publishing-walkthroughs-proc.adoc[leveloffset=+1]
+include::_partials/gs-publishing-walkthroughs-proc.adoc[leveloffset=+1]
 
-include::gs-writing-walkthroughs-proc.adoc[leveloffset=+1]
+include::_partials/gs-writing-walkthroughs-proc.adoc[leveloffset=+1]
 
-// include::gs-using-nexus-proc.adoc[leveloffset=+1]
+// include::_partials/gs-using-nexus-proc.adoc[leveloffset=+1]
 
-include::gs-custom-keycloak-idp.adoc[leveloffset=+1]
+include::_partials/gs-custom-keycloak-idp.adoc[leveloffset=+1]
 
-include::gs-adding-custom-3scale-routes.adoc[leveloffset=+1]
+include::_partials/gs-adding-custom-3scale-routes.adoc[leveloffset=+1]
 
-include::gs-service-discovery-3scale.adoc[leveloffset=+1]
+include::_partials/gs-service-discovery-3scale.adoc[leveloffset=+1]
 
-include::gs-managing-images-proc.adoc[leveloffset=+1]
+include::_partials/gs-managing-images-proc.adoc[leveloffset=+1]
