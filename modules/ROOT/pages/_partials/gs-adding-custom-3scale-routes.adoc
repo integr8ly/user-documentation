@@ -9,13 +9,12 @@ endif::[]
 NOTE: You cannot delete routes created using the procedure described below.
 
 If you use 3scale to manage your API, you might need to use a specific host and format for the API URL.
-
 For example, you might want to expose an API as `https://mydomain.com/v1/getStuff`.
-To use a custom domain, you must create a route in the OpenShift 3scale project as described in the following procedure.
+To use a custom domain, you must create a route in the OpenShift 3scale project as described below.
 
 .Prerequisites
-* The `customer-admin` user credentials
-* A custom domain registration
+* the `customer-admin` user credentials
+* a custom domain registration
 
 .Procedure
 A new OpenShift route for the public has to be created.

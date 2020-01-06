@@ -9,12 +9,12 @@ endif::[]
 
 You access your cluster using the credentials for the `customer-admin` user received in the _Welcome_ email. This user can:
 
-* Access the OpenShift cluser with the permissions of the link:https://docs.openshift.com/dedicated/3/admin_guide/index.html#admin-guide-index-dedicated-admin-role[Dedicated cluster administrator Role], including read-only access to the Fuse Online project.
-* Access the services available from the Solution Explorer with administrator privileges, for example:
+* access the OpenShift cluser with the permissions of the link:https://docs.openshift.com/dedicated/3/admin_guide/index.html#admin-guide-index-dedicated-admin-role[Dedicated cluster administrator Role], including read-only access to the Fuse Online project.
+* access the services available from the Solution Explorer with administrator privileges, for example:
 
-** 3scale admin access - that is, full access to all areas and services.
+** 3scale admin access, that is,  full access to all areas and services.
 
-** The `customer-admin` user has the manage-user, view-realm and manage-identity-providers roles in the Managed Integration SSO instance as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/admin_permissions#realm_specific_roles[Red Hat Single Sign-On documentation]
+** the `customer-admin` user has the manage-user, view-realm and manage-identity-providers roles in the managed integration SSO instance as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/admin_permissions#realm_specific_roles[Red Hat Single Sign-On documentation]
 
 See the link:{rn-link}[Release Notes] for links to the associated product documentation.
 
@@ -43,23 +43,23 @@ Red Hat manages and provides limited access to this instance. For example, you c
 
 |Define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}.
 
-Red Hat manages this instance; however, the customer-admin user has administrator level privileges to configure this instance.
+Red Hat manages this instance, however the customer-admin user has admin level privileges to configure this instance.
 
 
 |Solution Explorer link
 |Red Hat Single Sign-On (Cluster)
 |Red Hat Single Sign-On
 
-When you click this link for the first time an *Account already exists* message and an *Add to existing account* option are displayed. 
+When you click this link the first time an *Account already exists* message and an *Add to existing account* option are displayed. 
 
-Choose the *Add to existing account* option. After logging in as the `customer-admin`, you will have administrator access.
+Choose this option. After logging in as the `customer-admin`, you will have administrator access.
 Subsequent logins do not require this step.
 
 |User access
 |`customer-admin`
 |`customer-admin`
 
-A user named `admin` is also created and is used to manage the instance. Do not delete this user.
+A user named `admin` is also created and is used to manage this instance. Do not delete this user.
 
 | Permissions
 | Can create users in the `openshift` realm.
@@ -106,7 +106,7 @@ NOTE: Red Hat recommends federating an LDAP or Active Directory server in each R
 To access the Red Hat Single Sign-On administration console:
 
 . Navigate to the *Red Hat Solution Explorer* URL that you received in the _Welcome email_.
-If asked for credentials, log in as the `customer-admin` user.
+If asked for credentials, log in as `customer-admin` user.
 
 . Click the *Red Hat Single Sign-On* link available in the *Applications* panel.
 
