@@ -48,10 +48,8 @@ Most applications are available in the {webapp}, after you first log in.  Howeve
 
 * Integrating message-oriented middleware with a RESTful API using AMQ Online
 * Protecting Applications using Red Hat Single Sign-On (SSO)
-+
-NOTE: This {walkthrough-name} requires that you have completed the first {walkthrough-name}.
 * Managing and protecting APIs using API management
-* No code API development and SaaS integration
+* Low-code API development and SaaS integration
 
 In addition, there is a Data Sync Solution Pattern using GraphQL {walkthrough-name} for mobile and web developers.
 
