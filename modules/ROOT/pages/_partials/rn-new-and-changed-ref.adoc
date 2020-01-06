@@ -28,11 +28,15 @@ This release includes new versions of the following components:
 
 |===
 
+== Solution Explorer changes
 
-== New Red Hat Single Sign-On instance
+The Solution Explorer home page now provides more information about the applications in your cluster, listing the goals you can accomplish with each service. 
+The Solution Patterns are now available in a separate tab, named *All Solution Patterns*.
 
-This release includes a second Red Hat Single Sign-On instance, which can be used to define the identities of the end users of the solution developed and hosted on {PRODUCT_SHORT}. See the link:{gs-link}#sso[Getting Started] guide for more information.
+In addition, you can now:
 
-== Adding {walkthrough-name}s
+* Navigate to the Git repository of any set of Solution Patterns in your cluster. 
+See link:{gs-link}#gs-publishing-walkthroughs-proc[Adding Solution Patterns to your cluster] for more information about navigating to a source repository.
 
-This release allows users to add {walkthrough-name}s from the {webapp}. See the link:{gs-link}#gs-publishing-walkthroughs-proc[Getting Started] guide for more information.
+* Retrieve useful URLs for your cluster from the help menu of Solution Explorer.
+See link:{gs-link}#gs-using-developer-resources-proc[Using Developer Resources] for more information.
