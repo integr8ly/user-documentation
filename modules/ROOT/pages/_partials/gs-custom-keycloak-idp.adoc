@@ -26,4 +26,4 @@ This section describes how to add a custom identity provider to Red Hat Single S
 
 . In the menu navigate to `Identity Providers` and pick a provider from the drop down.
 
-. Follow the instructions in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.2/html-single/server_administration_guide/index#identity_broker[Red Hat Single Sign-On documentation] to add a new identity provider.
+. Follow the instructions in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Red Hat Single Sign-On documentation] to add a new identity provider.

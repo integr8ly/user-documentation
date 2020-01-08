@@ -14,26 +14,26 @@
 |*Documentation*
 
 |{fuse-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.4/html/release_notes/index[{fuse-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.5/html/release_notes_for_red_hat_fuse_7.5/micro-release-7.5.1[{fuse-version}]
 |{fuse-configs}
 |link:{fuse-docs}[{fuse-version}] +
 (Click Fuse Online Category)
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.4/html/amq_online_1.2_on_openshift_container_platform_release_notes/[{amq-online-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5/html/release_notes_for_amq_online_1.3_on_openshift/index[{amq-online-version}]
 |{amq-online-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.4[{amq-online-version}] +
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5[{amq-online-version}] +
 (Click AMQ Online Category)
 
 |{three-scale-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.6/html/release_notes/index[{three-scale-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/release_notes_for_red_hat_3scale_api_management_2.7_on-premises/index[{three-scale-version}]
 |{three-scale-configs}
 |link:{three-scale-docs}[{three-scale-version}]
 
 |{code-ready-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/html/release_notes_and_known_issues/index[{code-ready-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.0/html/release_notes_and_known_issues/index[{code-ready-version}]
 |{code-ready-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.0/[{code-ready-version}]
 
 
 |Red Hat Single Sign-On
