@@ -15,7 +15,7 @@ This release includes new versions of the following components:
 |link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.5/html/release_notes_for_red_hat_fuse_7.5/micro-release-7.5.1[{fuse-version}]
 
 |{amq-online-name}
-|link:hhttps://access.redhat.com/documentation/en-us/red_hat_amq/7.5/html/release_notes_for_amq_online_1.3_on_openshift/index[{amq-online-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5/html/release_notes_for_amq_online_1.3_on_openshift/index[{amq-online-version}]
 
 |{three-scale-name}
 |link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/release_notes_for_red_hat_3scale_api_management_2.7_on-premises/index[{three-scale-version}]
