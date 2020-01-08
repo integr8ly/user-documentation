@@ -1,0 +1,26 @@
+[id='gs-accessing-developer-resources-proc']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+= Accessing Developer Resources
+
+The Developer Resources page displays commonly used information about your cluster. It provides the following:
+
+* Kibana URL to review logs
+* OpenShift and Kubernetes REST API hostname
+* cluster registry hostname
+
+.Prerequisite
+* You are logged into Solution Explorer
+
+.Procedure
+
+. In the Solution Explorer, click on the help icon located in the upper-right corner of the page.
+
+. Select Developer Resources.
+
+NOTE: For more information on Kibana, see link:https://docs.openshift.com/dedicated/3/product_security/recommendations_for_customers/customer_logging_metrics_monitoring.html[Logging and Monitoring].
+
+
