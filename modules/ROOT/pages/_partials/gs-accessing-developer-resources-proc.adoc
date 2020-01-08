@@ -6,7 +6,7 @@ endif::[]
 
 = Accessing Developer Resources
 
-The Developer Resources page displays commonly used information about your cluster. It provides the following:
+The Developer Resources page displays information about your cluster. It provides the following:
 
 * Kibana URL to review logs
 * OpenShift and Kubernetes REST API hostname
