@@ -408,8 +408,6 @@ Other attributes that are available to {walkthrough-name} authors are:
 ** AMQ Online Broker URL: `\{enmasse-broker-url}`
 ** AMQ Online Credential Username: `\{enmasse-credentials-username}`
 ** AMQ Online Credential Password: `\{enmasse-credentials-password}`
-* Custom attributes:
-** NodeJS Frontend App Route (provisioned from walkthrough.json): `\{route-frontend-host}`
 
 
 .Prerequisites
