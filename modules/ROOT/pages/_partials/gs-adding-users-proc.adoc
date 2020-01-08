@@ -26,12 +26,6 @@ NOTE: The `customer-admin` user is a single account with the privilege to create
 [[sso]]
 = About Single Sign-On instances
 
-:rhmi-sso-name: Managed Integration SSO instance
-:customer-sso-name: End user SSO instance
-:rhsso-name: 
-
-
-
 .The two SSO instances in {PRODUCT_SHORT}
 |===
 | |*{rhmi-sso-name}* |*{customer-sso-name}*
@@ -64,7 +58,7 @@ A user named `admin` is also created and is used to manage this instance. Do not
 | Permissions
 | Can create users in the `openshift` realm.
 
-Can add an Identity Provider in the `openshift` realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/server_administration_guide/index#identity_broker[Identity Brokering] to avoid managing the same users in different realms.
+Can add an Identity Provider in the `openshift` realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering] to avoid managing the same users in different realms.
 
 | Can create users in the `master` realm.
 

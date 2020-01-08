@@ -15,6 +15,10 @@
 :webapp: Solution Explorer
 :walkthrough-name: Solution Pattern
 
+:rhmi-sso-name: Managed Integration SSO instance
+:customer-sso-name: Customer Application SSO instance
+:rhsso-name: 
+
 :fuse-name: Red Hat Fuse Online
 :fuse-version: 7.4
 :fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
