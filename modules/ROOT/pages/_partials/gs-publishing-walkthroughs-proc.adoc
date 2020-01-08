@@ -3,9 +3,12 @@
 
 The home page of {webapp} lists the {walkthrough-name}s from all the Git repositories you are subscribed to. Any user can add {walkthrough-name}s to your cluster.
 
-For more information on writing {walkthrough-name}s, see documentation on xref:gs-writing-walkthroughs-proc[Creating {walkthrough-name}s].
+For more information on writing {walkthrough-name}s, see documentation on xref:gs-writing-walkthroughs-proc.adoc[Creating {walkthrough-name}s].
+
+Note: You can access the GitHub repository that contains the {walkthrough-name} source code, by clicking the *Repository* link located in the upper right corner of the *All Solutions Patterns* tab. 
 
 This procedure describes how to subscribe your cluster to a Git repository that contains {walkthrough-name}s.
+
 
 .Procedure
 
