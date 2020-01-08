@@ -26,12 +26,6 @@ NOTE: The `customer-admin` user is a single account with the privilege to create
 [[sso]]
 = About Single Sign-On instances
 
-:rhmi-sso-name: Managed Integration SSO instance
-:customer-sso-name: End user SSO instance
-:rhsso-name: 
-
-
-
 .The two SSO instances in {PRODUCT_SHORT}
 |===
 | |*{rhmi-sso-name}* |*{customer-sso-name}*
