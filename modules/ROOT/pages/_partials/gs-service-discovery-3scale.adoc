@@ -22,5 +22,5 @@ $ oc adm policy add-role-to-user view <user-name> -n fuse
 
 .Additional resources
 
-* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html/service_discovery/index[Service Discovery] 3scale documentation.
-* link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.3/html/designing_apis_with_apicurito/threescale-discover-service[Service Discovery] Fuse documentation.
+* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/admin_portal_guide/service-discovery[Service Discovery] 3scale documentation.
+* link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.4/html/designing_apis_with_apicurito/threescale-discover-service[Service Discovery] Fuse documentation.

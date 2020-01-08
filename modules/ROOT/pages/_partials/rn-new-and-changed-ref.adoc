@@ -12,16 +12,16 @@ This release includes new versions of the following components:
 |Release Notes
 
 |{fuse-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.4/html/release_notes/index[{fuse-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.5/html/release_notes_for_red_hat_fuse_7.5/micro-release-7.5.1[{fuse-version}]
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.4/html/amq_online_1.2_on_openshift_container_platform_release_notes/[{amq-online-version}]
+|link:hhttps://access.redhat.com/documentation/en-us/red_hat_amq/7.5/html/release_notes_for_amq_online_1.3_on_openshift/index[{amq-online-version}]
 
 |{three-scale-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.6/html/release_notes/index[{three-scale-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/release_notes_for_red_hat_3scale_api_management_2.7_on-premises/index[{three-scale-version}]
 
 |{code-ready-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/html/release_notes_and_known_issues/index[{code-ready-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.0/html/release_notes_and_known_issues/index[{code-ready-version}]
 
 |Red Hat Single Sign-On
 |link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/release_notes/index[7.3]
@@ -30,8 +30,8 @@ This release includes new versions of the following components:
 
 == Solution Explorer changes
 
-The Solution Explorer home page now provides more information about the applications in your cluster, listing the goals you can accomplish with each service. 
-The Solution Patterns are now available in a separate tab, named *All Solution Patterns*.
+The Solution Explorer homepage now provides more information on the applications in your cluster, listing the goals you can accomplish with each service. 
+The Solution Patterns are available in a separate tab, named *All Solution Patterns*.
 
 In addition, you can now:
 
@@ -39,4 +39,4 @@ In addition, you can now:
 See link:{gs-link}#gs-publishing-walkthroughs-proc[Adding Solution Patterns to your cluster] for more information about navigating to a source repository.
 
 * Retrieve useful URLs for your cluster from the help menu of Solution Explorer.
-See link:{gs-link}#gs-using-developer-resources-proc[Using Developer Resources] for more information.
+See link:{gs-link}#gs-accessing-developer-resources-proc[Using Developer Resources] for more information.

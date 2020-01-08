@@ -64,11 +64,11 @@ A user named `admin` is also created and is used to manage this instance. Do not
 | Permissions
 | Can create users in the `openshift` realm.
 
-Can add an Identity Provider in the `openshift` realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/server_administration_guide/index#identity_broker[Identity Brokering] to avoid managing the same users in different realms.
+Can add an Identity Provider in the `openshift` realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering] to avoid managing the same users in different realms.
 
 | Can create users in the `master` realm.
 
-Can add an Identity Provider in the `master` realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/server_administration_guide/index#identity_broker[Identity Brokering] to avoid managing the same users in different realms.
+Can add an Identity Provider in the `master` realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering] to avoid managing the same users in different realms.
 
 Can create new and manage realms.
 
@@ -146,7 +146,7 @@ NOTE: This step does not automatically send an email to new users.
 
 [NOTE]
 ====
-You can also import a JSON file with user information as described in the https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.2/html/server_administration_guide/export_import#admin_console_export_import[Red Hat Single Sign-On documentation].
+You can also import a JSON file with user information as described in the https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/export_import[Red Hat Single Sign-On documentation].
 ====
 
 The following example JSON file imports two users:
@@ -291,7 +291,7 @@ To delete 3scale users:
 
 This procedure describes how to add the *view* role for a user if that user requires either of the following:
 
-* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/service_discovery/index[Service Discovery] in 3scale, which can be used to add Fuse Online services automatically
+* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/admin_portal_guide/service-discovery[Service Discovery] in 3scale, which can be used to add Fuse Online services automatically
 * Access to Fuse Online integration logs
 
 . Log in to OpenShift using `oc` and the `customer-admin` credentials.
