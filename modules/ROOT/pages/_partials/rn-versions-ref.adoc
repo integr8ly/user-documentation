@@ -14,7 +14,7 @@
 |*Documentation*
 
 |{fuse-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.5/html/release_notes_for_red_hat_fuse_7.5/micro-release-7.5.1[{fuse-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.5/html/release_notes_for_red_hat_fuse_7.5/index[{fuse-version}]
 |{fuse-configs}
 |link:{fuse-docs}[{fuse-version}] +
 (Click Fuse Online Category)
@@ -31,9 +31,9 @@
 |link:{three-scale-docs}[{three-scale-version}]
 
 |{code-ready-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.0/html/release_notes_and_known_issues/index[{code-ready-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/html/release_notes_and_known_issues/index[{code-ready-version}]
 |{code-ready-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.0/[{code-ready-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/[{code-ready-version}]
 
 
 |Red Hat Single Sign-On
