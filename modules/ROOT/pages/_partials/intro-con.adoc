@@ -12,7 +12,9 @@ The {webapp} presents links to the applications available in a {PRODUCT_SHORT} c
 
 == Applications available in {webapp}
 
-{PRODUCT_SHORT} includes the following middleware applications:
+{PRODUCT_SHORT} provides access to the following consoles:
+
+* *OpenShift*, the OpenShift cluster console.
 
 * *API Designer*,  the Apicurito RESTful API visual designer.
 
@@ -26,14 +28,16 @@ The {webapp} presents links to the applications available in a {PRODUCT_SHORT} c
 
 * *Red Hat Fuse Online*, a facility to obtain data from an application or service, operate on that data, and then send the data to another application or service without writing code.
 
-* *Red Hat Single Sign-On*, a single sign-on solution for web apps and RESTful web services.
+* *Push Notifications*, a service to push notifications to Android and iOS devices.
+
+* *Red Hat Single Sign-On*, a single sign-on solution for web apps and RESTful web services. Two instances are available as described in xref:sso[].
 
 +
 [NOTE]
 ====
 Most applications are available in the {webapp}, after you first log in.  However:
 
-* If *Red Hat AMQ Online* is displayed as *Not ready* in the *Applications* menu, click *Start service* to provision it.
+* If *Red Hat AMQ Online* is not available, the *Start service* button is displayed. Click *Start service* to provision it.
 * You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you start a {walkthrough-name}, you also provision an instance of Fuse Online which is not shared with other cluster users.
 ====
 
