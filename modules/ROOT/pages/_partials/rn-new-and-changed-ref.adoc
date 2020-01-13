@@ -40,3 +40,18 @@ See link:{gs-link}#gs-publishing-walkthroughs-proc[Adding Solution Patterns to y
 
 * Retrieve useful URLs for your cluster from the help menu of Solution Explorer.
 See link:{gs-link}#gs-accessing-developer-resources-proc[Using Developer Resources] for more information.
+
+
+== Mobile features
+
+* Mobile Security Service - The Mobile Security Service is no longer available.
+
+* Mobile Developer Console - The Mobile Developer Console is no longer available. 
+The Push Admin UI is now linked directly from the Solution Explorer.
+
+* Mobile Developer Services - This documentation no longer refers to Mobile Developer Services. 
+The documentation is now separated as follows:
+
+** The Data Sync framework documentation provides all the steps required to implement data sync features in a web or mobile app.
+** The *Adding Data Sync to your Application with GraphQL* demonstrates the data sync features and shows you how to implement authentication and authorization in your web or mobile app.
+** The Push Notification Service documentation shows you how to implement push notifications in your mobile app.
