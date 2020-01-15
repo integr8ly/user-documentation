@@ -16,7 +16,6 @@ The Developer Resources page displays information about your cluster. It provide
 * You are logged into Solution Explorer
 
 .Procedure
-
 . In the Solution Explorer, click on the help icon located in the upper-right corner of the page.
 
 . Select Developer Resources.
