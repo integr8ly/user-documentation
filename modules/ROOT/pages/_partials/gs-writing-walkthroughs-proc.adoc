@@ -148,7 +148,6 @@ This description is displayed in the {webapp} dashboard card for the {walkthroug
 
 
 .Procedure
-
 To add an overview section using the template respository:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
@@ -187,7 +186,6 @@ git push upstream master
 Tasks are procedures that you write as a section of the `walkthrough.adoc` file, the section being defined by a second level heading (`==`).
 
 .Procedure
-
 The template already contains a sample task, you can change it as follows:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
@@ -237,7 +235,6 @@ Prepend each step with a `.` to create a simple numbered list.
 
 
 .Procedure
-
 To edit a procedure in the template respository:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
@@ -269,7 +266,6 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 
 .Procedure
-
 To add a {walkthrough-name} resources:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
@@ -321,7 +317,6 @@ The {webapp} can display helpful information and links on the right hand side pa
 
 
 .Procedure
-
 To add task resources:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
@@ -357,7 +352,6 @@ NOTE: Every procedure in a task or subtask requires a verification.
 
 
 .Procedure
-
 To add a verification:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
@@ -416,7 +410,6 @@ Other attributes that are available to {walkthrough-name} authors are:
 
 
 .Procedure
-
 To add a link to the OpenShift console in the {walkthrough-name}:
 
 . Add another step to the numbered list in your procedure:
@@ -447,7 +440,6 @@ You can also link to the URLs associated with those services in your `walkthroug
 
 
 .Procedure
-
 . Find the name of the service you want to provision:
 
 .. Log in to the OpenShift console.
@@ -526,5 +518,6 @@ By default, the {walkthrough-name}s from a repository are displayed in {webapp} 
 
 == Previewing your {walkthrough-name}
 
+.Procedure
 . Log in to the {webapp}
 . Follow the steps described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
