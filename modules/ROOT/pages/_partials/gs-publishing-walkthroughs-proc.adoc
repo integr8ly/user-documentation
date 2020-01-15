@@ -11,7 +11,6 @@ This procedure describes how to subscribe your cluster to a Git repository that 
 
 
 .Procedure
-
 . Navigate to the *Solution Explorer*.
 
 . Click the gear icon in the top right to display the *Application settings* screen.
