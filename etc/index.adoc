@@ -1,6 +1,7 @@
-= User Documentation
+= User Documentation on master branch
 
-* link:index.html?e=modules/ROOT/pages//getting-started.adoc[Getting Started]
+* link:master.html?e=modules/ROOT/pages//getting-started.adoc[Getting Started]
 
-* link:index.html?e=modules/ROOT/pages//release-notes.adoc[Release Notes]
+* link:master.html?e=modules/ROOT/pages//release-notes.adoc[Release Notes]
 
+NOTE: This page is a live rendering of the user-documentation repo. The link:https://integr8ly.netlify.com/[main doc site] contains current and previous versions.
