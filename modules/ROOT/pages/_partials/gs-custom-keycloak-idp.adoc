@@ -19,7 +19,6 @@ This section describes how to add a custom identity provider to Red Hat Single S
 
 
 .Procedure
-
 . Log in to the Red Hat Single Sign-On administration console using the URL and credentials you received in your welcome email.
 
 . Make sure the `openshift` realm is selected on the top left drop down.
