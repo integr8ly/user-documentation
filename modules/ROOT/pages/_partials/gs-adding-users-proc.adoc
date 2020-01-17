@@ -81,7 +81,7 @@ For example, if you use {PRODUCT_SHORT} to develop an solution named `my-app`, d
 
 Typically, you only use the *{customer-sso-name}* for end users; however, you have the privileges required to use it for developer related activities.
 // tag::excludeDownstream[]
-For example, if a developer wanted to use http://microcks.github.io/[Microcks],that developer could create associated users in this instance.
+For example, if a developer wanted to use http://microcks.github.io/[Microcks], that developer could create associated users in this instance.
 // end::excludeDownstream[]
 ====
 
