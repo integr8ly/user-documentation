@@ -81,7 +81,7 @@ For example, if you use {PRODUCT_SHORT} to develop an solution named `my-app`, d
 
 Typically, you only use the *{customer-sso-name}* for end users; however, you have the privileges required to use it for developer related activities.
 // tag::excludeDownstream[]
-For example, if a developer wanted to use http://microcks.github.io/[Microcks],that developer could create associated users in this instance.
+For example, if a developer wanted to use http://microcks.github.io/[Microcks], that developer could create associated users in this instance.
 // end::excludeDownstream[]
 ====
 
@@ -93,7 +93,7 @@ You manage users in the context of a Red Hat Single Sign-On realm.
 A realm manages a set of users, credentials, roles, and groups.
 A user belongs to a realm and can log in to this realm.
 
-NOTE: Red Hat recommends federating an LDAP or Active Directory server in each Red Hat Single Sign-On realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/server_administration_guide/index#user-storage-federation[User Storage Federation documentation], to avoid managing the same users in different realms.
+NOTE: Red Hat recommends setting up an identity provider in each Red Hat Single Sign-On realm as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering documentation]. For example, set up Active Directory as an OIDC provider to avoid managing the same users in different realms.
 
 == Accessing the Red Hat Single Sign-On administration console
 
