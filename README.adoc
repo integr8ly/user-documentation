@@ -9,4 +9,4 @@ For documentation on the latest release of RHMI, visit the link:https://access.r
 == Additional Resources
 
 * link:https://github.com/integr8ly/tutorial-web-app-walkthroughs[Integreatly Solution Patterns]
-* *Docs Site:* https://integr8ly.netlify.com/
+* *Docs Site:* https://integr8ly.github.io/user-docs-site/
