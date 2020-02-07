@@ -1,5 +1,5 @@
-== Previewing your {walkthrough-name}
+= Previewing your Solution Pattern
 
 .Procedure
 . Log in to the {webapp}
-. Follow the steps described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
+. Follow the steps described in xref:gs-publishing-walkthroughs-proc[Adding Solution Patterns].

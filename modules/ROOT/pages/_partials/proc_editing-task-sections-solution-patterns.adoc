@@ -1,9 +1,8 @@
-[time=5]
-== Editing task sections of a {PRODUCT} {walkthrough-name}
+= Editing task sections of a {PRODUCT} Solution Pattern
 
 .Prerequisites
-* You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
+* You have created a repository using the Solution Pattern template.
+* You have added the Solution Pattern repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding Solution Patterns].
 
 Tasks are procedures that you write as a section of the `walkthrough.adoc` file, the section being defined by a second level heading (`==`).
 
@@ -18,7 +17,7 @@ The template already contains a sample task, you can change it as follows:
 
 . Change the task timing estimate. Each task has an attribute to communicate the approximate time that the task should take the user to perform.
 +
-This is displayed in the {walkthrough-name} overview as part of the task list.
+This is displayed in the Solution Pattern overview as part of the task list.
 +
 For example to change the estimated time for the first task to 12 minutes:
 +

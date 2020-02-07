@@ -1,13 +1,12 @@
-[time=10]
-== Adding custom services to a {PRODUCT} {walkthrough-name}
+= Adding custom services to a {PRODUCT} Solution Pattern
 
-You can create services from the OpenShift catalog in the cluster as part of the {walkthrough-name} startup process.
+You can create services from the OpenShift catalog in the cluster as part of the Solution Pattern startup process.
 You can also link to the URLs associated with those services in your `walkthrough.adoc` file.
 
 
 .Prerequisites
-* You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
+* You have created a repository using the Solution Pattern template.
+* You have added the Solution Pattern repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Publishing Solution Patterns].
 * Some experience with the `oc` command. See link:https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html[Getting Started with the OpenShift CLI] for more information about `oc` command.
 
 
@@ -33,7 +32,7 @@ The output lists all the services available in two columns:
 
 .. Choose the service you want to use, and note the value in the `Identifier (clusterServiceClassExternalName)` column.
 +
-For example, to use the `CakePHP + MySQL (Ephemeral)` service in your custom {walkthrough-name}, note the value `cakephp-mysql-example`.
+For example, to use the `CakePHP + MySQL (Ephemeral)` service in your custom Solution Pattern, note the value `cakephp-mysql-example`.
 
 . Create a `walkthrough.json` with the following contents to provision the `cakephp-mysql-example` service:
 +
@@ -56,14 +55,14 @@ For example, to use the `CakePHP + MySQL (Ephemeral)` service in your custom {wa
 }
 ----
 +
-. Add your {walkthrough-name} to the cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
-. Navigate the {walkthrough-name} to trigger the provisioning of the custom service, for example, the `cakephp-mysql-example` service.
+. Add your Solution Pattern to the cluster as described in xref:gs-publishing-walkthroughs-proc[Adding Solution Patterns].
+. Navigate the Solution Pattern to trigger the provisioning of the custom service, for example, the `cakephp-mysql-example` service.
 . Log in to the OpenShift console.
 . Navigate to the custom project in OpenShift.The project is named using the pattern `<username>-<walkthrough-id>`.
 . Open *Routes* from the *Applications* menu.
-. Note the *Name* of the route you want to reference in your {walkthrough-name} tasks. For example, `cakephp-mysql-example`.
+. Note the *Name* of the route you want to reference in your Solution Pattern tasks. For example, `cakephp-mysql-example`.
 . Edit the `walkthrough.adoc` file and use the `{route-<route-name>-host}` pattern, whenever you want the route URL to appear.
-For example, to insert a step that asks the user of the {walkthrough-name} to log in to the CakePHP app:
+For example, to insert a step that asks the user of the Solution Pattern to log in to the CakePHP app:
 +
 ----
 . Log into the link:{route-cakephp-mysql-example-host}[CakePHP app].
@@ -72,5 +71,5 @@ For example, to insert a step that asks the user of the {walkthrough-name} to lo
 NOTE: If you want Asciidoc attributes to render values in code blocks, you must start the code block with `[subs="attributes"]`.
 
 +
-. Redeploy the *tutorial-web-app* to pick up changes to your {walkthrough-name}.
-. Log in to the {webapp} using a different username to test the {walkthrough-name}.
+. Redeploy the *tutorial-web-app* to pick up changes to your Solution Pattern.
+. Log in to the {webapp} using a different username to test the Solution Pattern.

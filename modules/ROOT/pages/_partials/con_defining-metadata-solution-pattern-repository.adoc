@@ -2,9 +2,9 @@
 :linkGitHubFork: https://help.github.com/articles/fork-a-repo/
 :linkIndexURL: https://github.com/integr8ly/example-customisations/index.adoc
 
-== Defining metadata for your {walkthrough-name} repository
+== Defining metadata for your Solution Pattern repository
 
-By default, the {walkthrough-name}s from a repository are displayed in {webapp} with a title corresponding to your repository name. You can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My {walkthrough-name}s`:
+By default, the Solution Patterns from a repository are displayed in {webapp} with a title corresponding to your repository name. You can add a `walkthroughs-config.json` file with the following contents if, for example, you want to title the group `My Solution Patterns`:
 
 
 [source, json]

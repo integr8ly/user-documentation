@@ -1,7 +1,8 @@
-=== Committing your {walkthrough-name}s to a remote repository
+= Committing your Solution Pattern to a remote repository
 
 You can edit the `walkthrough.adoc` file and push your changes to GitHub.
 
+.Procedure
 . Create a new remote repository and take note of the remote URL.
 
 . Add the remote to your local clone.

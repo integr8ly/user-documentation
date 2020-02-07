@@ -1,12 +1,11 @@
-[time=5]
-== Editing task resources for a {PRODUCT} {walkthrough-name}
+= Editing task resources for a {PRODUCT} Solution Pattern
 
 The {webapp} can display helpful information and links on the right hand side panel that are specific to a task.
-{walkthrough-name} resources are displayed for every task, whereas task resources typically change as the user navigates the {walkthrough-name}.
+Solution Pattern resources are displayed for every task, whereas task resources typically change as the user navigates the Solution Pattern.
 
 .Prerequisites
-* You have created a repository using the {walkthrough-name} template.
-* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
+* You have created a repository using the Solution Pattern template.
+* You have added the Solution Pattern repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding Solution Patterns].
 
 
 .Procedure
