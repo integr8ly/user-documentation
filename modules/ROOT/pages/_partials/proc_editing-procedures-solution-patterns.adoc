@@ -1,0 +1,33 @@
+[time=5]
+== Editing procedures of a {PRODUCT} {walkthrough-name}
+
+A procedure is a set of steps that you perform to complete a task or subtask.
+
+Write procedures using AsciiDoc numbered lists.
+Prepend each step with a `.` to create a simple numbered list.
+
+
+.Prerequisites
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
+
+
+.Procedure
+To edit a procedure in the template respository:
+
+. Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
+
+. Edit the numbered list:
++
+----
+. First step
+. Second step
+. Third step
+----
+
+. Save, commit and push your changes.
+
+. Redeploy the {webapp}:
+.. Navigate to the *webapp* project in OpenShift.
+.. Click on the *tutorial-web-app* deployment config.
+.. Click the *Deploy* button.

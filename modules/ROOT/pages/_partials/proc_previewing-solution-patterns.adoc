@@ -1,0 +1,5 @@
+== Previewing your {walkthrough-name}
+
+.Procedure
+. Log in to the {webapp}
+. Follow the steps described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].

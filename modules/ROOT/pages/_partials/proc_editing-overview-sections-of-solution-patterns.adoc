@@ -1,0 +1,43 @@
+[time=5]
+== Editing overview sections of a {PRODUCT} {walkthrough-name}
+
+The first section of the `walkthrough.adoc` describes your {walkthrough-name},it provides an overview of the purpose of the {walkthrough-name}.
+The overview is displayed when a user clicks on the {walkthrough-name} in {webapp}.
+
+* The overview is defined by a first level heading (in AsciiDoc a line begining with `=`) and finishes at the next second level heading (`==`).
+* The title of the overview becomes the name of the {walkthrough-name}.
+* The overview heading must be followed by a paragraph giving a short introduction to the {walkthrough-name} in one or two sentences.
+This description is displayed in the {webapp} dashboard card for the {walkthrough-name}.
+
+.Prerequisites
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
+
+
+.Procedure
+To add an overview section using the template respository:
+
+. Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
+
+. Change the title of the {walkthrough-name}, for example:
++
+[subs="attributes"]
+----
+= My first {walkthrough-name}
+----
+
+. Add an introduction paragraph to your preamble.
+
+. Add another paragraph with more information about the {walkthrough-name}.
+
+. Commit your changes
++
+----
+git commit -am "add overview"
+----
+
+. Push your change to the remote repository
++
+----
+git push upstream master
+----

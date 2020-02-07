@@ -1,0 +1,22 @@
+[time=10]
+== Getting started
+
+To get started with {walkthrough-name} development you can edit the template repository and learn about the components of a {walkthrough-name}.
+
+=== Downloading the template
+
+The template contains the directory structure along with a sample {walkthrough-name} and manifest file.
+
+. Clone the template repository
++
+[source,bash]
+----
+git clone https://github.com/integr8ly/walkthrough-template.git
+----
+
+. Change to the `walkthrough-template` directory:
++
+[source,bash]
+----
+cd walkthrough-template
+----

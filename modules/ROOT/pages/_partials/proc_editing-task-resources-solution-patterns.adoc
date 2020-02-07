@@ -1,0 +1,32 @@
+[time=5]
+== Editing task resources for a {PRODUCT} {walkthrough-name}
+
+The {webapp} can display helpful information and links on the right hand side panel that are specific to a task.
+{walkthrough-name} resources are displayed for every task, whereas task resources typically change as the user navigates the {walkthrough-name}.
+
+.Prerequisites
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
+
+
+.Procedure
+To add task resources:
+
+. Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
+
+. At the end any task section, add the following:
++
+----
+[type=taskResource]
+.Useful links
+****
+* link:https://google.com[Task related link]
+****
+----
+
+. Save, commit and push your changes.
+
+. Redeploy the {webapp}:
+.. Navigate to the *webapp* project in OpenShift.
+.. Click on the *tutorial-web-app* deployment config.
+.. Click the *Deploy* button.

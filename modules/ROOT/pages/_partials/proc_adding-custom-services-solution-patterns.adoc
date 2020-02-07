@@ -1,0 +1,76 @@
+[time=10]
+== Adding custom services to a {PRODUCT} {walkthrough-name}
+
+You can create services from the OpenShift catalog in the cluster as part of the {walkthrough-name} startup process.
+You can also link to the URLs associated with those services in your `walkthrough.adoc` file.
+
+
+.Prerequisites
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[].
+* Some experience with the `oc` command. See link:https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html[Getting Started with the OpenShift CLI] for more information about `oc` command.
+
+
+.Procedure
+. Find the name of the service you want to provision:
+
+.. Log in to the OpenShift console.
+
+.. Click your username in the top right corner and choose *Copy Login Command* from the menu.
+
+.. Log in to the OpenShift CLI using the `oc` on your clipboard.
+
+.. Run the following command to list all the service names available from your cluster catalog:
++
+----
+oc get clusterserviceclasses -o custom-columns="Display Name (From Service Catalog):.spec.externalMetadata.displayName, Identifier (clusterServiceClassExternalName):.spec.externalName"
+----
++
+The output lists all the services available in two columns:
++
+* Display Name (From Service Catalog)
+* Identifier (clusterServiceClassExternalName)
+
+.. Choose the service you want to use, and note the value in the `Identifier (clusterServiceClassExternalName)` column.
++
+For example, to use the `CakePHP + MySQL (Ephemeral)` service in your custom {walkthrough-name}, note the value `cakephp-mysql-example`.
+
+. Create a `walkthrough.json` with the following contents to provision the `cakephp-mysql-example` service:
++
+----
+{
+    "dependencies": {
+        "repos": [],
+        "serviceInstances": [
+            {
+                "metadata": {
+                    "name": "cakephp-mysql-example"
+                },
+                "spec": {
+                    "clusterServiceClassExternalName": "cakephp-mysql-example",
+                    "clusterServicePlanExternalName": "default"
+                }
+            }
+        ]
+    }
+}
+----
++
+. Add your {walkthrough-name} to the cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
+. Navigate the {walkthrough-name} to trigger the provisioning of the custom service, for example, the `cakephp-mysql-example` service.
+. Log in to the OpenShift console.
+. Navigate to the custom project in OpenShift.The project is named using the pattern `<username>-<walkthrough-id>`.
+. Open *Routes* from the *Applications* menu.
+. Note the *Name* of the route you want to reference in your {walkthrough-name} tasks. For example, `cakephp-mysql-example`.
+. Edit the `walkthrough.adoc` file and use the `{route-<route-name>-host}` pattern, whenever you want the route URL to appear.
+For example, to insert a step that asks the user of the {walkthrough-name} to log in to the CakePHP app:
++
+----
+. Log into the link:{route-cakephp-mysql-example-host}[CakePHP app].
+----
++
+NOTE: If you want Asciidoc attributes to render values in code blocks, you must start the code block with `[subs="attributes"]`.
+
++
+. Redeploy the *tutorial-web-app* to pick up changes to your {walkthrough-name}.
+. Log in to the {webapp} using a different username to test the {walkthrough-name}.

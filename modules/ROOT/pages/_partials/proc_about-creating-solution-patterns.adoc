@@ -1,0 +1,39 @@
+[id='gs-writing-walkthroughs-proc']
+= Creating {PRODUCT} {walkthrough-name}s
+:toc:
+
+== About creating {walkthrough-name}s
+
+To write {walkthrough-name}s you require a knowledge of:
+
+* Asciidoc - a lightweight markup language, similar to markdown
+* JSON - a lightweight format for storing and transporting data
+* Git - you must push your Asciidoc and JSON files to a Git repository
+* OpenShift - you can add {walkthrough-name}s using the OpenShift console
+
+A simple {walkthrough-name} only requires that you edit an Asciidoc file, for example:
+
+[source,asciidoc]
+----
+= Demonstrating features <1>
+
+A short description for the feature. <2>
+
+== Doing a task <3>
+
+. Do this first: <4>
+. Do this second:
+----
+<1> {walkthrough-name} title, you can only have a single level 1 heading per file.
+<2> The first line of the introduction is displayed as a tag line for the {walkthrough-name} and displayed on the {webapp} home page.
+Do not use AsciiDoc attributes in this line because they are not displayed correctly on the homepage.
+<3> A task contains one or more subtasks (level 3 headings)
+<4> A numbered list of steps the user must perform.
+
+[type={walkthrough-name}Resource]
+.Additional Resources
+****
+* link:http://asciidoc.org/[Asciidoc Homepage^]
+* link:https://asciidoctor-docs.netlify.com/asciidoc/1.5/[AsciiDoc Syntax]
+* link:https://github.com/evanshortiss/integreatly-vscode-asciidoc-snippets/[Visual Studio Code extension]
+****

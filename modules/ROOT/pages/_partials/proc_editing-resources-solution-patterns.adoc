@@ -1,0 +1,48 @@
+[time=5]
+== Editing {walkthrough-name} resources for a {PRODUCT} {walkthrough-name}
+
+The {webapp} can display helpful information and links on the right hand side panel.
+
+.Prerequisites
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
+
+
+.Procedure
+To add a {walkthrough-name} resources:
+
+. Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
+
+. Add {walkthrough-name} resources using block attributes at the end of the overview section, for example:
++
+[source,asciidoc]
+----
+[type=walkthroughResource,serviceName=openshift]
+.OpenShift
+****
+* link:{openshift-host}[Openshift Console, window="_blank"]
+****
+----
+
++
+[NOTE]
+====
+* Setting `serviceName` is optional.
+
+* If `serviceName` is set to the name of a middleware service, an icon indicating the service status is displayed next to the resource.
+
+* For a list of default services, see link:https://github.com/integr8ly/tutorial-web-app/blob/master/src/common/serviceInstanceHelpers.js[the value for DEFAULT_SERVICES].
+
+* Setting the `window="_blank"` parameter for a {walkthrough-name} resource link is also optional, but ensures that the target of the link displays in a separate browser tab.
+====
++
+NOTE: You can only define {walkthrough-name} resources in the overview section.
+
++
+
+. Save, commit and push your changes.
+
+. Redeploy the {webapp}:
+.. Navigate to the *webapp* project in OpenShift.
+.. Click on the *tutorial-web-app* deployment config.
+.. Click the *Deploy* button.

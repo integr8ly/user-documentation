@@ -1,0 +1,42 @@
+[time=5]
+== Editing task sections of a {PRODUCT} {walkthrough-name}
+
+.Prerequisites
+* You have created a repository using the {walkthrough-name} template.
+* You have added the {walkthrough-name} repository to your cluster as described in xref:gs-publishing-walkthroughs-proc[Adding {walkthrough-name}s].
+
+Tasks are procedures that you write as a section of the `walkthrough.adoc` file, the section being defined by a second level heading (`==`).
+
+.Procedure
+The template already contains a sample task, you can change it as follows:
+
+. Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
+
+. Change the task title, for example, `== Doing the first task`.
+
+. Write a short introduction to the task.
+
+. Change the task timing estimate. Each task has an attribute to communicate the approximate time that the task should take the user to perform.
++
+This is displayed in the {walkthrough-name} overview as part of the task list.
++
+For example to change the estimated time for the first task to 12 minutes:
++
+----
+[time=12]
+== Doing the first task
+----
+
+. Save, commit and push your changes.
++
+NOTE: The content of the {webapp} does not change automatically after a change in the subscribed repository. You must redeploy the {webapp} for the change to be visible.
+
++
+. Redeploy the {webapp}:
+.. Navigate to the *webapp* project in OpenShift.
+.. Click on the *tutorial-web-app* deployment config.
+.. Click the *Deploy* button.
+
++
+NOTE: You can create another level of subtasks by creating a third level heading (`===`). Subtasks are displayed in the {webapp} on the parent task page.
+
