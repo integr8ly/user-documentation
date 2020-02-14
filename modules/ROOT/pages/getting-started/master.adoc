@@ -1,6 +1,6 @@
 [id='assembly_getting-started']
 
-include::attributes.adoc[]
+include::_partials/attributes.adoc[]
 
 = Getting started with {PRODUCT}
 // Context attribute is assembly specific and enables module reuse between assemblies.

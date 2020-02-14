@@ -1,5 +1,5 @@
 * xref::index.adoc[User Documentation]
 
-** xref::getting-started.adoc[Getting Started]
+** xref::getting-started/master.adoc[Getting Started]
 
-** xref::release-notes.adoc[Release Notes]
+** xref::release-notes/master.adoc[Release Notes]

@@ -1,6 +1,6 @@
 [id='assembly_release-notes']
 
-include::attributes.adoc[]
+include::_partials/attributes.adoc[]
 
 :gs-link: :rn-link: ../getting-started/
 
