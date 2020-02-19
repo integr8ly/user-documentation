@@ -1,10 +1,12 @@
 :page-partial:
 :PRODUCT: Red Hat Managed Integration
+:ProductName: {PRODUCT}
 :PRODUCT_SHORT: Managed Integration
 :PRODUCT_INIT: rhmi
 :PRODUCT_INIT_CAP: RHMI
 
 :PRODUCT_VERSION: 1
+:ProductRelease: {PRODUCT_VERSION}
 :MINOR_VERSION_NO: 1.6
 :PATCH_VERSION_NO: 1.6.0
 
