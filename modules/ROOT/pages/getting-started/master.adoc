@@ -2,7 +2,7 @@
 
 include::modules/attributes.adoc[]
 
-= Getting started with {PRODUCT}
+= Getting Started
 // Context attribute is assembly specific and enables module reuse between assemblies.
 :imagesdir: images
 :context: getting-started
