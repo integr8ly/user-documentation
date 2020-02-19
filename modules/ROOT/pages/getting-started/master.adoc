@@ -1,6 +1,6 @@
 [id='assembly_getting-started']
 
-include::_partials/attributes.adoc[]
+include::modules/attributes.adoc[]
 
 = Getting started with {PRODUCT}
 // Context attribute is assembly specific and enables module reuse between assemblies.
@@ -17,20 +17,20 @@ NOTE: Refer to the link:{rn-link}[Release Notes] for the latest information abou
 This document provides instructions for new users of {PRODUCT_SHORT}.
 // and subsequent patch releases.
 
-include::_partials/intro-con.adoc[leveloffset=+1]
+include::modules/intro-con.adoc[leveloffset=+1]
 
-include::_partials/gs-adding-users-proc.adoc[leveloffset=+1]
+include::modules/gs-adding-users-proc.adoc[leveloffset=+1]
 
-include::_partials/gs-publishing-walkthroughs-proc.adoc[leveloffset=+1]
+include::modules/gs-publishing-walkthroughs-proc.adoc[leveloffset=+1]
 
-include::_partials/gs-writing-walkthroughs-proc.adoc[leveloffset=+1]
+include::modules/gs-writing-walkthroughs-proc.adoc[leveloffset=+1]
 
-// include::_partials/gs-using-nexus-proc.adoc[leveloffset=+1]
+// include::modules/gs-using-nexus-proc.adoc[leveloffset=+1]
 
-include::_partials/gs-custom-keycloak-idp.adoc[leveloffset=+1]
+include::modules/gs-custom-keycloak-idp.adoc[leveloffset=+1]
 
-include::_partials/gs-adding-custom-3scale-routes.adoc[leveloffset=+1]
+include::modules/gs-adding-custom-3scale-routes.adoc[leveloffset=+1]
 
-include::_partials/gs-service-discovery-3scale.adoc[leveloffset=+1]
+include::modules/gs-service-discovery-3scale.adoc[leveloffset=+1]
 
-include::_partials/gs-managing-images-proc.adoc[leveloffset=+1]
+include::modules/gs-managing-images-proc.adoc[leveloffset=+1]

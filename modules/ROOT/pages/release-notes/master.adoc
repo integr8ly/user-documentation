@@ -1,6 +1,6 @@
 [id='assembly_release-notes']
 
-include::_partials/attributes.adoc[]
+include::modules/attributes.adoc[]
 
 :gs-link: :rn-link: ../getting-started/
 
@@ -19,10 +19,10 @@ When prompted, see these Release Notes for details regarding changes to your clu
 
 
 
-include::_partials/rn-versions-ref.adoc[leveloffset=+1]
+include::modules/rn-versions-ref.adoc[leveloffset=+1]
 
-include::_partials/rn-fixed-issues-ref.adoc[leveloffset=+1]
+include::modules/rn-fixed-issues-ref.adoc[leveloffset=+1]
 
-include::_partials/rn-known-issues-ref.adoc[leveloffset=+1]
+include::modules/rn-known-issues-ref.adoc[leveloffset=+1]
 
-include::_partials/rn-new-and-changed-ref.adoc[leveloffset=+1]
+include::modules/rn-new-and-changed-ref.adoc[leveloffset=+1]
