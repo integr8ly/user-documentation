@@ -1,4 +1,4 @@
-[id='gs-managing-images-proc']
+[id='managing-images']
 
 ifdef::env-github[]
 :imagesdir: ../images/

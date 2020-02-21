@@ -1,4 +1,3 @@
-
 [id='rn-fixed-issues-ref']
 
 = Fixed Issues

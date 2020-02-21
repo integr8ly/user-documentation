@@ -1,4 +1,10 @@
-=== Understanding the file structure
+[id='understanding-file-structure']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+= Understanding the file structure
 
 [source]
 ----

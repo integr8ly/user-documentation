@@ -1,3 +1,9 @@
+[id='editing-overview-section-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Editing the overview section of a {PRODUCT} Solution Pattern
 
 The first section of the `walkthrough.adoc` describes your Solution Pattern,it provides an overview of the purpose of the Solution Pattern.

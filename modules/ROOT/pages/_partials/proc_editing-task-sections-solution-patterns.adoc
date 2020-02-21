@@ -1,3 +1,9 @@
+[id='editing-task-sections-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Editing task sections of a {PRODUCT} Solution Pattern
 
 .Prerequisites

@@ -1,3 +1,9 @@
+[id='editing-procedures-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Editing procedures of a {PRODUCT} Solution Pattern
 
 A procedure is a set of steps that you perform to complete a task or subtask.

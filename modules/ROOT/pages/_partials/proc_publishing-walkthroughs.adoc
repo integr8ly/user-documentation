@@ -1,5 +1,6 @@
-[id='gs-publishing-walkthroughs-proc']
-= Adding {walkthrough-name}s to your {PRODUCT} cluster
+[id='publishing-walkthroughs']
+
+= Adding Solution Patterns to your {PRODUCT} cluster
 
 The home page of {webapp} lists the {walkthrough-name}s from all the Git repositories you are subscribed to. Any user can add {walkthrough-name}s to your cluster.
 

@@ -1,3 +1,9 @@
+[id='downloading-solution-pattern-template']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Downloading the Solution Pattern template
 
 To get started with Solution Pattern development you can edit the template repository and learn about the components of a Solution Pattern.

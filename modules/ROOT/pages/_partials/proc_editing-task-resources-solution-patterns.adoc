@@ -1,3 +1,10 @@
+[id='editing-task-resources-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+
 = Editing task resources for a {PRODUCT} Solution Pattern
 
 The {webapp} can display helpful information and links on the right hand side panel that are specific to a task.

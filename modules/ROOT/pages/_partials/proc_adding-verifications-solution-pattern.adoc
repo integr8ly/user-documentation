@@ -1,3 +1,9 @@
+[id='adding-verifications-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Adding verifications to a {PRODUCT} Solution Pattern
 Verifications are interactive elements in a Solution Pattern that confirm whether a user has successfully completed a procedure. They are questions presented to the user, which can be answered with either a `Yes` or `No` response.
 

@@ -1,3 +1,9 @@
+[id='committing-solution-pattern-remote-repository']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Committing your Solution Pattern to a remote repository
 
 You can edit the `walkthrough.adoc` file and push your changes to GitHub.

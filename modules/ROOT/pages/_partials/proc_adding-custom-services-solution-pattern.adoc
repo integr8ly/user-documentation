@@ -1,3 +1,9 @@
+[id='adding-custom-services-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Adding custom services to a {PRODUCT} Solution Pattern
 
 You can create services from the OpenShift catalog in the cluster as part of the Solution Pattern startup process.

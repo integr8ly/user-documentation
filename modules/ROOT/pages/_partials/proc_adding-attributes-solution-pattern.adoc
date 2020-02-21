@@ -1,3 +1,9 @@
+[id='adding-attributes-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Adding attributes to a {PRODUCT} Solution Pattern
 
 Attributes are used to make external variable users performing a Solution Pattern.

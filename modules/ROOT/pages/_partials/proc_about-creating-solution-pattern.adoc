@@ -1,3 +1,9 @@
+[id='about-creating-solution-patterns']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = About creating solution patterns
 
 To write Solution Patterns you require a knowledge of:

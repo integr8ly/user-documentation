@@ -1,3 +1,9 @@
+[id='editing-resources-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Editing resources for a {PRODUCT} Solution Pattern
 
 The {webapp} can display helpful information and links on the right side panel.

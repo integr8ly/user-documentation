@@ -1,5 +1,11 @@
+[id='previewing-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
 = Previewing your Solution Pattern
 
 .Procedure
 . Log in to the {webapp}
-. Follow the steps described in xref:gs-publishing-walkthroughs-proc[Adding Solution Patterns].
+. Follow the steps described in xref:gs-publishing-walkthroughs-proc[Adding Solution Patterns]

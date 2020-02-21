@@ -1,4 +1,4 @@
-[id='gs-adding-custom-3scale-routes']
+[id='adding-custom-3scale-routes']
 
 ifdef::env-github[]
 :imagesdir: ../images/
