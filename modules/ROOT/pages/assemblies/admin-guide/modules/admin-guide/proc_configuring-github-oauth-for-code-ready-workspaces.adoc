@@ -1,0 +1,46 @@
+// Metadata created by nebel
+//
+// QuickstartID: 
+// Level: 2
+// ParentAssemblies: assemblies/admin-guide/as_admin-guide.adoc
+// UserStory: 
+// VerifiedInVersion: 
+
+[id="configuring-github-oauth-for-code-ready-workspaces"]
+= Configuring GitHub OAuth for Code Ready Workspaces
+// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
+OAuth for Github allows users to import projects using SSH addresses (`git@`), push to repositories, and use the pull request panel. To enable automatic SSH key upload to GitHub for users:
+
+.Procedure
+
+. Register an application on GitHub:
+** For GitHub, click https://github.com/settings/profile[Settings] ->
+https://github.com/settings/apps[Developer settings] ->
+https://github.com/settings/developers[OAuth Apps] ->
+https://github.com/settings/applications/new[Register a new OAuth application].
+** For GitHub Enterprise, go to your GitHub Enterprise home page and then click
+*Settings -> Developer settings -> Register a new application*.
+. Enter an application name, for example `CodeReady Workspaces`.
+. Enter a homepage URL, such as
+`https://<che>.<cluster-name>.<cluster-domain>`.
+. Enter the authorization callback URL:
++
+----
+https://keycloak-edge-redhat-rhmi-rhsso.apps.<cluster_name>.<cluster-domain>/auth/realms/openshift/broker/github/endpoint
+----
++
+where <cluster-name> and <cluster-domain> define your cluster.
+. Click *Register application*. GitHub provides a Client ID and a Client Secret.
+
+. Log into the OpenShift console as a {cluster-administrator}.
+
+. Navigate to the following URL in your browser: 
++
+----
+https://<openshift_web_console_domain>/k8s/ns/integreatly/secrets/github-oauth-secret
+----
++
+where <openshift_web_console_domain> is the domain of your OpenShift console.
+
+. Select the *Edit Secret* option from the *Actions* menu.
+. Enter your GitHub Client ID and Client Secret and click *Save*.

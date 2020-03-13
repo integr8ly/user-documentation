@@ -1,0 +1,11 @@
+[id='previewing-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+= Previewing your Solution Pattern
+
+.Procedure
+. Log in to the {webapp}
+. Follow the steps described in Adding Solution Patterns

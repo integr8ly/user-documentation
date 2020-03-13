@@ -1,0 +1,38 @@
+[id='editing-task-resources-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+
+= Editing task resources for a {PRODUCT} Solution Pattern
+
+The {webapp} can display helpful information and links on the right hand side panel that are specific to a task.
+Solution Pattern resources are displayed for every task, whereas task resources typically change as the user navigates the Solution Pattern.
+
+.Prerequisites
+* You have created a repository using the Solution Pattern template.
+* You have added the Solution Pattern repository to your cluster as described in link:{adding-sps}[Adding Solution Patterns].
+
+
+.Procedure
+To add task resources:
+
+. Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
+
+. At the end any task section, add the following:
++
+----
+[type=taskResource]
+.Useful links
+****
+* link:https://google.com[Task related link]
+****
+----
+
+. Save, commit and push your changes.
+
+. Redeploy the {webapp}:
+.. Navigate to the *webapp* project in OpenShift.
+.. Click on the *tutorial-web-app* deployment config.
+.. Click the *Deploy* button.

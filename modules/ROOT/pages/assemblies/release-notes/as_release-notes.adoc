@@ -1,0 +1,27 @@
+// Metadata created by nebel
+//
+// QuickstartID: 
+// Level: 1
+// ParentAssemblies: generated-master.adoc
+// UserStory: 
+// VerifiedInVersion: 
+
+
+include::_artifacts/attributes.adoc[]
+
+
+[id="release-notes"]
+= Release Notes for Red Hat Managed Integration 2.0
+//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
+
+This document provides information for new users of {PRODUCT}.
+
+//INCLUDES
+
+include::modules/release-notes/con_new-changed.adoc[leveloffset=+1]
+
+include::modules/release-notes/ref_known-issues.adoc[leveloffset=+1]
+
+include::modules/release-notes/ref_versions.adoc[leveloffset=+1]
+
+

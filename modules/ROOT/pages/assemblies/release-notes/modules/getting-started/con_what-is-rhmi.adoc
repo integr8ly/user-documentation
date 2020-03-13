@@ -1,0 +1,19 @@
+// Metadata created by nebel
+//
+// QuickstartID: 
+// Level: 2
+// ParentAssemblies: assemblies/getting-started/as_getting-started.adoc
+// UserStory: 
+// VerifiedInVersion: 
+
+[id="what-is-rhmi"]
+= What is Red Hat Managed Integration?
+//In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
+//Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
+
+Red Hat Managed Integration delivers managed integration services hosted on the leading container platform, enabling diverse developers to engage in agile, microservices-based application development.
+
+{PRODUCT_SHORT} enables your team to develop, build and deploy enterprise integration solutions on an OpenShift Dedicated cluster managed by Red Hat.
+{PRODUCT_SHORT} enables developers adopt event-based computing and API-based development with lightweight, loosely coupled, self-service and flexible components.
+
+{PRODUCT_SHORT} enables the operations team focus on high value objectives while Red Hat manage the infrastructure. All the applications and services are protected by Red Hat Single Sign-On.

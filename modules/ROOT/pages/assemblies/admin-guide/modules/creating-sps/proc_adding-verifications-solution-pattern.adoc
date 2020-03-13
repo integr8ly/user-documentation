@@ -1,0 +1,44 @@
+[id='adding-verifications-solution-pattern']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+= Adding verifications to a {PRODUCT} Solution Pattern
+Verifications are interactive elements in a Solution Pattern that confirm whether a user has successfully completed a procedure. They are questions presented to the user, which can be answered with either a `Yes` or `No` response.
+
+NOTE: Every procedure in a task or subtask requires a verification.
+
+
+.Prerequisites
+* You have created a repository using the Solution Pattern template.
+* You have added the Solution Pattern repository to your cluster as described in link:{adding-sps}[Adding Solution Patterns].
+
+
+.Procedure
+To add a verification:
+
+. Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
+
+. At the end of the procedure section, following the numbered list add:
++
+:verificationText: verification
+[source,asciidoc,subs="attributes"]
+----
+[type={verificationText}]
+Check that the dashboard of service X reports no errors.
+----
+. Add the following block to cater for users that answer the question with `No`:
++
+[source,asciidoc]
+----
+[type=verificationFail]
+Try turning it off and on again.
+----
+
+. Save, commit and push your changes.
+
+. Redeploy the {webapp}:
+.. Navigate to the *webapp* project in OpenShift.
+.. Click on the *tutorial-web-app* deployment config.
+.. Click the *Deploy* button.

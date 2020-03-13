@@ -1,0 +1,26 @@
+// Metadata created by nebel
+//
+// QuickstartID: 
+// Level: 2
+// ParentAssemblies: assemblies/release-notes/as_release-notes.adoc
+// UserStory: 
+// VerifiedInVersion: 
+
+[id="new-changed"]
+= Key features
+//In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
+//Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
+
+{PRODUCT} delivers integration services hosted on the leading container platform, an OpenShift Dedicated cluster managed by Red Hat.
+
+{PRODUCT_SHORT} supports:
+
+Agile, microservices-based, application development
+
+Development of enterprise integration solutions
+
+Adoption of event-based computing with lightweight, loosely-coupled, self-service and flexible components
+
+Adoption of API-based development
+
+Red Hat manages all infrastructure, allowing organizations to focus on high value objectives.

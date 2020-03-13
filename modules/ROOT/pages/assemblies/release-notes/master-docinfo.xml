@@ -1,0 +1,12 @@
+<title>Release Notes</title>
+<productname>{PRODUCT}</productname>
+<productnumber>{PRODUCT_VERSION}</productnumber>
+<subtitle>For {PRODUCT} {PRODUCT_VERSION}</subtitle>
+<release>{PRODUCT_VERSION}</release>
+<abstract>
+    <para>This document provides a high-level description of known issues and features in {PRODUCT} {PRODUCT_VERSION}.</para>
+</abstract>
+<authorgroup>
+    <orgname>Red Hat Customer Content Services</orgname>
+</authorgroup>
+<xi:include href="Common_Content/Legal_Notice.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />

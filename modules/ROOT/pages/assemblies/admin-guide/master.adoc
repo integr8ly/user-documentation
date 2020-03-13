@@ -1,0 +1,3 @@
+include::_artifacts/attributes.adoc[]
+
+include::./as_admin-guide.adoc[]
