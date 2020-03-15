@@ -1,11 +1,20 @@
 = User Documentation
 
-Red Hat Managed Integration (RHMI) delivers Integreatly on link:https://www.openshift.com/products/dedicated/[OpenShift Dedicated].
-
-This page and corresponding GitHub link:https://integr8ly.github.io/user-documentation/[repository] (Getting Started Guide and Release Notes) for RHMI as well as Integreatly users.  
-
 For documentation on the latest release of RHMI, visit the link:https://access.redhat.com/documentation/en-us/red_hat_managed_integration/1/[Customer Portal].
-  
+
+Draft documentation
+
+* link:assemblies/release-notes/master.html[Release Notes]
+
+* link:assemblies/getting-started/master.html[Getting Started]
+
+* link:assemblies/admin-guide/master.html[Admin Guide]
+
+* link:assemblies/developer-guide/master.html[Dev Guide]
+
+* link:assemblies/creating-sps/master.html[Creating Solution Patterns]
+
+
 == Additional Resources
 
 * link:/data-sync/latest/[latest Data Sync documentation]

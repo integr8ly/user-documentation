@@ -1,0 +1,14 @@
+site:
+  title: Integreatly Docs Site
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: https://integr8ly.github.io/user-docs-site
+  start_page: integreatly::index.adoc
+content:
+  sources:
+  - url: .
+    branches: HEAD
+
+ui:
+  bundle:
+    url: ./ui-bundle.zip
+    snapshot: true

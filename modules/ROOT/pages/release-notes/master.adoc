@@ -1,0 +1,191 @@
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 1
+// ParentAssemblies: generated-master.adoc
+// UserStory:
+// VerifiedInVersion:
+
+
+:PRODUCT: Red Hat Managed Integration
+:ProductName: {PRODUCT}
+:PRODUCT_SHORT: Managed Integration
+:PRODUCT_INIT: rhmi
+:PRODUCT_INIT_CAP: RHMI
+
+:PRODUCT_VERSION: 2
+:ProductRelease: {PRODUCT_VERSION}
+:MINOR_VERSION_NO: 2.0
+:PATCH_VERSION_NO: 2.0.0
+
+:URL_COMPONENT_PRODUCT: red_hat_managed_integration
+
+:URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
+
+:webapp: Solution Explorer
+:walkthrough-name: Solution Pattern
+
+:cluster-administrator: cluster administrator
+
+//:rhmi-sso-name: Managed Integration SSO instance
+:customer-sso-name: Customer Application SSO instance
+:rhsso-name: Red Hat Single Sign-On
+
+:fuse-name: Red Hat Fuse Online
+:fuse-version: 7.5
+:fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
+:fuse-configs: https://access.redhat.com/articles/310603
+
+:amq-online-name: Red Hat AMQ Online
+:amq-online-version: 1.3
+:amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
+:amq-online-configs: https://access.redhat.com/articles/2791941
+
+:three-scale-name: Red Hat 3scale API Management
+:three-scale-version: 2.8
+:three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
+:three-scale-configs: https://access.redhat.com/articles/2798521
+
+:code-ready-name: Red Hat CodeReady Workspaces for OpenShift
+:code-ready-version: 2.0
+:code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
+:code-ready-configs: N/A
+
+
+[id="release-notes"]
+= Release Notes for Red Hat Managed Integration 2.0
+//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
+
+This document provides information for new users of {PRODUCT}.
+
+//INCLUDES
+
+:leveloffset: +1
+
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 2
+// ParentAssemblies: assemblies/release-notes/as_release-notes.adoc
+// UserStory:
+// VerifiedInVersion:
+
+[id="new-changed"]
+= Key features
+//In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
+//Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
+
+{PRODUCT} delivers integration services hosted on the leading container platform, an OpenShift Dedicated cluster managed by Red Hat.
+
+{PRODUCT_SHORT} supports:
+
+Agile, microservices-based, application development
+
+Development of enterprise integration solutions
+
+Adoption of event-based computing with lightweight, loosely-coupled, self-service and flexible components
+
+Adoption of API-based development
+
+Red Hat manages all infrastructure, allowing organizations to focus on high value objectives.
+
+:leveloffset!:
+
+:leveloffset: +1
+
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 2
+// ParentAssemblies: assemblies/release-notes/as_release-notes.adoc
+// UserStory:
+// VerifiedInVersion:
+
+[id="known-issues"]
+= Known issues
+//In the title of a reference module, include nouns that are used in the body text. For example, "Keyboard shortcuts for ___" or "Command options for ___." This helps readers and search engines find the information quickly.
+
+A short introductory paragraph is required for the reference module.
+It will provide an overview of the module.
+
+A reference module provide data that users might want to look up, but do not need to remember.
+It has a very strict structure, often in the form of a list or a table.
+A well-organized reference module enables users to scan it quickly to find the details they want.
+AsciiDoc markup to consider for reference data:
+
+.Unordered list
+* For more details on writing reference modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+* Use a consistent system for file names, IDs, and titles.
+For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+
+.Labeled list
+Term 1:: Definition
+Term 2:: Definition
+
+.Table
+[options="header"]
+|===
+|Column 1|Column 2|Column 3
+|Row 1, column 1|Row 1, column 2|Row 1, column 3
+|Row 2, column 1|Row 2, column 2|Row 2, column 3
+|===
+
+:leveloffset!:
+
+:leveloffset: +1
+
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 2
+// ParentAssemblies: assemblies/release-notes/as_release-notes.adoc
+// UserStory:
+// VerifiedInVersion:
+
+[id="versions"]
+= Versions of components
+//In the title of a reference module, include nouns that are used in the body text. For example, "Keyboard shortcuts for ___" or "Command options for ___." This helps readers and search engines find the information quickly.
+
+{PRODUCT} {MINOR_VERSION_NO} includes the following software versions.
+
+[cols="h,,,"]
+|===
+
+|Component
+|*Release Notes*
+|*Supported Configurations*
+|*Documentation*
+
+|{fuse-name}
+|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.5/html/release_notes_for_red_hat_fuse_7.5/index[{fuse-version}]
+|{fuse-configs}
+|link:{fuse-docs}[{fuse-version}] +
+(Click Fuse Online Category)
+
+|{amq-online-name}
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5/html/release_notes_for_amq_online_1.3_on_openshift/index[{amq-online-version}]
+|{amq-online-configs}
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5[{amq-online-version}] +
+(Click AMQ Online Category)
+
+|{three-scale-name}
+|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/release_notes_for_red_hat_3scale_api_management_2.7_on-premises/index[{three-scale-version}]
+|{three-scale-configs}
+|link:{three-scale-docs}[{three-scale-version}]
+
+|{code-ready-name}
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/html/release_notes_and_known_issues/index[{code-ready-version}]
+|{code-ready-configs}
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/[{code-ready-version}]
+
+
+|Red Hat Single Sign-On
+|link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/release_notes/index[7.3]
+|https://access.redhat.com/articles/2342861
+|https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/
+
+
+|===
+
+:leveloffset!:
+
