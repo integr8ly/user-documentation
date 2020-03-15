@@ -1,0 +1,118 @@
+:PRODUCT: Red Hat Managed Integration
+:ProductName: {PRODUCT}
+:PRODUCT_SHORT: Managed Integration
+:PRODUCT_INIT: rhmi
+:PRODUCT_INIT_CAP: RHMI
+
+:PRODUCT_VERSION: 2
+:ProductRelease: {PRODUCT_VERSION}
+:MINOR_VERSION_NO: 2.0
+:PATCH_VERSION_NO: 2.0.0
+
+:URL_COMPONENT_PRODUCT: red_hat_managed_integration
+
+:URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
+
+:webapp: Solution Explorer
+:walkthrough-name: Solution Pattern
+
+:cluster-administrator: cluster administrator
+
+//:rhmi-sso-name: Managed Integration SSO instance
+:customer-sso-name: Customer Application SSO instance
+:rhsso-name: Red Hat Single Sign-On
+
+:fuse-name: Red Hat Fuse Online
+:fuse-version: 7.5
+:fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
+:fuse-configs: https://access.redhat.com/articles/310603
+
+:amq-online-name: Red Hat AMQ Online
+:amq-online-version: 1.3
+:amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
+:amq-online-configs: https://access.redhat.com/articles/2791941
+
+:three-scale-name: Red Hat 3scale API Management
+:three-scale-version: 2.8
+:three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
+:three-scale-configs: https://access.redhat.com/articles/2798521
+
+:code-ready-name: Red Hat CodeReady Workspaces for OpenShift
+:code-ready-version: 2.0
+:code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
+:code-ready-configs: N/A
+
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 1
+// ParentAssemblies: generated-master.adoc
+// UserStory:
+// VerifiedInVersion:
+
+[id="admin-guide"]
+= Administration Guide for Red Hat Managed Integration 2.0
+//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
+
+This document provides instructions for {cluster-administrator}s to manage and configure a cluster.
+
+// The following include statements pull in the sub-assemblies and the module files that comprise the assembly. Include any combination of concept, procedure, or reference modules required to cover the user story.
+
+// \include::../../assemblies/CATEGORY/as_sub-assembly-id.adoc[leveloffset=+1]
+// [leveloffset=+1] ensures that when a module starts with a level-1 heading (= Heading), the heading will be interpreted as a level-2 heading (== Heading) in the assembly.
+
+// \include::../../modules/CATEGORY/TYPE_use-module-id-here.adoc[leveloffset=+1]
+// Where TYPE_ can be one of p_, c_, or r_ for 'procedure', 'concept', or 'reference'
+
+//INCLUDES
+
+:leveloffset: +1
+
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 2
+// ParentAssemblies: assemblies/admin-guide/as_admin-guide.adoc
+// UserStory:
+// VerifiedInVersion:
+
+[id="configuring-github-oauth-for-code-ready-workspaces"]
+= Configuring GitHub OAuth for Code Ready Workspaces
+// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
+OAuth for Github allows users to import projects using SSH addresses (`git@`), push to repositories, and use the pull request panel. To enable automatic SSH key upload to GitHub for users:
+
+.Procedure
+
+. Register an application on GitHub:
+** For GitHub, click https://github.com/settings/profile[Settings] ->
+https://github.com/settings/apps[Developer settings] ->
+https://github.com/settings/developers[OAuth Apps] ->
+https://github.com/settings/applications/new[Register a new OAuth application].
+** For GitHub Enterprise, go to your GitHub Enterprise home page and then click
+*Settings -> Developer settings -> Register a new application*.
+. Enter an application name, for example `CodeReady Workspaces`.
+. Enter a homepage URL, such as
+`https://<che>.<cluster-name>.<cluster-domain>`.
+. Enter the authorization callback URL:
++
+----
+https://keycloak-edge-redhat-rhmi-rhsso.apps.<cluster_name>.<cluster-domain>/auth/realms/openshift/broker/github/endpoint
+----
++
+where <cluster-name> and <cluster-domain> define your cluster.
+. Click *Register application*. GitHub provides a Client ID and a Client Secret.
+
+. Log into the OpenShift console as a {cluster-administrator}.
+
+. Navigate to the following URL in your browser:
++
+----
+https://<openshift_web_console_domain>/k8s/ns/integreatly/secrets/github-oauth-secret
+----
++
+where <openshift_web_console_domain> is the domain of your OpenShift console.
+
+. Select the *Edit Secret* option from the *Actions* menu.
+. Enter your GitHub Client ID and Client Secret and click *Save*.
+
+:leveloffset!:

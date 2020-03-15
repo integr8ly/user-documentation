@@ -1,3 +1,0 @@
-include::_artifacts/attributes.adoc[]
-
-include::./creating-solution-patterns.adoc[]

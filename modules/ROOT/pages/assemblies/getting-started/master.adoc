@@ -1,4 +1,0 @@
-
-include::_artifacts/attributes.adoc[]
-
-include::./as_getting-started.adoc[]
