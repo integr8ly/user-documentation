@@ -4,15 +4,15 @@ For documentation on the latest release of RHMI, visit the link:https://access.r
 
 Draft documentation
 
-* link:assemblies/release-notes/master.html[Release Notes]
+* link:release-notes/master.html[Release Notes]
 
-* link:assemblies/getting-started/master.html[Getting Started]
+* link:getting-started/master.html[Getting Started]
 
-* link:assemblies/admin-guide/master.html[Admin Guide]
+* link:admin-guide/master.html[Admin Guide]
 
-* link:assemblies/developer-guide/master.html[Dev Guide]
+* link:developer-guide/master.html[Dev Guide]
 
-* link:assemblies/creating-sps/master.html[Creating Solution Patterns]
+* link:creating-sps/master.html[Creating Solution Patterns]
 
 
 == Additional Resources
