@@ -18,6 +18,9 @@
 :MINOR_VERSION_NO: 2.0
 :PATCH_VERSION_NO: 2.0.0
 
+:cluster-suffix: <cluster suffix>
+:suffix-example: example.u7y2.s1.openshift.com
+
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
 
 :URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
@@ -26,6 +29,7 @@
 :walkthrough-name: Solution Pattern
 
 :cluster-administrator: cluster administrator
+:cluster-developer: developer user
 
 //:rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: Customer Application SSO instance
@@ -47,9 +51,11 @@
 :three-scale-configs: https://access.redhat.com/articles/2798521
 
 :code-ready-name: Red Hat CodeReady Workspaces for OpenShift
+:code-ready-short: CodeReady Workspaces
 :code-ready-version: 2.0
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
+:codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
 
 
 [id="release-notes"]
@@ -75,19 +81,23 @@ This document provides information for new users of {PRODUCT}.
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
-{PRODUCT} delivers integration services hosted on the leading container platform, an OpenShift Dedicated cluster managed by Red Hat.
+Red Hat Managed Integration is a hosted and managed platform for developing, deploying, and scaling cloud-native, integrated applications. The combination of developer tooling, API-first approach to integration, and managed operations allows teams to focus on accelerating time to value and reduce operational cost.
 
-{PRODUCT_SHORT} supports:
+*Platform:* Red Hat OpenShift Dedicated
 
-Agile, microservices-based, application development
+OpenShift Dedicated is a platform for developing and running containerized applications. It is designed to allow applications and the data centers that support them to expand from just a few machines and applications to thousands of machines that serve millions of clients.
 
-Development of enterprise integration solutions
+*Services:* Fully hosted and managed integration products are pre-installed and pre-configured in a dedicated cluster. The products available as services are:
 
-Adoption of event-based computing with lightweight, loosely-coupled, self-service and flexible components
+* Red Hat 3scale (API management)
+* Fuse Online (Enterprise connectivity)
+* Red Hat AMQ Online (Messaging)
+* RH SSO (Single sign-on )
+* Red Hat CodeReady Workspaces (Integrated development environment )
 
-Adoption of API-based development
+*Solution Explorer:* A unified front-end web application that provides access to the installed products, development tools, solution patterns, and the Red Hat OpenShift console.
 
-Red Hat manages all infrastructure, allowing organizations to focus on high value objectives.
+*Solution Patterns:* Pre-developed solution patterns demonstrate best practices and help development teams get started quickly. They provide a framework for organizations to create additional solution patterns in the cluster to standardize best practices.
 
 :leveloffset!:
 

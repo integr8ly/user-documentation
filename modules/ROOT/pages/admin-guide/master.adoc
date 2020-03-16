@@ -9,6 +9,9 @@
 :MINOR_VERSION_NO: 2.0
 :PATCH_VERSION_NO: 2.0.0
 
+:cluster-suffix: <cluster suffix>
+:suffix-example: example.u7y2.s1.openshift.com
+
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
 
 :URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
@@ -17,6 +20,7 @@
 :walkthrough-name: Solution Pattern
 
 :cluster-administrator: cluster administrator
+:cluster-developer: developer user
 
 //:rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: Customer Application SSO instance
@@ -38,9 +42,11 @@
 :three-scale-configs: https://access.redhat.com/articles/2798521
 
 :code-ready-name: Red Hat CodeReady Workspaces for OpenShift
+:code-ready-short: CodeReady Workspaces
 :code-ready-version: 2.0
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
+:codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
 
 // Metadata created by nebel
 //
@@ -68,18 +74,15 @@ This document provides instructions for {cluster-administrator}s to manage and c
 
 :leveloffset: +1
 
-// Metadata created by nebel
-//
-// QuickstartID:
-// Level: 2
-// ParentAssemblies: assemblies/admin-guide/as_admin-guide.adoc
-// UserStory:
-// VerifiedInVersion:
+:authorization-callback-url: https://keycloak-edge-redhat-rhmi-rhsso.apps.{cluster-suffix}/auth/realms/openshift/broker/github/endpoint
+:github-oauth-secret-url: https://console-openshift-console.apps.{cluster-suffix}/k8s/ns/redhat-rhmi-operator/secrets/github-oauth-secret
+:creating-workspace-link: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.0/html-single/end-user_guide/index#creating-and-configuring-a-new-codeready-workspaces-2.0-workspace
 
-[id="configuring-github-oauth-for-code-ready-workspaces"]
-= Configuring GitHub OAuth for Code Ready Workspaces
-// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
-OAuth for Github allows users to import projects using SSH addresses (`git@`), push to repositories, and use the pull request panel. To enable automatic SSH key upload to GitHub for users:
+[id="configuring-github-oauth-for-codeready-workspaces_{context}"]
+= Configuring GitHub OAuth for CodeReady Workspaces
+
+A GitHub OAuth app allows users to import projects into {code-ready-short} using SSH addresses (`git@`), push to repositories, and use the pull request panel.
+This procedure enables automatic SSH key upload to GitHub.
 
 .Procedure
 
@@ -91,28 +94,52 @@ https://github.com/settings/applications/new[Register a new OAuth application].
 ** For GitHub Enterprise, go to your GitHub Enterprise home page and then click
 *Settings -> Developer settings -> Register a new application*.
 . Enter an application name, for example `CodeReady Workspaces`.
-. Enter a homepage URL, such as
-`https://<che>.<cluster-name>.<cluster-domain>`.
+. For the Homepage URL, enter the CodeReady Workspaces URL
++
+[subs="attributes"]
+----
+{codeready-workspaces-url}
+----
++
+where <cluster-suffix> is the unique sub-domain for your cluster.
+For example, {suffix-example}
+
 . Enter the authorization callback URL:
 +
+[subs="attributes"]
 ----
-https://keycloak-edge-redhat-rhmi-rhsso.apps.<cluster_name>.<cluster-domain>/auth/realms/openshift/broker/github/endpoint
+{authorization-callback-url}
 ----
 +
-where <cluster-name> and <cluster-domain> define your cluster.
-. Click *Register application*. GitHub provides a Client ID and a Client Secret.
+where <cluster-suffix> is the unique sub-domain for your cluster.
+For example, {suffix-example}
+
+. Click *Register application*.
+
+. Note  the *Client ID* and *Client Secret*. You require these values later in the procedure.
 
 . Log into the OpenShift console as a {cluster-administrator}.
 
 . Navigate to the following URL in your browser:
 +
+[subs="attributes"]
 ----
-https://<openshift_web_console_domain>/k8s/ns/integreatly/secrets/github-oauth-secret
+{github-oauth-secret-url}
 ----
 +
-where <openshift_web_console_domain> is the domain of your OpenShift console.
+where <cluster-suffix> is the unique sub-domain for your cluster.
+For example, {suffix-example}
 
 . Select the *Edit Secret* option from the *Actions* menu.
-. Enter your GitHub Client ID and Client Secret and click *Save*.
+. Enter your GitHub Client ID for the value of *Client Id* and Github Client Secret for the value of *Secret* and click *Save*.
+. To validate, create a workspace and connect to GitHub:
+.. Log into Solution Explorer as a {cluster-developer}.
+.. Navigate to {code-ready-short}.
+.. Create a workspace as described in link:{creating-workspace-link}[Creating and configuring a new CodeReady Workspaces 2.0 workspace]
+.. Click *Add or Import Project*
+.. Click *GitHub*
+.. Click *Connect your github account*
+.. Click *Authorize*
+.. Check that a list of projects is displayed. If projects are not displayed, verify that you followed each step in the procedure above.
 
 :leveloffset!:

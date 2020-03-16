@@ -9,6 +9,9 @@
 :MINOR_VERSION_NO: 2.0
 :PATCH_VERSION_NO: 2.0.0
 
+:cluster-suffix: <cluster suffix>
+:suffix-example: example.u7y2.s1.openshift.com
+
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
 
 :URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
@@ -17,6 +20,7 @@
 :walkthrough-name: Solution Pattern
 
 :cluster-administrator: cluster administrator
+:cluster-developer: developer user
 
 //:rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: Customer Application SSO instance
@@ -38,9 +42,11 @@
 :three-scale-configs: https://access.redhat.com/articles/2798521
 
 :code-ready-name: Red Hat CodeReady Workspaces for OpenShift
+:code-ready-short: CodeReady Workspaces
 :code-ready-version: 2.0
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
+:codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
 
 // Metadata created by nebel
 //
