@@ -5,7 +5,7 @@
 // ParentAssemblies: generated-master.adoc
 // UserStory:
 // VerifiedInVersion:
-
+:context: release-notes
 
 :PRODUCT: Red Hat Managed Integration
 :ProductName: {PRODUCT}
@@ -198,4 +198,3 @@ Term 2:: Definition
 |===
 
 :leveloffset!:
-

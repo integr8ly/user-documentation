@@ -55,6 +55,7 @@
 // ParentAssemblies: generated-master.adoc
 // UserStory:
 // VerifiedInVersion:
+:context: developer-guide
 
 [id="developer-guide"]
 = Developer Guide for Red Hat Managed Integration 2.0
@@ -95,4 +96,3 @@ The contents of a concept module give the user descriptions and explanations nee
 * Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
 
 :leveloffset!:
-

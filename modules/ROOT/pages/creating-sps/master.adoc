@@ -109,47 +109,7 @@ This document provides instructions for creating Solution Patterns.
 
 
 
-:leveloffset: +1
-
-[id='about-creating-solution-patterns']
-
-
-= Creating solution patterns
-
-To write Solution Patterns you require a knowledge of:
-
-* Asciidoc - a lightweight markup language, similar to markdown
-* JSON - a lightweight format for storing and transporting data
-* Git - you must push your Asciidoc and JSON files to a Git repository
-* OpenShift - you can add Solution Patterns using the OpenShift console
-
-A simple Solution Pattern only requires that you edit an Asciidoc file, for example:
-
-[source,asciidoc]
-----
-= Demonstrating features <1>
-
-A short description for the feature. <2>
-
-== Doing a task <3>
-
-. Do this first: <4>
-. Do this second:
-----
-<1> Solution Pattern title, you can only have a single level 1 heading per file.
-<2> The first line of the introduction is displayed as a tag line for the Solution Pattern and displayed on the {webapp} home page.
-Do not use AsciiDoc attributes in this line because they are not displayed correctly on the homepage.
-<3> A task contains one or more subtasks (level 3 headings)
-<4> A numbered list of steps the user must perform.
-
-
-.Additional Resources
-
-* link:http://asciidoc.org/[Asciidoc Homepage^]
-* link:https://asciidoctor-docs.netlify.com/asciidoc/1.5/[AsciiDoc Syntax]
-* link:https://github.com/evanshortiss/integreatly-vscode-asciidoc-snippets/[Visual Studio Code extension]
-
-:leveloffset!:
+Unresolved directive in creating-solution-patterns.adoc - include::modules/creating-sps/proc_about-creating-solution-pattern.adoc[leveloffset=+1]
 
 :leveloffset: +1
 
