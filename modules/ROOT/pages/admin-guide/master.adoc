@@ -4,6 +4,8 @@
 :PRODUCT_INIT: rhmi
 :PRODUCT_INIT_CAP: RHMI
 
+:imagesdir: _images
+
 :PRODUCT_VERSION: 2
 :ProductRelease: {PRODUCT_VERSION}
 :MINOR_VERSION_NO: 2.0
@@ -47,6 +49,8 @@
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
 :codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
+
+:project-note: Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.
 
 // Metadata created by nebel
 //

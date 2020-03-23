@@ -4,6 +4,8 @@
 :PRODUCT_INIT: rhmi
 :PRODUCT_INIT_CAP: RHMI
 
+:imagesdir: _images
+
 :PRODUCT_VERSION: 2
 :ProductRelease: {PRODUCT_VERSION}
 :MINOR_VERSION_NO: 2.0
@@ -48,6 +50,8 @@
 :code-ready-configs: N/A
 :codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
 
+:project-note: Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.
+
 // Metadata created by nebel
 //
 // QuickstartID:
@@ -59,11 +63,8 @@
 
 [id="developer-guide"]
 = Developer Guide for Red Hat Managed Integration 2.0
-//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 
-This paragraph is the assembly introduction. It explains what the user will accomplish by working through the modules in the assembly and sets the context for the user story the assembly is based on. Can include more than one paragraph. Consider using the information from the user story.
-
-//INCLUDES
+This guide provides documentation for developers using {PRODUCT}.
 
 :leveloffset: +1
 
@@ -94,5 +95,347 @@ The contents of a concept module give the user descriptions and explanations nee
 * A bulleted list of links to other material closely related to the contents of the concept module.
 * For more details on writing concept modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
 * Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+
+:leveloffset!:
+
+:product-title: OpenShift Dedicated
+:leveloffset: +1
+
+// This assembly is included in the following assemblies:
+//
+// as_developer-guide.adoc
+
+
+
+[id="as_builds"]
+= {PRODUCT_SHORT} Builds
+
+:context: builds
+
+{PRODUCT} enables you to deploy apps to your cluster as described in the OpenShift Dedicated link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/builds/index[Builds] guide. The following procedures are reproduced for your convenience.
+
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+//*assembly/builds
+//*builds/understanding-image-builds
+
+
+[id="builds-about_{context}"]
+= Builds
+
+A _build_ is the process of transforming input parameters into a resulting
+object. Most often, the process is used to transform input parameters or source
+code into a runnable image. A `BuildConfig` object is the definition of the
+entire build process.
+
+{product-title} uses Kubernetes by creating containers
+from build images and pushing them to a container image registry.
+
+Build objects share common characteristics including inputs for a build, the requirement to
+complete a build process, logging the build process, publishing resources from
+successful builds, and publishing the final status of the build. Builds take
+advantage of resource restrictions, specifying limitations on resources such as
+CPU usage, memory usage, and build or pod execution time.
+
+
+
+
+The resulting object of a build depends on the builder used to create it. For
+Docker and S2I builds, the resulting objects are runnable images. For Custom
+builds, the resulting objects are whatever the builder image author has
+specified.
+
+Additionally, the Pipeline build strategy can be used to implement sophisticated
+workflows:
+
+* Continuous integration
+* Continuous deployment
+
+:leveloffset: -1
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+//*assembly/builds
+//*builds/build-strategies.adoc
+//*builds/understanding-image-builds
+
+[id="builds-strategy-docker-build_{context}"]
+= Docker build
+
+The Docker build strategy invokes the docker build command, and it expects a
+repository with a *_Dockerfile_* and all required artifacts in it to produce a
+runnable image.
+
+:leveloffset: -1
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//* assembly/builds
+//* builds/build-strategies.adoc
+
+[id="build-strategy-s2i_{context}"]
+= Source-to-Image (S2I) build
+
+Source-to-Image (S2I) is a tool for building reproducible, Docker-formatted
+container images. It produces ready-to-run images by injecting application
+source into a container image and assembling a new image. The new image
+incorporates the base image (the builder) and built source and is ready to use
+with the `buildah run` command. S2I supports incremental builds, which re-use
+previously downloaded dependencies, previously built artifacts, etc.
+
+The advantages of S2I include the following:
+
+[horizontal]
+Image flexibility:: S2I scripts can be written to inject
+application code into almost any existing Docker-formatted container image,
+taking advantage of the existing ecosystem. Note that, currently, S2I relies on
+`tar` to inject application source, so the image needs to be able to process
+tarred content.
+
+Speed:: With S2I, the assemble process can perform a large number of complex
+operations without creating a new layer at each step, resulting in a fast
+process. In addition, S2I scripts can be written to re-use artifacts stored in a
+previous version of the application image, rather than having to download or
+build them each time the build is run.
+
+Patchability:: S2I allows you to rebuild the application consistently if an
+underlying image needs a patch due to a security issue.
+
+Operational efficiency:: By restricting build operations instead of allowing
+arbitrary actions, as a *_Dockerfile_* would allow, the PaaS operator can avoid
+accidental or intentional abuses of the build system.
+
+Operational security:: Building an arbitrary *_Dockerfile_* exposes the host
+system to root privilege escalation. This can be exploited by a malicious user
+because the entire Docker build process is run as a user with Docker privileges.
+S2I restricts the operations performed as a root user and can run the scripts
+as a non-root user.
+
+User efficiency:: S2I prevents developers from performing arbitrary `yum
+install` type operations, which could slow down development iteration, during
+their application build.
+
+Ecosystem:: S2I encourages a shared ecosystem of images where you can leverage
+best practices for your applications.
+
+Reproducibility:: Produced images can include all inputs including specific versions
+of build tools and dependencies. This ensures that the image can be reproduced
+precisely.
+
+:leveloffset: -1
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+// * assembly/builds/build-strategies.adoc
+
+[id="build-strategy-custom-build_{context}"]
+= Custom build
+
+The Custom build strategy allows developers to define a specific builder image
+responsible for the entire build process. Using your own builder image allows
+you to customize your build process.
+
+A Custom builder image is a plain Docker-formatted container image embedded with
+build process logic, for example for building RPMs or base images.
+
+Custom builds run with a very high level of privilege and are not available to
+users by default. Only users who can be trusted with cluster administration
+permissions should be granted access to run custom builds.
+
+:leveloffset: -1
+
+== Additional resources
+
+* See the Managing Images section for more information on how to manage images in your cluster.
+
+// Restore the context to what it was before this assembly.
+:!context:
+
+:leveloffset!:
+
+:leveloffset: +1
+
+// This assembly is included in the following assemblies:
+//
+// as_developer-guide.adoc
+
+
+
+[id="as_projects"]
+= {PRODUCT_SHORT} Projects
+
+:context: projects
+
+{PRODUCT} enables you to deploy apps to your cluster as described in the OpenShift Dedicated link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/projects/index[Projects] guide. The following procedures are reproduced for your convenience.
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+// applications/projects/working-with-projects.adoc
+
+[id="creating-a-project-using-the-web-console_{context}"]
+= Creating a project using the web console
+
+If allowed by your cluster administrator, you can create a new project.
+
+[NOTE]
+====
+{project-note}
+====
+
+.Procedure
+
+. Navigate to *Home* -> *Projects*.
+
+. Click *Create Project*.
+
+. Enter your project details.
+
+. Click *Create*.
+
+:leveloffset: -1
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+// applications/projects/working-with-projects.adoc
+
+[id="odc-creating-projects-using-developer-perspective_{context}"]
+= Creating a project using the Developer perspective in the web console
+
+You can use the *Developer* perspective in the {product-title} web console to create a project in your namespace.
+
+[NOTE]
+====
+{project-note}
+====
+
+.Prerequisites
+
+* Ensure that you have the appropriate link:https://docs.openshift.com/container-platform/latest/authentication/using-rbac.html#default-roles_using-rbac[roles and permissions] to create projects, applications, and other workloads in {product-title}.
+
+.Procedure
+You can create a project using the *Developer* perspective, as follows:
+
+. In the *Add* view, click the *Project* drop-down menu to see a list of all available projects. Select *Create Project*.
++
+image::odc_create_project.png[Create Project]
+
+. In the *Create Project* dialog box, enter a unique name for the *Name* field. For example, enter `myproject` as the name of the project in the *Name* field.
+. Optionally, add the *Display Name* and *Description* details for the Project.
+. Click *Create*.
+. Navigate to the *Advanced → Project Details* page to see the dashboard for your project.
+. In the *Project* drop-down menu at the top of the screen, select *all projects* to list all of the projects in your cluster. If you have adequate permissions for a project, you can use the  *Options* menu {kebab} to edit or delete the project.
+
+:leveloffset: -1
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+// applications/projects/working-with-projects.adoc
+
+[id="creating-a-project-using-the-CLI_{context}"]
+= Creating a project using the CLI
+
+If allowed by your cluster administrator, you can create a new project.
+
+[NOTE]
+====
+{project-note}
+====
+
+.Procedure
+
+. Run:
+
+----
+$ oc new-project <project_name> \
+    --description="<description>" --display-name="<display_name>"
+----
+
+For example:
+
+----
+$ oc new-project hello-openshift \
+    --description="This is an example project" \
+    --display-name="Hello OpenShift"
+----
+
+[NOTE]
+====
+The number of projects you are allowed to create
+After your limit is reached, you might have to delete an existing project in
+order to create a new one.
+====
+
+:leveloffset: -1
+
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+// applications/projects/working-with-projects.adoc
+
+[id="viewing-a-project-using-the-web-console_{context}"]
+= Viewing a project using the web console
+
+.Procedure
+
+. Navigate to *Home* -> *Projects*.
+
+. Select a project to view.
++
+On this page, click the *Workloads* button to see workloads in the project.
+
+:leveloffset: -1
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+// applications/projects/working-with-projects.adoc
+
+[id="viewing-a-project-using-the-CLI_{context}"]
+= Viewing a project using the CLI
+
+When viewing projects, you are restricted to seeing only the projects you have
+access to view based on the authorization policy.
+
+.Procedure
+
+. To view a list of projects, run:
++
+----
+$ oc get projects
+----
+
+. You can change from the current project to a different project for CLI
+operations. The specified project is then used in all subsequent operations that
+manipulate project-scoped content:
++
+----
+$ oc project <project_name>
+----
+
+:leveloffset: -1
+
+== Additional resources
+
+* See the Managing Images section for more information on how to manage images in your cluster.
+
+// Restore the context to what it was before this assembly.
+:!context:
 
 :leveloffset!:
