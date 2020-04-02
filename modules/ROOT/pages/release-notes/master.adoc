@@ -24,6 +24,7 @@
 :suffix-example: example.u7y2.s1.openshift.com
 
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
+:URL_BASE: https://access.redhat.com/documentation/en-us/red_hat_managed_integration/2/html-single
 
 :URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
 
@@ -63,7 +64,7 @@
 
 
 [id="release-notes"]
-= Release Notes for Red Hat Managed Integration 2.0
+= Release Notes for {PRODUCT} {PRODUCT_VERSION}
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 
 This document provides information for new users of {PRODUCT}.
@@ -99,9 +100,11 @@ OpenShift Dedicated is a platform for developing and running containerized appli
 * RH SSO (Single sign-on )
 * Red Hat CodeReady Workspaces (Integrated development environment )
 
+*Solution Patterns:* Pre-developed solution patterns demonstrate best practices and help development teams get started quickly. They provide a framework for organizations to create additional solution patterns in the cluster to standardize best practices.
+
 *Solution Explorer:* A unified front-end web application that provides access to the installed products, development tools, solution patterns, and the Red Hat OpenShift console.
 
-*Solution Patterns:* Pre-developed solution patterns demonstrate best practices and help development teams get started quickly. They provide a framework for organizations to create additional solution patterns in the cluster to standardize best practices.
+Technical preview features are not enabled by default in {PRODUCT} clusters. For example, the Internet of Things (IoT) feature of AMQ Online is not enabled. Any exceptions are labeled in the Solution Explorer.
 
 :leveloffset!:
 

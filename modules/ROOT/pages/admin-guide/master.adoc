@@ -15,6 +15,7 @@
 :suffix-example: example.u7y2.s1.openshift.com
 
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
+:URL_BASE: https://access.redhat.com/documentation/en-us/red_hat_managed_integration/2/html-single
 
 :URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
 
@@ -62,20 +63,59 @@
 :context: admin-guide
 
 [id="admin-guide"]
-= Administration Guide for Red Hat Managed Integration 2.0
+= Administration Guide for {PRODUCT} {PRODUCT_VERSION}
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 
 This document provides instructions for {cluster-administrator}s to manage and configure a cluster.
 
-// The following include statements pull in the sub-assemblies and the module files that comprise the assembly. Include any combination of concept, procedure, or reference modules required to cover the user story.
-
-// \include::../../assemblies/CATEGORY/as_sub-assembly-id.adoc[leveloffset=+1]
-// [leveloffset=+1] ensures that when a module starts with a level-1 heading (= Heading), the heading will be interpreted as a level-2 heading (== Heading) in the assembly.
-
-// \include::../../modules/CATEGORY/TYPE_use-module-id-here.adoc[leveloffset=+1]
-// Where TYPE_ can be one of p_, c_, or r_ for 'procedure', 'concept', or 'reference'
-
 //INCLUDES
+
+:leveloffset: +1
+
+[id="permissions-cluster-administrator"]
+= Permissions of a {PRODUCT_SHORT} {cluster-administrator}
+
+This section describes the permissions granted to a {cluster-administrator} in a {PRODUCT} cluster.
+
+A {cluster-administrator} has the `dedicated-admin` role in OpenShift and can:
+
+* Create another {cluster-administrator}
+* Manage 3scale and give a {cluster-developer} admin rights in 3scale
+* Administer the {customer-sso} and give a {cluster-developer} administration privileges on the master realm
+* Manage any realms created by a {cluster-developer}
+* View the managed services projects in the OpenShift console
+
+
+NOTE: Do not delete the `admin` user in the master realm of the {customer-sso-name}.
+
+
+:leveloffset!:
+
+:leveloffset: +1
+
+[id="creating-new-dedicated-admins_{context}"]
+= Creating a new {cluster-administrator}
+
+An administrator of an OpenShift Dedicated cluster has additional permissions and access to all user-created projects in your organization’s cluster. While logged in to an account with this role, the basic developer CLI (the oc command) allows you increased visibility and management capabilities over objects across projects, while the administrator CLI (commands under the oc adm command) allow you to complete additional operations.
+
+.Prerequisites
+* You are logged into the CLI as a user with the dedicated-admin role
+
+.Procedure
+. Run the following:
++
+----
+oc adm groups add-users dedicated-admins <user>
+----
+where <user> is the username of the user you want to add to the group.
+
+. Run the following command to verify that the user is included in the group:
++
+----
+oc get groups
+----
+
+:leveloffset!:
 
 :leveloffset: +1
 
@@ -146,5 +186,314 @@ For example, {suffix-example}
 .. Click *Connect your github account*
 .. Click *Authorize*
 .. Check that a list of projects is displayed. If projects are not displayed, verify that you followed each step in the procedure above.
+
+:leveloffset!:
+
+:leveloffset: +1
+
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 2
+// ParentAssemblies: assemblies/admin-guide/as_admin-guide.adoc
+// UserStory:
+// VerifiedInVersion:
+
+[id="configuring-amq-online-for-production"]
+= Configuring AMQ Online for production
+// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
+
+Each configuration of AMQ Online for production is unique, this section provides some general information to help you determine that configuration.
+
+.Procedure
+
+. Configure AMQ Online as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/installing_and_managing_amq_online_on_openshift/index#configuring-messaging[Configuring AMQ Online], noting the following:
++
+* You must log in as a {cluster-administrator}.
+//(for RHMI1) The name of the AMQ Online project in your cluster is enmasse
++
+* The name of the AMQ Online project in your cluster is `redhat-rhmi-amq-online`.
+
+. Use an external authentication service as shown in the link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#ref-address-space-example-external-auth-service-override-messaging[address space example using an external authentication service].
+
+
+:leveloffset!:
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+// as_admin-guide.adoc
+
+
+// The ID is used as an anchor for linking to the module. Avoid changing it after the module has been published to ensure existing links are not broken.
+[id="network-policies_{context}"]
+// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
+= Network policies
+
+A {PRODUCT_SHORT} cluster hosts two types of projects:
+
+* All managed services, for example, AMQ Online, exist in projects that support inbound and outbound connections.
+* User projects are created with a default template that allows communication from the managed services mentioned above.
+If you want to disable that communication, see xref:disabling-communications_admin-guide[].
+
+See the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/networking/index[Networking] documentation for an introduction to OpenShift Dedicated networking.
+
+NOTE: You cannot use the `join-projects` option of the `oc` command with managed services projects.
+
+
+:leveloffset!:
+:leveloffset: +2
+
+// Module included in the following assemblies:
+//
+// as_admin-guide.adoc
+
+
+[id="enabling-communications_{context}"]
+= Enabling communication between projects in your cluster
+
+When you create projects in a cluster, communication between the projects is disabled by default.
+
+This procedure describes enabling communication for a project.
+
+
+.Procedure
+
+. Log into the cluster using `oc` as a {cluster-administrator}.
+
+. Change project:
++
+----
+$ oc project <project_name>
+----
++
+where `<project_name>` is the name of a project that you want to accept communications from other projects.
+
+. Create a NetworkPolicy object as described in link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/networking/index#nw-networkpolicy-create_configuring-networkpolicy-plugin[Creating a NetworkPolicy object] with the following content:
++
+----
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-all
+spec:
+  podSelector:
+  ingress:
+  - {}
+----
++
+NOTE: This policy enables the most permissive option.
+
+.Additional resources
+
+* link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/networking/index#understanding-networking[Understanding Networking] in a {PRODUCT_SHORT} cluster
+
+:leveloffset!:
+:leveloffset: +2
+
+// Module included in the following assemblies:
+//
+// as_admin-guide.adoc
+
+
+[id="disabling-communications_{context}"]
+= Disabling communication from a managed service to your project
+
+By default, your projects are created with a default template that allows communication from a managed service.
+For example, 3scale can communicate with all your projects by default.
+This procedure describes disabling that communication.
+
+.Prerequisite
+
+* A project you want to isolate from the managed services
+
+.Procedure
+
+. Log into the cluster using `oc` as a {cluster-administrator}.
+
+. Change project:
++
+----
+$ oc project <project_name>
+----
++
+where `<project_name>` is the name of a project that you want to isolate from the managed services.
+
+
+. Create a NetworkPolicy object as described in link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/networking/index#nw-networkpolicy-create_configuring-networkpolicy-plugin[Creating a NetworkPolicy object] with the following content:
++
+----
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: deny-all
+spec:
+  podSelector: redhat-rhmi-*
+  ingress:
+  - {}
+----
++
+NOTE: This disables communication from all projects, not just the managed services.
+
+.Additional resources
+
+* link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/networking/index#understanding-networking[Understanding Networking] in a {PRODUCT_SHORT} cluster
+
+:leveloffset!:
+
+:leveloffset: +1
+
+[id="disabling-realm-creation_{context}"]
+= Disabling realm creation for {cluster-developer}s
+
+By default, a {cluster-developer} can create a realm in the {customer-sso-name}.
+This section describes how to disable this permission, for example, in a production cluster
+
+.Prerequisites
+
+* You are logged into the cluster as a {cluster-administrator}
+
+.Procedure
+
+. From the {webapp}, open the {customer-sso-name} console.
+
+. When prompted, choose the *Administration Console*.
+
+. Choose *Groups* from the menu for the Master realm.
+
+. Select the *rhmi-developers* group.
+
+. Click *Edit* from the *User Groups* menu.
+
+. Choose the *Role Mappings* tab.
+
+. Select *create-realm* in the *Assigned Roles* panel.
+
+. Click *Remove selected* to remove that role from the *rhmi-developers* group.
+
+. To verify the change, log into the {customer-sso-name} as a {cluster-developer} and make sure you cannot create a realm.
+
+
+
+:leveloffset!:
+
+:leveloffset: +1
+
+[id='manage-3scale-users_{context}']
+
+= Manage 3scale users from your Identity Provider
+
+Red Hat 3scale API Management allows you to manage APIs for internal or external users. With it’s pluggable and scalable architecture, 3scale easily integrates with your identity provider.
+
+User management with 3scale in {PRODUCT_SHORT} differs from an on-premise installation.
+
+* In {PRODUCT_SHORT}, all users with access to the cluster can log into 3scale API Management.
+* All {cluster-administrator}s have admininstrator privileges in 3scale.
+* Only a {cluster-administrator} can create new products.
+* Only a {cluster-administrator} can grant 3scale administrator privileges to any cluster user.
+
+
+[NOTE]
+====
+You cannot delete a user from 3scale. You must revoke the cluster privileges of that user. If a user is removed from the cluster, the user is also removed from 3scale.
+====
+
+.Additional resources
+* For more information on API Management, please read the guide for link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/index[3scale API management]
+
+:leveloffset!:
+
+:leveloffset: +1
+
+[id='deploying-a-self-managed-apicast-api-gateway_{context}']
+
+
+
+= Deploying a self-managed APIcast API gateway
+
+APIcast is an NGINX based API gateway used to integrate your internal and external API services with the 3scale platform.
+
+By default, {PRODUCT_NAME} includes an embedded APIcast. The embedded APIcast is deployed and is supported for production scenarios.
+
+If you want to modify the APIcast configuration, you can deploy a self-managed APIcast.
+The following procedure describes deploying a self-managed APIcast.
+
+
+.Prerequisite
+* You must have {customer-administrator} access.
+
+
+.Procedure
+. From the Solution Explorer, log in to the 3scale console as a {cluster-administrator}.
+. Click on the gear icon in the top right corner of the page.
+. Note the Provider API Key;  this is your <access_token> and is required later in this procedure.
+. Deploy a new APIcast instance:
++
+NOTE: You can use the procedure in link:adding-custom-services-solution-pattern[Adding custom services to a {PRODUCT} Solution Pattern] to create services from the OpenShift catalog in your cluster.
+
++
+.. Log into OpenShift using the `oc login` command from the OpenShift client tools. The default login credentials are _username = "developer"_ and _password = "developer"_:
++
+----
+oc login https://OPENSHIFT-SERVER-IP:8443
+----
+You should see `Login successful.` in the output.
+
++
+.. Create your project. This example sets the display name as gateway.
++
+----
+oc new-project "3scalegateway" --display-name="gateway" --description="3scale gateway demo"
+----
++
+
+The response should look similiar to the following:
++
+----
+Now using project "3scalegateway" on server "https://172.30.0.112:8443"
+----
++
+Ignore the suggested next steps in the text output at the command prompt. Proceed to the following step.
+
+.. Create a new secret to reference your project by replacing `<access_token>` and `< {qualified-domain-name} >` with your own credentials.
++
+----
+oc create secret generic apicast-configuration-url-secret --from-literal=password=https://<access_token>@< {qualified-domain-name} >  --type=kubernetes.io/basic-auth
+----
++
+Here `<access_token>` is the Provider API Key for the account, and `scale-admin.apps.< {qualified-domain-name} >` is the URL, where < {qualified-domain-name} > is the unique sub-domain for your cluster.
++
+The response should look like the following:
++
+----
+secret/apicast-configuration-url-secret
+----
+
+.. Create an application for your APIcast gateway from the template, and start the deployment:
++
+----
+oc new-app -f https://raw.githubusercontent.com/3scale/3scale-amp-openshift-templates/{three-scale-version}GA/apicast-gateway/apicast.yml
+----
++
+You should see the following messages at the bottom of the output:
++
+----
+    --> Creating resources with label app=3scale-gateway ...
+        deploymentconfig "apicast" created
+        service "apicast" created
+    --> Success
+        Run 'oc status' to view your app.
+----
+
+. Set THREESCALE_DEPLOYMENT_ENV to staging in the gateway deployment configuration.
+
+. To validate your configuration, perform the *Protecting APIs using 3scale API Management Platform* Solution Pattern.
+
+
+
+
+.Additional resources
+* To learn more about deploying a self-managed APIcast, see link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/installing_3scale/installing-apicast[Installing APIcast] documentation.
 
 :leveloffset!:

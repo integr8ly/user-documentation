@@ -15,6 +15,7 @@
 :suffix-example: example.u7y2.s1.openshift.com
 
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
+:URL_BASE: https://access.redhat.com/documentation/en-us/red_hat_managed_integration/2/html-single
 
 :URL_BASE_GITHUB: https://github.com/integr8ly/user-documentation
 
@@ -62,204 +63,39 @@
 :context: developer-guide
 
 [id="developer-guide"]
-= Developer Guide for Red Hat Managed Integration 2.0
-
-This guide provides documentation for developers using {PRODUCT}.
+= Developer Guide for {PRODUCT} {PRODUCT_VERSION}
+//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 
 :leveloffset: +1
 
-// Metadata created by nebel
-//
-// QuickstartID:
-// Level: 2
-// ParentAssemblies: assemblies/developer-guide/as_developer-guide.adoc
-// UserStory:
-// VerifiedInVersion:
+[id="the-managed-integration-developer-experience"]
+= The {PRODUCT_SHORT} developer experience
 
-[id="intro"]
-= Introduction
-//In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
-//Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
+This section describes the tools and techniques that a developer typically uses in a {PRODUCT} cluster.
 
-A short introductory paragraph is required for the concept module.
-It will provide an overview of the module.
+Solution Explorer provides access to various user interfaces available in the cluster.
+Red Hat recommends that new users perform the Solution Patterns, available from the *All Solution Patterns* tab, to develop a better understanding of the capabilities of a {PRODUCT_SHORT} cluster.
 
-The contents of a concept module give the user descriptions and explanations needed to understand and use a product.
+As a developer, you can:
 
-* Look at nouns and noun phrases in related procedure modules and assemblies to find the concepts to explain to users.
-* Explain only things that are visible to users. Even if a concept is interesting, it probably does not require explanation if it is not visible to users.
-* Do not include any instructions to perform an action, such as executing a command. Action items belong in procedure modules.
+* Create and edit OpenShift projects
+* Develop applications using {code-ready-name}
+* Create a realm in the {customer-sso-name}
+* Create Fuse Online integrations and view logs
+* Create address spaces and addresses in AMQ Online
+* Edit a 3scale product and backend
 
-.Additional resources
+If a {cluster-developer} needs to create products in 3scale, a {cluster-administrator} must give that user *Admin* rights as described in the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.8/html/admin_portal_guide/inviting-users-managing-rights#give_new_users_rights[3scale documentation].
 
-* A bulleted list of links to other material closely related to the contents of the concept module.
-* For more details on writing concept modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+NOTE: Red Hat recommends that you use an external authentication service for AMQ Online address spaces in a production environment.
+
+A {cluster-developer} can also use the OpenShift CLI tools on a local machine to interact with a  {PRODUCT} cluster.
+The client is available from the link:https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software[download] page.
+
 
 :leveloffset!:
 
 :product-title: OpenShift Dedicated
-:leveloffset: +1
-
-// This assembly is included in the following assemblies:
-//
-// as_developer-guide.adoc
-
-
-
-[id="as_builds"]
-= {PRODUCT_SHORT} Builds
-
-:context: builds
-
-{PRODUCT} enables you to deploy apps to your cluster as described in the OpenShift Dedicated link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/builds/index[Builds] guide. The following procedures are reproduced for your convenience.
-
-
-:leveloffset: +1
-
-// Module included in the following assemblies:
-//
-//*assembly/builds
-//*builds/understanding-image-builds
-
-
-[id="builds-about_{context}"]
-= Builds
-
-A _build_ is the process of transforming input parameters into a resulting
-object. Most often, the process is used to transform input parameters or source
-code into a runnable image. A `BuildConfig` object is the definition of the
-entire build process.
-
-{product-title} uses Kubernetes by creating containers
-from build images and pushing them to a container image registry.
-
-Build objects share common characteristics including inputs for a build, the requirement to
-complete a build process, logging the build process, publishing resources from
-successful builds, and publishing the final status of the build. Builds take
-advantage of resource restrictions, specifying limitations on resources such as
-CPU usage, memory usage, and build or pod execution time.
-
-
-
-
-The resulting object of a build depends on the builder used to create it. For
-Docker and S2I builds, the resulting objects are runnable images. For Custom
-builds, the resulting objects are whatever the builder image author has
-specified.
-
-Additionally, the Pipeline build strategy can be used to implement sophisticated
-workflows:
-
-* Continuous integration
-* Continuous deployment
-
-:leveloffset: -1
-
-:leveloffset: +1
-
-// Module included in the following assemblies:
-//
-//*assembly/builds
-//*builds/build-strategies.adoc
-//*builds/understanding-image-builds
-
-[id="builds-strategy-docker-build_{context}"]
-= Docker build
-
-The Docker build strategy invokes the docker build command, and it expects a
-repository with a *_Dockerfile_* and all required artifacts in it to produce a
-runnable image.
-
-:leveloffset: -1
-
-:leveloffset: +1
-
-// Module included in the following assemblies:
-//* assembly/builds
-//* builds/build-strategies.adoc
-
-[id="build-strategy-s2i_{context}"]
-= Source-to-Image (S2I) build
-
-Source-to-Image (S2I) is a tool for building reproducible, Docker-formatted
-container images. It produces ready-to-run images by injecting application
-source into a container image and assembling a new image. The new image
-incorporates the base image (the builder) and built source and is ready to use
-with the `buildah run` command. S2I supports incremental builds, which re-use
-previously downloaded dependencies, previously built artifacts, etc.
-
-The advantages of S2I include the following:
-
-[horizontal]
-Image flexibility:: S2I scripts can be written to inject
-application code into almost any existing Docker-formatted container image,
-taking advantage of the existing ecosystem. Note that, currently, S2I relies on
-`tar` to inject application source, so the image needs to be able to process
-tarred content.
-
-Speed:: With S2I, the assemble process can perform a large number of complex
-operations without creating a new layer at each step, resulting in a fast
-process. In addition, S2I scripts can be written to re-use artifacts stored in a
-previous version of the application image, rather than having to download or
-build them each time the build is run.
-
-Patchability:: S2I allows you to rebuild the application consistently if an
-underlying image needs a patch due to a security issue.
-
-Operational efficiency:: By restricting build operations instead of allowing
-arbitrary actions, as a *_Dockerfile_* would allow, the PaaS operator can avoid
-accidental or intentional abuses of the build system.
-
-Operational security:: Building an arbitrary *_Dockerfile_* exposes the host
-system to root privilege escalation. This can be exploited by a malicious user
-because the entire Docker build process is run as a user with Docker privileges.
-S2I restricts the operations performed as a root user and can run the scripts
-as a non-root user.
-
-User efficiency:: S2I prevents developers from performing arbitrary `yum
-install` type operations, which could slow down development iteration, during
-their application build.
-
-Ecosystem:: S2I encourages a shared ecosystem of images where you can leverage
-best practices for your applications.
-
-Reproducibility:: Produced images can include all inputs including specific versions
-of build tools and dependencies. This ensures that the image can be reproduced
-precisely.
-
-:leveloffset: -1
-
-:leveloffset: +1
-
-// Module included in the following assemblies:
-//
-// * assembly/builds/build-strategies.adoc
-
-[id="build-strategy-custom-build_{context}"]
-= Custom build
-
-The Custom build strategy allows developers to define a specific builder image
-responsible for the entire build process. Using your own builder image allows
-you to customize your build process.
-
-A Custom builder image is a plain Docker-formatted container image embedded with
-build process logic, for example for building RPMs or base images.
-
-Custom builds run with a very high level of privilege and are not available to
-users by default. Only users who can be trusted with cluster administration
-permissions should be granted access to run custom builds.
-
-:leveloffset: -1
-
-== Additional resources
-
-* See the Managing Images section for more information on how to manage images in your cluster.
-
-// Restore the context to what it was before this assembly.
-:!context:
-
-:leveloffset!:
 
 :leveloffset: +1
 
@@ -267,14 +103,24 @@ permissions should be granted access to run custom builds.
 //
 // as_developer-guide.adoc
 
+:kebab: image:kebab.png[title="Options menu"]
 
 
-[id="as_projects"]
+[id="projects"]
 = {PRODUCT_SHORT} Projects
 
 :context: projects
 
-{PRODUCT} enables you to deploy apps to your cluster as described in the OpenShift Dedicated link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/projects/index[Projects] guide. The following procedures are reproduced for your convenience.
+{PRODUCT} enables you to deploy apps to your cluster as described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/applications/index#projects[Applications guide].
+
+You can create projects to manage your development work:
+
+* You can create AMQ Online address space definitions in your project as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#create-address-space-cli-messaging[Creating address spaces using the command line]. The resulting pods are created in the `redhat-rhmi-amq-online` project, which is managed by Red Hat.
+* If you delete the project, all associated resources are also deleted. For example, address spaces that you defined in your project are deleted.
+* Sharing access to projects is described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/applications/index#odc-providing-project-permissions-using-developer-perspective_projects[Applications] guide.
+
+
+The following procedures are reproduced from the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/applications/index#projects[Applications guide] for your convenience.
 
 :leveloffset: +1
 
@@ -431,11 +277,248 @@ $ oc project <project_name>
 
 :leveloffset: -1
 
-== Additional resources
+.Additional resources
 
-* See the Managing Images section for more information on how to manage images in your cluster.
+* See xref:managing-images[] for more information on how to manage images in your cluster.
 
 // Restore the context to what it was before this assembly.
 :!context:
+
+:leveloffset!:
+
+:leveloffset: +1
+
+// This assembly is included in the following assemblies:
+//
+// as_developer-guide.adoc
+
+
+
+[id="as_builds"]
+= {PRODUCT_SHORT} Builds
+
+:context: builds
+
+{PRODUCT} enables you to deploy apps to your cluster as described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/builds/index[builds] guide. The following procedures are reproduced for your convenience.
+
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+//*assembly/builds
+//*builds/understanding-image-builds
+
+
+[id="builds-about_{context}"]
+= Builds
+
+A _build_ is the process of transforming input parameters into a resulting
+object. Most often, the process is used to transform input parameters or source
+code into a runnable image. A `BuildConfig` object is the definition of the
+entire build process.
+
+{product-title} uses Kubernetes by creating containers
+from build images and pushing them to a container image registry.
+
+Build objects share common characteristics including inputs for a build, the requirement to
+complete a build process, logging the build process, publishing resources from
+successful builds, and publishing the final status of the build. Builds take
+advantage of resource restrictions, specifying limitations on resources such as
+CPU usage, memory usage, and build or pod execution time.
+
+
+
+
+The resulting object of a build depends on the builder used to create it. For
+Docker and S2I builds, the resulting objects are runnable images. For Custom
+builds, the resulting objects are whatever the builder image author has
+specified.
+
+Additionally, the Pipeline build strategy can be used to implement sophisticated
+workflows:
+
+* Continuous integration
+* Continuous deployment
+
+:leveloffset: -1
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+//*assembly/builds
+//*builds/build-strategies.adoc
+//*builds/understanding-image-builds
+
+[id="builds-strategy-docker-build_{context}"]
+= Docker build
+
+The Docker build strategy invokes the docker build command, and it expects a
+repository with a *_Dockerfile_* and all required artifacts in it to produce a
+runnable image.
+
+:leveloffset: -1
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//* assembly/builds
+//* builds/build-strategies.adoc
+
+[id="build-strategy-s2i_{context}"]
+= Source-to-Image (S2I) build
+
+Source-to-Image (S2I) is a tool for building reproducible, Docker-formatted
+container images. It produces ready-to-run images by injecting application
+source into a container image and assembling a new image. The new image
+incorporates the base image (the builder) and built source and is ready to use
+with the `buildah run` command. S2I supports incremental builds, which re-use
+previously downloaded dependencies, previously built artifacts, etc.
+
+The advantages of S2I include the following:
+
+[horizontal]
+Image flexibility:: S2I scripts can be written to inject
+application code into almost any existing Docker-formatted container image,
+taking advantage of the existing ecosystem. Note that, currently, S2I relies on
+`tar` to inject application source, so the image needs to be able to process
+tarred content.
+
+Speed:: With S2I, the assemble process can perform a large number of complex
+operations without creating a new layer at each step, resulting in a fast
+process. In addition, S2I scripts can be written to re-use artifacts stored in a
+previous version of the application image, rather than having to download or
+build them each time the build is run.
+
+Patchability:: S2I allows you to rebuild the application consistently if an
+underlying image needs a patch due to a security issue.
+
+Operational efficiency:: By restricting build operations instead of allowing
+arbitrary actions, as a *_Dockerfile_* would allow, the PaaS operator can avoid
+accidental or intentional abuses of the build system.
+
+Operational security:: Building an arbitrary *_Dockerfile_* exposes the host
+system to root privilege escalation. This can be exploited by a malicious user
+because the entire Docker build process is run as a user with Docker privileges.
+S2I restricts the operations performed as a root user and can run the scripts
+as a non-root user.
+
+User efficiency:: S2I prevents developers from performing arbitrary `yum
+install` type operations, which could slow down development iteration, during
+their application build.
+
+Ecosystem:: S2I encourages a shared ecosystem of images where you can leverage
+best practices for your applications.
+
+Reproducibility:: Produced images can include all inputs including specific versions
+of build tools and dependencies. This ensures that the image can be reproduced
+precisely.
+
+:leveloffset: -1
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+// * assembly/builds/build-strategies.adoc
+
+[id="build-strategy-custom-build_{context}"]
+= Custom build
+
+The Custom build strategy allows developers to define a specific builder image
+responsible for the entire build process. Using your own builder image allows
+you to customize your build process.
+
+A Custom builder image is a plain Docker-formatted container image embedded with
+build process logic, for example for building RPMs or base images.
+
+Custom builds run with a very high level of privilege and are not available to
+users by default. Only users who can be trusted with cluster administration
+permissions should be granted access to run custom builds.
+
+:leveloffset: -1
+
+.Additional resources
+
+* See xref:managing-images[] for more information on how to manage images in your cluster.
+
+// Restore the context to what it was before this assembly.
+:!context:
+
+:leveloffset!:
+
+:leveloffset: +1
+
+[id="managing-images"]
+
+= Managing images in a {PRODUCT_SHORT} cluster
+
+{PRODUCT_SHORT} allows you to create and push images to your cluster.
+For the {PRODUCT_SHORT} cluster, the registry is located at:
+
+[subs="attributes+"]
+----
+registry.{cluster-suffix}.openshift.com
+----
+
+where {cluster-suffix} is the unique sub-domain for your cluster, for example, `{suffix-example}`
+
+.Procedure
+. Use the instructions in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/registry/index[registry documentation] to access the registry.
+. Follow the procedures for link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html/images/managing-images[managing images].
+
+:leveloffset!:
+
+:leveloffset: +1
+
+[id="adding-solution-patterns"]
+
+= Adding Solution Patterns to your {PRODUCT_SHORT} cluster
+
+The home page of the {webapp} lists the Solution Patterns from all the Git repositories you are subscribed to. Any user can add Solution Patterns to your cluster.
+
+This procedure describes how to subscribe your cluster to a Git repository that contains Solution Patterns.
+
+
+.Procedure
+. Navigate to the *Solution Explorer*.
+
+. Click the gear icon in the top right to display the *Application settings* screen.
+
+. Enter the URLs of the Solution Pattern repositories you want to add to your cluster using the following syntax:
++
+----
+https://github.com/<org>/<repo>.git
+----
+where `<org>` is the name of your GitHub organization and `<repo>` is the name of your repository.
++
+[NOTE]
+====
+* List URLs in the order you want them to appear in the {webapp}.
+* Enter one URL per line.
+* To include a specific branch, append #<branch-name> to the url.
+====
+
+. Click *Save*.
++
+Editing the value triggers an automatic redeployment of the {webapp}.
+
+. When the deployment is complete, refresh your browser.
++
+You should now see new Solution Patterns available from the dashboard.
+
+
+. If the Git repository is updated with new content, the {webapp} is not automatically updated.
++
+Redeploy the {webapp} to view the changes:
++
+.. Click the gear icon in the top right to display the **Application settings** screen.
+.. Click Save to trigger a redeployment of the Solution Explorer app.
+.. When the deployment is complete, refresh your browser.
+.. Navigate to the **Solution Patterns** tab to see the updated content.
+
+
+NOTE: You can access the Git repository that contains the Solution Pattern source code by clicking the *Repository* link located in the upper right corner of each group of Solution Patterns on the *All Solutions Patterns* tab in the Solution Explorer.
 
 :leveloffset!:
