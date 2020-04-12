@@ -21,13 +21,16 @@
 
 :webapp: Solution Explorer
 :walkthrough-name: Solution Pattern
+:solution-name: cloud-native, integrated applications
 
 :cluster-administrator: cluster administrator
-:cluster-developer: developer user
+:cluster-developer: developer
 
 //:rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: Red Hat Single Sign-On
+
+:openshift-client-url: https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software
 
 :fuse-name: Red Hat Fuse Online
 :fuse-version: 7.5
@@ -62,10 +65,12 @@
 // VerifiedInVersion:
 :context: getting-started
 
+:app-launcher: image:app-launcher.png[title="Application Launcher"]
+
 [id="getting-started"]
 = Getting Started with {PRODUCT} {PRODUCT_VERSION}
 
-This document provides an introduction to {PRODUCT} {PRODUCT_VERSION} for both {cluster-administrator}s and {cluster-developer}s.
+//This document provides an introduction to {PRODUCT} {PRODUCT_VERSION} for both {cluster-administrator}s and {cluster-developer}s.
 
 
 :leveloffset: +1
@@ -92,6 +97,15 @@ With {PRODUCT_SHORT}, selected Red Hat services are integrated, available throug
 
 {PRODUCT_SHORT} enables your operations team to focus on high-value objectives while Red Hat manages the infrastructure. All of the applications and services are protected by your identity provider.
 
+{PRODUCT} provides a simplified cloud-native experience and includes:
+
+* Solution Explorer: A web-based UI with single sign-on access to all the applications.
+* Solution Patterns: Pre-built templates that shorten development time and encourage best practices.
+* Recommended configurations: Installed infrastructure components are preconfigured for optimal performance.
+* Integrated technology: Unified development tools and services.
+
+
+
 :leveloffset!:
 
 :leveloffset: +1
@@ -110,18 +124,21 @@ With {PRODUCT_SHORT}, selected Red Hat services are integrated, available throug
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
 
-The {webapp} presents links to the applications available in a {PRODUCT_SHORT} cluster. The {webapp} provides Solution Patterns that guide users through the process of creating various integrated solutions using these applications.
+The {webapp} includes links to the applications and services available in your {PRODUCT_SHORT} cluster.
 
 
-{PRODUCT_SHORT} provides access to the following consoles:
+{PRODUCT_SHORT} provides access to the following application consoles:
 
 * *OpenShift*, the OpenShift cluster console.
++
+NOTE: From the OpenShift Console, you can navigate to the Solution Explorer by clicking the Application Launcher {app-launcher} and choosing *Solution Explorer*.
+
 
 * *API Designer*,  the Apicurito RESTful API visual designer.
 
-* *Red Hat 3scale API Management*, a platform that provide RESTful API Management.
+* *Red Hat 3scale API Management*, a platform that provides RESTful API Management.
 
-* *Red Hat AMQ*, fast, lightweight, and secure messaging for Internet-scale applications.
+* *Red Hat AMQ*, a fast, lightweight, and secure messaging solution for Internet-scale applications.
 
 * *Red Hat CodeReady Workspaces*, a developer workspace server and cloud IDE.
 
@@ -131,11 +148,8 @@ The {webapp} presents links to the applications available in a {PRODUCT_SHORT} c
 
 * *Red Hat Single Sign-On*, a single sign-on solution for web apps and RESTful web services.
 
-+
-[NOTE]
-====
-Most applications are available in the {webapp} after you log in; however, if *Red Hat AMQ Online* is not available, the *Start service* button is displayed. Click *Start service* to provision it.
-====
+The {webapp} also provides xref:what-are-solution-patterns[Solution Patterns] that guide you through the process of creating various integrated solutions using these applications.
+
 
 
 :leveloffset!:
@@ -155,7 +169,7 @@ Most applications are available in the {webapp} after you log in; however, if *R
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
-Solution Patterns are tutorials available in {PRODUCT_SHORT}. The default Solution Patterns guide you through the following scenarios:
+Solution Patterns are tutorials available in your {PRODUCT_SHORT} cluster. The Solution Patterns provided in {webapp} guide you through the following scenarios:
 
 * Connecting applications using asynchronous messaging
 * Protecting applications using single sign-on
@@ -163,35 +177,56 @@ Solution Patterns are tutorials available in {PRODUCT_SHORT}. The default Soluti
 * Protecting APIs using 3scale API Management Platform
 * Adding Data Sync to your application with GraphQL
 
-
-These Solution Patterns are available in the {webapp}.
-
 :leveloffset!:
 
 :leveloffset: +1
 
 :creating-new-dedicated-admins-link: {URl_BASE}/admin-guide/index#creating-new-dedicated-admins
 
-[id="getting-started-admin_{context}"]
+[id="configuring-new-cluster_{context}"]
 
-= Getting Started with administering a Managed Integration cluster
+= Configuring a new {PRODUCT_SHORT} cluster
 
-A Managed Integration cluster is an OpenShift Dedicated cluster.
-As a {cluster-administrator} you can perform all the tasks described in link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/administering_a_cluster/index[Administering a cluster].
 
-NOTE: This release of {PRODUCT} does not support the task described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/getting_started/index[Getting started with OpenShift Dedicated 4].  If you would like to request a change to your cluster that is described in that guide, open a support case on the link:https://access.redhat.com/support/[Red Hat Customer Portal].
+Before {cluster-developer}s start working in the cluster, complete this section to configure your cluster.
 
-A {cluster-administrator} is also an administrator of 3scale and can perform the tasks described in the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/index[Admin Portal Guide], noting that Service Discovery is enabled by default.
+
+.Prerequisite
+* You are a {cluster-administrator}.
+
+
+.Procedure
+
+. Log in to the {webapp}. The URL for the {webapp} is included with the *Welcome email*.
+
+. Share the {webapp} URL with the {cluster-developer}s in your organization.
 
 . Read xref:about-user-sso[].
 +
 NOTE: A {cluster-administrator} is an administrator of the {customer-sso-name} and can perform all the tasks in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/server_administration_guide/index[Server Administration Guide].
 
-. Complete the xref:configuring-github-oauth-for-codeready-workspaces_getting-started[] section so that developers can use CodeReady Workspaces with GitHub.
+. Complete the xref:configuring-github-oauth-for-codeready-workspaces_getting-started[] section so that developers can use {code-ready-short} with GitHub.
 
 . Consider creating more {cluster-administrator}s as described in link:{creating-new-dedicated-admins-link}[Creating a new {cluster-administrator}].
-
++
 NOTE: This release of {PRODUCT} does not support managing groups using the link:https://cloud.redhat.com/openshift[Red Hat OpenShift Cluster Manager] site.
+
+. Give 3scale administrative privileges to any {cluster-developer}s who need to create products in 3scale. This is described in the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.8/html/admin_portal_guide/inviting-users-managing-rights#give_new_users_rights[3scale Admin Portal Guide].
++
+NOTE: When navigating to 3scale, choose to *Authenticate through Red Hat Single Sign-On* when prompted to *Log in to your Account*.
+
+.Additional resources
+
+* See the link:{BASE_URL}/administration_guide_for_red_hat_managed_integration_2/[{PRODUCT_SHORT} Administration Guide] for more information on administering your cluster.
+
+* As a {cluster-administrator} you can perform all the tasks described in link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/administering_a_cluster/index[Administering an OpenShift Dedicated cluster].
++
+NOTE: This release of {PRODUCT} does not support the task described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/getting_started/index[Getting started with OpenShift Dedicated 4].  If you would like to request a change to your cluster that is described in that guide, open a support case on the link:https://access.redhat.com/support/[Red Hat Customer Portal].
+
+* A {cluster-administrator} is also an administrator of 3scale and can perform the tasks described in the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/index[Admin Portal Guide].
+
+// not true for 2.0
+//, noting that Service Discovery is enabled by default.
 
 
 :leveloffset!:
@@ -213,22 +248,24 @@ NOTE: This release of {PRODUCT} does not support managing groups using the link:
 
 Red Hat manages this instance; however, all {cluster-administrator}s have admin level privileges to configure this instance.
 
-A user named `admin` is used to manage this instance. Do not delete this user.
+A user named `admin` manages this instance. Do not delete this user.
 
 A {cluster-administrator} typically uses this instance to:
 
 * Create users in the `master` realm.
 
-* Add an Identity Provider in the `master` realm as described in link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering] to avoid managing the same users in different realms.
+* Add an Identity Provider in the `master` realm to avoid managing the same users in different realms.
+See the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering]section of the Red Hat Single Sign-On Server Administration Guide for more information about adding Identity Providers.
 
 * Create and manage new realms.
 
-A {cluster-developer} can create new realms.
-{cluster-administrator}s can administer these realms.
+
+A {cluster-developer} can create new realms and a {cluster-administrator} can administer these realms.
+
 
 .Additional resources
 
-* link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/[Product Documentation]
+* For more information about Red Hat Single Sign-On, see link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/[Red Hat Single Sign-On Product Documentation].
 
 :leveloffset!:
 
@@ -241,20 +278,27 @@ A {cluster-developer} can create new realms.
 [id="configuring-github-oauth-for-codeready-workspaces_{context}"]
 = Configuring GitHub OAuth for CodeReady Workspaces
 
-A GitHub OAuth app allows users to import projects into {code-ready-short} using SSH addresses (`git@`), push to repositories, and use the pull request panel.
+{PRODUCT} provides a full developer workspace server and cloud IDE with {code-ready-short}, allowing you to pull and push to GitHub projects. You must configure a GitHub OAuth app before {cluster-developer}s can pull and push GitHub projects.
+The GitHub OAuth app allows users to import projects into {code-ready-short} by using SSH addresses (`git@`). Users can then push to repositories and use the pull request panel.
+
 This procedure enables automatic SSH key upload to GitHub.
+
+.Prerequisites
+
+* You must have prior experience using GitHub.
+* You are a {cluster-administrator}.
 
 .Procedure
 
 . Register an application on GitHub:
-** For GitHub, click https://github.com/settings/profile[Settings] ->
+**  To add a new application, log in to GitHub and go to OAuth applications in your developer settings. Click https://github.com/settings/profile[Settings] ->
 https://github.com/settings/apps[Developer settings] ->
 https://github.com/settings/developers[OAuth Apps] ->
 https://github.com/settings/applications/new[Register a new OAuth application].
-** For GitHub Enterprise, go to your GitHub Enterprise home page and then click
+** For GitHub Enterprise, go to your GitHub Enterprise homepage and then click
 *Settings -> Developer settings -> Register a new application*.
-. Enter an application name, for example `CodeReady Workspaces`.
-. For the Homepage URL, enter the CodeReady Workspaces URL
+. Enter an application name, for example, `CodeReady Workspaces`.
+. For the homepage URL, enter the CodeReady Workspaces URL.
 +
 [subs="attributes"]
 ----
@@ -276,9 +320,9 @@ For example, {suffix-example}
 
 . Click *Register application*.
 
-. Note  the *Client ID* and *Client Secret*. You require these values later in the procedure.
+. Note the GitHub *Client ID* and GitHub *Client Secret*. You require these values later in the procedure.
 
-. Log into the OpenShift console as a {cluster-administrator}.
+. Log in to the OpenShift console as a {cluster-administrator}.
 
 . Navigate to the following URL in your browser:
 +
@@ -291,15 +335,72 @@ where <cluster-suffix> is the unique sub-domain for your cluster.
 For example, {suffix-example}
 
 . Select the *Edit Secret* option from the *Actions* menu.
-. Enter your GitHub Client ID for the value of *Client Id* and Github Client Secret for the value of *Secret* and click *Save*.
-. To validate, create a workspace and connect to GitHub:
-.. Log into Solution Explorer as a {cluster-developer}.
+. Enter the GitHub Client ID and Client Secret that you previously noted:
+.. Enter the GitHub Client ID for the value of *Client ID*.
+.. Enter the GitHub Client Secret for the value of *Secret*.
+. Click *Save*.
+
+. To validate, request that a {cluster-developer} creates a workspace and connects to GitHub:
+.. Log in to Solution Explorer.
 .. Navigate to {code-ready-short}.
-.. Create a workspace as described in link:{creating-workspace-link}[Creating and configuring a new CodeReady Workspaces 2.0 workspace]
-.. Click *Add or Import Project*
-.. Click *GitHub*
-.. Click *Connect your github account*
-.. Click *Authorize*
-.. Check that a list of projects is displayed. If projects are not displayed, verify that you followed each step in the procedure above.
+.. Create a workspace as described in link:{creating-workspace-link}[Creating and configuring a new CodeReady Workspaces 2.0 workspace].
+.. Click *Add or Import Project* -> *GitHub* -> *Connect your GitHub account* -> *Authorize*.
+.. Check that a list of projects is displayed in the Import Projects panel. If projects are not displayed, verify that you followed each step in this procedure.
+
+:leveloffset!:
+
+:leveloffset: +1
+
+// Module included in the following assemblies:
+//
+// getting-started
+
+[id="preparing-to-develop-solution_{context}"]
+
+= Preparing to develop {solution-name}
+
+As a {cluster-developer} with access to a {PRODUCT_SHORT} cluster, you can learn about developing {solution-name} using Solution Patterns.
+
+
+.Prerequisites
+
+* You are a {cluster-developer}.
+* You have the {webapp} URL.
+
+.Procedure
+
+. Log in to the {webapp}.
+
+. Select the *All Solution Patterns* tab. The default Solution Patterns are displayed.
++
+NOTE: See link:{BASE_URL}/developer_guide_for_red_hat_managed_integration_2/index#adding-solution-patterns[Adding Solution Patterns] for information about how to subscribe your cluster to a Git repository that contains more Solution Patterns.
+
+. Perform the *1 - Connecting applications using asynchronous messaging* Solution Pattern to learn about using AMQ Online and Fuse Online.
+
+. Perform the *2 - Protecting applications using single sign-on* Solution Pattern to learn about using the {customer-sso-name} to protect end-user applications.
++
+NOTE: You must complete the *1 - Connecting applications using asynchronous messaging* Solution Pattern before performing this Solution Pattern.
+
+. Perform the *3 - Low-code API development and SaaS integration* Solution Pattern to learn more about using Fuse Online with external services.
+
+. Perform the *4 - Protecting APIs using 3scale API Management Platform* Solution Pattern to learn about protecting APIs with {three-scale-name}.
+When navigating to 3scale, choose to *Authenticate through Red Hat Single Sign-On* when prompted to *Log in to your Account*.
++
+NOTE: To complete this Solution Pattern, a {cluster-administrator} must give you 3scale administrative privileges as described in the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.8/html/admin_portal_guide/inviting-users-managing-rights#give_new_users_rights[3scale Admin Portal Guide].
+
+. Perform the *5 - Adding Data Sync to your application with GraphQL* to learn about deploying applications on a {PRODUCT_SHORT} cluster and about Data Sync application development.
+
+. If you do not intend to use the resources created by completing Solution Patterns, delete those resources to preserve cluster capacity.
+For example:
+.. Delete OpenShift projects.
+.. Delete Fuse Online integrations.
+.. Delete AMQ address spaces.
+.. Delete 3scale products.
+
+
+.Additional resources
+
+* See the link:{BASE_URL}/developer_guide_for_red_hat_managed_integration_2[Developer Guide] for more information about what {cluster-developer}s can do in a cluster.
+
 
 :leveloffset!:

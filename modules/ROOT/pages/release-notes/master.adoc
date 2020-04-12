@@ -30,13 +30,16 @@
 
 :webapp: Solution Explorer
 :walkthrough-name: Solution Pattern
+:solution-name: cloud-native, integrated applications
 
 :cluster-administrator: cluster administrator
-:cluster-developer: developer user
+:cluster-developer: developer
 
 //:rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: Red Hat Single Sign-On
+
+:openshift-client-url: https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software
 
 :fuse-name: Red Hat Fuse Online
 :fuse-version: 7.5

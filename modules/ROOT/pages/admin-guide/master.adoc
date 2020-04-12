@@ -21,13 +21,16 @@
 
 :webapp: Solution Explorer
 :walkthrough-name: Solution Pattern
+:solution-name: cloud-native, integrated applications
 
 :cluster-administrator: cluster administrator
-:cluster-developer: developer user
+:cluster-developer: developer
 
 //:rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: Red Hat Single Sign-On
+
+:openshift-client-url: https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software
 
 :fuse-name: Red Hat Fuse Online
 :fuse-version: 7.5
@@ -66,27 +69,33 @@
 = Administration Guide for {PRODUCT} {PRODUCT_VERSION}
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 
-This document provides instructions for {cluster-administrator}s to manage and configure a cluster.
+This document provides instructions for {cluster-administrator}s to:
+
+* Manage cluster security
+* Enable developers sufficient access to develop and deploy {solution-name}
+* Configure systems for production scenarios
 
 //INCLUDES
 
 :leveloffset: +1
 
 [id="permissions-cluster-administrator"]
-= Permissions of a {PRODUCT_SHORT} {cluster-administrator}
+= Permissions of {PRODUCT_SHORT} {cluster-administrator}s
 
-This section describes the permissions granted to a {cluster-administrator} in a {PRODUCT} cluster.
+Typically, a {cluster-administrator} uses the OpenShift CLI tools on a local machine to interact with a  {PRODUCT} cluster.
+The client is available from the link:https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software[download] page.
 
-A {cluster-administrator} has the `dedicated-admin` role in OpenShift and can:
+A {cluster-administrator} can:
 
+* Manage the OpenShift cluster as described in link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/administering_a_cluster/index[Administering a cluster]
 * Create another {cluster-administrator}
 * Manage 3scale and give a {cluster-developer} admin rights in 3scale
-* Administer the {customer-sso} and give a {cluster-developer} administration privileges on the master realm
+* Administer the {customer-sso-name} and give a {cluster-developer} administration privileges on the master realm
 * Manage any realms created by a {cluster-developer}
 * View the managed services projects in the OpenShift console
 
 
-NOTE: Do not delete the `admin` user in the master realm of the {customer-sso-name}.
+NOTE: Do not delete the `admin` user in the master realm of the {customer-sso-name}. Red Hat manages this service using this user.
 
 
 :leveloffset!:
@@ -96,13 +105,16 @@ NOTE: Do not delete the `admin` user in the master realm of the {customer-sso-na
 [id="creating-new-dedicated-admins_{context}"]
 = Creating a new {cluster-administrator}
 
-An administrator of an OpenShift Dedicated cluster has additional permissions and access to all user-created projects in your organization’s cluster. While logged in to an account with this role, the basic developer CLI (the oc command) allows you increased visibility and management capabilities over objects across projects, while the administrator CLI (commands under the oc adm command) allow you to complete additional operations.
+You might want to give a {cluster-developer} permissions to administer the cluster.
 
-.Prerequisites
-* You are logged into the CLI as a user with the dedicated-admin role
+.Prerequisite
+
+* You are a {cluster-administrator}.
 
 .Procedure
-. Run the following:
+
+. Log in to the cluster using the `oc` login command.
+. Run the following to create a new {cluster-administrator}:
 +
 ----
 oc adm groups add-users dedicated-admins <user>
@@ -126,20 +138,27 @@ oc get groups
 [id="configuring-github-oauth-for-codeready-workspaces_{context}"]
 = Configuring GitHub OAuth for CodeReady Workspaces
 
-A GitHub OAuth app allows users to import projects into {code-ready-short} using SSH addresses (`git@`), push to repositories, and use the pull request panel.
+{PRODUCT} provides a full developer workspace server and cloud IDE with {code-ready-short}, allowing you to pull and push to GitHub projects. You must configure a GitHub OAuth app before {cluster-developer}s can pull and push GitHub projects.
+The GitHub OAuth app allows users to import projects into {code-ready-short} by using SSH addresses (`git@`). Users can then push to repositories and use the pull request panel.
+
 This procedure enables automatic SSH key upload to GitHub.
+
+.Prerequisites
+
+* You must have prior experience using GitHub.
+* You are a {cluster-administrator}.
 
 .Procedure
 
 . Register an application on GitHub:
-** For GitHub, click https://github.com/settings/profile[Settings] ->
+**  To add a new application, log in to GitHub and go to OAuth applications in your developer settings. Click https://github.com/settings/profile[Settings] ->
 https://github.com/settings/apps[Developer settings] ->
 https://github.com/settings/developers[OAuth Apps] ->
 https://github.com/settings/applications/new[Register a new OAuth application].
-** For GitHub Enterprise, go to your GitHub Enterprise home page and then click
+** For GitHub Enterprise, go to your GitHub Enterprise homepage and then click
 *Settings -> Developer settings -> Register a new application*.
-. Enter an application name, for example `CodeReady Workspaces`.
-. For the Homepage URL, enter the CodeReady Workspaces URL
+. Enter an application name, for example, `CodeReady Workspaces`.
+. For the homepage URL, enter the CodeReady Workspaces URL.
 +
 [subs="attributes"]
 ----
@@ -161,9 +180,9 @@ For example, {suffix-example}
 
 . Click *Register application*.
 
-. Note  the *Client ID* and *Client Secret*. You require these values later in the procedure.
+. Note the GitHub *Client ID* and GitHub *Client Secret*. You require these values later in the procedure.
 
-. Log into the OpenShift console as a {cluster-administrator}.
+. Log in to the OpenShift console as a {cluster-administrator}.
 
 . Navigate to the following URL in your browser:
 +
@@ -176,16 +195,17 @@ where <cluster-suffix> is the unique sub-domain for your cluster.
 For example, {suffix-example}
 
 . Select the *Edit Secret* option from the *Actions* menu.
-. Enter your GitHub Client ID for the value of *Client Id* and Github Client Secret for the value of *Secret* and click *Save*.
-. To validate, create a workspace and connect to GitHub:
-.. Log into Solution Explorer as a {cluster-developer}.
+. Enter the GitHub Client ID and Client Secret that you previously noted:
+.. Enter the GitHub Client ID for the value of *Client ID*.
+.. Enter the GitHub Client Secret for the value of *Secret*.
+. Click *Save*.
+
+. To validate, request that a {cluster-developer} creates a workspace and connects to GitHub:
+.. Log in to Solution Explorer.
 .. Navigate to {code-ready-short}.
-.. Create a workspace as described in link:{creating-workspace-link}[Creating and configuring a new CodeReady Workspaces 2.0 workspace]
-.. Click *Add or Import Project*
-.. Click *GitHub*
-.. Click *Connect your github account*
-.. Click *Authorize*
-.. Check that a list of projects is displayed. If projects are not displayed, verify that you followed each step in the procedure above.
+.. Create a workspace as described in link:{creating-workspace-link}[Creating and configuring a new CodeReady Workspaces 2.0 workspace].
+.. Click *Add or Import Project* -> *GitHub* -> *Connect your GitHub account* -> *Authorize*.
+.. Check that a list of projects is displayed in the Import Projects panel. If projects are not displayed, verify that you followed each step in this procedure.
 
 :leveloffset!:
 
@@ -201,21 +221,28 @@ For example, {suffix-example}
 
 [id="configuring-amq-online-for-production"]
 = Configuring AMQ Online for production
-// Start the title of a procedure module with a verb, such as Creating or Create. See also _Wording of headings_ in _The IBM Style Guide_.
 
-Each configuration of AMQ Online for production is unique, this section provides some general information to help you determine that configuration.
+If you plan to use AMQ Online in {PRODUCT_SHORT}, you need to create an AMQ Online configuration for production.
+You must edit and apply YAML files using the command line (CLI) tools to configure AMQ Online.
+
+This section provides general guidance on configuring AMQ Online for production usage in {PRODUCT_SHORT}.
+
+.Prerequisites
+* You are a {cluster-administrator}.
+* Experience with configuring AMQ Online.
 
 .Procedure
 
-. Configure AMQ Online as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/installing_and_managing_amq_online_on_openshift/index#configuring-messaging[Configuring AMQ Online], noting the following:
+. Configure AMQ Online in {PRODUCT_SHORT} as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/installing_and_managing_amq_online_on_openshift/index#configuring-messaging[Configuring AMQ Online].
 +
 * You must log in as a {cluster-administrator}.
 //(for RHMI1) The name of the AMQ Online project in your cluster is enmasse
 +
 * The name of the AMQ Online project in your cluster is `redhat-rhmi-amq-online`.
 
-. Use an external authentication service as shown in the link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#ref-address-space-example-external-auth-service-override-messaging[address space example using an external authentication service].
-
+. Configure your address space to use an external authentication service as shown in the link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#ref-address-space-example-external-auth-service-override-messaging[address space example using an external authentication service].
++
+NOTE: The authentication services are configured by the AMQ Online service operator and are specified when creating an address space.
 
 :leveloffset!:
 
@@ -233,13 +260,20 @@ Each configuration of AMQ Online for production is unique, this section provides
 
 A {PRODUCT_SHORT} cluster hosts two types of projects:
 
-* All managed services, for example, AMQ Online, exist in projects that support inbound and outbound connections.
-* User projects are created with a default template that allows communication from the managed services mentioned above.
+* Projects associated with managed services, for example, the `redhat-rhmi-amq-online` project is associated with AMQ Online. These projects support inbound and outbound connections.
+* User projects, for example a web app. These projects support communication from the managed services mentioned above.
 If you want to disable that communication, see xref:disabling-communications_admin-guide[].
 
 See the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/networking/index[Networking] documentation for an introduction to OpenShift Dedicated networking.
 
-NOTE: You cannot use the `join-projects` option of the `oc` command with managed services projects.
+
+In OpenShift, there are two approaches to enabling communications:
+
+* Using network policies
+* Using the `join-project` option of the `oc` command
+
+In {PRODUCT_SHORT}, you can enable communications using network policies.
+You cannot use the `join-projects` option of the `oc` command with managed services projects.
 
 
 :leveloffset!:
@@ -253,14 +287,17 @@ NOTE: You cannot use the `join-projects` option of the `oc` command with managed
 [id="enabling-communications_{context}"]
 = Enabling communication between projects in your cluster
 
-When you create projects in a cluster, communication between the projects is disabled by default.
+By default, when you create projects in a cluster, communication between the projects is disabled.
 
 This procedure describes enabling communication for a project.
 
+.Prerequisite
+
+* You are a {cluster-administrator}.
 
 .Procedure
 
-. Log into the cluster using `oc` as a {cluster-administrator}.
+. Log in to the cluster using the `oc` login command.
 
 . Change project:
 +
@@ -283,7 +320,8 @@ spec:
   - {}
 ----
 +
-NOTE: This policy enables the most permissive option.
+NOTE: This policy configuration enables this project to communicate with all projects in the cluster.
+
 
 .Additional resources
 
@@ -300,17 +338,18 @@ NOTE: This policy enables the most permissive option.
 [id="disabling-communications_{context}"]
 = Disabling communication from a managed service to your project
 
-By default, your projects are created with a default template that allows communication from a managed service.
-For example, 3scale can communicate with all your projects by default.
+By default, your projects are created with a template that allows communication from a managed service.
+For example, {three-scale-name} can communicate with all your projects by default.
 This procedure describes disabling that communication.
 
-.Prerequisite
+.Prerequisites
 
 * A project you want to isolate from the managed services
+* You are a {cluster-administrator}.
 
 .Procedure
 
-. Log into the cluster using `oc` as a {cluster-administrator}.
+. Log in to the cluster using the `oc` login command.
 
 . Change project:
 +
@@ -348,15 +387,17 @@ NOTE: This disables communication from all projects, not just the managed servic
 = Disabling realm creation for {cluster-developer}s
 
 By default, a {cluster-developer} can create a realm in the {customer-sso-name}.
-This section describes how to disable this permission, for example, in a production cluster
+This section describes how to disable this permission. You might want to disable this permission in a production cluster.
 
 .Prerequisites
 
-* You are logged into the cluster as a {cluster-administrator}
+* You are a {cluster-administrator}.
 
 .Procedure
 
-. From the {webapp}, open the {customer-sso-name} console.
+. Log in to the {webapp}.
+
+. Open the {customer-sso-name} console.
 
 . When prompted, choose the *Administration Console*.
 
@@ -374,126 +415,32 @@ This section describes how to disable this permission, for example, in a product
 
 . To verify the change, log into the {customer-sso-name} as a {cluster-developer} and make sure you cannot create a realm.
 
-
-
 :leveloffset!:
 
 :leveloffset: +1
 
 [id='manage-3scale-users_{context}']
 
-= Manage 3scale users from your Identity Provider
+= 3scale user management
 
-Red Hat 3scale API Management allows you to manage APIs for internal or external users. With it’s pluggable and scalable architecture, 3scale easily integrates with your identity provider.
+Red Hat 3scale API Management allows you to manage APIs for internal or external users.
 
-User management with 3scale in {PRODUCT_SHORT} differs from an on-premise installation.
+User management with 3scale in {PRODUCT_SHORT} can be summarized as follows:
 
-* In {PRODUCT_SHORT}, all users with access to the cluster can log into 3scale API Management.
-* All {cluster-administrator}s have admininstrator privileges in 3scale.
+* All users with access to the cluster can log in to 3scale API Management.
+* All {cluster-administrator}s have administrator privileges in 3scale.
 * Only a {cluster-administrator} can create new products.
 * Only a {cluster-administrator} can grant 3scale administrator privileges to any cluster user.
 
 
 [NOTE]
 ====
-You cannot delete a user from 3scale. You must revoke the cluster privileges of that user. If a user is removed from the cluster, the user is also removed from 3scale.
+The link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/index[Portal Admin Guide] describes how to administer users in 3scale. However, you cannot delete a user from 3scale in {PRODUCT_SHORT}. You must revoke the cluster privileges of that user. If a user is removed from the cluster, the user is also removed from 3scale.
 ====
 
 .Additional resources
-* For more information on API Management, please read the guide for link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/index[3scale API management]
+* For more information on managing 3scale users, see the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/index[Portal Admin Guide].
 
 :leveloffset!:
 
-:leveloffset: +1
-
-[id='deploying-a-self-managed-apicast-api-gateway_{context}']
-
-
-
-= Deploying a self-managed APIcast API gateway
-
-APIcast is an NGINX based API gateway used to integrate your internal and external API services with the 3scale platform.
-
-By default, {PRODUCT_NAME} includes an embedded APIcast. The embedded APIcast is deployed and is supported for production scenarios.
-
-If you want to modify the APIcast configuration, you can deploy a self-managed APIcast.
-The following procedure describes deploying a self-managed APIcast.
-
-
-.Prerequisite
-* You must have {customer-administrator} access.
-
-
-.Procedure
-. From the Solution Explorer, log in to the 3scale console as a {cluster-administrator}.
-. Click on the gear icon in the top right corner of the page.
-. Note the Provider API Key;  this is your <access_token> and is required later in this procedure.
-. Deploy a new APIcast instance:
-+
-NOTE: You can use the procedure in link:adding-custom-services-solution-pattern[Adding custom services to a {PRODUCT} Solution Pattern] to create services from the OpenShift catalog in your cluster.
-
-+
-.. Log into OpenShift using the `oc login` command from the OpenShift client tools. The default login credentials are _username = "developer"_ and _password = "developer"_:
-+
-----
-oc login https://OPENSHIFT-SERVER-IP:8443
-----
-You should see `Login successful.` in the output.
-
-+
-.. Create your project. This example sets the display name as gateway.
-+
-----
-oc new-project "3scalegateway" --display-name="gateway" --description="3scale gateway demo"
-----
-+
-
-The response should look similiar to the following:
-+
-----
-Now using project "3scalegateway" on server "https://172.30.0.112:8443"
-----
-+
-Ignore the suggested next steps in the text output at the command prompt. Proceed to the following step.
-
-.. Create a new secret to reference your project by replacing `<access_token>` and `< {qualified-domain-name} >` with your own credentials.
-+
-----
-oc create secret generic apicast-configuration-url-secret --from-literal=password=https://<access_token>@< {qualified-domain-name} >  --type=kubernetes.io/basic-auth
-----
-+
-Here `<access_token>` is the Provider API Key for the account, and `scale-admin.apps.< {qualified-domain-name} >` is the URL, where < {qualified-domain-name} > is the unique sub-domain for your cluster.
-+
-The response should look like the following:
-+
-----
-secret/apicast-configuration-url-secret
-----
-
-.. Create an application for your APIcast gateway from the template, and start the deployment:
-+
-----
-oc new-app -f https://raw.githubusercontent.com/3scale/3scale-amp-openshift-templates/{three-scale-version}GA/apicast-gateway/apicast.yml
-----
-+
-You should see the following messages at the bottom of the output:
-+
-----
-    --> Creating resources with label app=3scale-gateway ...
-        deploymentconfig "apicast" created
-        service "apicast" created
-    --> Success
-        Run 'oc status' to view your app.
-----
-
-. Set THREESCALE_DEPLOYMENT_ENV to staging in the gateway deployment configuration.
-
-. To validate your configuration, perform the *Protecting APIs using 3scale API Management Platform* Solution Pattern.
-
-
-
-
-.Additional resources
-* To learn more about deploying a self-managed APIcast, see link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/installing_3scale/installing-apicast[Installing APIcast] documentation.
-
-:leveloffset!:
+// include::modules/admin-guide/proc_deploying-a-self-managed-apicast-api-gateway.adoc[leveloffset=+1]
