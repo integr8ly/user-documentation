@@ -35,19 +35,21 @@
 :cluster-administrator: cluster administrator
 :cluster-developer: developer
 
-//:rhmi-sso-name: Managed Integration SSO instance
+:unifiedpush-service: Push Notifications
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: Red Hat Single Sign-On
+:rhsso-short-name: RH SSO
 
 :openshift-client-url: https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software
 
 :fuse-name: Red Hat Fuse Online
-:fuse-version: 7.5
+:fuse-version: 7.6
 :fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
 :fuse-configs: https://access.redhat.com/articles/310603
+:fuse-short-name: Fuse Online
 
 :amq-online-name: Red Hat AMQ Online
-:amq-online-version: 1.3
+:amq-online-version: 1.4
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 
@@ -55,9 +57,9 @@
 :three-scale-version: 2.8
 :three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
 :three-scale-configs: https://access.redhat.com/articles/2798521
+:three-scale-service-discovery: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/service-discovery
 
-:code-ready-name: Red Hat CodeReady Workspaces for OpenShift
-:code-ready-short: CodeReady Workspaces
+:code-ready-name: Red Hat CodeReady Workspaces
 :code-ready-version: 2.0
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
@@ -76,38 +78,39 @@ This document provides information for new users of {PRODUCT}.
 
 :leveloffset: +1
 
-// Metadata created by nebel
-//
-// QuickstartID:
-// Level: 2
-// ParentAssemblies: assemblies/release-notes/as_release-notes.adoc
-// UserStory:
-// VerifiedInVersion:
-
 [id="new-changed"]
 = Key features
-//In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
-//Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
 Red Hat Managed Integration is a hosted and managed platform for developing, deploying, and scaling cloud-native, integrated applications. The combination of developer tooling, API-first approach to integration, and managed operations allows teams to focus on accelerating time to value and reduce operational cost.
 
-*Platform:* Red Hat OpenShift Dedicated
+*Services:* Integration capabilities and services which are fully hosted and managed integration components that are pre-installed and pre-configured on an openshift dedicated cluster. The products available as services are:
 
-OpenShift Dedicated is a platform for developing and running containerized applications. It is designed to allow applications and the data centers that support them to expand from just a few machines and applications to thousands of machines that serve millions of clients.
-
-*Services:* Fully hosted and managed integration products are pre-installed and pre-configured in a dedicated cluster. The products available as services are:
-
-* Red Hat 3scale (API management)
-* Fuse Online (Enterprise connectivity)
-* Red Hat AMQ Online (Messaging)
-* RH SSO (Single sign-on )
-* Red Hat CodeReady Workspaces (Integrated development environment )
+* API management ({three-scale-name})
+* Enterprise connectivity ({fuse-short-name})
+* Messaging ({amq-online-name})
+* Single sign-on ({rhsso-name})
+* Integrated development environment ({code-ready-name})
 
 *Solution Patterns:* Pre-developed solution patterns demonstrate best practices and help development teams get started quickly. They provide a framework for organizations to create additional solution patterns in the cluster to standardize best practices.
 
 *Solution Explorer:* A unified front-end web application that provides access to the installed products, development tools, solution patterns, and the Red Hat OpenShift console.
 
 Technical preview features are not enabled by default in {PRODUCT} clusters. For example, the Internet of Things (IoT) feature of AMQ Online is not enabled. Any exceptions are labeled in the Solution Explorer.
+
+:leveloffset!:
+
+:leveloffset: +1
+
+[id="known-issues"]
+= Known issues
+
+This section lists known issues with Red Hat Managed Integration 2.1.0:
+
+* There is an intermittent issue where the user is redirected to the login page when logging into the {unifiedpush-service} or {fuse-name}. To workaround this issue, clear the cookies in your browser.
+* Service Discovery as described in the link:{three-scale-service-discovery}[3scale documentation] does not work in RHMI 2.1.
+For example, you cannot successfully complete the _4 - Protecting APIs using 3scale API Management Platform_ Solution Pattern.
+* If you log into OpenShift console as a {cluster-developer} and then switch to the Developer perspective, you get a "Restricted Access" error. To workaround this issue, select a project from the project drop-down menu.
+* There is an intermittent issue where logging out of the {webapp} allows the user to log back in again without requiring login credentials.
 
 :leveloffset!:
 

@@ -26,19 +26,21 @@
 :cluster-administrator: cluster administrator
 :cluster-developer: developer
 
-//:rhmi-sso-name: Managed Integration SSO instance
+:unifiedpush-service: Push Notifications
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: Red Hat Single Sign-On
+:rhsso-short-name: RH SSO
 
 :openshift-client-url: https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software
 
 :fuse-name: Red Hat Fuse Online
-:fuse-version: 7.5
+:fuse-version: 7.6
 :fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
 :fuse-configs: https://access.redhat.com/articles/310603
+:fuse-short-name: Fuse Online
 
 :amq-online-name: Red Hat AMQ Online
-:amq-online-version: 1.3
+:amq-online-version: 1.4
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 
@@ -46,9 +48,9 @@
 :three-scale-version: 2.8
 :three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
 :three-scale-configs: https://access.redhat.com/articles/2798521
+:three-scale-service-discovery: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/service-discovery
 
-:code-ready-name: Red Hat CodeReady Workspaces for OpenShift
-:code-ready-short: CodeReady Workspaces
+:code-ready-name: Red Hat CodeReady Workspaces
 :code-ready-version: 2.0
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
@@ -126,6 +128,44 @@ where <user> is the username of the user you want to add to the group.
 ----
 oc get groups
 ----
+
+:leveloffset!:
+
+:leveloffset: +1
+
+// Metadata created by nebel
+//
+// QuickstartID:
+// Level: 2
+// ParentAssemblies: assemblies/getting-started/as_getting-started.adoc
+// UserStory:
+// VerifiedInVersion:
+
+[id="introduction-to-user-sso"]
+= Introduction to the {customer-sso-name}
+
+{PRODUCT_SHORT} includes an instance of {rhsso-name} to enable you to protect any applications you deploy on your cluster.
+
+Red Hat manages this instance; however, all {cluster-administrator}s have admin level privileges to configure this instance.
+
+A user named `admin` manages this instance. Do not delete this user.
+
+A {cluster-administrator} typically uses this instance to:
+
+* Create users in the `master` realm.
+
+* Add an Identity Provider in the `master` realm to avoid managing the same users in different realms.
+See the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering] section of the Red Hat Single Sign-On Server Administration Guide for more information about adding Identity Providers.
+
+* Create and manage new realms.
+
+
+A {cluster-developer} can create new realms and a {cluster-administrator} can administer these realms.
+
+
+.Additional resources
+
+* For more information about Red Hat Single Sign-On, see link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/[Red Hat Single Sign-On Product Documentation].
 
 :leveloffset!:
 

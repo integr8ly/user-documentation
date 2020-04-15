@@ -26,19 +26,21 @@
 :cluster-administrator: cluster administrator
 :cluster-developer: developer
 
-//:rhmi-sso-name: Managed Integration SSO instance
+:unifiedpush-service: Push Notifications
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: Red Hat Single Sign-On
+:rhsso-short-name: RH SSO
 
 :openshift-client-url: https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software
 
 :fuse-name: Red Hat Fuse Online
-:fuse-version: 7.5
+:fuse-version: 7.6
 :fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
 :fuse-configs: https://access.redhat.com/articles/310603
+:fuse-short-name: Fuse Online
 
 :amq-online-name: Red Hat AMQ Online
-:amq-online-version: 1.3
+:amq-online-version: 1.4
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 
@@ -46,9 +48,9 @@
 :three-scale-version: 2.8
 :three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
 :three-scale-configs: https://access.redhat.com/articles/2798521
+:three-scale-service-discovery: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/service-discovery
 
-:code-ready-name: Red Hat CodeReady Workspaces for OpenShift
-:code-ready-short: CodeReady Workspaces
+:code-ready-name: Red Hat CodeReady Workspaces
 :code-ready-version: 2.0
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
@@ -86,19 +88,21 @@
 :cluster-administrator: cluster administrator
 :cluster-developer: developer
 
-//:rhmi-sso-name: Managed Integration SSO instance
+:unifiedpush-service: Push Notifications
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: Red Hat Single Sign-On
+:rhsso-short-name: RH SSO
 
 :openshift-client-url: https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software
 
 :fuse-name: Red Hat Fuse Online
-:fuse-version: 7.5
+:fuse-version: 7.6
 :fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
 :fuse-configs: https://access.redhat.com/articles/310603
+:fuse-short-name: Fuse Online
 
 :amq-online-name: Red Hat AMQ Online
-:amq-online-version: 1.3
+:amq-online-version: 1.4
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 
@@ -106,9 +110,9 @@
 :three-scale-version: 2.8
 :three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
 :three-scale-configs: https://access.redhat.com/articles/2798521
+:three-scale-service-discovery: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/service-discovery
 
-:code-ready-name: Red Hat CodeReady Workspaces for OpenShift
-:code-ready-short: CodeReady Workspaces
+:code-ready-name: Red Hat CodeReady Workspaces
 :code-ready-version: 2.0
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
@@ -327,6 +331,11 @@ Redeploy the {webapp} to view the changes:
 
 
 NOTE: You can access the Git repository that contains the Solution Pattern source code by clicking the *Repository* link located in the upper right corner of each group of Solution Patterns on the *All Solutions Patterns* tab in the Solution Explorer.
+
+
+.Additional resources
+
+* To learn more about creating solution patterns, see the link:{URL_BASE}/creating_solution_patterns_for_red_hat_managed_integration_2[Creating Solution Patterns documentation].
 
 :leveloffset!:
 
