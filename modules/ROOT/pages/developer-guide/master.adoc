@@ -56,7 +56,10 @@
 :code-ready-configs: N/A
 :codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
 
-:project-note: Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.
+:rhsso-version: 7.3
+
+:project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
+
 
 // Metadata created by nebel
 //
@@ -110,6 +113,7 @@ The client is available from the link:https://access.redhat.com/downloads/conten
 // This assembly is included in the following assemblies:
 //
 // as_developer-guide.adoc
+:openshift-dedicated:
 
 :kebab: image:kebab.png[title="Options menu"]
 
@@ -119,16 +123,16 @@ The client is available from the link:https://access.redhat.com/downloads/conten
 
 :context: projects
 
-{PRODUCT} enables you to deploy apps to your cluster as described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/applications/index#projects[Applications guide].
+You can use {PRODUCT} to develop and deploy {solution-name} to your cluster as described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/applications/index#projects[OpenShift Dedicated Applications guide].
+Use the OpenShift Dedicated web console to complete common tasks. You can use the procedures in this guide to get started, then refer to the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/applications/index#projects[OpenShift Dedicated Applications guide] for more details.
 
 You can create projects to manage your development work:
 
 * You can create AMQ Online address space definitions in your project as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#create-address-space-cli-messaging[Creating address spaces using the command line]. The resulting pods are created in the `redhat-rhmi-amq-online` project, which is managed by Red Hat.
 * If you delete the project, all associated resources are also deleted. For example, address spaces that you defined in your project are deleted.
-* Sharing access to projects is described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/applications/index#odc-providing-project-permissions-using-developer-perspective_projects[Applications] guide.
 
+NOTE: Sharing access to projects is described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/applications/index#odc-providing-project-permissions-using-developer-perspective_projects[Applications] guide.
 
-The following procedures are reproduced from the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/applications/index#projects[Applications guide] for your convenience.
 
 :leveloffset: +1
 
@@ -229,6 +233,7 @@ $ oc new-project hello-openshift \
 [NOTE]
 ====
 The number of projects you are allowed to create
+may be limited by the system administrator.
 After your limit is reached, you might have to delete an existing project in
 order to create a new one.
 ====
@@ -300,6 +305,7 @@ $ oc project <project_name>
 //
 // as_developer-guide.adoc
 
+:openshift-dedicated:
 
 
 [id="as_builds"]
@@ -307,7 +313,7 @@ $ oc project <project_name>
 
 :context: builds
 
-{PRODUCT} enables you to deploy apps to your cluster as described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/builds/index[builds] guide. The following procedures are reproduced for your convenience.
+{PRODUCT} enables you to build applications as described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/builds/index[builds] guide. The following topics are reproduced for your convenience.
 
 
 :leveloffset: +1
@@ -335,8 +341,15 @@ successful builds, and publishing the final status of the build. Builds take
 advantage of resource restrictions, specifying limitations on resources such as
 CPU usage, memory usage, and build or pod execution time.
 
+The {product-title} build system provides extensible support for _build
+strategies_ that are based on selectable types specified in the build API. There
+are three primary build strategies available:
 
+* Docker build
+* Source-to-Image (S2I) build
+* Custom build
 
+By default, Docker builds and S2I builds are supported.
 
 The resulting object of a build depends on the builder used to create it. For
 Docker and S2I builds, the resulting objects are runnable images. For Custom
@@ -465,9 +478,9 @@ permissions should be granted access to run custom builds.
 {PRODUCT_SHORT} allows you to create and push images to your cluster.
 For the {PRODUCT_SHORT} cluster, the registry is located at:
 
-[subs="attributes+"]
+[subs="attributes"]
 ----
-registry.{cluster-suffix}.openshift.com
+registry.{cluster-suffix}
 ----
 
 where {cluster-suffix} is the unique sub-domain for your cluster, for example, `{suffix-example}`
@@ -506,6 +519,11 @@ where `<org>` is the name of your GitHub organization and `<repo>` is the name o
 * List URLs in the order you want them to appear in the {webapp}.
 * Enter one URL per line.
 * To include a specific branch, append #<branch-name> to the url.
+For example:
++
+----
+https://github.com/<org>/<repo>.git#version-one
+----
 ====
 
 . Click *Save*.

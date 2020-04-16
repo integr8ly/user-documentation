@@ -56,7 +56,10 @@
 :code-ready-configs: N/A
 :codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
 
-:project-note: Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.
+:rhsso-version: 7.3
+
+:project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
+
 
 [id="assembly_creating-solution-patterns"]
 
@@ -118,7 +121,10 @@
 :code-ready-configs: N/A
 :codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
 
-:project-note: Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.
+:rhsso-version: 7.3
+
+:project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
+
 
 = Creating Solution Patterns for {PRODUCT} {PRODUCT_VERSION}
 
@@ -309,6 +315,11 @@ where `<org>` is the name of your GitHub organization and `<repo>` is the name o
 * List URLs in the order you want them to appear in the {webapp}.
 * Enter one URL per line.
 * To include a specific branch, append #<branch-name> to the url.
+For example:
++
+----
+https://github.com/<org>/<repo>.git#version-one
+----
 ====
 
 . Click *Save*.

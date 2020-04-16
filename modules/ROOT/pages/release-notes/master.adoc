@@ -65,14 +65,15 @@
 :code-ready-configs: N/A
 :codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
 
-:project-note: Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.
+:rhsso-version: 7.3
+
+:project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
+
 
 
 [id="release-notes"]
 = Release Notes for {PRODUCT} {PRODUCT_VERSION}
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
-
-This document provides information for new users of {PRODUCT}.
 
 //INCLUDES
 
@@ -81,9 +82,11 @@ This document provides information for new users of {PRODUCT}.
 [id="new-changed"]
 = Key features
 
-Red Hat Managed Integration is a hosted and managed platform for developing, deploying, and scaling cloud-native, integrated applications. The combination of developer tooling, API-first approach to integration, and managed operations allows teams to focus on accelerating time to value and reduce operational cost.
+{PRODUCT} is a platform for developing and deploying enterprise integration solutions.
+It is hosted and managed by Red Hat so you can focus on building applications, not infrastructure.
+{PRODUCT_SHORT} enables your team to develop, build, and deploy enterprise integration solutions on an OpenShift Dedicated cluster managed by Red Hat
 
-*Services:* Integration capabilities and services which are fully hosted and managed integration components that are pre-installed and pre-configured on an openshift dedicated cluster. The products available as services are:
+*Services:* Integration capabilities and services which are fully hosted and managed integration components that are pre-installed and pre-configured on an OpenShift Dedicated cluster. The products available as services are:
 
 * API management ({three-scale-name})
 * Enterprise connectivity ({fuse-short-name})
@@ -91,9 +94,9 @@ Red Hat Managed Integration is a hosted and managed platform for developing, dep
 * Single sign-on ({rhsso-name})
 * Integrated development environment ({code-ready-name})
 
-*Solution Patterns:* Pre-developed solution patterns demonstrate best practices and help development teams get started quickly. They provide a framework for organizations to create additional solution patterns in the cluster to standardize best practices.
+*Solution Patterns:* Pre-developed Solution Patterns demonstrate best practices and help development teams get started quickly. You can create additional Solution Patterns to standardize best practices.
 
-*Solution Explorer:* A unified front-end web application that provides access to the installed products, development tools, solution patterns, and the Red Hat OpenShift console.
+*Solution Explorer:* A unified front-end web application that provides access to the installed products, development tools, Solution Patterns, and the Red Hat OpenShift console.
 
 Technical preview features are not enabled by default in {PRODUCT} clusters. For example, the Internet of Things (IoT) feature of AMQ Online is not enabled. Any exceptions are labeled in the Solution Explorer.
 
@@ -109,7 +112,7 @@ This section lists known issues with Red Hat Managed Integration 2.1.0:
 * There is an intermittent issue where the user is redirected to the login page when logging into the {unifiedpush-service} or {fuse-name}. To workaround this issue, clear the cookies in your browser.
 * Service Discovery as described in the link:{three-scale-service-discovery}[3scale documentation] does not work in RHMI 2.1.
 For example, you cannot successfully complete the _4 - Protecting APIs using 3scale API Management Platform_ Solution Pattern.
-* If you log into OpenShift console as a {cluster-developer} and then switch to the Developer perspective, you get a "Restricted Access" error. To workaround this issue, select a project from the project drop-down menu.
+* If you log into the OpenShift console as a {cluster-developer} and then switch to the Developer perspective, you get a "Restricted Access" error. To workaround this issue, select a project from the project drop-down menu.
 * There is an intermittent issue where logging out of the {webapp} allows the user to log back in again without requiring login credentials.
 
 :leveloffset!:
@@ -139,32 +142,31 @@ For example, you cannot successfully complete the _4 - Protecting APIs using 3sc
 |*Documentation*
 
 |{fuse-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.5/html/release_notes_for_red_hat_fuse_7.5/index[{fuse-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html/release_notes_for_amq_online_1.4_on_openshift/[{fuse-version}]
 |{fuse-configs}
 |link:{fuse-docs}[{fuse-version}] +
 (Click Fuse Online Category)
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5/html/release_notes_for_amq_online_1.3_on_openshift/index[{amq-online-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/{fuse-version}/html/release_notes_for_amq_online_1.4_on_openshift/[{amq-online-version}]
 |{amq-online-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5[{amq-online-version}] +
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/{fuse-version}/[{amq-online-version}] +
 (Click AMQ Online Category)
 
 |{three-scale-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/release_notes_for_red_hat_3scale_api_management_2.7_on-premises/index[{three-scale-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/release_notes_for_red_hat_3scale_api_management_2.8_on-premises/[{three-scale-version}]
 |{three-scale-configs}
 |link:{three-scale-docs}[{three-scale-version}]
 
 |{code-ready-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/html/release_notes_and_known_issues/index[{code-ready-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/html/release_notes_and_known_issues/[{code-ready-version}]
 |{code-ready-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/[{code-ready-version}]
-
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
 
 |Red Hat Single Sign-On
-|link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/release_notes/index[7.3]
+|link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{rhsso-version}/html-single/release_notes/index[{rhsso-version}]
 |https://access.redhat.com/articles/2342861
-|https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/
+|https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{rhsso-version}/[{rhsso-version}]
 
 
 |===
