@@ -8,10 +8,10 @@
 
 :PRODUCT_VERSION: 2
 :ProductRelease: {PRODUCT_VERSION}
-:MINOR_VERSION_NO: 2.0
-:PATCH_VERSION_NO: 2.0.0
+:MINOR_VERSION_NO: 2.1
+:PATCH_VERSION_NO: 2.1.0
 
-:cluster-suffix: <cluster suffix>
+:cluster-suffix: <cluster-suffix>
 :suffix-example: example.u7y2.s1.openshift.com
 
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
@@ -77,7 +77,7 @@
 This document provides instructions for {cluster-administrator}s to:
 
 * Manage cluster security
-* Enable developers sufficient access to develop and deploy {solution-name}
+* Grant developers sufficient access to develop and deploy {solution-name}
 * Configure systems for production scenarios
 
 //INCLUDES
@@ -102,35 +102,6 @@ A {cluster-administrator} can:
 
 NOTE: Do not delete the `admin` user in the master realm of the {customer-sso-name}. Red Hat manages this service using this user.
 
-
-:leveloffset!:
-
-:leveloffset: +1
-
-[id="creating-new-dedicated-admins_{context}"]
-= Creating a new {cluster-administrator}
-
-You might want to give a {cluster-developer} permissions to administer the cluster.
-
-.Prerequisite
-
-* You are a {cluster-administrator}.
-
-.Procedure
-
-. Log in to the cluster using the `oc` login command.
-. Run the following to create a new {cluster-administrator}:
-+
-----
-oc adm groups add-users dedicated-admins <user>
-----
-where <user> is the username of the user you want to add to the group.
-
-. Run the following command to verify that the user is included in the group:
-+
-----
-oc get groups
-----
 
 :leveloffset!:
 
@@ -181,7 +152,7 @@ A {cluster-developer} can create new realms and a {cluster-administrator} can ad
 [id="configuring-github-oauth-for-codeready-workspaces_{context}"]
 = Configuring GitHub OAuth for CodeReady Workspaces
 
-{PRODUCT} provides a full developer workspace server and cloud IDE with {code-ready-short}, allowing you to pull and push to GitHub projects. You must configure a GitHub OAuth app before {cluster-developer}s can pull and push GitHub projects.
+{PRODUCT} provides a full developer workspace server and cloud IDE with {code-ready-short}, allowing you to pull and push to GitHub projects. You must configure a GitHub OAuth app before {cluster-developer}s can create a repository, pull, and push GitHub projects.
 The GitHub OAuth app allows users to import projects into {code-ready-short} by using SSH addresses (`git@`). Users can then push to repositories and use the pull request panel.
 
 This procedure enables automatic SSH key upload to GitHub.
@@ -472,7 +443,7 @@ User management with 3scale in {PRODUCT_SHORT} can be summarized as follows:
 
 * All users with access to the cluster can log in to 3scale API Management.
 * All {cluster-administrator}s have administrator privileges in 3scale.
-* Only a {cluster-administrator} can create new products.
+* Only a {cluster-administrator} or a developer with 3scale administrator privileges can create new products.
 * Only a {cluster-administrator} can grant 3scale administrator privileges to any cluster user.
 
 

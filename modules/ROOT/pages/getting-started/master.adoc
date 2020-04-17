@@ -8,10 +8,10 @@
 
 :PRODUCT_VERSION: 2
 :ProductRelease: {PRODUCT_VERSION}
-:MINOR_VERSION_NO: 2.0
-:PATCH_VERSION_NO: 2.0.0
+:MINOR_VERSION_NO: 2.1
+:PATCH_VERSION_NO: 2.1.0
 
-:cluster-suffix: <cluster suffix>
+:cluster-suffix: <cluster-suffix>
 :suffix-example: example.u7y2.s1.openshift.com
 
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
@@ -248,7 +248,7 @@ See link:{URL_BASE}//administration_guide_for_red_hat_managed_integration_2/[Adm
 [id="configuring-github-oauth-for-codeready-workspaces_{context}"]
 = Configuring GitHub OAuth for CodeReady Workspaces
 
-{PRODUCT} provides a full developer workspace server and cloud IDE with {code-ready-short}, allowing you to pull and push to GitHub projects. You must configure a GitHub OAuth app before {cluster-developer}s can pull and push GitHub projects.
+{PRODUCT} provides a full developer workspace server and cloud IDE with {code-ready-short}, allowing you to pull and push to GitHub projects. You must configure a GitHub OAuth app before {cluster-developer}s can create a repository, pull, and push GitHub projects.
 The GitHub OAuth app allows users to import projects into {code-ready-short} by using SSH addresses (`git@`). Users can then push to repositories and use the pull request panel.
 
 This procedure enables automatic SSH key upload to GitHub.
