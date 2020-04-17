@@ -55,6 +55,7 @@
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
 :codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
+:code-ready-short: CodeReady Workspaces
 
 :rhsso-version: 7.3
 
@@ -120,6 +121,7 @@
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
 :codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
+:code-ready-short: CodeReady Workspaces
 
 :rhsso-version: 7.3
 

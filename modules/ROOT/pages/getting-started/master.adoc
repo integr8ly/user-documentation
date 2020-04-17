@@ -55,6 +55,7 @@
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
 :codeready-workspaces-url: https://codeready-redhat-rhmi-codeready-workspaces.apps.{cluster-suffix}
+:code-ready-short: CodeReady Workspaces
 
 :rhsso-version: 7.3
 
@@ -105,6 +106,17 @@ It is hosted and managed by Red Hat so you can focus on building applications, n
 * Applications: Pre-installed infrastructure components are configured for optimal performance.
 
 All of the applications and services are protected by your identity provider.
+
+
+
+{PRODUCT} includes the following roles:
+
+* Cluster administrators are created during the onboarding process and have the highest level of access to a cluster.
+To create a {cluster-administrator} open a support case on the link:https://access.redhat.com/support/[Red Hat Customer Portal].
+
+* Developers have access to the applications in the cluster and can deploy containerized applications.
+Typically, {cluster-developer}s start by xref:preparing-to-develop-solution_getting-started[].
+
 
 {PRODUCT_SHORT} includes a managed instance of {rhsso-name} to enable you to protect any applications you deploy on your cluster.
 This application is labeled *{customer-sso-name}* in the Solution Explorer.
@@ -342,7 +354,7 @@ NOTE: This release of {PRODUCT} does not support the tasks described in the link
 
 [id="preparing-to-develop-solution_{context}"]
 
-= Performing {PRODUCT_SHORT} {solution-name}s
+= Completing {PRODUCT_SHORT} Solution Patterns
 
 As a {cluster-developer} with access to a {PRODUCT_SHORT} cluster, you can learn about developing {solution-name} using Solution Patterns.
 
