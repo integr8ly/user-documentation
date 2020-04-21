@@ -352,9 +352,9 @@ NOTE: This release of {PRODUCT} does not support the tasks described in the link
 //
 // getting-started
 
-[id="preparing-to-develop-solution_{context}"]
+[id="creating-using-solution-patterns_{context}"]
 
-= Completing {PRODUCT_SHORT} Solution Patterns
+= Creating {solution-name} using Solution Patterns
 
 As a {cluster-developer} with access to a {PRODUCT_SHORT} cluster, you can learn about developing {solution-name} using Solution Patterns.
 

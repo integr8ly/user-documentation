@@ -115,6 +115,12 @@ This section lists known issues with Red Hat Managed Integration 2.1.0:
 For example, you cannot successfully complete the _4 - Protecting APIs using 3scale API Management Platform_ Solution Pattern.
 * If you log into the OpenShift console as a {cluster-developer} and then switch to the Developer perspective, you get a "Restricted Access" error. To workaround this issue, select a project from the project drop-down menu.
 * There is an intermittent issue where logging out of the {webapp} allows the user to log back in again without requiring login credentials.
+* If user emails are not available as part of your IdP configuration, you cannot receive 3scale email notifications.
+To workaround this issue, each user must:
+1. Log in to 3scale from the {webapp}.
+2. Access the *Settings* menu by clicking the gear icon.
+3. Enter your email address in the *USER INFORMATION* section.
+4. Click *Update Details*.
 
 :leveloffset!:
 
@@ -134,39 +140,27 @@ For example, you cannot successfully complete the _4 - Protecting APIs using 3sc
 
 {PRODUCT} {MINOR_VERSION_NO} includes the following software versions.
 
-[cols="h,,,"]
+[cols="h,"]
 |===
 
 |Component
-|*Release Notes*
-|*Supported Configurations*
 |*Documentation*
 
 |{fuse-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html/release_notes_for_amq_online_1.4_on_openshift/[{fuse-version}]
-|{fuse-configs}
 |link:{fuse-docs}[{fuse-version}] +
 (Click Fuse Online Category)
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/{fuse-version}/html/release_notes_for_amq_online_1.4_on_openshift/[{amq-online-version}]
-|{amq-online-configs}
 |link:https://access.redhat.com/documentation/en-us/red_hat_amq/{fuse-version}/[{amq-online-version}] +
 (Click AMQ Online Category)
 
 |{three-scale-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/release_notes_for_red_hat_3scale_api_management_2.8_on-premises/[{three-scale-version}]
-|{three-scale-configs}
 |link:{three-scale-docs}[{three-scale-version}]
 
 |{code-ready-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/html/release_notes_and_known_issues/[{code-ready-version}]
-|{code-ready-configs}
 |link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
 
 |Red Hat Single Sign-On
-|link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{rhsso-version}/html-single/release_notes/index[{rhsso-version}]
-|https://access.redhat.com/articles/2342861
 |https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{rhsso-version}/[{rhsso-version}]
 
 
