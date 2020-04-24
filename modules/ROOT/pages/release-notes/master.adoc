@@ -70,6 +70,8 @@
 
 :project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
 
+:refresh-note: pass:quotes[To see your changes in Solution Explorer, refresh Solution explorer by clicking the gear icon followed by *Save*.]
+
 
 
 [id="release-notes"]
@@ -108,19 +110,26 @@ Technical preview features are not enabled by default in {PRODUCT} clusters. For
 [id="known-issues"]
 = Known issues
 
-This section lists known issues with Red Hat Managed Integration 2.1.0:
+This section lists known issues with Red Hat Managed Integration {PRODUCT_VERSION}:
 
-* There is an intermittent issue where the user is redirected to the login page when logging into the {unifiedpush-service} or {fuse-name}. To workaround this issue, clear the cookies in your browser.
-* Service Discovery as described in the link:{three-scale-service-discovery}[3scale documentation] does not work in RHMI 2.1.
-For example, you cannot successfully complete the _4 - Protecting APIs using 3scale API Management Platform_ Solution Pattern.
-* If you log into the OpenShift console as a {cluster-developer} and then switch to the Developer perspective, you get a "Restricted Access" error. To workaround this issue, select a project from the project drop-down menu.
-* There is an intermittent issue where logging out of the {webapp} allows the user to log back in again without requiring login credentials.
-* If user emails are not available as part of your IdP configuration, you cannot receive 3scale email notifications.
-To workaround this issue, each user must:
+* There is an intermittent issue where you are redirected to the login page when logging into the {unifiedpush-service} or {fuse-name}. To work around this issue, clear the cookies in your browser.
+* Service Discovery as described in the link:{three-scale-service-discovery}[3scale documentation] does not work in {PRODUCT} {PRODUCT_VERSION}.
+* If you log into the OpenShift console as a {cluster-developer} and then switch to the Developer perspective, you get a "Restricted Access" error. To work around this issue, select a project from the project drop-down menu.
+* There is an intermittent issue where logging out of the {webapp} allows you to log back in again without requiring login credentials.
+* If email addresses are not available as part of your IdP configuration, you cannot receive 3scale email notifications.
+To work around this issue, you must:
 1. Log in to 3scale from the {webapp}.
 2. Access the *Settings* menu by clicking the gear icon.
 3. Enter your email address in the *USER INFORMATION* section.
 4. Click *Update Details*.
+* The following Solution Patterns are not available in this release:
++
+--
+** _3 - Low-code API development and SaaS integration._
+** _4 - Protecting APIs using 3scale API Management Platform._
+--
++
+Ignore references to these Solution Patterns in the documentation.
 
 :leveloffset!:
 
@@ -138,7 +147,7 @@ To workaround this issue, each user must:
 = Versions of components
 //In the title of a reference module, include nouns that are used in the body text. For example, "Keyboard shortcuts for ___" or "Command options for ___." This helps readers and search engines find the information quickly.
 
-{PRODUCT} {MINOR_VERSION_NO} includes the following software versions.
+{PRODUCT} includes the following software versions.
 
 [cols="h,"]
 |===
@@ -151,7 +160,7 @@ To workaround this issue, each user must:
 (Click Fuse Online Category)
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/{fuse-version}/[{amq-online-version}] +
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/[{amq-online-version}] +
 (Click AMQ Online Category)
 
 |{three-scale-name}
@@ -165,5 +174,7 @@ To workaround this issue, each user must:
 
 
 |===
+
+The documentation listed above assumes that you intend to install and configure the component on OpenShift Container Platform. With {PRODUCT}, the installation and configuration documentation is not relevant and should be ignored.
 
 :leveloffset!:

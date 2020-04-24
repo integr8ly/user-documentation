@@ -61,6 +61,8 @@
 
 :project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
 
+:refresh-note: pass:quotes[To see your changes in Solution Explorer, refresh Solution explorer by clicking the gear icon followed by *Save*.]
+
 
 // Metadata created by nebel
 //
@@ -72,7 +74,7 @@
 :context: developer-guide
 
 [id="developer-guide"]
-= Developer Guide for {PRODUCT} {PRODUCT_VERSION}
+= Developing Applications on {PRODUCT} {PRODUCT_VERSION}
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 
 :leveloffset: +1
@@ -498,7 +500,7 @@ where {cluster-suffix} is the unique sub-domain for your cluster, for example, `
 
 = Adding Solution Patterns to your {PRODUCT_SHORT} cluster
 
-The home page of the {webapp} lists the Solution Patterns from all the Git repositories you are subscribed to. Any user can add Solution Patterns to your cluster.
+The home page of the {webapp} lists the Solution Patterns from all the Git repositories you are subscribed to. Any {cluster-developer} can add Solution Patterns to your cluster.
 
 This procedure describes how to subscribe your cluster to a Git repository that contains Solution Patterns.
 
@@ -508,7 +510,7 @@ This procedure describes how to subscribe your cluster to a Git repository that 
 
 . Click the gear icon in the top right to display the *Application settings* screen.
 
-. Enter the URLs of the Solution Pattern repositories you want to add to your cluster using the following syntax:
+. Enter the URLs of the Solution Pattern Git repositories you want to add to your cluster using the following syntax:
 +
 ----
 https://github.com/<org>/<repo>.git
@@ -529,7 +531,7 @@ https://github.com/<org>/<repo>.git#version-one
 
 . Click *Save*.
 +
-Editing the value triggers an automatic redeployment of the {webapp}.
+This triggers an automatic refresh of the {webapp}.
 
 . When the deployment is complete, refresh your browser.
 +
@@ -538,11 +540,11 @@ You should now see new Solution Patterns available from the dashboard.
 
 . If the Git repository is updated with new content, the {webapp} is not automatically updated.
 +
-Redeploy the {webapp} to view the changes:
+Refresh the {webapp} to view the changes:
 +
 .. Click the gear icon in the top right to display the **Application settings** screen.
-.. Click Save to trigger a redeployment of the Solution Explorer app.
-.. When the deployment is complete, refresh your browser.
+.. Click Save to trigger a refresh of the Solution Explorer app.
+.. When the Solution Explorer refresh is complete, refresh your browser.
 .. Navigate to the **Solution Patterns** tab to see the updated content.
 
 

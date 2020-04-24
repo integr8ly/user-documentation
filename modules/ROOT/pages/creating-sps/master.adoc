@@ -61,6 +61,8 @@
 
 :project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
 
+:refresh-note: pass:quotes[To see your changes in Solution Explorer, refresh Solution explorer by clicking the gear icon followed by *Save*.]
+
 
 [id="assembly_creating-solution-patterns"]
 
@@ -127,6 +129,8 @@
 
 :project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
 
+:refresh-note: pass:quotes[To see your changes in Solution Explorer, refresh Solution explorer by clicking the gear icon followed by *Save*.]
+
 
 = Creating Solution Patterns for {PRODUCT} {PRODUCT_VERSION}
 
@@ -139,21 +143,23 @@
 :leveloffset: +1
 
 [id="about-creating-solution-patterns"]
-= Creating Solution Patterns
+= Introducing Solution Patterns
 
-Solution Patterns are templates that shorten development time and encourage best practices. You can create a Solution Pattern to communicate technical concepts and provide guidance for users.
-Your Solution Pattern should have a clear user story that addresses a goal.
+Solution Patterns are templates that shorten development time and encourage best practices by providing opinionated instructions about how to develop {solution-name} on your {PRODUCT} cluster.
+You can create a Solution Pattern to communicate technical concepts and provide guidance for users in your organization.
+Your Solution Pattern should document a clear user story that addresses a goal.
 
 
 To write a Solution Pattern you require a knowledge of:
 
 * AsciiDoc: A lightweight markup language that is similar to Markdown.
 * JSON: A lightweight format for storing and transporting data.
-* Git: An open source distributed version control system. You must push your AsciiDoc and JSON files to a Git repository.
+* Git: An open source distributed version control system. You must push your AsciiDoc and JSON files to a Git repository accessbile from your cluster, for example, GitHub or GitLab.
 * OpenShift: A platform for developing and running containerized applications. You can add Solution Patterns using the OpenShift console.
 
 
-You must edit an AsciiDoc file to create a Solution Pattern. The AsciiDoc file should resemble the following example:
+You must create and edit an AsciiDoc file to contruct a Solution Pattern.
+The AsciiDoc file should resemble the following example:
 
 [source,asciidoc]
 ----
@@ -166,10 +172,10 @@ A short description for the feature. <2>
 . Do this first: <4>
 . Do this second:
 ----
-<1> Solution Pattern title. You can only have a single level 1 heading per file.
-<2> The first line of the introduction is displayed as a tag line for the Solution Pattern and displayed on the {webapp} home page.
+<1> Solution Pattern title. Only one level 1 heading per file is allowed.
+<2> The Solution Pattern description is displayed on the {webapp} home page.
 Do not use AsciiDoc attributes in this line because they are not displayed correctly on the homepage.
-<3> A task contains one or more subtasks.
+<3> Optional subtasks describe how to complete the task.
 <4> A numbered list of steps the user must perform.
 
 
@@ -189,7 +195,7 @@ The template contains:
 
 * The directory structure
 * An example Solution Pattern
-* An example manifest file.
+* An example manifest file
 
 .Procedure
 . Clone the template repository
@@ -211,7 +217,7 @@ cd walkthrough-template
 :leveloffset: +1
 
 [id='understand-file-structure']
-= Understand the file structure
+= Solution Pattern file structure
 
 [source]
 ----
@@ -260,7 +266,7 @@ The default `walkthrough.json` does not define any dependent services:
 [id="committing-solution-pattern-remote-repository"]
 = Committing your Solution Pattern to a remote repository
 
-After you edit the `walkthrough.adoc` file, push your changes to GitHub.
+Push your repository to GitHub or GitLab.
 
 .Procedure
 . Create a new remote repository and take note of the remote URL.
@@ -295,7 +301,7 @@ git push -u upstream master
 
 = Adding Solution Patterns to your {PRODUCT_SHORT} cluster
 
-The home page of the {webapp} lists the Solution Patterns from all the Git repositories you are subscribed to. Any user can add Solution Patterns to your cluster.
+The home page of the {webapp} lists the Solution Patterns from all the Git repositories you are subscribed to. Any {cluster-developer} can add Solution Patterns to your cluster.
 
 This procedure describes how to subscribe your cluster to a Git repository that contains Solution Patterns.
 
@@ -305,7 +311,7 @@ This procedure describes how to subscribe your cluster to a Git repository that 
 
 . Click the gear icon in the top right to display the *Application settings* screen.
 
-. Enter the URLs of the Solution Pattern repositories you want to add to your cluster using the following syntax:
+. Enter the URLs of the Solution Pattern Git repositories you want to add to your cluster using the following syntax:
 +
 ----
 https://github.com/<org>/<repo>.git
@@ -326,7 +332,7 @@ https://github.com/<org>/<repo>.git#version-one
 
 . Click *Save*.
 +
-Editing the value triggers an automatic redeployment of the {webapp}.
+This triggers an automatic refresh of the {webapp}.
 
 . When the deployment is complete, refresh your browser.
 +
@@ -335,11 +341,11 @@ You should now see new Solution Patterns available from the dashboard.
 
 . If the Git repository is updated with new content, the {webapp} is not automatically updated.
 +
-Redeploy the {webapp} to view the changes:
+Refresh the {webapp} to view the changes:
 +
 .. Click the gear icon in the top right to display the **Application settings** screen.
-.. Click Save to trigger a redeployment of the Solution Explorer app.
-.. When the deployment is complete, refresh your browser.
+.. Click Save to trigger a refresh of the Solution Explorer app.
+.. When the Solution Explorer refresh is complete, refresh your browser.
 .. Navigate to the **Solution Patterns** tab to see the updated content.
 
 
@@ -360,7 +366,7 @@ NOTE: You can access the Git repository that contains the Solution Pattern sourc
 The first section of the `walkthrough.adoc` describes your Solution Pattern. The overview section outlines the purpose of the Solution Pattern.
 The overview is displayed when a user clicks on the Solution Pattern in the {webapp}.
 
-* The overview is defined by a first level heading (in AsciiDoc a line begining with `=`).
+* The overview is defined by the content before the first task.
 * The title of the overview is the name of the Solution Pattern.
 * The overview heading is followed by a short introduction to the Solution Pattern.
 
@@ -394,6 +400,9 @@ git commit -am "add overview"
 ----
 git push upstream master
 ----
+
+
+{refresh-note}
 
 :leveloffset!:
 
@@ -466,7 +475,7 @@ NOTE: The content of the {webapp} does not change automatically after a change i
 A procedure is a set of steps that you perform to complete a task or subtask.
 
 Write procedures using AsciiDoc numbered lists.
-Prepend each step with a `.` to create a simple numbered list.
+Prepend each step with a dot (.) to create a simple numbered list.
 
 
 .Prerequisites
@@ -489,12 +498,7 @@ To edit a procedure in the template respository:
 
 . Save, commit, and push your changes.
 
-. Redeploy the {webapp}:
-
-.. Click the gear icon in the top right to display the **Application settings** screen.
-.. Click Save to trigger a redeployment of the Solution Explorer app.
-.. When the deployment is complete, refresh your browser.
-.. Navigate to the **Solution Patterns** tab to see the updated content.
+{refresh-note}
 
 :leveloffset!:
 
@@ -503,7 +507,7 @@ To edit a procedure in the template respository:
 [id="editing-resources-solution-pattern"]
 = Editing resources for a {PRODUCT} Solution Pattern
 
-The {webapp} displays helpful information and links on the right side panel. You can add Solution Pattern resources by using block attributes. You can only define Solution Pattern resources in the overview section.
+The {webapp} displays information and links on the right side pane in Solution Explorer. You can add Solution Pattern resources by using block attributes. You can only define Solution Pattern resources in the overview section.
 
 [NOTE]
 ====
@@ -540,11 +544,7 @@ The {webapp} displays helpful information and links on the right side panel. You
 +
 . Save, commit, and push your changes.
 
-. Redeploy the {webapp}:
-.. Click the gear icon in the top right to display the *Application settings* screen.
-.. Click Save to trigger a redeployment of the Solution Explorer App.
-.. When the deployment is complete, refresh your browser.
-.. Navigate to the *Solution Patterns* tab to see the updated content.
+{refresh-note}
 
 :leveloffset!:
 
@@ -554,7 +554,8 @@ The {webapp} displays helpful information and links on the right side panel. You
 = Editing task resources for a {PRODUCT} Solution Pattern
 
 The {webapp} displays helpful information and links on the right side panel that are specific to a task.
-Solution Pattern resources are displayed for every task. Task resources typically change as the user navigates the Solution Pattern.
+Solution Pattern resources are displayed for every task.
+Task resources typically change as you navigate the Solution Pattern.
 
 .Prerequisites
 * You have created a repository using the Solution Pattern template.
@@ -576,11 +577,7 @@ Solution Pattern resources are displayed for every task. Task resources typicall
 
 . Save, commit, and push your changes.
 
-. Redeploy the {webapp}:
-.. Click the gear icon in the top right to display the *Application settings* screen.
-.. Click Save to trigger a redeployment of the Solution Explorer app.
-.. When the deployment is complete, refresh your browser.
-.. Navigate to the *Solution Patterns* tab to see the updated content.
+{refresh-note}
 
 :leveloffset!:
 
@@ -591,7 +588,6 @@ Solution Pattern resources are displayed for every task. Task resources typicall
 
 Verifications are interactive elements in a Solution Pattern that confirm whether a user has successfully completed a procedure. They are questions presented to the user, which can be answered with either a `Yes` or `No` response.
 
-NOTE: Every procedure in a task or subtask requires a verification.
 
 
 .Prerequisites
@@ -621,11 +617,7 @@ Try turning it off and on again.
 
 . Save, commit, and push your changes.
 
-. Redeploy the {webapp}:
-.. Click the gear icon in the top right to display the *Application settings* screen.
-.. Click Save to trigger a redeployment of the Solution Explorer app.
-.. When the deployment is complete, refresh your browser.
-.. Navigate to the *Solution Patterns* tab to see the updated content.
+{refresh-note}
 
 :leveloffset!:
 

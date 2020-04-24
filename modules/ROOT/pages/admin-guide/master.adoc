@@ -61,6 +61,8 @@
 
 :project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
 
+:refresh-note: pass:quotes[To see your changes in Solution Explorer, refresh Solution explorer by clicking the gear icon followed by *Save*.]
+
 
 // Metadata created by nebel
 //
@@ -72,7 +74,7 @@
 :context: admin-guide
 
 [id="admin-guide"]
-= Administration Guide for {PRODUCT} {PRODUCT_VERSION}
+= Administering {PRODUCT} {PRODUCT_VERSION}
 //If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
 
 This document provides instructions for {cluster-administrator}s to:
@@ -121,6 +123,8 @@ NOTE: Do not delete the `admin` user in the master realm of the {customer-sso-na
 
 {PRODUCT_SHORT} includes an instance of {rhsso-name} to enable you to protect any applications you deploy on your cluster.
 
+You can navigate to the {customer-sso-name} from the *Protect customer applications* item in the {webapp}.
+
 Red Hat manages this instance; however, all {cluster-administrator}s have admin level privileges to configure this instance.
 
 A user named `admin` manages this instance. Do not delete this user.
@@ -128,9 +132,6 @@ A user named `admin` manages this instance. Do not delete this user.
 A {cluster-administrator} typically uses this instance to:
 
 * Create users in the `master` realm.
-
-* Add an Identity Provider in the `master` realm to avoid managing the same users in different realms.
-See the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering] section of the Red Hat Single Sign-On Server Administration Guide for more information about adding Identity Providers.
 
 * Create and manage new realms.
 
@@ -141,6 +142,42 @@ A {cluster-developer} can create new realms and a {cluster-administrator} can ad
 .Additional resources
 
 * For more information about Red Hat Single Sign-On, see link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/[Red Hat Single Sign-On Product Documentation].
+
+:leveloffset!:
+
+:leveloffset: +1
+
+[id="disabling-realm-creation_{context}"]
+= Disabling realm creation for {cluster-developer}s
+
+By default, a {cluster-developer} can create a realm in the {customer-sso-name}.
+This section describes how to disable this permission. You might want to disable this permission in a production cluster.
+
+.Prerequisites
+
+* You are a {cluster-administrator}.
+
+.Procedure
+
+. Log in to the {webapp}.
+
+. Navigate to the {customer-sso-name} from the *Protect customer applications* item in the {webapp}.
+
+. When prompted, choose the *Administration Console*.
+
+. Choose *Groups* from the menu for the Master realm.
+
+. Select the *rhmi-developers* group.
+
+. Click *Edit* from the *User Groups* menu.
+
+. Choose the *Role Mappings* tab.
+
+. Select *create-realm* in the *Assigned Roles* panel.
+
+. Click *Remove selected* to remove that role from the *rhmi-developers* group.
+
+. To verify the change, log into the {customer-sso-name} as a {cluster-developer} and make sure you cannot create a realm.
 
 :leveloffset!:
 
@@ -243,17 +280,17 @@ You must edit and apply YAML files using the command line (CLI) tools to configu
 This section provides general guidance on configuring AMQ Online for production usage in {PRODUCT_SHORT}.
 
 .Prerequisites
-* You are a {cluster-administrator}.
+* You are a {cluster-administrator} with the OpenShift CLI (`oc`) installed locally.
 * Experience with configuring AMQ Online.
 
 .Procedure
 
 . Configure AMQ Online in {PRODUCT_SHORT} as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/installing_and_managing_amq_online_on_openshift/index#configuring-messaging[Configuring AMQ Online].
 +
+* The name of the AMQ Online project in your cluster is `redhat-rhmi-amq-online`.
++
 * You must log in as a {cluster-administrator}.
 //(for RHMI1) The name of the AMQ Online project in your cluster is enmasse
-+
-* The name of the AMQ Online project in your cluster is `redhat-rhmi-amq-online`.
 
 . Configure your address space to use an external authentication service as shown in the link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#ref-address-space-example-external-auth-service-override-messaging[address space example using an external authentication service].
 +
@@ -292,6 +329,7 @@ You cannot use the `join-projects` option of the `oc` command with managed servi
 
 
 :leveloffset!:
+
 :leveloffset: +2
 
 // Module included in the following assemblies:
@@ -343,94 +381,8 @@ NOTE: This policy configuration enables this project to communicate with all pro
 * link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/networking/index#understanding-networking[Understanding Networking] in a {PRODUCT_SHORT} cluster
 
 :leveloffset!:
-:leveloffset: +2
 
-// Module included in the following assemblies:
-//
-// as_admin-guide.adoc
-
-
-[id="disabling-communications_{context}"]
-= Disabling communication from a managed service to your project
-
-By default, your projects are created with a template that allows communication from a managed service.
-For example, {three-scale-name} can communicate with all your projects by default.
-This procedure describes disabling that communication.
-
-.Prerequisites
-
-* A project you want to isolate from the managed services
-* You are a {cluster-administrator}.
-
-.Procedure
-
-. Log in to the cluster using the `oc` login command.
-
-. Change project:
-+
-----
-$ oc project <project_name>
-----
-+
-where `<project_name>` is the name of a project that you want to isolate from the managed services.
-
-
-. Create a NetworkPolicy object as described in link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/networking/index#nw-networkpolicy-create_configuring-networkpolicy-plugin[Creating a NetworkPolicy object] with the following content:
-+
-----
-kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
-metadata:
-  name: deny-all
-spec:
-  podSelector: redhat-rhmi-*
-  ingress:
-  - {}
-----
-+
-NOTE: This disables communication from all projects, not just the managed services.
-
-.Additional resources
-
-* link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/networking/index#understanding-networking[Understanding Networking] in a {PRODUCT_SHORT} cluster
-
-:leveloffset!:
-
-:leveloffset: +1
-
-[id="disabling-realm-creation_{context}"]
-= Disabling realm creation for {cluster-developer}s
-
-By default, a {cluster-developer} can create a realm in the {customer-sso-name}.
-This section describes how to disable this permission. You might want to disable this permission in a production cluster.
-
-.Prerequisites
-
-* You are a {cluster-administrator}.
-
-.Procedure
-
-. Log in to the {webapp}.
-
-. Open the {customer-sso-name} console.
-
-. When prompted, choose the *Administration Console*.
-
-. Choose *Groups* from the menu for the Master realm.
-
-. Select the *rhmi-developers* group.
-
-. Click *Edit* from the *User Groups* menu.
-
-. Choose the *Role Mappings* tab.
-
-. Select *create-realm* in the *Assigned Roles* panel.
-
-. Click *Remove selected* to remove that role from the *rhmi-developers* group.
-
-. To verify the change, log into the {customer-sso-name} as a {cluster-developer} and make sure you cannot create a realm.
-
-:leveloffset!:
+// include::modules/admin-guide/proc_disabling-communications.adoc[leveloffset=+2]
 
 :leveloffset: +1
 
@@ -439,6 +391,8 @@ This section describes how to disable this permission. You might want to disable
 = 3scale user management
 
 Red Hat 3scale API Management allows you to manage APIs for internal or external users.
+
+You can navigate to the 3scale console from the *Manage APIs* item in the {webapp}.
 
 User management with 3scale in {PRODUCT_SHORT} can be summarized as follows:
 

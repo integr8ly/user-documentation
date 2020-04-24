@@ -61,6 +61,8 @@
 
 :project-note: pass:quotes[Projects starting with `redhat-`, `openshift-` and `kube` host cluster components that run as Pods and other infrastructure components. Do not create projects starting with these strings.]
 
+:refresh-note: pass:quotes[To see your changes in Solution Explorer, refresh Solution explorer by clicking the gear icon followed by *Save*.]
+
 
 // Metadata created by nebel
 //
@@ -101,11 +103,11 @@ It is hosted and managed by Red Hat so you can focus on building applications, n
 
 {PRODUCT_SHORT} provides a simplified cloud-native experience and includes:
 
-* Solution Explorer: A web-based UI with single sign-on access to all the applications.
+* Solution Explorer: A web-based UI with single sign-on access to all applications.
 * Solution Patterns: Step-by-step instructions and best practices for common connectivity and application development tasks.
 * Applications: Pre-installed infrastructure components are configured for optimal performance.
 
-All of the applications and services are protected by your identity provider.
+All of the applications and services provided by {PRODUCT_SHORT} are protected by your identity provider.
 
 
 
@@ -115,7 +117,7 @@ All of the applications and services are protected by your identity provider.
 To create a {cluster-administrator} open a support case on the link:https://access.redhat.com/support/[Red Hat Customer Portal].
 
 * Developers have access to the applications in the cluster and can deploy containerized applications.
-Typically, {cluster-developer}s start by xref:preparing-to-develop-solution_getting-started[].
+Typically, {cluster-developer}s start by xref:creating-using-solution-patterns_getting-started[].
 
 
 {PRODUCT_SHORT} includes a managed instance of {rhsso-name} to enable you to protect any applications you deploy on your cluster.
@@ -141,7 +143,7 @@ NOTE: Do not delete the `admin` user in the {customer-sso-name}. This user is re
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
 
-The {webapp} is a web-based UI with single sign-on access to all the applications available in your {PRODUCT_SHORT} cluster:
+The {webapp} is a web-based UI with single sign-on access to all the applications and services available in your {PRODUCT_SHORT} cluster:
 
 * *OpenShift*, the OpenShift cluster console.
 
@@ -159,7 +161,7 @@ The {webapp} is a web-based UI with single sign-on access to all the application
 
 * *Red Hat Single Sign-On*, a single sign-on solution for web apps and RESTful web services.
 
-The {webapp} also provides xref:introduction-to-solution-patterns[Solution Patterns] that provide step-by-step instructions and best practices for common connectivity and application development tasks.
+The {webapp} also provides xref:introduction-to-solution-patterns[Solution Patterns] that provide step-by-step instructions and best practices for common connectivity and application development tasks that create new {solution-name}.
 
 
 
@@ -187,6 +189,11 @@ The following Solution Patterns are included within your Managed Integration clu
 * Implement Low-code API development and SaaS integration.
 * Protect APIs using 3scale API Management Platform.
 * Add Data Sync to your application with GraphQL.
+
+
+.Additional resources
+
+* To learn more about using Solution Patterns, see xref:creating-using-solution-patterns_getting-started[].
 
 :leveloffset!:
 
@@ -385,7 +392,8 @@ When navigating to 3scale, choose *Authenticate through Red Hat Single Sign-On* 
 +
 NOTE: To complete this Solution Pattern, a {cluster-administrator} must give you 3scale administrative privileges as described in the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.8/html/admin_portal_guide/inviting-users-managing-rights#give_new_users_rights[3scale Admin Portal Guide].
 
-. Perform the *5 - Adding Data Sync to your application with GraphQL* to learn about deploying applications on a {PRODUCT_SHORT} cluster and about Data Sync application development.
+. Perform the *5 - Adding Data Sync to your application with GraphQL* Solution Pattern to learn about building a Node.js application using a GraphQL API. This Solution Pattern also shows how to integrate applications with Red Hat Single-Sign On and AMQ Online.
+
 
 . If you do not intend to use the resources created by completing Solution Patterns, delete those resources to preserve cluster capacity.
 For example:
