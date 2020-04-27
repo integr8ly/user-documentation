@@ -5,6 +5,4 @@
 
 The following issues are resolved in {PRODUCT} {PATCH_VERSION_NO}:
 
-* IUXD-73 - Update the ordering of Solution Patterns on the home page
-
 
