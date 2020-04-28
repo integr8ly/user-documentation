@@ -1,7 +1,7 @@
 [id='rn-new-and-changed-ref']
 = New and changed features
 
-* With this release, RHMI only supports TLS 1.2
+* {PRODUCT} only supports TLS 1.2 in this release.
 
 == New component versions
 
