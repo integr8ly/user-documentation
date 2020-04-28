@@ -18,6 +18,7 @@
 :rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: 
+:rhsso-version: 7.3
 
 :fuse-name: Red Hat Fuse Online
 :fuse-version: 7.6
@@ -28,6 +29,7 @@
 :amq-online-version: 1.4
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
+:amq-fuse-version: 7.6
 
 :three-scale-name: Red Hat 3scale API Management
 :three-scale-version: 2.8

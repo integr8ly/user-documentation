@@ -16,17 +16,17 @@
 (Click Fuse Online Category)
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5[{amq-online-version}] +
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/{amq-fuse-version}[{amq-online-version}] +
 (Click AMQ Online Category)
 
 |{three-scale-name}
 |link:{three-scale-docs}[{three-scale-version}]
 
 |{code-ready-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/[{code-ready-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
 
 
 |Red Hat Single Sign-On
-|https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/
+|link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{rhsso-version}/[{rhsso-version}]
 
 |===
