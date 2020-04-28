@@ -1,6 +1,8 @@
 [id='rn-new-and-changed-ref']
 = New and changed features
 
+* With this release, RHMI only supports TLS 1.2
+
 == New component versions
 
 This release includes new versions of the following components:
@@ -21,4 +23,3 @@ This release includes new versions of the following components:
 |link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.8/html/release_notes_for_red_hat_3scale_api_management_2.7_on-premises/index[{three-scale-version}]
 
 |===
-
