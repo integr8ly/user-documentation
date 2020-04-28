@@ -8,6 +8,15 @@
 If your workspace was created from a code repository without a {code-ready-name-short} configuration file , you can recreate it using {code-ready-name-short} {code-ready-version}.
 Otherwise, you need to convert your {code-ready-name-short} configuration file as described in link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.0/html/end-user_guide/workspaces-overview#converting-a-codeready-workspaces-1.2-workspace-to-a-codeready-workspaces-2.0-devfile[Converting a CodeReady Workspaces 1.2 workspace to a CodeReady Workspaces 2.0 devfile].
 
+* The following Solution Patterns are not available in this release:
++
+--
+** _Protecting Applications using Red Hat Single Sign-On (SSO)_.
+** _Low-code API development and SaaS integration_.
+--
++
+Ignore references to these Solution Patterns in the documentation.  
+
 == New component versions
 
 This release includes new versions of the following components:
