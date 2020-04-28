@@ -5,41 +5,28 @@
 
 {PRODUCT} {MINOR_VERSION_NO} includes the following software versions:
 
-[cols="h,,,"]
+[cols="h,"]
 |===
 
 |Component
-|*Release Notes*
-|*Supported Configurations*
 |*Documentation*
 
 |{fuse-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.5/html/release_notes_for_red_hat_fuse_7.5/index[{fuse-version}]
-|{fuse-configs}
 |link:{fuse-docs}[{fuse-version}] +
 (Click Fuse Online Category)
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5/html/release_notes_for_amq_online_1.3_on_openshift/index[{amq-online-version}]
-|{amq-online-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.5[{amq-online-version}] +
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/{amq-fuse-version}[{amq-online-version}] +
 (Click AMQ Online Category)
 
 |{three-scale-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/release_notes_for_red_hat_3scale_api_management_2.7_on-premises/index[{three-scale-version}]
-|{three-scale-configs}
 |link:{three-scale-docs}[{three-scale-version}]
 
 |{code-ready-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/html/release_notes_and_known_issues/index[{code-ready-version}]
-|{code-ready-configs}
-|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/[{code-ready-version}]
+|link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/[{code-ready-version}]
 
 
 |Red Hat Single Sign-On
-|link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html-single/release_notes/index[7.3]
-|https://access.redhat.com/articles/2342861
-|https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/
-
+|link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{rhsso-version}/[{rhsso-version}]
 
 |===
