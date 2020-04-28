@@ -1,7 +1,7 @@
 [id='rn-new-and-changed-ref']
 = New and changed features
 
-* {PRODUCT} only supports TLS 1.2 in this release.
+* Support for TLS 1.0 and TLS 1.1 is removed from {PRODUCT}. Only TLS 1.2 is supported in this release.
 
 == New component versions
 
