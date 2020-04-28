@@ -3,6 +3,11 @@
 
 * Support for TLS 1.0 and TLS 1.1 is removed from {PRODUCT}. Only TLS 1.2 is supported in this release.
 
+* {code-ready-name-short} {code-ready-version} is available in your cluster. Existing workspaces are not compatible with this version of {code-ready-name-short}.
++
+If your workspace was created from a code repository without a {code-ready-name-short} configuration file , you can recreate it using {code-ready-name-short} {code-ready-version}.
+Otherwise, you need to convert your {code-ready-name-short} configuration file as described in link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.0/html/end-user_guide/workspaces-overview#converting-a-codeready-workspaces-1.2-workspace-to-a-codeready-workspaces-2.0-devfile[Converting a CodeReady Workspaces 1.2 workspace to a CodeReady Workspaces 2.0 devfile].
+
 == New component versions
 
 This release includes new versions of the following components:
