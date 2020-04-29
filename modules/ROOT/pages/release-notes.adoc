@@ -17,7 +17,16 @@ These release notes list the components of {PRODUCT} {PATCH_VERSION_NO}, as well
 NOTE: When a {PRODUCT_SHORT} patch or upgrade is available, you are notified and prompted to create an upgrade schedule. 
 When prompted, see these Release Notes for details regarding changes to your cluster.
 
-
+[IMPORTANT]
+====
+{PRODUCT_SHORT} is a Technology Preview feature only. Technology Preview features are 
+not supported with Red Hat production service level agreements (SLAs) and might not be 
+functionally complete. Red Hat does not recommend using them in production. 
+These features provide early access to upcoming product features, enabling 
+customers to test functionality and provide feedback during the development process. 
+For more information about the support scope of Red Hat Technology Preview features, 
+see https://access.redhat.com/support/offerings/techpreview/. 
+====
 
 include::_partials/rn-versions-ref.adoc[leveloffset=+1]
 
