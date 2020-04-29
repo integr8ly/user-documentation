@@ -17,7 +17,10 @@ These release notes list the components of {PRODUCT} {PATCH_VERSION_NO}, as well
 NOTE: When a {PRODUCT_SHORT} patch or upgrade is available, you are notified and prompted to create an upgrade schedule. 
 When prompted, see these Release Notes for details regarding changes to your cluster.
 
-
+[NOTE]
+====
+Currently, technical preview features are not enabled by default in {PRODUCT_SHORT} clusters. For example, the Internet of Things (IoT) feature of AMQ Online is not enabled. Any exceptions are labeled in the Solution Explorer.
+====
 
 include::_partials/rn-versions-ref.adoc[leveloffset=+1]
 
