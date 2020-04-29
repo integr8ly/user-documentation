@@ -131,6 +131,8 @@ To work around this issue, you must:
 +
 Ignore references to these Solution Patterns in the documentation.
 
+* In the 2 - Managing and protecting APIs using API management Solution Pattern, users must have administrator privileges to create a product in 3scale.
+
 :leveloffset!:
 
 :leveloffset: +1
