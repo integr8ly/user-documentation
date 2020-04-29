@@ -25,15 +25,18 @@ This release includes new versions of the following components:
 |===
 
 |Component
-|Release Notes
+|*Release Notes*
 
 |{fuse-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_fuse/7.6/html/release_notes_for_red_hat_fuse_7.6/index[{fuse-version}]
+|link:{fuse-rn-docs}[{fuse-version}]
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html/release_notes_for_amq_online_1.4_on_openshift/index[{amq-online-version}]
+|link:{amq-rn-docs}[{amq-online-version}]
 
 |{three-scale-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.8/html/release_notes_for_red_hat_3scale_api_management_2.7_on-premises/index[{three-scale-version}]
+|link:{three-scale-rn-docs}[{three-scale-version}]
+
+|{code-ready-name}
+|link:{code-ready-rn-docs}[{code-ready-version}]
 
 |===
