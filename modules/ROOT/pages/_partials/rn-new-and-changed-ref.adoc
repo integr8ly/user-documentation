@@ -56,7 +56,7 @@ This section provides general guidance on configuring AMQ Online for production 
 
 .Prerequisites
 * You are a {cluster-administrator} with the OpenShift CLI (`oc`) installed locally.
-* Experience with configuring AMQ Online.
+* You have experience with configuring AMQ Online.
 
 .Procedure
 
@@ -69,4 +69,3 @@ This section provides general guidance on configuring AMQ Online for production 
 . Configure your address space to use an external authentication service as shown in the link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#ref-address-space-example-external-auth-service-override-messaging[address space example using an external authentication service]. 
 +
 NOTE: The authentication services are configured by the AMQ Online service operator and are specified when creating an address space.
-
