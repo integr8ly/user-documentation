@@ -16,6 +16,9 @@ Red Hat recommends that you recreate any existing workspaces using {code-ready-n
 +
 Ignore references to these Solution Patterns in the documentation.  
 
+* You can now configure AMQ Online as described xref:configuring-amq[].
+
+
 == New component versions
 
 This release includes new versions of the following components:
@@ -39,3 +42,31 @@ This release includes new versions of the following components:
 |link:{code-ready-rn-docs}[{code-ready-version}]
 
 |===
+
+
+[id='configuring-amq']
+== Configuring AMQ Online for production
+
+:cluster-administrator: cluster administrator
+
+If you plan to use AMQ Online in {PRODUCT_SHORT}, you need to create an AMQ Online configuration for production. 
+You must edit and apply YAML files using the command line (CLI) tools to configure AMQ Online. 
+
+This section provides general guidance on configuring AMQ Online for production usage in {PRODUCT_SHORT}.
+
+.Prerequisites
+* You are a {cluster-administrator} with the OpenShift CLI (`oc`) installed locally.
+* Experience with configuring AMQ Online.
+
+.Procedure
+
+. Configure AMQ Online in {PRODUCT_SHORT} as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/installing_and_managing_amq_online_on_openshift/index#configuring-messaging[Configuring AMQ Online].
++
+* The name of the AMQ Online project in your cluster is `enmasse`.
++
+* You must log in as `customer-admin`.
+
+. Configure your address space to use an external authentication service as shown in the link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#ref-address-space-example-external-auth-service-override-messaging[address space example using an external authentication service]. 
++
+NOTE: The authentication services are configured by the AMQ Online service operator and are specified when creating an address space.
+
