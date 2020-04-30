@@ -16,7 +16,7 @@ Red Hat recommends that you recreate any existing workspaces using {code-ready-n
 +
 Ignore references to these Solution Patterns in the documentation.  
 
-* You can now configure AMQ Online as described xref:configuring-amq[].
+* You can now configure AMQ Online as described in xref:configuring-amq[].
 
 
 == New component versions
