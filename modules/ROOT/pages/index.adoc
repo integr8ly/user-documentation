@@ -17,12 +17,8 @@ Draft documentation
 
 == Additional Resources
 
-* link:/data-sync/latest/[latest Data Sync documentation]
+* link:../data-sync/latest/[latest Data Sync documentation]
 
-* link:/push/latest/[latest Push documentation]
-
-* link:https://github.com/integr8ly/tutorial-web-app-walkthroughs[Integreatly Solution Patterns repo]
-
-* link:https://integr8ly.github.io/user-documentation/master.html[latest Release Notes and Getting Started master branch]
+* link:../push/latest/[latest Push documentation]
 
 
