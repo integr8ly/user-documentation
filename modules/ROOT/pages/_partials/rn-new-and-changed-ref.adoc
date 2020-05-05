@@ -7,15 +7,6 @@
 +
 Red Hat recommends that you recreate any existing workspaces using {code-ready-name-short} {code-ready-version}.
 
-* The following Solution Patterns are not available in this release:
-+
---
-** _Protecting Applications using Red Hat Single Sign-On (SSO)_.
-** _Low-code API development and SaaS integration_.
---
-+
-Ignore references to these Solution Patterns in the documentation.  
-
 * You can now configure AMQ Online as described in xref:configuring-amq[].
 
 [id='configuring-amq']
