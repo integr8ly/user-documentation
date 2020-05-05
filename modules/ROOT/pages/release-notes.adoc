@@ -29,3 +29,5 @@ include::_partials/rn-fixed-issues-ref.adoc[leveloffset=+1]
 include::_partials/rn-known-issues-ref.adoc[leveloffset=+1]
 
 include::_partials/rn-new-and-changed-ref.adoc[leveloffset=+1]
+
+include::_partials/rn-depricated-ref.adoc[leveloffset=+1]

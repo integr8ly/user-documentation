@@ -1,0 +1,4 @@
+[id='rn-depricated-ref']
+= Depricated features
+
+* Support for TLS 1.0 and TLS 1.1 is removed from {PRODUCT}. Only TLS 1.2 is supported in this release.

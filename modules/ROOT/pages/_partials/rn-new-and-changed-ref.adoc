@@ -1,8 +1,6 @@
 [id='rn-new-and-changed-ref']
 = New and changed features
 
-* Support for TLS 1.0 and TLS 1.1 is removed from {PRODUCT}. Only TLS 1.2 is supported in this release.
-
 * Any {PRODUCT_SHORT} user can now determine which {walkthrough-name}s are available in a cluster. 
 
 * {code-ready-name-short} is upgraded to {code-ready-version}. Existing workspaces are not compatible with this version of {code-ready-name-short}.
