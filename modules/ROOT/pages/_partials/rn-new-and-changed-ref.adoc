@@ -7,7 +7,7 @@
 +
 Red Hat recommends that you recreate any existing workspaces using {code-ready-name-short} {code-ready-version}.
 
-* You can now configure AMQ Online as described in xref:configuring-amq[].
+* You can now configure AMQ Online.
 +
 --
 :cluster-administrator: cluster administrator
