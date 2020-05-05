@@ -18,32 +18,6 @@ Ignore references to these Solution Patterns in the documentation.
 
 * You can now configure AMQ Online as described in xref:configuring-amq[].
 
-
-== New component versions
-
-This release includes new versions of the following components:
-
-[cols="h,"]
-|===
-
-|Component
-|*Release Notes*
-
-|{fuse-name}
-|link:{fuse-rn-docs}[{fuse-version}]
-
-|{amq-online-name}
-|link:{amq-rn-docs}[{amq-online-version}]
-
-|{three-scale-name}
-|link:{three-scale-rn-docs}[{three-scale-version}]
-
-|{code-ready-name}
-|link:{code-ready-rn-docs}[{code-ready-version}]
-
-|===
-
-
 [id='configuring-amq']
 == Configuring AMQ Online for production
 
