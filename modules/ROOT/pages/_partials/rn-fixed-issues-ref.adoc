@@ -1,8 +1,7 @@
-
 [id='rn-fixed-issues-ref']
 
 = Fixed Issues
 
 The following issues are resolved in {PRODUCT} {PATCH_VERSION_NO}:
 
-* Using TLS 1.0 and TLS 1.1 for the address space messaging endpoint is no longer supported in Red Hat Managed Integration. Only TLS 1.2 is supported in this release.
+* The address space messaging endpoint in {PRODUCT_SHORT} supported TLS 1.0 and TLS 1.1, which are weak cipher suites. In this release, only TLS 1.2 is supported.
