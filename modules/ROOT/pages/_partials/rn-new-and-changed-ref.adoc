@@ -8,10 +8,8 @@
 Red Hat recommends that you recreate any existing workspaces using {code-ready-name-short} {code-ready-version}.
 
 * You can now configure AMQ Online as described in xref:configuring-amq[].
-
-[id='configuring-amq']
-== Configuring AMQ Online for production
-
++
+--
 :cluster-administrator: cluster administrator
 
 If you plan to use AMQ Online in {PRODUCT_SHORT}, you need to create an AMQ Online configuration for production. 
