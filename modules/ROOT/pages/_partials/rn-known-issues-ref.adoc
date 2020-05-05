@@ -3,6 +3,13 @@
 
 This section lists known issues with  {PRODUCT} {PATCH_VERSION_NO}:
 
-* Any {PRODUCT_SHORT} user can now determine which {walkthrough-name}s are available in a cluster. 
 * In the _Managing and protecting APIs using API management_ Solution Pattern, users must have administrator privileges to create a product in 3scale.
 
+* The following Solution Patterns are not available in this release:
++
+--
+** _Protecting Applications using Red Hat Single Sign-On (SSO)_.
+** _Low-code API development and SaaS integration_.
+--
++
+Ignore references to these Solution Patterns in the documentation.  

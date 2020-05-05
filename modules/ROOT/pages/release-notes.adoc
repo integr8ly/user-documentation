@@ -14,7 +14,7 @@ include::attributes.adoc[]
 // Purpose statement for the assembly
 These release notes list the components of {PRODUCT} {PATCH_VERSION_NO}, as well as known and fixed issues in this release.
 
-When a {PRODUCT_SHORT} patch or upgrade is available, you are notified and prompted to create an upgrade schedule. 
+When a {PRODUCT_SHORT} patch or upgrade is available, you are notified by email and prompted to create an upgrade schedule. 
 When prompted, see these Release Notes for details regarding changes to your cluster.
 
 [NOTE]
@@ -27,5 +27,7 @@ include::_partials/rn-versions-ref.adoc[leveloffset=+1]
 include::_partials/rn-fixed-issues-ref.adoc[leveloffset=+1]
 
 include::_partials/rn-known-issues-ref.adoc[leveloffset=+1]
+
+include::_partials/rn-deprecated-ref.adoc[leveloffset=+1]
 
 include::_partials/rn-new-and-changed-ref.adoc[leveloffset=+1]
