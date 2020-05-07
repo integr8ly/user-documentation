@@ -1,8 +1,6 @@
 [id='rn-new-and-changed-ref']
 = New and changed features
 
-* Any {PRODUCT_SHORT} user can now determine which {walkthrough-name}s are available in a cluster. 
-
 * {code-ready-name-short} is upgraded to {code-ready-version}. Existing workspaces are not compatible with this version of {code-ready-name-short}.
 +
 Red Hat recommends that you recreate any existing workspaces using {code-ready-name-short} {code-ready-version}.
