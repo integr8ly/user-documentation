@@ -56,9 +56,9 @@ spec:
 $ oc create -f ./custom-route.yaml
 ----
 +
-. Set up your public base URL in APIcast as described in the https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/administering_the_api_gateway/operating-apicast[3scale documentation].
+. Set up your public base URL in APIcast as described in the link:{three-scale-docs}/html/administering_the_api_gateway/operating-apicast[3scale documentation].
 
 
 .Additional resources
 
-* See the https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html-single/administering_the_api_gateway/index#public_base_url[Public Base URL] documentation for an introduction to custom URLs.
+* See the link:{three-scale-docs}/html-single/administering_the_api_gateway/index#public_base_url[Public Base URL] documentation for an introduction to custom URLs.
