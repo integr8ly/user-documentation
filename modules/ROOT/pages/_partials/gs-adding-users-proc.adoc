@@ -97,12 +97,12 @@ NOTE: Red Hat recommends setting up an identity provider in each Red Hat Single 
 
 == Accessing the Red Hat Single Sign-On administration console
 
-To access the Red Hat Single Sign-On administration console:
+To access the Red Hat Single Sign-On administration console for the {rhmi-sso-name}:
 
 . Navigate to the *Red Hat Solution Explorer* URL that you received in the _Welcome email_.
 If asked for credentials, log in as `customer-admin` user.
 
-. Click the *Red Hat Single Sign-On* link available in the *Applications* panel.
+. Click the *Managed Integration SSO* link.
 
 
 == Viewing Users in the Red Hat Single Sign-On administration console
@@ -236,7 +236,7 @@ To access the Red Hat 3scale API Management Platform administration console:
 . Navigate to the *Red Hat Solution Explorer* URL that you received in the _Welcome email_.
 If asked for credentials, log in as the `customer-admin` user.
 
-. Click the *Red Hat 3scale API Management Platform* link available in the *Applications* panel.
+. Click the *Red Hat 3scale API Management Platform* link.
 
 
 === Setting user roles and permissions in Red Hat 3scale API Management Platform administration console
