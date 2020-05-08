@@ -9,7 +9,7 @@ endif::[]
 
 You access your cluster using the credentials for the `customer-admin` user received in the _Welcome_ email. This user can:
 
-* access the OpenShift cluser with the permissions of the link:https://docs.openshift.com/dedicated/3/admin_guide/index.html#admin-guide-index-dedicated-admin-role[Dedicated cluster administrator Role], including read-only access to the Fuse Online project.
+* access the OpenShift cluster with the permissions of the link:https://docs.openshift.com/dedicated/3/admin_guide/index.html#admin-guide-index-dedicated-admin-role[Dedicated cluster administrator Role], including read-only access to the Fuse Online project.
 * access the services available from the Solution Explorer with administrator privileges, for example:
 
 ** 3scale admin access, that is,  full access to all areas and services.
@@ -285,7 +285,7 @@ To delete 3scale users:
 
 This procedure describes how to add the *view* role for a user if that user requires either of the following:
 
-* link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.7/html/admin_portal_guide/service-discovery[Service Discovery] in 3scale, which can be used to add Fuse Online services automatically
+* link:{three-scale-docs}/html/admin_portal_guide/service-discovery[Service Discovery] in 3scale, which can be used to add Fuse Online services automatically
 * Access to Fuse Online integration logs
 
 . Log in to OpenShift using `oc` and the `customer-admin` credentials.
