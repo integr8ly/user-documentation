@@ -18,7 +18,8 @@ You must edit and apply YAML files using the command line (CLI) tools to configu
 This section provides general guidance on configuring {amq-online-name-short} for production usage in {PRODUCT_SHORT}.
 
 .Prerequisites
-* You are a {cluster-administrator} with the OpenShift CLI (`oc`) installed locally.
+* You are a {cluster-administrator}.
+* You have the OpenShift CLI (`oc`) installed locally.
 * You have experience with configuring {amq-online-name-short}.
 
 .Procedure
