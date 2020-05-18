@@ -5,6 +5,8 @@
 +
 Red Hat recommends that you recreate any existing workspaces using {code-ready-name-short} {code-ready-version}.
 
+* In {amq-online-name-short}, rejected messages are retried indefinitely instead of being sent to the Dead Letter Queue.
+
 * You can now configure AMQ Online.
 +
 --
