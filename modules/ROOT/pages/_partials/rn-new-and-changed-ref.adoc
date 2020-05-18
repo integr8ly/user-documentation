@@ -7,28 +7,28 @@ Red Hat recommends that you recreate any existing workspaces using {code-ready-n
 
 * In {amq-online-name-short}, rejected messages are retried indefinitely instead of being sent to the Dead Letter Queue.
 
-* You can now configure AMQ Online.
+* You can now configure {amq-online-name-short}.
 +
 --
 :cluster-administrator: cluster administrator
 
-If you plan to use AMQ Online in {PRODUCT_SHORT}, you need to create an AMQ Online configuration for production. 
-You must edit and apply YAML files using the command line (CLI) tools to configure AMQ Online. 
+If you plan to use {amq-online-name-short} in {PRODUCT_SHORT}, you need to create an {amq-online-name-short} configuration for production. 
+You must edit and apply YAML files using the command line (CLI) tools to configure {amq-online-name-short}. 
 
-This section provides general guidance on configuring AMQ Online for production usage in {PRODUCT_SHORT}.
+This section provides general guidance on configuring {amq-online-name-short} for production usage in {PRODUCT_SHORT}.
 
 .Prerequisites
 * You are a {cluster-administrator} with the OpenShift CLI (`oc`) installed locally.
-* You have experience with configuring AMQ Online.
+* You have experience with configuring {amq-online-name-short}.
 
 .Procedure
 
-. Configure AMQ Online in {PRODUCT_SHORT} as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/installing_and_managing_amq_online_on_openshift/index#configuring-messaging[Configuring AMQ Online].
+. Configure {amq-online-name-short} in {PRODUCT_SHORT} as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/installing_and_managing_amq_online_on_openshift/index#configuring-messaging[Configuring {amq-online-name-short}].
 +
-* The name of the AMQ Online project in your cluster is `enmasse`.
+* The name of the {amq-online-name-short} project in your cluster is `enmasse`.
 +
 * You must log in as `customer-admin`.
 
 . Configure your address space to use an external authentication service as shown in the link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#ref-address-space-example-external-auth-service-override-messaging[address space example using an external authentication service]. 
 +
-NOTE: The authentication services are configured by the AMQ Online service operator and are specified when creating an address space.
+NOTE: The authentication services are configured by the {amq-online-name-short} service operator and are specified when creating an address space.
