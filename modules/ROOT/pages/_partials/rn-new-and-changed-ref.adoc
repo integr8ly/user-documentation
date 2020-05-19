@@ -7,6 +7,8 @@ Red Hat recommends that you recreate any existing workspaces using {code-ready-n
 
 * In {amq-online-name-short}, rejected messages are retried indefinitely instead of being sent to the Dead Letter Queue.
 
+* In {amq-online-name-short}, you can sort addresses by message count.
+
 * You can now configure {amq-online-name-short}.
 +
 --
