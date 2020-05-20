@@ -10,7 +10,7 @@ This section lists known issues with  {PRODUCT} {PATCH_VERSION_NO}:
 * The following Solution Pattern is not available in this release:
 +
 --
-** _Low-code API development and SaaS integration_.
+** _Low-code API development and SaaS integration_
 --
 +
 Ignore references to this Solution Pattern in the documentation.  
