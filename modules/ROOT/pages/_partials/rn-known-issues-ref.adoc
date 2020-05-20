@@ -3,14 +3,15 @@
 
 This section lists known issues with  {PRODUCT} {PATCH_VERSION_NO}:
 
-* In the _Managing and protecting APIs using API management_ Solution Pattern, users must have administrator privileges to create a product in 3scale.
+* In the _Managing and protecting APIs using API management_ Solution Pattern, users must have administrator privileges to create a product in 3scale. Administrator privileges are not required for other Solution Patterns.
 
 * The `customer-admin` user cannot prevent any user with access to the {webapp} from changing the {walkthrough-name} subscription settings. Any user with access to the {webapp} can determine which {walkthrough-name}s are available in a cluster.
 
+// This is https://issues.redhat.com/browse/INTLY-7031
 * The following Solution Pattern is not available in this release:
 +
 --
-** _Low-code API development and SaaS integration_.
+** _Low-code API development and SaaS integration_
 --
 +
 Ignore references to this Solution Pattern in the documentation.  

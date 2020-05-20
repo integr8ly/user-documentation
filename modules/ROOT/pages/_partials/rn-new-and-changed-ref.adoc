@@ -1,14 +1,18 @@
 [id='rn-new-and-changed-ref']
 = New and changed features
 
+// https://issues.redhat.com/browse/INTLY-4589
 * {code-ready-name-short} is upgraded to {code-ready-version}. Existing workspaces are not compatible with this version of {code-ready-name-short}.
 +
 Red Hat recommends that you recreate any existing workspaces using {code-ready-name-short} {code-ready-version}.
 
+// This is https://issues.redhat.com/browse/INTLY-5345
 * In {amq-online-name-short}, rejected messages are retried indefinitely instead of being sent to the Dead Letter Queue.
 
+// This is https://issues.redhat.com/browse/INTLY-3561
 * In {amq-online-name-short}, you can sort addresses by message count.
 
+// This is https://issues.redhat.com/browse/INTLY-4805
 * You can now configure {amq-online-name-short}.
 +
 --

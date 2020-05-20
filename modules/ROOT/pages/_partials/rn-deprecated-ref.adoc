@@ -1,4 +1,5 @@
 [id='rn-deprecated-ref']
 = Deprecated features
 
+// This is https://issues.redhat.com/browse/INTLY-5350
 * Support for TLS 1.0 and TLS 1.1 is removed from {PRODUCT}. Only TLS 1.2 is supported in this release.
