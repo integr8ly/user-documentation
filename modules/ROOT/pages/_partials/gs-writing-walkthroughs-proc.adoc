@@ -148,7 +148,7 @@ This description is displayed in the {webapp} dashboard card for the {walkthroug
 
 
 .Procedure
-To add an overview section using the template respository:
+To add an overview section using the template repository:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
 
