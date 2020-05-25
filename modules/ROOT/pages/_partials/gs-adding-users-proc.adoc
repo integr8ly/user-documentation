@@ -77,7 +77,7 @@ a|
 [NOTE]
 ====
 Red Hat recommends that you define users of the solution you are developing in the *{customer-sso-name}*.
-For example, if you use {PRODUCT_SHORT} to develop an solution named `my-app`, define all users of `my-app` in the *{customer-sso-name}* instance only.
+For example, if you use {PRODUCT_SHORT} to develop a solution named `my-app`, define all users of `my-app` in the *{customer-sso-name}* instance only.
 
 Typically, you only use the *{customer-sso-name}* for end users; however, you have the privileges required to use it for developer related activities.
 // tag::excludeDownstream[]
