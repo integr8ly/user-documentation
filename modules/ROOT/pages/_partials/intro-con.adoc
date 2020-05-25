@@ -4,7 +4,7 @@
 Red Hat Managed Integration delivers managed integration services hosted on the leading container platform, enabling diverse developers to engage in agile, microservices-based application development.
 {PRODUCT_SHORT} enables your team to develop, build and deploy enterprise integration solutions on an OpenShift Dedicated cluster managed by Red Hat.
 {PRODUCT_SHORT} enables developers to adopt event-based computing and API-based development with lightweight, loosely coupled, self-service and flexible components.
-{PRODUCT_SHORT} enables the operations team focus on high value objectives while Red Hat manage the infrastructure. All the applications and services are protected by Red Hat Single Sign-On.
+{PRODUCT_SHORT} enables the operations team to focus on high value objectives while Red Hat manage the infrastructure. All the applications and services are protected by Red Hat Single Sign-On.
 
 == Solution Explorer
 
