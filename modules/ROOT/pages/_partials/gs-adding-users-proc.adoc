@@ -5,7 +5,7 @@ ifdef::env-github[]
 endif::[]
 
 [[customer-admin]]
-= About the customer-admin user
+= About the customer-admin User
 
 You access your cluster using the credentials for the `customer-admin` user received in the _Welcome_ email. This user can:
 
