@@ -235,7 +235,7 @@ Prepend each step with a `.` to create a simple numbered list.
 
 
 .Procedure
-To edit a procedure in the template respository:
+To edit a procedure in the template repository:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
 
