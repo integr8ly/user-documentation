@@ -137,7 +137,7 @@ git push -u upstream master
 The first section of the `walkthrough.adoc` describes your {walkthrough-name}. It provides an overview of the purpose of the {walkthrough-name}.
 The overview is displayed when a user clicks on the {walkthrough-name} in {webapp}.
 
-* The overview is defined by a first level heading (in AsciiDoc a line begining with `=`) and finishes at the next second level heading (`==`).
+* The overview is defined by a first level heading (in AsciiDoc a line beginning with `=`) and finishes at the next second level heading (`==`).
 * The title of the overview becomes the name of the {walkthrough-name}.
 * The overview heading must be followed by a paragraph giving a short introduction to the {walkthrough-name} in one or two sentences.
 This description is displayed in the {webapp} dashboard card for the {walkthrough-name}.
