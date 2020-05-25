@@ -134,7 +134,7 @@ git push -u upstream master
 [time=5]
 == Editing overview sections of a {PRODUCT} {walkthrough-name}
 
-The first section of the `walkthrough.adoc` describes your {walkthrough-name},it provides an overview of the purpose of the {walkthrough-name}.
+The first section of the `walkthrough.adoc` describes your {walkthrough-name}. It provides an overview of the purpose of the {walkthrough-name}.
 The overview is displayed when a user clicks on the {walkthrough-name} in {webapp}.
 
 * The overview is defined by a first level heading (in AsciiDoc a line begining with `=`) and finishes at the next second level heading (`==`).
