@@ -93,7 +93,7 @@ You manage users in the context of a Red Hat Single Sign-On realm.
 A realm manages a set of users, credentials, roles, and groups.
 A user belongs to a realm and can log in to this realm.
 
-NOTE: Red Hat recommends setting up an identity provider in each Red Hat Single Sign-On realm as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering documentation]. For example, set up Active Directory as an OIDC provider to avoid managing the same users in different realms.
+NOTE: Red Hat recommends setting up an identity provider in each Red Hat Single Sign-On realm as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering documentation]. For example, you should set up Active Directory as an OIDC provider to avoid managing the same users in different realms.
 
 == Accessing the Red Hat Single Sign-On administration console
 
