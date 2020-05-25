@@ -214,7 +214,7 @@ To delete users:
 . Navigate to the *Users* menu
 . Click the *View all users* button at the top of the page.
 . Find the user you wish to delete
-. Click the *Delete* button associated to the user you wish to remove.
+. Click the *Delete* button associated with the user you wish to remove.
 . Click *Delete* in the confirmation box to proceed.
 
 == Managing Red Hat 3scale API Management Platform users
