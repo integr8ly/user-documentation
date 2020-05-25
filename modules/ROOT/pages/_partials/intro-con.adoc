@@ -20,7 +20,7 @@ The {webapp} presents links to the applications available in a {PRODUCT_SHORT} c
 
 * *Red Hat 3scale API Management*, a platform that provides RESTful API Management.
 
-* *Red Hat AMQ*, a fast, lightweight, and secure messaging for Internet-scale applications.
+* *Red Hat AMQ*, a fast, lightweight, and secure messaging provider for Internet-scale applications.
 
 * *Red Hat CodeReady Workspaces*, a developer workspace server and cloud IDE.
 
