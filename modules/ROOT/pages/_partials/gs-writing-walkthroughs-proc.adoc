@@ -67,21 +67,16 @@ cd walkthrough-template
 
 
 === Understanding the file structure
-
 [source]
 ----
-.
 ├── walkthroughs-config.json <1>
-└── walkthroughs<2>
-    ├── <identifier> <3>
-    │   ├── images <4>
-    │   │   └── image.png
-    │   ├── walkthrough.adoc <5>
-    │   └── walkthrough.json <6>
-    ├── <walkthrough2-id> <3>
-    └── <walkthrough3-id> <3>
+├── walkthroughs <2>
+│   └── 1-template-walkthrough <3>
+│   ├── images <4>
+│   │   └── image.png
+│   ├── walkthrough.adoc <5>
+│   └── walkthrough.json <6>
 ----
-
 
 <1> This is an optional file that defines metadata for the set of Solution Patterns in the repository.
 
@@ -89,7 +84,7 @@ cd walkthrough-template
 
 <3> The directory name of a {walkthrough-name}. This is also displayed in the URL of {webapp}.
 
-<4> All images for the {walkthrough-name}.
+<4> All images for the {walkthrough-name}. This directory must be manually created by the user.
 
 <5> *walkthrough.adoc* is where the content of the {walkthrough-name} is written in Asciidoc format.
 
