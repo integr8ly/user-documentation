@@ -24,8 +24,7 @@ You must edit and apply YAML files using the command line (CLI) tools to configu
 This section provides general guidance on configuring {amq-online-name-short} for production usage in {PRODUCT_SHORT}.
 
 .Prerequisites
-* You are a {cluster-administrator}.
-* You have the OpenShift CLI (`oc`) installed locally.
+* You are logged in to OpenShift as the `customer-admin` user.
 * You have experience with configuring {amq-online-name-short}.
 
 .Procedure
@@ -34,7 +33,7 @@ This section provides general guidance on configuring {amq-online-name-short} fo
 +
 * The name of the {amq-online-name-short} project in your cluster is `enmasse`.
 +
-* You must log in as `customer-admin`.
+* You must log in to the AMQ console as `customer-admin`.
 
 . Configure your address space to use an external authentication service as shown in the link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#ref-address-space-example-external-auth-service-override-messaging[address space example using an external authentication service]. 
 +
