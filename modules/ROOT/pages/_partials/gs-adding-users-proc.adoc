@@ -5,16 +5,16 @@ ifdef::env-github[]
 endif::[]
 
 [[customer-admin]]
-= About the customer-admin user
+= About the customer-admin User
 
 You access your cluster using the credentials for the `customer-admin` user received in the _Welcome_ email. This user can:
 
-* access the OpenShift cluster with the permissions of the link:https://docs.openshift.com/dedicated/3/admin_guide/index.html#admin-guide-index-dedicated-admin-role[Dedicated cluster administrator Role], including read-only access to the Fuse Online project.
-* access the services available from the Solution Explorer with administrator privileges, for example:
+* Access the OpenShift cluster with the permissions of the link:https://docs.openshift.com/dedicated/3/admin_guide/index.html#admin-guide-index-dedicated-admin-role[Dedicated cluster administrator Role], including read-only access to the Fuse Online project
+* Access the services available from the Solution Explorer with administrator privileges, for example:
 
-** 3scale admin access, that is,  full access to all areas and services.
+** 3scale admin access with full access to all areas and services
 
-** the `customer-admin` user has the manage-user, view-realm and manage-identity-providers roles in the managed integration SSO instance as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/admin_permissions#realm_specific_roles[Red Hat Single Sign-On documentation]
+** The `customer-admin` user has the manage-user, view-realm and manage-identity-providers roles in the managed integration SSO instance as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/admin_permissions#realm_specific_roles[Red Hat Single Sign-On documentation]
 
 See the link:{rn-link}[Release Notes] for links to the associated product documentation.
 
@@ -77,7 +77,7 @@ a|
 [NOTE]
 ====
 Red Hat recommends that you define users of the solution you are developing in the *{customer-sso-name}*.
-For example, if you use {PRODUCT_SHORT} to develop an solution named `my-app`, define all users of `my-app` in the *{customer-sso-name}* instance only.
+For example, if you use {PRODUCT_SHORT} to develop a solution named `my-app`, define all users of `my-app` in the *{customer-sso-name}* instance only.
 
 Typically, you only use the *{customer-sso-name}* for end users; however, you have the privileges required to use it for developer related activities.
 // tag::excludeDownstream[]
@@ -93,7 +93,7 @@ You manage users in the context of a Red Hat Single Sign-On realm.
 A realm manages a set of users, credentials, roles, and groups.
 A user belongs to a realm and can log in to this realm.
 
-NOTE: Red Hat recommends setting up an identity provider in each Red Hat Single Sign-On realm as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering documentation]. For example, set up Active Directory as an OIDC provider to avoid managing the same users in different realms.
+NOTE: Red Hat recommends setting up an identity provider in each Red Hat Single Sign-On realm as described in the link:https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/7.3/html/server_administration_guide/identity_broker[Identity Brokering documentation]. For example, you should set up Active Directory as an OIDC provider to avoid managing the same users in different realms.
 
 == Accessing the Red Hat Single Sign-On administration console
 
@@ -102,8 +102,7 @@ To access the Red Hat Single Sign-On administration console for the {rhmi-sso-na
 . Navigate to the *Red Hat Solution Explorer* URL that you received in the _Welcome email_.
 If asked for credentials, log in as `customer-admin` user.
 
-. Click the *Managed Integration SSO* link.
-
+. Click the *Red Hat Single Sign-On* link available under the *Managed Services* tab.
 
 == Viewing Users in the Red Hat Single Sign-On administration console
 
@@ -214,8 +213,8 @@ To delete users:
 
 . Navigate to the *Users* menu
 . Click the *View all users* button at the top of the page.
-. Find the user you wish to delete
-. Click the *Delete* button associated to the user you wish to remove.
+. Find the user you wish to delete.
+. Click the *Delete* button associated with the user you wish to remove.
 . Click *Delete* in the confirmation box to proceed.
 
 == Managing Red Hat 3scale API Management Platform users

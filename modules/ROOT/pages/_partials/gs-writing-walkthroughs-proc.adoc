@@ -67,21 +67,16 @@ cd walkthrough-template
 
 
 === Understanding the file structure
-
 [source]
 ----
-.
 ├── walkthroughs-config.json <1>
-└── walkthroughs<2>
-    ├── <identifier> <3>
-    │   ├── images <4>
-    │   │   └── image.png
-    │   ├── walkthrough.adoc <5>
-    │   └── walkthrough.json <6>
-    ├── <walkthrough2-id> <3>
-    └── <walkthrough3-id> <3>
+├── walkthroughs <2>
+│   └── 1-template-walkthrough <3>
+│   ├── images <4>
+│   │   └── image.png
+│   ├── walkthrough.adoc <5>
+│   └── walkthrough.json <6>
 ----
-
 
 <1> This is an optional file that defines metadata for the set of Solution Patterns in the repository.
 
@@ -89,7 +84,7 @@ cd walkthrough-template
 
 <3> The directory name of a {walkthrough-name}. This is also displayed in the URL of {webapp}.
 
-<4> All images for the {walkthrough-name}.
+<4> All images for the {walkthrough-name}. This directory must be manually created by the user.
 
 <5> *walkthrough.adoc* is where the content of the {walkthrough-name} is written in Asciidoc format.
 
@@ -122,6 +117,11 @@ git remote add upstream <remote URL>
 ----
 
 . Commit your changes.
++
+[source,bash]
+----
+git commit -m "<your message>"
+----
 
 . Push your changes.
 +
@@ -134,10 +134,10 @@ git push -u upstream master
 [time=5]
 == Editing overview sections of a {PRODUCT} {walkthrough-name}
 
-The first section of the `walkthrough.adoc` describes your {walkthrough-name},it provides an overview of the purpose of the {walkthrough-name}.
+The first section of the `walkthrough.adoc` describes your {walkthrough-name}. It provides an overview of the purpose of the {walkthrough-name}.
 The overview is displayed when a user clicks on the {walkthrough-name} in {webapp}.
 
-* The overview is defined by a first level heading (in AsciiDoc a line begining with `=`) and finishes at the next second level heading (`==`).
+* The overview is defined by a first level heading (in AsciiDoc a line beginning with `=`) and finishes at the next second level heading (`==`).
 * The title of the overview becomes the name of the {walkthrough-name}.
 * The overview heading must be followed by a paragraph giving a short introduction to the {walkthrough-name} in one or two sentences.
 This description is displayed in the {webapp} dashboard card for the {walkthrough-name}.
@@ -148,7 +148,7 @@ This description is displayed in the {webapp} dashboard card for the {walkthroug
 
 
 .Procedure
-To add an overview section using the template respository:
+To add an overview section using the template repository:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
 
@@ -235,7 +235,7 @@ Prepend each step with a `.` to create a simple numbered list.
 
 
 .Procedure
-To edit a procedure in the template respository:
+To edit a procedure in the template repository:
 
 . Edit the `walkthroughs/1-template-walkthrough/walkthrough.adoc` file.
 

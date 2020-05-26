@@ -3,8 +3,8 @@
 
 Red Hat Managed Integration delivers managed integration services hosted on the leading container platform, enabling diverse developers to engage in agile, microservices-based application development.
 {PRODUCT_SHORT} enables your team to develop, build and deploy enterprise integration solutions on an OpenShift Dedicated cluster managed by Red Hat.
-{PRODUCT_SHORT} enables developers adopt event-based computing and API-based development with lightweight, loosely coupled, self-service and flexible components.
-{PRODUCT_SHORT} enables the operations team focus on high value objectives while Red Hat manage the infrastructure. All the applications and services are protected by Red Hat Single Sign-On.
+{PRODUCT_SHORT} enables developers to adopt event-based computing and API-based development with lightweight, loosely coupled, self-service and flexible components.
+{PRODUCT_SHORT} enables the operations team to focus on high value objectives while Red Hat manages the infrastructure. All the applications and services are protected by Red Hat Single Sign-On.
 
 == Solution Explorer
 
@@ -18,9 +18,9 @@ The {webapp} presents links to the applications available in a {PRODUCT_SHORT} c
 
 * *API Designer*,  the Apicurito RESTful API visual designer.
 
-* *Red Hat 3scale API Management*, a platform that provide RESTful API Management.
+* *Red Hat 3scale API Management*, a platform that provides RESTful API Management.
 
-* *Red Hat AMQ*, fast, lightweight, and secure messaging for Internet-scale applications.
+* *Red Hat AMQ*, a fast, lightweight, and secure messaging provider for Internet-scale applications.
 
 * *Red Hat CodeReady Workspaces*, a developer workspace server and cloud IDE.
 
@@ -37,7 +37,7 @@ The {webapp} presents links to the applications available in a {PRODUCT_SHORT} c
 ====
 Most applications are available in the {webapp}, after you first log in.  However:
 
-* If *Red Hat AMQ Online* is not available, the *Start service* button is displayed. Click *Start service* to provision it.
+* If *{amq-online-name}* is not available, the *Start service* button is displayed. Click *Start service* to provision it. *{amq-online-name-short}* is also provisioned if you start a {walkthrough-name} that uses it.
 * You automatically have access to a shared instance of Fuse Online from the *Applications* menu, and if you start a {walkthrough-name}, you also provision an instance of Fuse Online which is not shared with other cluster users.
 ====
 
@@ -53,7 +53,6 @@ Most applications are available in the {webapp}, after you first log in.  Howeve
 * Integrating message-oriented middleware with a RESTful API using AMQ Online
 * Protecting Applications using Red Hat Single Sign-On (SSO)
 * Managing and protecting APIs using API management
-* Low-code API development and SaaS integration
 
 In addition, there is a Data Sync Solution Pattern using GraphQL {walkthrough-name} for mobile and web developers.
 
