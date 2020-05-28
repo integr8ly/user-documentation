@@ -98,6 +98,7 @@ The default `walkthrough.json` does not define any dependent services:
 {
   "dependencies": {
     "repos": [],
+    "managedServices": [],
     "serviceInstances": []
   }
 }
