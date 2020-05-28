@@ -200,7 +200,7 @@ To set user passwords:
 . Find the user you wish to edit and click on the *Edit* button associated with the user.
 . Go to the *Credentials* tab.
 . Set a password for the user and click the *Reset Password* button to save.
-. If you require the user to update their password upon logging in, set the `Temporary` field to *ON*.
+. By default, the user must update their password upon logging in. If you do not want the user to have to do this, set the `Temporary` field to *OFF*.
 
 == Deleting users in the Red Hat Single Sign-On administration console
 
