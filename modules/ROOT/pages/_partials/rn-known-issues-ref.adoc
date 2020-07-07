@@ -1,7 +1,7 @@
 [id='rn-known-issues-ref']
 = Known issues
 
-This section lists known issues with  {PRODUCT} {PATCH_VERSION_NO}:
+This section lists known issues with  {PRODUCT} {MINOR_VERSION_NO}:
 
 * In the _Managing and protecting APIs using API management_ Solution Pattern, users must have administrator privileges to create a product in 3scale. Administrator privileges are not required for other Solution Patterns.
 
