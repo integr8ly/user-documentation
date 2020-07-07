@@ -1,7 +1,9 @@
 [id='rn-fixed-issues-ref']
 
 = Fixed Issues
-The following issue is resolved in {PRODUCT} {PATCH_VERSION_NO}:
+
+The following issue is resolved in {PRODUCT} 1.7.1:
+
 // This is https://issues.redhat.com/browse/INTLY-8362
 
 * In previous versions of {PRODUCT}, {amq-online-name} console returned the message `500 Internal Error, Internal Error` and users were unable to log in. This error and inability to access the console occurred because a custom certificate used by the console created a trust issue between the `oauth-proxy` and the `oauth2` server.
