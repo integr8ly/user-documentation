@@ -31,7 +31,7 @@ This section provides general guidance on configuring {amq-online-name-short} fo
 
 . Configure {amq-online-name-short} in {PRODUCT_SHORT} as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/installing_and_managing_amq_online_on_openshift/index#configuring-messaging[Configuring {amq-online-name-short}].
 +
-* The name of the {amq-online-name-short} project in your cluster is `enmasse`.
+* The name of the {amq-online-name-short} project in your cluster is `openshift-enmasse`.
 +
 * You must log in to the AMQ console as `customer-admin`.
 
