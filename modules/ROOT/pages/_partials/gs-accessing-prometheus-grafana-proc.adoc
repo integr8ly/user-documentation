@@ -1,0 +1,16 @@
+[id='gs-viewing-metrics-proc']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+= Accessing Prometheus and Grafana
+
+.Prerequisite
+* You have logged in to the OpenShift console as the `customer-admin` user.
+
+. In the *My Projects* section, click lick *View All*
+. In the *Filter by keyword* box, enter "managed service monitoring"
+. Click on the *Managed Service Monitoring* project
+. From the sidebar, select *Applications* - *Routes*
+. To access Grafana, click on the hostname for the _grafana-route_. To access Prometheus, click on the hostname for the _prometheus-route_.
