@@ -35,4 +35,4 @@ include::_partials/gs-service-discovery-3scale.adoc[leveloffset=+1]
 
 include::_partials/gs-managing-images-proc.adoc[leveloffset=+1]
 
-include::_partials/gs-viewing-metrics-proc.adoc[leveloffset=+1]
+include::_partials/gs-accessing-prometheus-grafana-proc.adoc[leveloffset=+1]
