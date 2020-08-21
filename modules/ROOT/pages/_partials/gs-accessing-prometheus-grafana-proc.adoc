@@ -15,6 +15,6 @@ Prometheus and Grafana are available to monitor your platform. Prometheus is a s
 . In the *My Projects* section, click *View All*.
 . Select the *Managed Service Monitoring* project.
 . From the sidebar, select *Applications* -> *Routes*.
-. To access Grafana, click on the hostname for _grafana-route_.
+. To access Grafana, click the hostname for _grafana-route_.
 +
-To access Prometheus, click on the hostname for _prometheus-route_.
+To access Prometheus, click the hostname for _prometheus-route_.
