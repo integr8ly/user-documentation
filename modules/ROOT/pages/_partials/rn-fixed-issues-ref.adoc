@@ -2,7 +2,7 @@
 
 = Fixed Issues
 
-The following issue is resolved in {PRODUCT} 1.7.1:
+The following issue is resolved in {PRODUCT} {MINOR_VERSION_NO}:
 
 // This is https://issues.redhat.com/browse/INTLY-8362
 
