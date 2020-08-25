@@ -28,7 +28,7 @@
 
 :amq-online-name: Red Hat AMQ Online
 :amq-online-name-short: AMQ Online
-:amq-online-version: 1.4
+:amq-online-version: 1.5
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 :amq-fuse-version: 7.6
