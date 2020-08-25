@@ -3,6 +3,27 @@
 
 This section lists known issues with  {PRODUCT} {MINOR_VERSION_NO}:
 
+// https://issues.redhat.com/browse/INTLY-9939
+* In _Managed Integration SSO_, setting the email details for the admin user within the 'Manage account' page fails.
++
+The workaround is as follows:
+
+. Login to _Single sign-on_ as administrator user.
+
+. Select the master realm.
+
+. Select _users_ from the sidebar.
+
+. Click _View all users_.
+
+. Edit the admin user.
+
+. Add the email details and click _Save_.
+
+
+
+
+
 * In the _Managing and protecting APIs using API management_ Solution Pattern, users must have administrator privileges to create a product in 3scale. Administrator privileges are not required for other Solution Patterns.
 
 * The `customer-admin` user cannot prevent any user with access to the {webapp} from changing the {walkthrough-name} subscription settings. Any user with access to the {webapp} can determine which {walkthrough-name}s are available in a cluster.
