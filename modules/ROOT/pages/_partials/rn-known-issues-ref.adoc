@@ -8,9 +8,11 @@ This section lists known issues with  {PRODUCT} {MINOR_VERSION_NO}:
 +
 To work around this issue:
 
-. Log in into SE
+. Log in to the {webapp}
 
-. Log in to Single sign-on as an administrator user.
+. Click the *Single Sign-On* link available under the *All Services* tab.
+
+. Click on *Administration Console*.
 
 . Select the master realm.
 
@@ -31,7 +33,7 @@ To work around this issue:
 * The following Solution Pattern is not available in this release:
 +
 --
-** _Low-code API development and SaaS integration_
+** Low-code API development and SaaS integration
 --
 +
 Ignore references to this Solution Pattern in the documentation.  
