@@ -1,0 +1,20 @@
+[id='gs-accessing-prometheus-grafana-proc']
+
+ifdef::env-github[]
+:imagesdir: ../images/
+endif::[]
+
+= Accessing Prometheus and Grafana
+
+Prometheus is a storage backend for platform metrics and Grafana acts as the interface for analysis and visualization. Prometheus and Grafana are available to monitor your platform. 
+
+.Prerequisite
+* You have logged in to the OpenShift console as the `customer-admin` user.
+
+.Procedure
+. In the *My Projects* section, click *View All*.
+. Select the *Managed Service Monitoring* project.
+. From the sidebar, select *Applications* -> *Routes*.
+. To analyze and visualize your platform metrics using Grafana, click the hostname for _grafana-route_.
++
+To query your platform metrics using Prometheus, click the hostname for _prometheus-route_.
