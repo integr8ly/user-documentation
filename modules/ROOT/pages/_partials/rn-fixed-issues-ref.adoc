@@ -2,14 +2,4 @@
 
 = Fixed Issues
 
-The following issue is resolved in {PRODUCT} {MINOR_VERSION_NO}:
-
-// This is https://issues.redhat.com/browse/INTLY-8362
-
-* In previous versions of {PRODUCT}, {amq-online-name} console returned the message `500 Internal Error, Internal Error` and users were unable to log in. This error and inability to access the console occurred because a custom certificate used by the console created a trust issue between the `oauth-proxy` and the `oauth2` server.
-
-
-The following issue is resolved in {PRODUCT} 1.7.0:
-// This is https://issues.redhat.com/browse/INTLY-5350 (also in deprecated section for TLS 1.0 and 1.1)
-
-* The address space messaging endpoint in {PRODUCT_SHORT} supported TLS 1.0 and TLS 1.1, which are weak cipher suites. As of this release, only TLS 1.2 is supported.
+There are no fixed issues in this release.

@@ -13,7 +13,7 @@ include::attributes.adoc[]
 
 // Purpose statement for the assembly
 
-These release notes list the components of {PRODUCT} 1.7, as well as known and fixed issues in this release.
+These release notes list the components of {PRODUCT} {MINOR_VERSION_NO}, as well as known and fixed issues in this release.
 
 When a {PRODUCT_SHORT} patch or upgrade is available, you are notified by email and prompted to create an upgrade schedule. 
 When prompted, see these Release Notes for details regarding changes to your cluster.

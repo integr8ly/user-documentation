@@ -1,40 +1,4 @@
 [id='rn-new-and-changed-ref']
 = New and changed features
 
-// https://issues.redhat.com/browse/INTLY-4589
-* {code-ready-name-short} is upgraded to {code-ready-version}. Existing workspaces are not compatible with this version of {code-ready-name-short}.
-+
-Red Hat recommends that you recreate any existing workspaces using {code-ready-name-short} {code-ready-version}.
-
-// This is https://issues.redhat.com/browse/INTLY-5345
-* In {amq-online-name-short}, rejected messages are retried indefinitely instead of being sent to the Dead Letter Queue.
-
-// This is https://issues.redhat.com/browse/INTLY-3561
-* In {amq-online-name-short}, you can sort addresses by message count.
-
-// This is https://issues.redhat.com/browse/INTLY-4805
-* You can now configure {amq-online-name-short}.
-+
---
-:cluster-administrator: cluster administrator
-
-If you plan to use {amq-online-name-short} in {PRODUCT_SHORT}, you need to create an {amq-online-name-short} configuration for production. 
-You must edit and apply YAML files using the command line (CLI) tools to configure {amq-online-name-short}. 
-
-This section provides general guidance on configuring {amq-online-name-short} for production usage in {PRODUCT_SHORT}.
-
-.Prerequisites
-* You are logged in to OpenShift as the `customer-admin` user.
-* You have experience with configuring {amq-online-name-short}.
-
-.Procedure
-
-. Configure {amq-online-name-short} in {PRODUCT_SHORT} as described in link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/installing_and_managing_amq_online_on_openshift/index#configuring-messaging[Configuring {amq-online-name-short}].
-+
-* The name of the {amq-online-name-short} project in your cluster is `openshift-enmasse`.
-+
-* You must log in to the AMQ console as `customer-admin`.
-
-. Configure your address space to use an external authentication service as shown in the link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.6/html-single/using_amq_online_on_openshift/index#ref-address-space-example-external-auth-service-override-messaging[address space example using an external authentication service]. 
-+
-NOTE: The authentication services are configured by the {amq-online-name-short} service operator and are specified when creating an address space.
+There are no new or changed features in this release.
