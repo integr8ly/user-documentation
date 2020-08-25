@@ -8,7 +8,7 @@ This section lists known issues with  {PRODUCT} {MINOR_VERSION_NO}:
 +
 The workaround is as follows:
 
-. Login to _Single sign-on_ as administrator user.
+. Login to _Single sign-on_ as an administrator user.
 
 . Select the master realm.
 
