@@ -6,7 +6,7 @@ endif::[]
 
 = Accessing Prometheus and Grafana
 
-Prometheus is a storage backend for platform metrics and Grafana acts as the interface for analysis and visualization. Prometheus and Grafana are available to monitor your platform. 
+Prometheus is a storage backend for platform metrics and Grafana acts as the interface for analysis and visualization.
 
 .Prerequisite
 * You have logged in to the OpenShift console as the `customer-admin` user.
