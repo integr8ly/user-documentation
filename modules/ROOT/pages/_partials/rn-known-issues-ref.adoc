@@ -4,7 +4,7 @@
 This section lists known issues with {PRODUCT} {MINOR_VERSION_NO}:
 
 // https://issues.redhat.com/browse/INTLY-9939
-* In Managed Integration SSO, specifying email details in *Manage account* settings produces a `404 page not found` error.
+* In Managed Integration SSO, specifying email details in *Manage account* settings produces an error.
 +
 To work around this issue:
 
