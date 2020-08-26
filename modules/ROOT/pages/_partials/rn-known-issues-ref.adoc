@@ -4,7 +4,7 @@
 This section lists known issues with  {PRODUCT} {MINOR_VERSION_NO}:
 
 // https://issues.redhat.com/browse/INTLY-9939
-* In Managed Integration SSO, setting the email details for the admin user within the *Manage account* page fails.
+* In Managed Integration SSO, setting the email details for the admin user in the *Manage account* page fails.
 +
 To work around this issue:
 
