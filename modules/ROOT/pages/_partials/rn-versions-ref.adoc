@@ -16,7 +16,7 @@
 (Click Fuse Online Category)
 
 |{amq-online-name}
-|link:https://access.redhat.com/documentation/en-us/red_hat_amq/{amq-fuse-version}[{amq-online-version}] +
+|link:https://access.redhat.com/documentation/en-us/red_hat_amq/7.7/[{amq-online-version}] +
 (Click AMQ Online Category)
 
 |{three-scale-name}
