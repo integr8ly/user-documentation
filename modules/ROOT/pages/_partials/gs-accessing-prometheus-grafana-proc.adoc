@@ -13,7 +13,7 @@ Prometheus is a storage backend for platform metrics and Grafana acts as the int
 
 .Procedure
 . In the *My Projects* section, click *View All*.
-. Select the *Managed Service Monitoring* project.
+. Click the *Managed Service Monitoring* project.
 . From the sidebar, select *Applications* -> *Routes*.
 . To analyze and visualize your platform metrics using Grafana, click the hostname for _grafana-route_.
 +
