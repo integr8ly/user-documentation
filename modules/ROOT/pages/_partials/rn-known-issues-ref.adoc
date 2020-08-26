@@ -26,8 +26,8 @@ To work around this issue:
 
 // https://issues.redhat.com/browse/INTLY-7399
 * In {amq-online-name-short}, multiple messages are not distributed evenly among multiple consumers. This happens when:
-** Consumers are slow (taking 10-12 minutes to process each message)
-** Each slow consumer has a prefetch value of zero
+** Consumers are slow (taking 10-12 minutes to process each message).
+** Each slow consumer has a prefetch value of zero.
 
 // This is https://issues.redhat.com/browse/INTLY-7031
 * The following Solution Pattern is not available in this release:
