@@ -5,8 +5,8 @@
 :PRODUCT_INIT_CAP: RHMI
 
 :PRODUCT_VERSION: 1
-:MINOR_VERSION_NO: 1.7
-:PATCH_VERSION_NO: 1.7.1
+:MINOR_VERSION_NO: 1.8
+:PATCH_VERSION_NO: 1.8.0
 
 :URL_COMPONENT_PRODUCT: red_hat_managed_integration
 
@@ -18,7 +18,7 @@
 :rhmi-sso-name: Managed Integration SSO instance
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: 
-:rhsso-version: 7.3
+:rhsso-version: 7.4
 
 :fuse-name: Red Hat Fuse Online
 :fuse-version: 7.6
@@ -28,14 +28,14 @@
 
 :amq-online-name: Red Hat AMQ Online
 :amq-online-name-short: AMQ Online
-:amq-online-version: 1.4
+:amq-online-version: 1.5
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 :amq-fuse-version: 7.6
 :amq-rn-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/{amq-fuse-version}/html/release_notes_for_amq_online_1.4_on_openshift/index
 
 :three-scale-name: Red Hat 3scale API Management
-:three-scale-version: 2.8
+:three-scale-version: 2.9
 :three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
 :three-scale-configs: https://access.redhat.com/articles/2798521
 :three-scale-rn-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/release_notes_for_red_hat_3scale_api_management_2.7_on-premises/index

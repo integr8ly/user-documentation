@@ -6,14 +6,15 @@ endif::[]
 
 = Accessing Prometheus and Grafana
 
-Prometheus is a storage backend for platform metrics and Grafana acts as the interface for analysis and visualization. Prometheus and Grafana are available to monitor your platform. 
+link:https://prometheus.io/[Prometheus] is an open-source systems and service monitoring and alerting toolkit that you can use to monitor services deployed in your Red Hat OpenShift environment. Prometheus collects and stores metrics from configured services at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if a specified condition becomes true.
+Grafana is open source visualization and analytics software. It allows you to query, visualize, alert on, and explore your metrics.
 
 .Prerequisite
-* You have logged in to the OpenShift console as the `customer-admin` user.
+* You are logged in to the OpenShift console as the `customer-admin` user.
 
 .Procedure
 . In the *My Projects* section, click *View All*.
-. Select the *Managed Service Monitoring* project.
+. Click the *Managed Service Monitoring* project.
 . From the sidebar, select *Applications* -> *Routes*.
 . To analyze and visualize your platform metrics using Grafana, click the hostname for _grafana-route_.
 +

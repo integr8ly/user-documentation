@@ -1,17 +1,43 @@
 [id='rn-known-issues-ref']
 = Known issues
 
-This section lists known issues with  {PRODUCT} {MINOR_VERSION_NO}:
+This section lists known issues with {PRODUCT} {MINOR_VERSION_NO}:
 
-* In the _Managing and protecting APIs using API management_ Solution Pattern, users must have administrator privileges to create a product in 3scale. Administrator privileges are not required for other Solution Patterns.
+// https://issues.redhat.com/browse/INTLY-9939
+* In Managed Integration SSO, specifying email details in *Manage account* settings produces an error.
++
+To work around this issue:
 
-* The `customer-admin` user cannot prevent any user with access to the {webapp} from changing the {walkthrough-name} subscription settings. Any user with access to the {webapp} can determine which {walkthrough-name}s are available in a cluster.
+. Log in to the {webapp}.
+
+. Click the *Single Sign-On* link on the *All Services* tab.
+
+. Click *Administration Console*.
+
+. Select the master realm.
+
+. Select *users* from the sidebar.
+
+. Click *View all users*.
+
+. Edit the user account named `admin`.
+
+. Add the email details and click *Save*.
+
+// https://issues.redhat.com/browse/INTLY-7399
+* In {amq-online-name-short}, messages may not be distributed evenly among multiple consumers. This happens when:
+** Consumers are slow (taking 10-12 minutes to process each message).
+** Each slow consumer has a prefetch value of zero.
 
 // This is https://issues.redhat.com/browse/INTLY-7031
-* The following Solution Pattern is not available in this release:
-+
---
-** _Low-code API development and SaaS integration_
---
-+
-Ignore references to this Solution Pattern in the documentation.  
+* The *Low-code API development and SaaS integration* Solution Pattern is not available in this release.
+
+// https://issues.redhat.com/browse/INTLY-6478
+* In the *Managing and protecting APIs using API management* Solution Pattern, you must have administrator privileges to create a product in 3scale. You do not require administrator privileges for other Solution Patterns.
+
+* The `customer-admin` user cannot prevent users with access to the {webapp} from changing the {walkthrough-name} subscription settings. Any user with access to the {webapp} can determine which {walkthrough-name}s are available in a cluster.
+
+* In this version of {PRODUCT_SHORT}, your {customer-sso-name} is upgraded to Red Hat Single Sign-On {rhsso-version}.
++ 
+Applications that use {customer-sso-name}s will continue to function.
+We recommend you upgrade the SSO connectors in your applications to use the latest version.
