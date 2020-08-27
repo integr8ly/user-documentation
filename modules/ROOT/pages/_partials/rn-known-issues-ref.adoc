@@ -4,7 +4,7 @@
 This section lists known issues with {PRODUCT} {MINOR_VERSION_NO}:
 
 // https://issues.redhat.com/browse/INTLY-9939
-* In Managed Integration SSO and Single sign-on, specifying email details in *Manage account* settings produces an error.
+* In Managed Integration SSO and Single sign-on, specifying email details for the user-sso or cluster-sso user in the *Manage account* settings window produces an error.
 +
 To work around this issue:
 
@@ -14,7 +14,7 @@ To work around this issue:
 
 . Click *Administration Console*.
 
-. Select the realm that contains the user.
+. Select the realm that contains the user whose details you want to modify.
 
 . Select *users* from the sidebar.
 
