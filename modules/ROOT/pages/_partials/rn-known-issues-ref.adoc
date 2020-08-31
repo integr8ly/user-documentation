@@ -14,13 +14,13 @@ To work around this issue:
 
 . Click *Administration Console*.
 
-. Select the realm that contains the user whose details you want to modify.
+. Select the realm that contains the user account whose details you want to modify.
 
 . Select *users* from the sidebar.
 
 . Click *View all users*.
 
-. Find the account that you want to change the email details of and click *Edit*.
+. Find the user account that you want to change the email details of and click *Edit*.
 
 . Add the email details and click *Save*.
 
