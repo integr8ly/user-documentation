@@ -4,7 +4,7 @@
 This section lists known issues with {PRODUCT} {MINOR_VERSION_NO}:
 
 // https://issues.redhat.com/browse/INTLY-9939
-* In Managed Integration SSO and Single sign-on, specifying email details for the user-sso or cluster-sso user in the *Manage account* settings window produces an error.
+* In Managed Integration SSO and Single sign-on, changing the email address of an administrator account in the *Manage account* settings window produces an error.
 +
 To work around this issue:
 
@@ -20,7 +20,7 @@ To work around this issue:
 
 . Click *View all users*.
 
-. Edit the user account named `admin`.
+. Edit the account for which you wish to change the email address details.
 
 . Add the email details and click *Save*.
 
