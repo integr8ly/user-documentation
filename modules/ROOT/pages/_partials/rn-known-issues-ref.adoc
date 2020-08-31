@@ -4,11 +4,11 @@
 This section lists known issues with {PRODUCT} {MINOR_VERSION_NO}:
 
 // https://issues.redhat.com/browse/INTLY-9939
-* In Managed Integration SSO and Single sign-on, changing the email address of an administrator account in the *Manage account* settings window produces an error.
+* In *Managed Integration SSO* and *Single sign-on*, changing the email address of an administrator account in the *Manage account* settings window produces an error.
 +
 To work around this issue:
 
-. Log in to the {webapp}.
+. Log in to the {webapp} as a `customer-admin` user.
 
 . Click the *Single Sign-On* link on the *All Services* tab.
 
