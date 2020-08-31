@@ -18,6 +18,6 @@ link:https://grafana.com/[Grafana] is open source visualization and analytics so
 . Click the *My Projects* link.
 . Click the *Managed Service Monitoring* project.
 . In the sidebar, select *Applications* -> *Routes*.
-. In the *Routes* pane, you can choose to query or visualize the cluster metrics by clicking the host-names for different routes: 
-** To query your platform metrics using Prometheus, click the hostname for _prometheus-route_.
-** To analyze and visualize your platform metrics using Grafana, click the hostname for _grafana-route_.
+. In the *Routes* pane, you can choose to query or visualize the cluster metrics by clicking the host names for different routes: 
+** To query your platform metrics using Prometheus, click the host name for _prometheus-route_.
+** To analyze and visualize your platform metrics using Grafana, click the host name for _grafana-route_.
