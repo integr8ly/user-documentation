@@ -14,7 +14,7 @@ link:https://grafana.com/[Grafana] is open source visualization and analytics so
 * You are logged in to the {webapp} as the `customer-admin` user.
 
 .Procedure
-. On the *All Services* tab, click the *Open console* button for *Red Hat OpenShift*.
+. On the *All Services* tab, locate the entry for Red Hat OpenShift and click *Open console*.
 . Click the *My Projects* link.
 . Click the *Managed Service Monitoring* project.
 . In the sidebar, select *Applications* -> *Routes*.
